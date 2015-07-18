@@ -1,0 +1,5 @@
+pages:
+  - Home: 'index.md'
+  - Configuration:
+    - 'Performance Options': config/performance.md
+    - 'Gameplay Options': config/gameplay.md 
