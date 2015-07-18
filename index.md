@@ -88,7 +88,10 @@ You can get support for PaperSpigot on [#PaperSpigot on spigot IRC](http://irc.s
   - Prevents malicious players from hurting the server, but may cause issues for players with a high ping
 - Add an option to disable critical hits
   - Players may not like this but it will help with hacked clients
-
+- Send the absolute position the first time the entitiy is seen
+  - Should help with players sometimes seeing underground players
+  - Should hepl with players sometimes seeing players one block from the ground
+  
 ### APIs
 - Change if a player affects mob spawning
 - Add a method to get the server's TPS
