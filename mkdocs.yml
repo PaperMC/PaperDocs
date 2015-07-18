@@ -1,5 +1,10 @@
+site_name: PaperSpigot
+docs_dir: .
+theme: readthedocs
 pages:
-  - Home: 'index.md'
-  - Configuration:
-    - 'Performance Options': config/performance.md
-    - 'Gameplay Options': config/gameplay.md 
+- Home: 'index.md'
+- Building: 'building.md'
+- Configuration:
+  - 'Performance Options': config/performance.md
+  - 'Gameplay Options': config/gameplay.md
+  - 'Other Options': config/other.md
