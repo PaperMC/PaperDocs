@@ -50,6 +50,9 @@ You can get support for PaperSpigot on [#PaperSpigot on spigot IRC](http://irc.s
 - Configure How far away living entities despawn
     - A 'hard' despawn is when an entity is forced to despawn
     - A 'soft' despawn is how far away an entitiy has a chance to despawn  
+- Improves Anti X-Ray Performance
+    - Helps on servers with lots of redstone triggering block updates
+	- Delays X-Ray updates till the end of the tick
 - Improves ticking lists
   
 ### Gameplay
