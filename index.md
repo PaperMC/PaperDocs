@@ -101,3 +101,7 @@ You can get support for PaperSpigot on [#PaperSpigot on spigot IRC](http://irc.s
 - Add a way to load chunks async
 - Add a method to get where tnt and falling blocks come from
 - Add a view distance API
+- Adds a MicroPlayerMoveEvent
+    - PlayerMoveEvent is only fired on certain Player move packets to improve performance
+    - This is fired on all player move packets at the cost of performance
+    - Should signifigantly improve NoCheatPlus checks
