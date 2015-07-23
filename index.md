@@ -50,6 +50,9 @@ You can get support for PaperSpigot on [#PaperSpigot on spigot IRC](http://irc.s
 - Configure How far away living entities despawn
     - A 'hard' despawn is when an entity is forced to despawn
     - A 'soft' despawn is how far away an entitiy has a chance to despawn  
+- Improves Anti X-Ray Performance
+    - Helps on servers with lots of redstone triggering block updates
+	- Delays X-Ray updates till the end of the tick
 - Improves ticking lists
   
 ### Gameplay
@@ -98,3 +101,7 @@ You can get support for PaperSpigot on [#PaperSpigot on spigot IRC](http://irc.s
 - Add a way to load chunks async
 - Add a method to get where tnt and falling blocks come from
 - Add a view distance API
+- Adds a MicroPlayerMoveEvent
+    - PlayerMoveEvent is only fired on certain Player move packets to improve performance
+    - This is fired on all player move packets at the cost of performance
+    - Should signifigantly improve NoCheatPlus checks
