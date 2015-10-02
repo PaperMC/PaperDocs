@@ -1,6 +1,7 @@
-This repo will serve as a central storage point for project documentation.
-1.7 PaperSpigot documentation should go under the 'Paper/1.7' branch
-1.8 PaperSpigot documentation should go under the 'Paper/1.8' branch
+# PaperDocs
+This is the repository for PaperSpigot documentation.
 
-Other projects that may ever get documented here should follow a similar pattern of
-'Project/MCVersion'
+| Project                                                            | Branch          | Note           |
+|--------------------------------------------------------------------|-----------------|----------------|
+| [PaperSpigot 1.8](https://paper.readthedocs.org/en/paper-1.8/)     | `Paper/1.8`     |                |
+| ~~[PaperSpigot 1.7](https://paper.readthedocs.org/en/paper-1.7/)~~ | ~~`Paper/1.7`~~ | **deprecated** |
