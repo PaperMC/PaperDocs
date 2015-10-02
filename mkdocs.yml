@@ -1,0 +1,5 @@
+site_name: PaperSpigot
+docs_dir: .
+theme: readthedocs
+pages:
+- Home: 'index.md'
