@@ -3,3 +3,7 @@ docs_dir: .
 theme: readthedocs
 pages:
 - Home: 'index.md'
+- Building: 'building.md'
+- Features: 'features.md'
+- Configuration: 'config.md'
+- Developers: 'developers.md'

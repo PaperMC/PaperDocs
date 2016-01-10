@@ -1,0 +1,47 @@
+Features and Changes
+====================
+- Vanished Players
+    - In PaperSpigot, vanished players are better hidden. Arrows, fishing hooks, and other projectiles can fly through vanished players, as if they aren't even there. Players can place blocks even if someone is invisible standing directly in front of them.
+- Undead Horses
+    - Undead horses can be leashed, as though they are just normal horses, if you so want them to be
+- Squid Spawn Heights
+    - The spawning height of squid entities can be altered via our config file
+- Blocking Damage Modifier
+    - The damage modifier a player gets for blocking (right clicking with a sword) is configurable
+- Cacti and Reeds
+    - Cactus and Reed growth height can be altered in our config file
+- Baby Zombie Movement
+    - The speed at which baby zombies move can be altered
+- Fishing time ranges
+    - The amount of time it takes for a fish to be caught can be altered
+- Nerfed Mob Jump
+    - Spawner mobs nerfed via the spigot.yml config setting, are allowed to jump in PaperSpigot, to reduce breakage of vanilla gameplay mechanics, like spawner traps
+- Configurable Despawn Ranges
+    - The vanilla ranges that control when entities are despawned can be altered.
+- Falling Block Height Nerf
+    - Falling blocks can optionally be removed from the world when they reach a certain height, nerfing long range cannons
+- Chest Ticking
+    - In PaperSpigot, chests and enderchests do not tick, improving server performance
+- Tick Loop
+    - The server tick loop has been further altered to improve performance
+- Nether Void Damage
+    - The server can optionally apply void damage to those that get above the nether's bedrock roof
+- Vanilla Redstone
+    - Multiple internal changes to help redstone act more like it did on a vanilla server
+- Async Light Updates
+    - The server can optionally handle all lighting updates asynchronously, offloading the task from the main game loop and improving performance
+- Disable Player Crits
+    - Critical hit attacks by players can be disabled to alter gameplay
+- End Credits
+    - The end game credits that appear when leaving The End dimension can be disabled
+- Flying TNT Entities
+    - TNT, FallingBlock, and Enderpearls can be configured to either load chunks as they fly, or be removed from the world when they reach an unloaded chunk. Preventing players from using long distance cannons to shoot through terrain
+- Stackable Buckets
+    - Buckets can be stacked by type, enabled for milk, water, or lava individually.
+- World Generation Settings
+    - Numerous world generator settings can be controlled from within PaperSpigot
+- 1.7 TNT Behavior
+    - TNT can be reverted to behave as it did in Minecraft 1.7, bringing cannons back to life
+- Timings Version 2
+    - PaperSpigot implements Timings Version 2, the latest revision of timings. Offering increased detail and performance to server timings
+- ... and many many more!

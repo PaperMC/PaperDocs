@@ -1,0 +1,161 @@
+PaperSpigot Configuration Details
+=================================
+The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this file, along with ```spigot.yml```, ```bukkit.yml```, and ```minecraft.properties``` to control your server's feature and performance options
+
+## General Settings - Server-wide
+- 'data-value-allowed-items': []
+    - Which items are allowed to keep their invalid data values (by ID)
+- 'effect-modifiers':
+    - 'strength': 1.3
+        - Strength potion effect modifier for outgoing damage (percentage)
+    - 'weakness': -0.5
+        - Weakness potion effect modifier for outgoing damage (percentage)
+- 'settings':
+    - 'baby-zombie-movement-speed': 0.5
+        - The speed at which baby zombies will move
+        - The player moves at 0.1, for reference
+    - 'limit-player-interactions': true
+        - Whether or not the server should prevent people from spamming interaction packets to lag the server
+- 'stackable-buckets':
+    - 'lava': false
+        - Should lava buckets be stackable
+    - 'water': false
+        - Should water buckets be stackable
+    - 'milk': false
+        - Should milk buckets be stackable
+## World-Specific Settings
+###'default': - This prefix will allow you to specifiy which worlds the below settings apply to, "default" will make them apply to all worlds
+- 'verbose': true
+    - Do we print all of the below settings in startup console
+- 'generator-settings':
+    - NOTE: All the below settings will require new chunk generation to take effect
+    - 'canyon': true
+          - Should canyons generate in the world
+    - 'caves': true
+          - Should caves generate in the world
+    - 'dungeon': true
+          - Should dungeons generate in the world
+    - 'fortress': true
+          - Should fortresses generate in the world
+    - 'mineshaft': true
+          - Should mineshafts generate in the world
+    - 'monument': true
+          - Should monuments generate in the world
+    - 'stronghold': true
+          - Should strongholds generate in the world
+    - 'temple': true
+          - Should temples generate in the world
+    - 'village': true
+          - Should vilages generate in the world
+    - 'flat-bedrock': false
+          - Should bedrock be generated as a single flat layer
+- 'fishing-time-range':
+    - 'MinimumTicks': 100
+       	- Minimum amount of ticks before a fish will appear at the end of the fishing line
+    - 'MaximumTicks': 900
+       	- Maximum amount of ticks before a fish will appear at the end of the fishing line
+- 'player-exhaustion':
+    - 'block-break': 0.02500000037252903
+        - Player food exhaustion rate for breaking blocks
+    - 'swimming': 0.014999999664723873
+        - Player food exhaustion rate for swimming
+- 'despawn-ranges':
+    - 'soft': 32
+        - Distance in blocks from the player at which mobs will be randomly selected for removal
+    - 'hard': 128
+        - Distance in blocks from the player at which all mobs will be removed immediately
+- 'falling-block-height-nerf': 0
+    - Height at which falling blocks/TNTPrimed should be removed from the game
+    - (0 is disabled)
+- 'remove-invalid-mob-spawner-tile-entities': true
+    - Should the server remove bad mob spawner tile entities to prevent crashes
+- 'player-blocking-damage-multiplier': 0.5
+    - The modifier for the amount of damage a player will receive while blocking
+    - (as a percentage)
+- 'optimize-explosions': false
+    - Should we use the optimized explosion algorithm
+    - (removes dead entities in explosion radius)
+- 'mob-spawner-tick-rate': 1
+    - Rate at which mob spawners are checked for spawn conditions, in ticks
+- 'cache-chunk-maps': false
+    - Should we use optimized caching for chunk maps
+    - (performance improvement when sending data for areas that don't change much)
+- 'tnt-explosion-volume': 4.0 
+    - How loud should TNT explosions be
+- 'remove-unloaded':
+    - 'enderpearls': true
+        - Should we remove enderpearls when they enter an unloaded chunk
+    - 'tnt-entities': true
+        - Should we remove TNT entities when they enter an unloaded chunk
+    - 'falling-blocks': true
+        - Should we remove falling blocks when they enter an unloaded chunk
+- 'game-mechanics':
+    - 'boats-drop-boats': false
+        - Should boat entities always drop boat items
+    - 'disable-player-crits': false
+        - Should player critical hits be disabled
+    - 'disable-end-credits': false
+        - Should we disable the end credits when a player leaves the end
+- 'nether-ceiling-void-damage': false
+    - Should the player take damage in (or above) the nether ceiling
+- 'load-chunks':
+    - 'enderpearls': false
+        - Should Enderpearls load chunks that are not loaded as they fly through them
+    - 'tnt-entities': false
+        - Should TNT Entities load chunks that are not loaded as they fly through them
+    - 'falling-blocks': false
+        - Should FallingBlocks load chunks that are not loaded as they fly through them
+- 'fast-drain':
+    - 'lava': false
+        - Should lava drain faster than normal
+    - 'water': false
+        - Should water drain faster than normal
+- 'lava-flow-speed':
+    - 'normal': 30
+        - Speed in ticks at which lava will flow in overworld
+    - 'nether': 10
+        - Speed in ticks at which lava will flow in nether
+- 'squid-spawn-height':
+    - 'minimum': 45.0
+        - Minimum height at which squids will spawn
+    - 'maximum': 63.0
+        - Maximum height at which squids will spawn
+- 'max-growth-height':
+    - 'cactus': 3
+        -  Maximum height cacti will grow to
+    - 'reeds': 3
+        -  Maximum height reeds will grow to
+- 'disable-explosion-knockback': false
+    - Should entities get knocked back by explosions
+- 'water-over-lava-flow-speed': 5
+    - Speed at which water will flow when adjacent to lava
+    - (useful for limiting wall gen)
+- 'fix-cannons': false
+    - Revert 1.8 cannon behavior to 1.7 style
+- 'use-hopper-check': false
+    - Should we use the hopper-check delay option in spigot.yml
+    - (disabled in vanilla Spigot, this lets you re-enable it)
+- 'allow-undead-horse-leashing': false
+    - Should undead horses be able to be leashed
+- 'container-update-tick-rate': 1
+    - How often should we update container inventories, in ticks
+    - (changes visible when moving inventory, recommended to not set above 5)
+- 'keep-spawn-loaded': true
+    - Should the server keep the spawn chunks loaded at all times
+- 'falling-blocks-collide-with-signs': false
+    - Should falling blocks collide (instead of breaking) with signs and similar blocks
+- 'disable-thunder': false
+    - Should the server ever experience a thunder weather-state
+- 'disable-ice-and-snow': false
+    - Should ice and snow generate in snowy biomes
+- 'tick-next-tick-list-cap': 10000
+    - Maximum cap of tickables (Don't touch me unless you know what you're doing)
+- 'tick-next-tick-list-cap-ignores-redstone': false
+    - Should the above cap ignore redstone (Always tick redstone)
+- 'disable-mood-sounds': false
+    - Should the server send sound for cave travel and ambient noise
+- 'use-async-lighting': false
+    - Should the server use asynchronus lighting (Performance at the potential cost of accuracy)
+- 'log-duplicate-entity-UUIDs': true
+    - Should the server warn you in console when an entity is created with the same UUID as an existing entity
+    - (potentially Spammy)
