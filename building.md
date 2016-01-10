@@ -12,6 +12,8 @@ After the tools finish, you'll be able to PaperSpigot in the same directory you 
 On Windows, open git bash and use the ```cd``` command to navigate to the directory you placed the PaperTools jar file in.
 Then, within git bash, type ```java -jar PaperTools.jar``` to start the process. Be aware it may take a long time.
 
+[A video tutorial for windows users is available here](https://www.youtube.com/watch?v=CyReQZpDvYg)
+
 ### Linux
 On linux, open a shell and use the ```cd``` command to navigate to the directory you placed the PaperTools jar file in.
 
