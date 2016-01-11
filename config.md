@@ -96,6 +96,9 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
         - Should player critical hits be disabled
     - 'disable-end-credits': false
         - Should we disable the end credits when a player leaves the end
+    - 'disable-chest-cat-detection': false
+        - Should the server disable the chest block's detection of ocelots and cats standing on them
+        - (improves performance)
 - 'nether-ceiling-void-damage': false
     - Should the player take damage in (or above) the nether ceiling
 - 'load-chunks':
