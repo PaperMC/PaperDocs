@@ -65,7 +65,10 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
     - 'hard': 128
         - Distance in blocks from the player at which all mobs will be removed immediately
 - 'falling-block-height-nerf': 0
-    - Height at which falling blocks/TNTPrimed should be removed from the game
+    - Height at which falling block entities should be removed from the game
+    - (0 is disabled)
+- 'tnt-entity-height-nerf': 0
+    - Height at which tnt entities should be removed from the game
     - (0 is disabled)
 - 'remove-invalid-mob-spawner-tile-entities': true
     - Should the server remove bad mob spawner tile entities to prevent crashes
