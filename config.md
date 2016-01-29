@@ -165,3 +165,5 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
 - 'log-duplicate-entity-UUIDs': true
     - Should the server warn you in console when an entity is created with the same UUID as an existing entity
     - (potentially Spammy)
+- 'all-chunks-are-slime-chunks': false
+    - Should all chunks be eligible to spawn slime entities
