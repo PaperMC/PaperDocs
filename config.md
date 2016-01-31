@@ -167,3 +167,5 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
     - (potentially Spammy)
 - 'all-chunks-are-slime-chunks': false
     - Should all chunks be eligible to spawn slime entities
+- 'allow-block-location-tab-completion': true
+    - Should players be able to tab-complete block locations in supported commands
