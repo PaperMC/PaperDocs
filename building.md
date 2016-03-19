@@ -1,25 +1,11 @@
-Building PaperSpigot
+Building Paper
 ====================
 ## Server Administrators
 ### PaperSpigot requires Java 8!
-To build PaperSpigot, please start by installing the latest version of the [Java Development Kit (8)](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) for your platform, next, install [git for your platform](https://git-scm.com/). They are required and the server will not build without them.
+Server Admins do not need to build Paper to use it, as we provide a ready to use jar file [here](https://paperclip.emc.gs)
+This jar does not violate the DMCA against CraftBukkit as it does not ship the Minecraft Server. It distributes a patch file, that the jar will then download Minecraft Vanilla server for you, and apply the patches to it.
 
-After you have the above dependencies, download [PaperTools, from here](https://ci.destroystokyo.com/job/PaperSpigot-BuildTools/), and put it in an empty folder. Try and keep the folder path free of spaces or exclamation points, as these sometimes break the build tool.
+### Developers
+Developers may download the [Paper repo](https://paperdev.emc.gs) and then run ./build.sh --jar to build a jar file.
 
-After the tools finish, you'll be able to PaperSpigot in the same directory you ran the PaperTools jar file from. You'll also be able to find the API and server jars in your local maven repository, ready for development work (if you so need them).
-
-### Windows
-On Windows, open git bash and use the ```cd``` command to navigate to the directory you placed the PaperTools jar file in.
-Then, within git bash, type ```java -jar PaperTools.jar``` to start the process. Be aware it may take a long time.
-
-[A video tutorial for windows users is available here](https://www.youtube.com/watch?v=CyReQZpDvYg)
-
-### Linux
-On linux, open a shell and use the ```cd``` command to navigate to the directory you placed the PaperTools jar file in.
-
-From the shell, use ```git config --global --unset core.autocrlf```
-
-and then run ```java -jar BuildTools.jar``` to start the process
-
-## Build Issues
-If you run into any issues with PaperTools, first consult the [SpigotMC BuildTools page](https://www.spigotmc.org/wiki/buildtools/), as we share a large amount of code with them. If that doesn't help you fix your problem, contact us in [#PaperSpigot on irc.spi.gt](http://irc.spi.gt/iris/?channels=PaperSpigot) for further assistance.
+JDK8 is required.

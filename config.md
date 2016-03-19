@@ -23,6 +23,13 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
         - Should water buckets be stackable
     - 'milk': false
         - Should milk buckets be stackable
+- 'settings.load-permissions-yml-before-plugins': true
+    - Load the servers permission.yml BEFORE plugins. Bukkit/Spigot behavior was after, resulting in plugins not seeing those permission in onEnable. Defaults to true. Set to false to go back to Bukkit behavior.
+
+- 'settings.sleep-between-chunk-saves': false
+    - Should server sleep between every chunk save. Will cause memory issues if you disable this.
+
+
 ## World-Specific Settings
 ###'default': - This prefix will allow you to specifiy which worlds the below settings apply to, "default" will make them apply to all worlds
 - 'verbose': true
@@ -137,11 +144,11 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
     - Speed at which water will flow when adjacent to lava
     - (useful for limiting wall gen)
 - 'fix-cannons': false
-    - Revert 1.8 cannon behavior to 1.7 style
+    - Revert 1.8+ cannon behavior to 1.7 style
 - 'use-hopper-check': false
     - Should we use the hopper-check delay option in spigot.yml
     - (disabled in vanilla Spigot, this lets you re-enable it)
-- 'allow-undead-horse-leashing': false
+- 'allow-leashing-undead-horse': false
     - Should undead horses be able to be leashed
 - 'container-update-tick-rate': 1
     - How often should we update container inventories, in ticks
@@ -162,10 +169,9 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
     - Should the server send sound for cave travel and ambient noise
 - 'use-async-lighting': false
     - Should the server use asynchronus lighting (Performance at the potential cost of accuracy)
-- 'log-duplicate-entity-UUIDs': true
-    - Should the server warn you in console when an entity is created with the same UUID as an existing entity
-    - (potentially Spammy)
 - 'all-chunks-are-slime-chunks': false
     - Should all chunks be eligible to spawn slime entities
 - 'allow-block-location-tab-completion': true
     - Should players be able to tab-complete block locations in supported commands
+- 'non-player-arrow-despawn-rate': -1
+    - How many ticks to despawn arrows from a non player. -1 will use the spigot.yml arrow despawn rate config. 

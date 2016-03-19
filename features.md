@@ -1,7 +1,7 @@
 Features and Changes
 ====================
 - Vanished Players
-    - In PaperSpigot, vanished players are better hidden. Arrows, fishing hooks, and other projectiles can fly through vanished players, as if they aren't even there. Players can place blocks even if someone is invisible standing directly in front of them.
+    - In Paper, vanished players are better hidden. Arrows, fishing hooks, and other projectiles can fly through vanished players, as if they aren't even there. Players can place blocks even if someone is invisible standing directly in front of them.
 - Undead Horses
     - Undead horses can be leashed, as though they are just normal horses, if you so want them to be
 - Squid Spawn Heights
@@ -44,4 +44,10 @@ Features and Changes
     - TNT can be reverted to behave as it did in Minecraft 1.7, bringing cannons back to life
 - Timings Version 2
     - PaperSpigot implements Timings Version 2, the latest revision of timings. Offering increased detail and performance to server timings
+- Improved Chunk Saving
+    - Will retry instead of giving up after a failure, and also fixes race conditions that could result in chunk rollbacks.
+- Configurable Non Player Arrow despawn
+    - Make arrows fired by skeletons despawn quicker since players can not even pick those up.
+- Use $sender in commands.yml
+    - You may use $sender to represent the sender of the command in your commands.yml aliases.
 - ... and many many more!

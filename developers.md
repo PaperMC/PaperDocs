@@ -1,4 +1,4 @@
-Developers
+Paper 1.9 - Developers
 ==========
 ## Plugin Developers
 Plugin developers may be interested in the API additions made by PaperSpigot to Spigot-API, and the Bukkit platform. They include:
@@ -18,5 +18,7 @@ Plugin developers may be interested in the API additions made by PaperSpigot to 
 
 
 ## Implementation Developers
-All of PaperSpigot's code is public. We welcome discussion and contribution.
-You can find all of our [code here](https://hub.spigotmc.org/stash/projects/PAPER/), and are welcome to [talk with us here](http://irc.spi.gt/iris/?channels=PaperSpigot). We're around fairly often, feel free to come talk.
+All of Paper's code is public. We welcome discussion and contribution.
+You can find all of our [code here](https://github.com/PaperMC) on GitHub, and are welcome to [talk with us here](https://paperchat.emc.gs). We're around fairly often, feel free to come talk.
+
+Paper boasts a much less political process for Pull Requests, and open to reasonable improvements that do not break things for people.

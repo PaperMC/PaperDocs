@@ -1,17 +1,28 @@
-PaperSpigot
+Paper 1.9 Minecraft Server
 ===========
-###High performance Spigot fork that aims to fix gameplay and mechanics inconsistencies.
+### What is Paper?
 
-PaperSpigot contains numerous unique [features and changes](features.md).
+Paper is a high performance Spigot fork that aims to fix gameplay and mechanics inconsistencies.
 
-Almost everything in PaperSpigot is [configurable](config.md).
+Paper contains numerous unique [features and changes](features.md), including many performance improvements not found in Spigot.
 
-To get PaperSpigot use [PaperTools](building.md).
+Almost everything in Paper is [configurable](config.md).
+
+Download latest Paper [here](https://ci.destroystokyo.com/job/PaperSpigot/lastSuccessfulBuild/artifact/paperclip.jar)
+CI for previous builds: [here](https://ci.destroystokyo.com/job/PaperSpigot/)
+
+Donation ability on the CI page above.
+
+### Developers
+Interested in helping the Paper project? Join us on [IRC](https://paperchat.emc.gs)!
 
 Plugin and implementation developers may be interested to [see our code and API](developers.md).
 
-## Support
-You can get support for PaperSpigot at [#PaperSpigot on SpigotIRC](http://irc.spi.gt/iris/?channels=PaperSpigot)
+### Support
+You can get support for Paper at [#PaperSpigot on SpigotIRC](https://paperchat.emc.gs)
+
+Please file bug reports on [GitHub](https://paperissues.emc.gs)
+
 ###Please be prepared to provide errors, stacktraces, and config files
 
 ## Special Thanks To:

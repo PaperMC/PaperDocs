@@ -1,4 +1,4 @@
-site_name: PaperSpigot Documentation
+site_name: Paper Documentation
 docs_dir: .
 theme: readthedocs
 pages:
