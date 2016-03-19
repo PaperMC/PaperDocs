@@ -8,7 +8,7 @@ Paper contains numerous unique [features and changes](features.md), including ma
 
 Almost everything in Paper is [configurable](config.md).
 
-Download latest Paper [here](https://ci.destroystokyo.com/job/PaperSpigot/lastSuccessfulBuild/artifact/paperclip.jar)
+Download latest Paper [here](https://paperclip.emc.gs)
 CI for previous builds: [here](https://ci.destroystokyo.com/job/PaperSpigot/)
 
 Donation ability on the CI page above.
