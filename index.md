@@ -8,10 +8,7 @@ Paper contains numerous unique [features and changes](features.md), including ma
 
 Almost everything in Paper is [configurable](config.md).
 
-Download latest Paper [here](https://paperclip.emc.gs)
-CI for previous builds: [here](https://ci.destroystokyo.com/job/PaperSpigot/)
-
-Donation ability on the CI page above.
+## [Click here to get Paper 1.9](building.md)
 
 ### Developers
 Interested in helping the Paper project? Join us on [IRC](https://paperchat.emc.gs)!
@@ -24,6 +21,9 @@ You can get support for Paper at [#PaperSpigot on SpigotIRC](https://paperchat.e
 Please file bug reports on [GitHub](https://paperissues.emc.gs)
 
 ###Please be prepared to provide errors, stacktraces, and config files
+
+## Donating
+If you wish to donate, please visit the Aquifer Website and donate there.
 
 ## Special Thanks To:
 -------------

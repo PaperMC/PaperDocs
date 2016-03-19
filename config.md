@@ -27,7 +27,7 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
     - Load the servers permission.yml BEFORE plugins. Bukkit/Spigot behavior was after, resulting in plugins not seeing those permission in onEnable. Defaults to true. Set to false to go back to Bukkit behavior.
 
 - 'settings.sleep-between-chunk-saves': false
-    - Should server sleep between every chunk save. Will cause memory issues if you disable this.
+    - Should server sleep between every chunk save. Will cause memory issues if you enable this.
 
 
 ## World-Specific Settings
