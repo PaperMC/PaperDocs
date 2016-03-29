@@ -21,6 +21,18 @@ Plugin developers may be interested in the API additions made by PaperSpigot to 
 - Get TPS API
     - An API to return the server's TPS, no more ugly reflection
 
+## Timings v2
+Timings v2 supports a new API for plugin developers to properly add their own Timings to the v2 data export.
+
+Example:
+
+```try (Timing timed = Timings.ofStart(plugin, "My Timed Section")) {
+// code
+}```
+
+Because Paper requires Java 8, you can safely use try-with-resources style blocks!
+Every thing in that section of the try block will be timed under "Your Plugin :: My Timed Section"
+
 
 ## Implementation Developers
 All of Paper's code is public. We welcome discussion and contribution.
