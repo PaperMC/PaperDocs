@@ -9,6 +9,11 @@ Plugin developers may be interested in the API additions made by PaperSpigot to 
     - Get the original source location of TNT and FallingBlock entities
 - PlayerLocaleChangeEvent
     - An event that fires when a player changes their locale
+- EntityPathfindEvent
+    - Fires when an Entity decides to start moving to a location.
+    - This is not the same as a move event. This only fires when an entity chooses to start moving to a location, and allows cancelling that pathfind.
+- EntityAddToWorldEvent / EntityRemoveFromWorldEvent
+    - Called when entities are added or removed from the world. Not to be confused with Spawn events. This fires on chunk load/unload.
 - Player View Distance API
     - Dynamically set the server view distance, per-player
 - BeaconEffectEvent
