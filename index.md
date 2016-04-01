@@ -1,12 +1,17 @@
-Paper 1.9 Minecraft Server
+Paper Minecraft Server - 1.9.2
 ===========
 ### What is Paper?
 
-Paper is a high performance Spigot fork that aims to fix gameplay and mechanics inconsistencies.
+Paper is a high performance fork of the Spigot Minecraft Server that aims to fix gameplay and mechanics inconsistencies and improve performance.
 
 Paper contains numerous unique [features and changes](features.md), including many performance improvements not found in Spigot.
 
 Almost everything in Paper is [configurable](config.md).
+
+## Current Version
+Paper is currently updated to 1.9.2, and supports 1.9 clients.
+
+Older versions: [1.8.8](https://ci.destroystokyo.com/job/PaperSpigot/443/)
 
 ## [Click here to get Paper 1.9](building.md)
 
