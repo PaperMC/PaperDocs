@@ -3,35 +3,22 @@ PaperSpigot Configuration Details
 The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this file, along with ```spigot.yml```, ```bukkit.yml```, and ```minecraft.properties``` to control your server's feature and performance options
 
 ## General Settings - Server-wide
-- 'data-value-allowed-items': []
-    - Which items are allowed to keep their invalid data values (by ID)
-- 'effect-modifiers':
-    - 'strength': 1.3
-        - Strength potion effect modifier for outgoing damage (percentage)
-    - 'weakness': -0.5
-        - Weakness potion effect modifier for outgoing damage (percentage)
+
 - 'settings':
     - 'baby-zombie-movement-speed': 0.5
         - The speed at which baby zombies will move
         - The player moves at 0.1, for reference
     - 'limit-player-interactions': true
         - Whether or not the server should prevent people from spamming interaction packets to lag the server
-- 'stackable-buckets':
-    - 'lava': false
-        - Should lava buckets be stackable
-    - 'water': false
-        - Should water buckets be stackable
-    - 'milk': false
-        - Should milk buckets be stackable
-- 'settings.load-permissions-yml-before-plugins': true
-    - Load the servers permission.yml BEFORE plugins. Bukkit/Spigot behavior was after, resulting in plugins not seeing those permission in onEnable. Defaults to true. Set to false to go back to Bukkit behavior.
-
-- 'settings.sleep-between-chunk-saves': false
-    - Should server sleep between every chunk save. Will cause memory issues if you enable this.
-
+    - 'load-permissions-yml-before-plugins': true
+        - Load the servers permission.yml BEFORE plugins. Bukkit/Spigot behavior was after, resulting in plugins not seeing those permission in onEnable. Defaults to true. Set to false to go back to Bukkit behavior.
+    - 'sleep-between-chunk-saves': false
+        - Should server sleep between every chunk save. Will cause memory issues if you enable this.
+    - 'enable-player-collisions': true
+        - If disabled, Players should not be able to collide with each other. If enabled (default, vanilla), it will use the players scoreboard team setting. Setting this to false will not impact non player collisions unless you also enable allow-non-player-entities-on-scoreboards and then disable collision for that team.
 
 ## World-Specific Settings
-###'default': - This prefix will allow you to specifiy which worlds the below settings apply to, "default" will make them apply to all worlds
+###'default': - This prefix will allow you to specify which worlds the below settings apply to, "default" will make them apply to all worlds
 - 'verbose': true
     - Do we print all of the below settings in startup console
 - 'generator-settings':
@@ -169,9 +156,17 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
     - Should the server send sound for cave travel and ambient noise
 - 'use-async-lighting': false
     - Should the server use asynchronus lighting (Performance at the potential cost of accuracy)
+- 'use-chunk-inhabited-timer': true
+    - Should chunks have [Regional Difficulty](http://minecraft.gamepedia.com/Difficulty#Regional_difficulty) enabled. Setting this to false will ensure all chunks are treated equally. In Vanilla, the longer a player is in a chunk, the difficulty will rise. 
 - 'all-chunks-are-slime-chunks': false
     - Should all chunks be eligible to spawn slime entities
 - 'allow-block-location-tab-completion': true
     - Should players be able to tab-complete block locations in supported commands
 - 'non-player-arrow-despawn-rate': -1
-    - How many ticks to despawn arrows from a non player. -1 will use the spigot.yml arrow despawn rate config. 
+    - How many ticks to despawn arrows from a non player. -1 will use the spigot.yml arrow despawn rate config.
+- 'grass-spread-tick-rate': 1
+    - How many ticks between each grass block ticks in attempt to spread. Raising this value will improve performance but slow down grass spreading. 1 is vanilla (every tick)
+- 'keep-spawn-loaded-range': <varies>
+    - Configure how far your spawn should keep chunks loaded. Default value will be based on your view distance for that world defined in spigot.yml, capped to 8. However the value itself is not capped to 8, just the default if you have not set it. Once set, you may go over 8 chunks. Recommended 0-1 for development servers and unused worlds to drastically speed up server start up time!
+- 'allow-non-player-entities-on-scoreboards': false
+    - Vanilla defaults this to true, however when this setting is false, Paper will drastically reduce the performance impact of non player collisions. You would only ever need to set this to true if you intend to use /scoreboard team join teamname @e syntax to force non players into a team. It is recommended to not set this to true unless you know you are trying to do something that this blocks.
