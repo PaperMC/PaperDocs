@@ -15,6 +15,6 @@ CI for previous builds: [here](https://ci.destroystokyo.com/job/PaperSpigot/)
 This jar does not violate the DMCA against CraftBukkit as it does not ship the Minecraft Server. It distributes a patch file, that the jar will then download Minecraft Vanilla server for you, and apply the patches to it.
 
 ### Developers
-Developers may download the [Paper repo](https://paperdev.emc.gs) and then run `./build.sh --jar` to build a jar file.
+Developers may download the [Paper repo](https://paperdev.emc.gs) and then run `./paper jar` to build a jar file.
 
 JDK8 is required.
