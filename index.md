@@ -1,4 +1,4 @@
-Paper Minecraft Server - 1.9.2
+Paper Minecraft Server
 ===========
 ### What is Paper?
 
@@ -9,7 +9,7 @@ Paper contains numerous unique [features and changes](features.md), including ma
 Almost everything in Paper is [configurable](config.md).
 
 ## Current Version
-Paper is currently updated to 1.9.2, and supports 1.9 clients.
+Paper actively targets the latest version of Minecraft and those versions can be downloaded [here](https://ci.destroystokyo.com/job/PaperSpigot).
 
 Older versions: [1.8.8](https://ci.destroystokyo.com/job/PaperSpigot/443/)
 
