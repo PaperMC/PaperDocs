@@ -140,8 +140,6 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
 - `container-update-tick-rate`: 1
     - How often should we update container inventories, in ticks
     - (changes visible when moving inventory, recommended to not set above 5)
-- `keep-spawn-loaded`: true
-    - Should the server keep the spawn chunks loaded at all times
 - `falling-blocks-collide-with-signs`: false
     - Should falling blocks collide (instead of breaking) with signs and similar blocks
 - `disable-thunder`: false
@@ -168,7 +166,12 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
     - Whether or not to fire the BlockPhysicsEvent for redstone activity. This is VERY UNLIKELY to ever need to be true, unless a bad plugin is listening to the wrong event. Setting this false will have drastic impact to performance with heavy redstone. Plugins should be using BlockRedstoneEvent to detect redstone, not Physics Event. 
 - `grass-spread-tick-rate`: 1
     - How many ticks between each grass block ticks in attempt to spread. Raising this value will improve performance but slow down grass spreading. 1 is vanilla (every tick)
+- `keep-spawn-loaded`: true
+    - Should the server keep the spawn chunks loaded at all times
 - `keep-spawn-loaded-range`: <varies>
-    - Configure how far your spawn should keep chunks loaded. Default value will be based on your view distance for that world defined in spigot.yml, capped to 8. However the value itself is not capped to 8, just the default if you have not set it. Once set, you may go over 8 chunks. Recommended 0-1 for development servers and unused worlds to drastically speed up server start up time!
+    - Configure how far your spawn should keep chunks loaded. 
+    - The spawns chunk is included in this range.  If you set a range of 7, a box of 14x14 will stay loaded, not 15x15. This is the way Vanilla handles it.
+    - Default value will be based on your view distance for that world defined in spigot.yml, capped to 8. However the value itself is not capped to 8, just the default if you have not set it. 
+    - Once set, you may go over 8 chunks. Recommended 0-1 for development servers and unused worlds to drastically speed up server start up time!
 - `allow-non-player-entities-on-scoreboards`: false
     - Vanilla defaults this to true, however when this setting is false, Paper will drastically reduce the performance impact of non player collisions. You would only ever need to set this to true if you intend to use /scoreboard team join teamname @e syntax to force non players into a team. It is recommended to not set this to true unless you know you are trying to do something that this blocks.
