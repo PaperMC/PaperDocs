@@ -1,6 +1,8 @@
 Paper 1.9 - Developers
 ==========
 ## Plugin Developers
+[Paper API javadocs](http://javadocs.destroystokyo.com)
+
 Plugin developers may be interested in the API additions made by PaperSpigot to Spigot-API, and the Bukkit platform. They include:
 
 - Player Affects Spawning API
