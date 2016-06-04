@@ -15,13 +15,13 @@ Features and Changes
 - Fishing time ranges
     - The amount of time it takes for a fish to be caught can be altered
 - Nerfed Mob Jump
-    - Spawner mobs nerfed via the spigot.yml config setting, are allowed to jump in PaperSpigot, to reduce breakage of vanilla gameplay mechanics, like spawner traps
+    - Spawner mobs nerfed via the spigot.yml config setting, are allowed to jump in Paper, to reduce breakage of vanilla gameplay mechanics, like spawner traps
 - Configurable Despawn Ranges
     - The vanilla ranges that control when entities are despawned can be altered.
 - Falling Block Height Nerf
     - Falling blocks can optionally be removed from the world when they reach a certain height, nerfing long range cannons
 - Chest Ticking
-    - In PaperSpigot, chests and enderchests do not tick, improving server performance
+    - In Paper, chests and enderchests do not tick, improving server performance
 - Tick Loop
     - The server tick loop has been further altered to improve performance
 - Nether Void Damage
@@ -39,15 +39,15 @@ Features and Changes
 - Stackable Buckets
     - Buckets can be stacked by type, enabled for milk, water, or lava individually.
 - World Generation Settings
-    - Numerous world generator settings can be controlled from within PaperSpigot
+    - Numerous world generator settings can be controlled from within Paper
 - 1.7 TNT Behavior
-    - TNT can be reverted to behave as it did in Minecraft 1.7, bringing cannons back to life
+    - TNT can be reverted to behave similar to the way it did in Minecraft 1.7, bringing cannons back to life
 - Timings Version 2
-    - PaperSpigot implements Timings Version 2, the latest revision of timings. Offering increased detail and performance to server timings
+    - Paper implements Timings Version 2, the latest revision of timings. Offering increased detail and performance to server timings
 - Improved Chunk Saving
     - Will retry instead of giving up after a failure, and also fixes race conditions that could result in chunk rollbacks.
 - Configurable Non Player Arrow despawn
     - Make arrows fired by skeletons despawn quicker since players can not even pick those up.
 - Use $sender in commands.yml
     - You may use $sender to represent the sender of the command in your commands.yml aliases.
-- ... and many many more!
+- ... and many many more! (this list is hard to keep up-to-date)
