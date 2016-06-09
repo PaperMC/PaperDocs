@@ -11,9 +11,7 @@ Almost everything in Paper is [configurable](config.md).
 ## Current Version
 Paper actively targets the latest version of Minecraft and those versions can be downloaded [here](https://ci.destroystokyo.com/job/PaperSpigot).
 
-Older versions: [1.8.8](https://ci.destroystokyo.com/job/PaperSpigot/443/)
-
-## [Click here to get Paper 1.9](building.md)
+## [Click here to get the latest version of Paper](building.md)
 
 ### Developers
 Interested in helping the Paper project? Join us on [IRC](https://paperchat.emc.gs)!
