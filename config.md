@@ -201,3 +201,7 @@ The Paper configuration file is ```paper.yml```. Paper uses this file, along wit
             - Sets the minimum delay for potion effects on frosted ice
         - `max`: 40
             - Sets the maxmimum delay for potion effects on frosted ice
+- `hopper`
+    - `push-based`: true
+        - Should entities, such as dropped items and minecart chests/hoppers, search for hoppers instead of the other way around.
+        - This should improve hopper performance, but may have a slight negative effect on dropped item entity performance, test and see.
