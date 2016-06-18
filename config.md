@@ -1,13 +1,27 @@
-PaperSpigot Configuration Details
+Paper Configuration Details
 =================================
-The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this file, along with ```spigot.yml```, ```bukkit.yml```, and ```minecraft.properties``` to control your server's feature and performance options
+The Paper configuration file is ```paper.yml```. Paper uses this file, along with ```spigot.yml```, ```bukkit.yml```, and ```server.properties``` to control your server's feature and performance options
 
+## Timings Settings
+- `timings`:
+    - `enabled`: true
+        - Controls the global on/off state for timings, we do not recommend you disable it
+    - `verbose`: true
+        - Makes timings data more specific with entity and other information
+        - We recommend you leave this on, at least until you get your server tuned as you want it
+    - `server-name-privacy`: true
+        - Sets whether timings hides your server name (as set in server.properties) when pasting to the web
+    - `hidden-config-entries`:
+        - defaults:
+             - `database`
+             - `settings.bungeecord-addresses`
+        - Information to hide from pasted config entries
+    - `history-interval`: 300
+        - How often history snapshots are taken, more often means more data
+    - `history-lenth`: 3600
+        - How much history, in total, to keep per paste
 ## General Settings - Server-wide
-
 - `settings`:
-    - `baby-zombie-movement-speed`: 0.5
-        - The speed at which baby zombies will move
-        - The player moves at 0.1, for reference
     - `limit-player-interactions`: true
         - Whether or not the server should prevent people from spamming interaction packets to lag the server
     - `load-permissions-yml-before-plugins`: true
@@ -16,6 +30,17 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
         - Should server sleep between every chunk save. Will cause memory issues if you enable this.
     - `enable-player-collisions`: true
         - If disabled, Players should not be able to collide with each other. If enabled (default, vanilla), it will use the players scoreboard team setting. Setting this to false will not impact non player collisions unless you also enable allow-non-player-entities-on-scoreboards and then disable collision for that team.
+    - `save-empty-scoreboard-teams`: false
+        - Sets whether the server is to save empty scoreboard teams.
+        - We do not recommend you enable this. Many plugins abuse empty scoreboard teams for sidebars and other features, saving them will increase join lag.
+    - `region-file-cache-size`: 256
+        - The size of the region file cache.
+    - `min-chunk-load-threads`: 2
+        - The number of threads to use for asynchronous chunk loading
+        - Cranking this value super high doesn't make everything really fast, only mess with this as needed.
+    - `set-health-before-death-event`: false
+        - Determines if the server should set an entities health before it fires the death event.
+        - ```true``` would be seen as the correct value by many, however it may break plugins, so ```false``` is the default.
 
 ## World-Specific Settings
 ###'default': - This prefix will allow you to specify which worlds the below settings apply to, "default" will make them apply to all worlds
@@ -43,6 +68,9 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
           - Should vilages generate in the world
     - `flat-bedrock`: false
           - Should bedrock be generated as a single flat layer
+- `baby-zombie-movement-speed`: 0.5
+    - The speed at which baby zombies will move
+    - The player moves at 0.1, for reference
 - `fishing-time-range`:
     - `MinimumTicks`: 100
        	- Minimum amount of ticks before a fish will appear at the end of the fishing line
@@ -66,9 +94,6 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
     - (0 is disabled)
 - `remove-invalid-mob-spawner-tile-entities`: true
     - Should the server remove bad mob spawner tile entities to prevent crashes
-- `player-blocking-damage-multiplier`: 0.5
-    - The modifier for the amount of damage a player will receive while blocking
-    - (as a percentage)
 - `optimize-explosions`: false
     - Should we use the optimized explosion algorithm
     - (removes dead entities in explosion radius)
@@ -79,18 +104,7 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
     - (performance improvement when sending data for areas that don't change much)
 - `tnt-explosion-volume`: 4.0 
     - How loud should TNT explosions be
-- `remove-unloaded`:
-    - `enderpearls`: true
-        - Should we remove enderpearls when they enter an unloaded chunk
-    - `tnt-entities`: true
-        - Should we remove TNT entities when they enter an unloaded chunk
-    - `falling-blocks`: true
-        - Should we remove falling blocks when they enter an unloaded chunk
 - `game-mechanics`:
-    - `boats-drop-boats`: false
-        - Should boat entities always drop boat items
-    - `disable-player-crits`: false
-        - Should player critical hits be disabled
     - `disable-end-credits`: false
         - Should we disable the end credits when a player leaves the end
     - `disable-chest-cat-detection`: false
@@ -98,13 +112,6 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
         - (improves performance)
 - `nether-ceiling-void-damage`: false
     - Should the player take damage in (or above) the nether ceiling
-- `load-chunks`:
-    - `enderpearls`: false
-        - Should Enderpearls load chunks that are not loaded as they fly through them
-    - `tnt-entities`: false
-        - Should TNT Entities load chunks that are not loaded as they fly through them
-    - `falling-blocks`: false
-        - Should FallingBlocks load chunks that are not loaded as they fly through them
 - `fast-drain`:
     - `lava`: false
         - Should lava drain faster than normal
@@ -130,32 +137,23 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
 - `water-over-lava-flow-speed`: 5
     - Speed at which water will flow when adjacent to lava
     - (useful for limiting wall gen)
-- `fix-cannons`: false
-    - Revert 1.8+ cannon behavior to 1.7 style
+- `enable-old-tnt-cannon-behaviors`: false
+    - Reverts the newer TNT and FallingBlock behaviors to a style more similar to Minecraft 1.7.
 - `use-hopper-check`: false
-    - Should we use the hopper-check delay option in spigot.yml
+    - Should we use the hopper-check delay option in spigot.yml.
     - (disabled in vanilla Spigot, this lets you re-enable it)
 - `allow-leashing-undead-horse`: false
     - Should undead horses be able to be leashed
 - `container-update-tick-rate`: 1
-    - How often should we update container inventories, in ticks
+    - How often should we update container inventories, in ticks.
     - (changes visible when moving inventory, recommended to not set above 5)
-- `keep-spawn-loaded`: true
-    - Should the server keep the spawn chunks loaded at all times
-- `falling-blocks-collide-with-signs`: false
-    - Should falling blocks collide (instead of breaking) with signs and similar blocks
 - `disable-thunder`: false
-    - Should the server ever experience a thunder weather-state
+    - Should the server ever experience a thunder weather-state.
 - `disable-ice-and-snow`: false
-    - Should ice and snow generate in snowy biomes
-- `tick-next-tick-list-cap`: 10000
-    - Maximum cap of tickables (Don't touch me unless you know what you're doing)
-- `tick-next-tick-list-cap-ignores-redstone`: false
-    - Should the above cap ignore redstone (Always tick redstone)
-- `disable-mood-sounds`: false
-    - Should the server send sound for cave travel and ambient noise
-- `use-async-lighting`: false
-    - Should the server use asynchronus lighting (Performance at the potential cost of accuracy)
+    - Should ice and snow generate in snowy biomes.
+- `queue-light-updates`: false
+    - Queues light updates to happen at the end of each tick, after all other work has been done.
+    - May skip some in low-TPS situations.
 - `use-chunk-inhabited-timer`: true
     - Should chunks have [Regional Difficulty](http://minecraft.gamepedia.com/Difficulty#Regional_difficulty) enabled. Setting this to false will ensure all chunks are treated equally. In Vanilla, the longer a player is in a chunk, the difficulty will rise. 
 - `all-chunks-are-slime-chunks`: false
@@ -168,7 +166,38 @@ The paperspigot configuration file is ```paper.yml```. PaperSpigot uses this fil
     - Whether or not to fire the BlockPhysicsEvent for redstone activity. This is VERY UNLIKELY to ever need to be true, unless a bad plugin is listening to the wrong event. Setting this false will have drastic impact to performance with heavy redstone. Plugins should be using BlockRedstoneEvent to detect redstone, not Physics Event. 
 - `grass-spread-tick-rate`: 1
     - How many ticks between each grass block ticks in attempt to spread. Raising this value will improve performance but slow down grass spreading. 1 is vanilla (every tick)
+- `keep-spawn-loaded`: true
+    - Should the server keep the spawn chunks loaded at all times
 - `keep-spawn-loaded-range`: <varies>
-    - Configure how far your spawn should keep chunks loaded. Default value will be based on your view distance for that world defined in spigot.yml, capped to 8. However the value itself is not capped to 8, just the default if you have not set it. Once set, you may go over 8 chunks. Recommended 0-1 for development servers and unused worlds to drastically speed up server start up time!
+    - Configure how far your spawn should keep chunks loaded. 
+    - The spawns chunk is included in this range.  If you set a range of 7, a box of 14x14 will stay loaded, not 15x15. This is the way Vanilla handles it.
+    - Default value will be based on your view distance for that world defined in spigot.yml, capped to 8. However the value itself is not capped to 8, just the default if you have not set it. 
+    - Once set, you may go over 8 chunks. Recommended 0-1 for development servers and unused worlds to drastically speed up server start up time!
 - `allow-non-player-entities-on-scoreboards`: false
     - Vanilla defaults this to true, however when this setting is false, Paper will drastically reduce the performance impact of non player collisions. You would only ever need to set this to true if you intend to use /scoreboard team join teamname @e syntax to force non players into a team. It is recommended to not set this to true unless you know you are trying to do something that this blocks.
+- `use-vanilla-world-scoreboard-name-coloring`: false
+    - Attempts to use vanilla scoreboard information to provide name coloring in chat.
+    - Helpful for vanilla maps or vanilla map authors.
+- `lootables`:
+    - `auto-replenish`: false
+        - Sets whether lootable blocks and entities should automatically refill after a certain time period.
+    - `restrict-player-reloot`: true
+        - Sets whether a player who has already looted a lootable should be prevented from looting it a second time
+    - `reset-seed-on-fill`: true
+        - If enabled, a different item seed will be used on refill, meaning a different set of items will be filled than the prior time.
+    - `max-refills`: -1
+        - The number of times a lootable may be refilled, where -1 means infinitely.
+    - `refresh-min`: 12h
+        - The minimum amount of time before a lootable can be refilled.
+        - Accepts values of seconds `12s`, minutes `5m`, hours `4h`, or days `10d`. 
+    - `refresh-max`: 2d
+        - The maximum amount of time before a lootable will be refilled.
+        - Accepts values of seconds `12s`, minutes `5m`, hours `4h`, or days `10d`.
+- `frosted-ice`
+    - `enabled`: true
+        - Should we tick frosted ice at all, as needed for melting and other effects
+    - `delay`:
+        - `min`: 20
+            - Sets the minimum delay for potion effects on frosted ice
+        - `max`: 40
+            - Sets the maxmimum delay for potion effects on frosted ice

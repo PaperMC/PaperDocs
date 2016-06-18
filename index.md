@@ -11,7 +11,7 @@ Almost everything in Paper is [configurable](config.md).
 ## Current Version
 Paper actively targets the latest version of Minecraft and those versions can be downloaded [here](https://ci.destroystokyo.com/job/PaperSpigot).
 
-## [Click here to get the latest version of Paper](building.md)
+## [Other ways to get Paper are described here](building.md)
 
 ### Developers
 Interested in helping the Paper project? Join us on [IRC](https://paperchat.emc.gs)!
@@ -19,14 +19,14 @@ Interested in helping the Paper project? Join us on [IRC](https://paperchat.emc.
 Plugin and implementation developers may be interested to [see our code and API](developers.md).
 
 ### Support
-You can get support for Paper at [#PaperSpigot on SpigotIRC](https://paperchat.emc.gs)
+You can get support for Paper at [#paper on SpigotIRC](https://paperchat.emc.gs)
 
 Please file bug reports on [GitHub](https://paperissues.emc.gs)
 
 ###Please be prepared to provide errors, stacktraces, and config files
 
 ## Donating
-If you wish to donate, please visit the Aquifer Website and donate there.
+If you wish to donate, please visit the [Aquifer Website](https://aquifermc.org/) and donate there.
 
 ## Special Thanks To:
 -------------
