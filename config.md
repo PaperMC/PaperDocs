@@ -205,3 +205,8 @@ The Paper configuration file is ```paper.yml```. Paper uses this file, along wit
     - `push-based`: true
         - Should entities, such as dropped items and minecart chests/hoppers, search for hoppers instead of the other way around.
         - This should improve hopper performance, but may have a slight negative effect on dropped item entity performance, test and see.
+- `delay-chunk-unloads-by`: 30s
+    - When players move in the world they will commonly go back and forth in a relatively small area, this causes lots of chunk load and unload activity. This is wasteful. This option introduces a delay of inactivity on a chunk before it unloads. Which lets servers will smaller worlds, or smaller active portions of their worlds, to stop wasting tick time on save -> unload -> reload happening constantly.
+    - The `s` in this value refers to seconds.
+- `elytra-hit-wall-damage`: true
+    - Allows servers to disable the damage given to entities when they fly into solid objects at speed using elytra. Disabling this option may improve performance in some situations, as it will skip all of the calculations needed.

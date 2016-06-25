@@ -1,4 +1,4 @@
-Paper 1.9 - Developers
+Plugin and Implementation Developers
 ==========
 ## Plugin Developers
 Plugin developers may be interested in the API additions made by Paper to Spigot-API, and the Bukkit platform. They include:
@@ -38,7 +38,7 @@ and then add it to your dependencies:
     <dependency>
         <groupId>com.destroystokyo.paper</groupId>
         <artifactId>paper-api</artifactId>
-        <version>1.9.4-R0.1-SNAPSHOT</version>
+        <version>1.10.2-R0.1-SNAPSHOT</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>

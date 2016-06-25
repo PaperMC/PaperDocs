@@ -1,4 +1,4 @@
-Building Paper
+Get Paper
 ====================
 ### Paper requires Java 8!
 Download Java 8 [here, from oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
@@ -14,7 +14,7 @@ CI for specific builds: [here](https://ci.destroystokyo.com/job/PaperSpigot/)
 
 This jar does not violate the DMCA against CraftBukkit as it does not ship the Minecraft Server. It distributes a patch file, that the jar will then download Minecraft Vanilla server for you, and apply the patches to it.
 
-### Developers
+## Implementation Developers / Building From Source
 Developers may download the [Paper repo](https://paperdev.emc.gs) and then run `./paper jar` to build a jar file.
 
 JDK8 is required.
