@@ -28,7 +28,7 @@ To build against Paper-API, you need to add our maven repository to your plugin'
 <repositories>
     <repository>
         <id>destroystokyo-repo</id>
-        <url>https://repo.destroystokyo.com/content/repositories/snapshots/</url>
+        <url>https://repo.destroystokyo.com/repository/maven-public//</url>
     </repository>
 </repositories>
 ```
