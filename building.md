@@ -8,7 +8,7 @@ Java 8 is strongly recommended for ALL servers. If your host is still using Java
 ## Server Administrators
 Server Admins do not need to build Paper to use it, as we provide a ready to use jar file!
 
-Download latest Paper 1.10 via direct link [here](https://paperclip.emc.gs)
+Download latest Paper 1.11 via direct link [here](https://paperclip.emc.gs)
 
 CI for specific builds: [here](https://ci.destroystokyo.com/job/PaperSpigot/)
 
