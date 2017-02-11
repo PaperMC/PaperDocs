@@ -20,8 +20,19 @@ Plugin developers may be interested in the API additions made by Paper to Spigot
     - An event that fires when a player is affected by a Beacon's radius effect
 - Get TPS API
     - An API to return the server's TPS, no more ugly reflection
-
+- EntityZapEvent
+    - Act on any entity being zapped by lightning.
+- PlayerTeleportEndGatewayEvent
+    - Control when players use end gateways
+- IllegalPacketEvent
+    - Automatically punish players using cheat clients to send invalid data to your server.
+- ServerExceptionEvent
+    - Be able to act on many caught exceptions that normally you would find in your log files.
 JavaDocs for the above features can be downloaded automatically via maven, or browsed online from [here](http://javadocs.destroystokyo.com).
+- LootableInventoryReplenishEvent
+    - When using Paper's Lootable Improvement feature, be able to control if a chest should replenish or not. \
+    \
+    Ideas around this can be limiting replenishes by IP address, Limiting how many chests a single player can trigger a replenish, and more.
 
 To build against Paper-API, you need to add our maven repository to your plugin's POM:
 ```

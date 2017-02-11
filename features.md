@@ -28,26 +28,58 @@ Features and Changes
     - The server can optionally apply void damage to those that get above the nether's bedrock roof
 - Vanilla Redstone
     - Multiple internal changes to help redstone act more like it did on a vanilla server
-- Async Light Updates
-    - The server can optionally handle all lighting updates asynchronously, offloading the task from the main game loop and improving performance
+- Throttled Light Updates
+    - Vanilla optimizes light updates to let them only run when the server has time to spare, and will hold off on them if the server is lagging.
 - Disable Player Crits
     - Critical hit attacks by players can be disabled to alter gameplay
 - End Credits
     - The end game credits that appear when leaving The End dimension can be disabled
 - Flying TNT Entities
     - TNT, FallingBlock, and Enderpearls can be configured to either load chunks as they fly, or be removed from the world when they reach an unloaded chunk. Preventing players from using long distance cannons to shoot through terrain
-- Stackable Buckets
-    - Buckets can be stacked by type, enabled for milk, water, or lava individually.
 - World Generation Settings
     - Numerous world generator settings can be controlled from within Paper
-- 1.7 TNT Behavior
-    - TNT can be reverted to behave similar to the way it did in Minecraft 1.7, bringing cannons back to life
 - Timings Version 2
-    - Paper implements Timings Version 2, the latest revision of timings. Offering increased detail and performance to server timings
+    - Paper implements Timings Version 2, the latest revision of timings. Offering a tremendous increase in performance details to server owners without the need to run a full profiler.
 - Improved Chunk Saving
     - Will retry instead of giving up after a failure, and also fixes race conditions that could result in chunk rollbacks.
 - Configurable Non Player Arrow despawn
     - Make arrows fired by skeletons despawn quicker since players can not even pick those up.
 - Use $sender in commands.yml
     - You may use $sender to represent the sender of the command in your commands.yml aliases.
+- Ability to disable treasure maps
+    - If you are concerned about your Map ID's depleting, you can turn off Treasure maps from Villagers.
+- Optimized Auto Saving of Chunks
+    - The auto save process has been drastically improved. It is absolutely recommended to use the built in auto save and remove all cronjob or externally scheduled saving tasks/plugins. They will never do as good of a job as Paper's auto save.
+- Remove Player Collisions
+    - 1.9 introduced forced player collisions for servers that do not use scoreboards and was able to turn them off. Paper includes the ability to turn off player collisions even for servers who do not use scoreboard teams with the ability to disable it themselves.
+- Enhanced Vanilla Loot Tables
+    - 1.9 Introduced a new system to control the loot that is generated into chests in Mineshafts, Fortresses and such. Paper includes an option that lets you specify an automatic refreshment behavior so that servers with long term worlds can have a better experience where new players can still go and find treasure in already explored areas.
+- Vanilla Name Colors
+    - Paper has the option to restore Vanilla name formatting based on Scoreboards for servers who do not use custom chat formatting.
+- Chunk Inhabited Time Difficulty Scaling
+    - You may turn off the vanilla feature that makes chunks difficulty scale up the longer a chunk has been used. This is useful for servers with long term worlds where the spawn chunks are guaranteed to max out where players are by design meant to stay in the same area.
+- Configurable Arrow Despawn Rate
+    - You can configure arrows to despawn at a different interval than normal items on the ground.
+- Configurable Grass Spread Rate
+   - You may control how fast grass spreads, improving performance of your server.
+- Optimized Scoreboard Saving
+   - Many plugins have bugs in their use of Scoreboards that over time makes the entire Scoreboard system lag the server.
+    Paper has optimized this case and automatically corrects the problem for you.
+- Faster Chunk Saving to Disk
+   - A problem for super active servers is that when lots of chunks get unloaded, the server may not fully unload them quick enough. The server by default sleeps between each save, and when there are a lot of chunks to save, it is possible that the server adds to that queue faster than it drains it. Paper by default will remove the unnecessary delay, allowing the chunks get out of memory faster. This has tremendous performance benefits on memory consumption and Garbage Collection.
+- Improved Chunk Unload logic
+   - When a player is building, it is common that they move back and forth in a small area. This constantly causes the chunks surrounding the player to change between in range and out of range. This ultimately causes a lot of "thrashing", with unnecessary chunk unloads and loads. \
+   \
+   Paper optimizes this by ensuring a chunk is 'out of range' from a player for a configurable amount of time (default 10s), allowing the server to avoid thrashing chunks that are still likely to be used by the player.
+   
+- Configurable Keep Spawn Loaded range per world
+    - Instead of relying on the view distance for keeping a spawn loaded, one can increase or decrease the range of a worlds spawn to stay loaded. Have a super active fixed sized spawn? Ensure the range covers the entire spawn and avoid unnecessary unload/reload cycles. Have a world that is barely used? Set the range to 1, resulting in faster server start up times and less memory.
 - ... and many many more! (this list is hard to keep up-to-date)
+
+## Performance
+Paper has numerous performance optimizations that can not be found in CraftBukkit and Spigot
+
+By using Paper, you can be sure that the communities leading developers are constantly working to improve the servers
+performance, finding new areas to improve and optimizing them in any way possible that does not break the game.
+
+There are literally too many improvements in Paper that Spigot does not have to list. 
