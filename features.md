@@ -63,16 +63,15 @@ Features and Changes
 - Grass Spread Rate __[CONFIGURABLE]__
    - You may control how fast grass spreads, improving performance of your server.
 - Optimized Scoreboard Saving __[CONFIGURABLE]__
-   - Many plugins have bugs in their use of Scoreboards that over time makes the entire Scoreboard system lag the server.
-    Paper has optimized this case and automatically corrects the problem for you.
+   - Many plugins have bugs in their use of Scoreboards that over time makes the entire Scoreboard system lag the server. Paper has optimized this case and automatically corrects the problem for you.
 - Faster Chunk Saving to Disk __[CONFIGURABLE]__
-   - A problem for super active servers is that when lots of chunks get unloaded, the server may not fully unload them quick enough. The server by default sleeps between each save, and when there are a lot of chunks to save, it is possible that the server adds to that queue faster than it drains it.\
-   \
+   - A problem for super active servers is that when lots of chunks get unloaded, the server may not fully unload them quick enough. The server by default sleeps between each save, and when there are a lot of chunks to save, it is possible that the server adds to that queue faster than it drains it.
+   
    Paper by default will remove the unnecessary delay, allowing the chunks get out of memory faster. This has tremendous performance benefits on memory consumption and Garbage Collection.
 
 - Improved Chunk Unload logic __[CONFIGURABLE]__
-   - When a player is building, it is common that they move back and forth in a small area. This constantly causes the chunks surrounding the player to change between in range and out of range. This ultimately causes a lot of "thrashing", with unnecessary chunk unloads and loads. \
-   \
+   - When a player is building, it is common that they move back and forth in a small area. This constantly causes the chunks surrounding the player to change between in range and out of range. This ultimately causes a lot of "thrashing", with unnecessary chunk unloads and loads.
+   
    Paper optimizes this by ensuring a chunk is 'out of range' from a player for a configurable amount of time (default 10s), allowing the server to avoid thrashing chunks that are still likely to be used by the player.
    
 - Keep Spawn Loaded range per world __[CONFIGURABLE]__
