@@ -4,7 +4,7 @@ Features and Changes
     - In Paper, vanished players are better hidden. Arrows, fishing hooks, and other projectiles can fly through vanished players, as if they aren't even there. Players can place blocks even if someone is invisible standing directly in front of them.
 - Undead Horses __[CONFIGURABLE]__
     - Undead horses can be leashed, as though they are just normal horses, if you so want them to be
-- Squid Spawn Heights__[CONFIGURABLE]__
+- Squid Spawn Heights __[CONFIGURABLE]__
     - The spawning height of squid entities can be altered via our config file
 - Blocking Damage Modifier __[CONFIGURABLE]__
     - The damage modifier a player gets for blocking (right clicking with a sword) is configurable
