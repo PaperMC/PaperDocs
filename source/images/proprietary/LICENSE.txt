@@ -1,0 +1,4 @@
+The files in this directory are --NOT-- licensed under the same license as the repository.
+
+Please see the art assets page for information about the limited set of terms under which you may use the assets listed in this directory.
+A copy of that file can be found at ~/source/about/assets.rst, where ~ represents the root of the source repository.

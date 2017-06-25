@@ -23,20 +23,19 @@ We appreciate any and all contributions we receieve and hope that if you see som
 
 ## Building
 
-This repository is built using the [mkdocs platform](http://www.mkdocs.org/), as such, it requires a few things.
+You can setup an environment so you can instantly see the changes that make to the docs.
 
-1. Install [Python 3](https://www.python.org)
-2. Install [mkdocs](http://www.mkdocs.org/#installation) via Python by using `pip install mkdocs`
+1. [Install Python 3](https://www.python.org)
+2. [Install node.js](https://nodejs.org)
 
-From there, you can build this repo into a set of sources for remote deployment using
+In terminal or the command line, within the directory containing this README, run the following commands:
 
-`mkdocs build`
+	npm install -g gulp
+	npm install
+	pip install -r requirements.txt
+	gulp
 
-Or, if you're just contributing back to us, you can have mkdocs run a local webserver that will monitor file changes using
-
-`mkdocs serve`
-
-The local mkdocs webserver will monitor changes to the source files and automatically refresh any clients connected to the local webserver. It is the preferred way to do documentation development.
+Your browser should open to reveal the docs. When you make a change to the documentation, the docs should refresh in the browser (possibly after a few seconds).
 
 ## Contact
 
@@ -44,3 +43,7 @@ If you need anything else not covered above, you can contact us directly via IRC
 
   + #Paper on EsperNet ([Webchat](https://webchat.esper.net/?channels=paper))
   + #Paper on SpigotIRC ([Webchat](http://elmer.spi.gt/iris/?channels=paper))
+
+## Special Thanks
+This project is based on the awesome work done by the [SpongePowered team](https://github.com/SpongePowered/) and [all those](https://github.com/SpongePowered/SpongeDocs/graphs/contributors) who helped them with their [SpongeDocs](https://github.com/SpongePowered/SpongeDocs) platform.
+Therefore it is only appropriate we thank them for all their hardwork that allowed us to build our own based on the structures they created for their own platform.
