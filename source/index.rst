@@ -7,6 +7,10 @@ Introduction
 
 Welcome to PaperDocs, the official documentation source for the `PaperMC <https://www.github.com/PaperMC>`__ project.
 
+Paper is a high performance fork of the Spigot Minecraft Server that aims to fix gameplay and mechanics inconsistencies and improve performance.
+
+Paper contains numerous :doc:`about/features`, including many performance improvements not found in Spigot.
+
 Not sure what you're looking for? Try our :doc:`about/index` section, which contains a short :doc:`about/introduction`,
 our :doc:`about/faq` and an article about :doc:`about/structure`.
 
