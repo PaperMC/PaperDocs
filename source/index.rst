@@ -2,8 +2,6 @@
 PaperMC Documentation
 =====================
 
-// TODO: Make this less of a clone of Sponge's main page
-
 Introduction
 ============
 
@@ -17,63 +15,10 @@ based server.
 
 The PaperMC project has several main components. Learn more about the project structure :doc:`here <about/structure>`.
 
-.. note::
-
-    Paper's development is ongoing. There may be bugs or other issues when using the latest tip-of-tree builds. Let us know
-    if and when you find them.
-
-Contents
-========
-
-Creating a Server
-~~~~~~~~~~~~~~~~~
-
-This section is for users who have a Sponge server or are interested in creating one.
-
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:
-
-    server/index
-
-Preparing for Development
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Get yourself and your machine ready to develop Sponge itself or your own plugins! Please read this section before
-:doc:`plugin/index` and :doc:`contributing/index`.
-
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:
-
-    preparing/index
-
-Creating Plugins
-~~~~~~~~~~~~~~~~
-
-Need help and information while coding your plugin for the SpongeAPI? Look no further!
-
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:
-
-    plugin/index
-
-Ore
-~~~
-
-Learn how to publish, install, browse, and use our Web API for our custom built plugin hosting solution, Ore.
-
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:
-
-    ore/index
-
-Contributing to Sponge
+Contributing to Paper
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Look here if you want to help out in making Sponge better. Make Spongie proud!
+It's great to see new contributors to the project! Here are some documents which provide further information to get you started:
 
 .. toctree::
     :maxdepth: 2
@@ -81,11 +26,10 @@ Look here if you want to help out in making Sponge better. Make Spongie proud!
 
     contributing/index
 
-About Sponge
+About Paper
 ~~~~~~~~~~~~
 
-This section contains basic information about the project, read this if you're confused about Sponge, its parts, or our
-goals.
+Paper is a fork of Spigot with certain goals in mind. The following links explain more about the purpose, rationale and structure of the PaperMC project.
 
 .. toctree::
     :maxdepth: 3
@@ -98,12 +42,8 @@ Acknowledgements
 
 .. image:: /images/yklogo.png
 
-The SpongePowered team are grateful to *YourKit* for providing its full-featured Java Profiler free to open source
-projects. YourKit, LLC is the creator of `YourKit Java Profiler <https://www.yourkit.com/java/profiler/index.jsp>`_
-and `YourKit .NET Profiler <https://www.yourkit.com/.net/profiler/index.jsp>`_, innovative and intelligent tools
-for profiling Java and .NET applications.
-
-
+`YourKit <http://www.yourkit.com/>`_ makers of the outstanding java profiler, support open source projects of all kinds with their full featured `Java <https://www.yourkit.com/java/profiler/index.jsp>`_ and `.NET <https://www.yourkit.com/.net/profiler/index.jsp>`_ application profilers.
+We thank them for granting Paper an OSS license so that we can make our software the best it can be.
 
 Links
 =====
@@ -112,12 +52,10 @@ Links
     :maxdepth: 2
     :titlesonly:
 
--  `Sponge Homepage <https://spongepowered.org>`_
--  `Sponge Forums <https://forums.spongepowered.org>`_
--  `Sponge Downloads <https://spongepowered.org/downloads>`_
--  `SpongeAPI Issue Tracker <https://github.com/SpongePowered/SpongeAPI/issues?q=>`_
--  `SpongeAPI Javadocs <https://jd.spongepowered.org>`_
--  `Sponge Twitter <https://twitter.com/SpongePowered>`_
--  `Sponge Subreddit <https://reddit.com/r/SpongeProject>`_
--  `Sponge GitHub <https://github.com/SpongePowered>`_
--  `Sponge Patreon Donation Page <https://www.patreon.com/Sponge?ty=h>`_
+-  `Homepage <https://aquifermc.org/>`_
+-  `Docs <https://paper.readthedocs.io>`_
+-  `GitHub <https://github.com/PaperMC/Paper>`_
+-  `Javadocs <https://paperdocs.emc.gs>`_
+-  `Issue Tracker <https://github.com/PaperMC/Paper/issues>`_
+-  `Build server <https://ci.destroystokyo.com/job/PaperSpigot/>`_
+-  `Organisation GitHub <https://github.com/PaperMC>`_
