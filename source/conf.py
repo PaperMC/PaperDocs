@@ -90,7 +90,7 @@ gettext_compact = False
 # -- sphinx-JDLinker Configuration ----------------------------------------
 
 javadoc_links = {
-    'https://jd.spongepowered.org/%s/' % release: ['org.spongepowered.api'],
+    'https://paperdocs.emc.gs/': ['com.destroystokyo.paper'],
     'http://zml2008.github.io/configurate/apidocs/': ['ninja.leaping.configurate'],
     'https://docs.oracle.com/javase/8/docs/api/': ['java'],
     'https://google.github.io/guava/releases/17.0/api/docs/': ['com.google.common']
