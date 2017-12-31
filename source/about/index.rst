@@ -13,5 +13,6 @@ Contents
 
     introduction
     faq
+    features
     structure
     assets

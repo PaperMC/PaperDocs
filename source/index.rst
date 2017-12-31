@@ -19,13 +19,24 @@ based server.
 
 The PaperMC project has several main components. Learn more about the project structure :doc:`here <about/structure>`.
 
+Running A Server
+~~~~~~~~~~~~~~~~
+
+Running a Paper server is easy. This section will cover common tasks such as configuring it, maintaining plugins, and general best practices.
+
+.. toctree::
+    :maxdepth: 3
+    :titlesonly:
+
+    server/index
+
 Contributing to Paper
 ~~~~~~~~~~~~~~~~~~~~~~
 
 It's great to see new contributors to the project! Here are some documents which provide further information to get you started:
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :titlesonly:
 
     contributing/index
@@ -44,7 +55,7 @@ Paper is a fork of Spigot with certain goals in mind. The following links explai
 Acknowledgements
 ~~~~~~~~~~~~~~~~
 
-.. image:: /images/yklogo.png
+.. image:: https://www.yourkit.com/images/yklogo.png
 
 `YourKit <http://www.yourkit.com/>`_ makers of the outstanding java profiler, support open source projects of all kinds with their full featured `Java <https://www.yourkit.com/java/profiler/index.jsp>`_ and `.NET <https://www.yourkit.com/.net/profiler/index.jsp>`_ application profilers.
 We thank them for granting Paper an OSS license so that we can make our software the best it can be.
