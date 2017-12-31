@@ -23,19 +23,34 @@ We appreciate any and all contributions we receieve and hope that if you see som
 
 ## Building
 
+### Environment Setup
+
 You can setup an environment so you can instantly see the changes that make to the docs.
 
 1. [Install Python 3](https://www.python.org)
-2. [Install node.js](https://nodejs.org)
+2. Install the needed sphinx packages
 
-In terminal or the command line, within the directory containing this README, run the following commands:
+After installing Python 3 (as well as python-pip), run the following commnads to install the sphinx packages:
 
-	npm install -g gulp
-	npm install
-	pip install -r requirements.txt
-	gulp
+	$ pip install sphinx sphinx-autobuild sphinx-rtd-theme
 
-Your browser should open to reveal the docs. When you make a change to the documentation, the docs should refresh in the browser (possibly after a few seconds).
+### Building
+
+To build the source into a proper HTML site, run the following command on Linux/macOS/WSL
+
+	$ make html
+
+To build the source on Windows without WSL, open CMD and execute the make.bat script:
+
+	make.bat html
+
+### Building Automatically On Change
+
+To automatically rebuild the HTML files as you edit the .rst source files, execute the following command:
+
+	$ sphinx-autobuild source _build/html
+
+Open your browser and connect to the address provided by the command. When you make a change to the documentation, the docs should refresh in the browser (possibly after a few seconds).
 
 ## Contact
 
