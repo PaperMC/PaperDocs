@@ -1,6 +1,6 @@
-================
-Running A Server
-================
+=============
+Paper Server
+=============
 
 This page has yet to be written.
 

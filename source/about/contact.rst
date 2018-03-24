@@ -11,7 +11,7 @@ IRC
 
 The Paper project handles most of our communication via IRC.
 
-You can join us in either of the two locations:
+You can join us on either of these two servers:
 
 * `#Paper on irc.spi.gt <https://irc.spi.gt/iris/?channels=paper>`_
 
@@ -33,3 +33,5 @@ via our Twitter page.
 
 * `@PaperPowerered <https://twitter.com/PaperPowered>`_
 
+You should not DM or @ this account for support. It is not
+checked as regularly as the above locations.

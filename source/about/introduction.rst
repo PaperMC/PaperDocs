@@ -21,11 +21,11 @@ Paper is largely composed of two projects:
 
 * **Paper-API**, An enhanced version of the Bukkit API.
 
-* **Paper-Server**, usually just referred to as 'Paper', Paper-Server is an enhanced implementation of the server that goes hand-in-hand with our enhanced API.
+* **Paper-Server**, usually just referred to as *Paper*, Paper-Server is an enhanced implementation of the server that goes hand-in-hand with our enhanced API.
 
 There are also other, more technical, projects that support the above two projects. Paper-API and Paper-Server remain our priority however.
 
 Where can I download Paper?
 ---------------------------
 
-A complete list of available builds can be obtained from our `continuous integration server <https://ci.destroystokyo.com/job/PaperSpigot>`_
+A complete list of available builds can be obtained from our `continuous integration server <https://ci.destroystokyo.com/job/Paper>`_

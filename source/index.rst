@@ -14,7 +14,7 @@ Welcome to PaperDocs, the official documentation source for the `PaperMC <https:
 
 Paper is a high performance fork of the Spigot Minecraft Server that aims to fix gameplay and mechanics inconsistencies and improve performance.
 
-Paper contains numerous :doc:`about/features`, including many performance improvements not found in Spigot.
+Paper contains numerous features, including many performance improvements not found in Spigot.
 
 Not sure what you're looking for? Try our :doc:`about/index` section, which contains a short :doc:`about/introduction`,
 our :doc:`about/faq` and an article about :doc:`about/structure`.
@@ -77,5 +77,8 @@ Acknowledgements
 
 .. image:: https://www.yourkit.com/images/yklogo.png
 
-`YourKit <http://www.yourkit.com/>`_ makers of the outstanding java profiler, support open source projects of all kinds with their full featured `Java <https://www.yourkit.com/java/profiler/index.jsp>`_ and `.NET <https://www.yourkit.com/.net/profiler/index.jsp>`_ application profilers.
+`YourKit <http://www.yourkit.com/>`_, makers of the outstanding java profiler,
+support open source projects of all kinds with their fully featured
+`Java <https://www.yourkit.com/java/profiler/index.jsp>`_ and
+`.NET <https://www.yourkit.com/.net/profiler/index.jsp>`_ application profilers.
 We thank them for granting Paper an OSS license so that we can make our software the best it can be.
