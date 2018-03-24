@@ -16,6 +16,9 @@ coverage.xml
 docs/_build/
 build/
 
+### Sphinx extensions ###
+*.pyc
+
 ### PyBuilder ###
 target/
 *.pydevproject
