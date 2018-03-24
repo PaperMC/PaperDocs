@@ -19,7 +19,7 @@ Paper contains numerous features, including many performance improvements not fo
 Not sure what you're looking for? Try our :doc:`about/index` section, which contains a short :doc:`about/introduction`,
 our :doc:`about/faq` and an article about :doc:`about/structure`.
 
-Server owners should read our tips and instructions in :doc:`server/index` on how to install, run and maintain a Sponge
+Server owners should read our tips and instructions in :doc:`server/index` on how to install, run and maintain a Paper
 based server.
 
 The PaperMC project has several main components. Learn more about the project structure :doc:`here <about/structure>`.
