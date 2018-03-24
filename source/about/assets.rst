@@ -2,11 +2,12 @@
 Art Assets
 ==========
 
-This page provides the official PaperMC logomark and the terms under which you may use it.
-It can be used to spread the word about PaperMC.
+This page provides the official PaperMC logomark and the terms under which you
+may use it.
 
 .. attention::
-  The PaperMC logo is subject to its own seperate licensing terms and does not inherit any from the projects it represents.
+  The PaperMC logo is subject to its own seperate licensing terms and does not
+  inherit any from the projects it represents.
 
 You may:
 
@@ -20,7 +21,7 @@ You may not:
 
 * Alter any of the colors used in the PaperMC logomark.
 
-* Change the dimensions of either the PaperMC logomark.
+* Change the dimensions of the PaperMC logomark.
 
 * Create modified versions of the PaperMC logomark or derivative works of it.
 

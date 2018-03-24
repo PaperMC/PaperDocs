@@ -2,6 +2,11 @@
 PaperMC Documentation
 =====================
 
+.. warning::
+    This documentation is a work in progress. Some things are still missing. If
+    you'd like to see it completed faster, you can contribute to the documentation
+    `here <https://github.com/PaperMC/PaperDocs>`_.
+
 Introduction
 ============
 
@@ -52,16 +57,8 @@ Paper is a fork of Spigot with certain goals in mind. The following links explai
 
     about/index
 
-Acknowledgements
-~~~~~~~~~~~~~~~~
-
-.. image:: https://www.yourkit.com/images/yklogo.png
-
-`YourKit <http://www.yourkit.com/>`_ makers of the outstanding java profiler, support open source projects of all kinds with their full featured `Java <https://www.yourkit.com/java/profiler/index.jsp>`_ and `.NET <https://www.yourkit.com/.net/profiler/index.jsp>`_ application profilers.
-We thank them for granting Paper an OSS license so that we can make our software the best it can be.
-
-Links
-=====
+Useful Links
+============
 
 .. toctree::
     :maxdepth: 2
@@ -72,5 +69,13 @@ Links
 -  `GitHub <https://github.com/PaperMC/Paper>`_
 -  `Javadocs <https://paperdocs.emc.gs>`_
 -  `Issue Tracker <https://github.com/PaperMC/Paper/issues>`_
--  `Build server <https://ci.destroystokyo.com/job/PaperSpigot/>`_
--  `Organisation GitHub <https://github.com/PaperMC>`_
+-  `Build server <https://ci.destroystokyo.com/job/Paper/>`_
+-  `Organization GitHub <https://github.com/PaperMC>`_
+
+Acknowledgements
+================
+
+.. image:: https://www.yourkit.com/images/yklogo.png
+
+`YourKit <http://www.yourkit.com/>`_ makers of the outstanding java profiler, support open source projects of all kinds with their full featured `Java <https://www.yourkit.com/java/profiler/index.jsp>`_ and `.NET <https://www.yourkit.com/.net/profiler/index.jsp>`_ application profilers.
+We thank them for granting Paper an OSS license so that we can make our software the best it can be.
