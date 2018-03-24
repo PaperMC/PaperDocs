@@ -38,7 +38,6 @@ extensions = [
 # github config
 edit_on_github_project = 'PaperMC/PaperDocs'
 edit_on_github_branch = 'master'
-edit_on_github_root = 'source'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['templates']
@@ -111,7 +110,6 @@ html_static_path = ['_static']
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
     '**': [
-        'globaltoc.html',
         'relations.html',  # needs 'show_related': True theme option to display
         'searchbox.html'
     ]
