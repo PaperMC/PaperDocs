@@ -242,7 +242,7 @@ enable-treasure-maps
 treasure-maps-return-already-discovered
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
-* **description**: Instructs the server to pre-fill treasure maps with data rather than requiring the player discover it themselves.
+* **description**: Instructs the server to target the first treasure location found, rather than the first undiscovered one. Vanilla mechanics normally find the first undiscovered location, which may lead to structures that were not fully looted, and can also fail with a world border set. Enabling this will make the map simply find the closest target structure, regardless if it has been loaded or not already.
 
 nether-ceiling-void-damage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
