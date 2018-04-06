@@ -45,7 +45,7 @@ player-auto-save-rate
 max-player-auto-save-per-tick
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: -1
-* **description**: Controls how many players may have their data autosaved per tick. Default is automatic.
+* **description**: Controls how many players may have their data autosaved per tick. The default is to automatically use Paper's recommended value, currently 10, subject to change as needed.
 
 load-permissions-yml-before-plugins
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
