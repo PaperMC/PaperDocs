@@ -76,7 +76,7 @@ TODO: Link to developer docs here :D
 Does Paper make any breaking changes to the API?
 ------------------------------------------------
 
-Forunately, Paper does not make breaking API changes so it can maintain plugin compatibility with upstream Spigot and CraftBukkit.
+Fortunately, Paper does not make breaking API changes so it can maintain plugin compatibility with upstream Spigot and CraftBukkit.
 At the same time, this means we are also sometimes limited with what we can do and how we can do it.
 
 It's a double-edged sword.
