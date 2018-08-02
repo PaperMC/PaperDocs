@@ -7,6 +7,24 @@ PaperMC Documentation
     you'd like to see it completed faster, you can contribute to the documentation
     `here <https://github.com/PaperMC/PaperDocs>`_.
 
+Useful Links
+============
+
+.. toctree::
+    :maxdepth: 2
+    :titlesonly:
+
+-  `1.12 Latest Downloads <https://paperci.emc.gs>`__
+-  `1.13 Latest Downloads <https://paper113.emc.gs>`__
+-  `Discord <https://paperdiscord.emc.gs>`__
+-  `IRC <https://paperchat.emc.gs>`__
+-  `Docs <https://paper.readthedocs.io>`_
+-  `GitHub <https://github.com/PaperMC/Paper>`_
+-  `Forums <https://aquifermc.org/>`_
+-  `Javadocs <https://paperdocs.emc.gs>`_
+-  `Issue Tracker <https://github.com/PaperMC/Paper/issues>`_
+-  `Organization GitHub <https://github.com/PaperMC>`_
+
 Introduction
 ============
 
@@ -14,7 +32,7 @@ Welcome to PaperDocs, the official documentation source for the `PaperMC <https:
 
 Paper is a high performance fork of the Spigot Minecraft Server that aims to fix gameplay and mechanics inconsistencies and improve performance.
 
-Paper contains numerous features, including many performance improvements not found in Spigot.
+Paper contains numerous features, bug fixes, exploit preventions including many MAJOR performance improvements not found in Spigot.
 
 Not sure what you're looking for? Try our :doc:`about/index` section, which contains a short :doc:`about/introduction`,
 our :doc:`about/faq` and an article about :doc:`about/structure`.
@@ -56,21 +74,6 @@ Paper is a fork of Spigot with certain goals in mind. The following links explai
     :titlesonly:
 
     about/index
-
-Useful Links
-============
-
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:
-
--  `Homepage <https://aquifermc.org/>`_
--  `Docs <https://paper.readthedocs.io>`_
--  `GitHub <https://github.com/PaperMC/Paper>`_
--  `Javadocs <https://paperdocs.emc.gs>`_
--  `Issue Tracker <https://github.com/PaperMC/Paper/issues>`_
--  `Build server <https://ci.destroystokyo.com/job/Paper/>`_
--  `Organization GitHub <https://github.com/PaperMC>`_
 
 Acknowledgements
 ================
