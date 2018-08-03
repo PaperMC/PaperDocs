@@ -5,9 +5,10 @@ Introduction
 What is Paper?
 --------------
 
-Paper, and the PaperMC project behind it, exist to expand the platforms upon which it is
-built. Paper has a relatively small team, despite that, we have received a large amount of
-attention and a great showing of support from both server administrators and fellow developers.
+Paper, and the PaperMC project behind it, exist to expand the platforms upon
+which it is built. Paper has a relatively small team, despite that, we have
+received a large amount of attention and a great showing of support from both
+server administrators and fellow developers.
 
 As such, we focus on a few things:
 
@@ -21,9 +22,12 @@ Paper is largely composed of two projects:
 
 * **Paper-API**, An enhanced version of the Bukkit API.
 
-* **Paper-Server**, usually just referred to as *Paper*, Paper-Server is an enhanced implementation of the server that goes hand-in-hand with our enhanced API.
+* **Paper-Server**, usually just referred to as *Paper*, Paper-Server is an
+  enhanced implementation of the server that goes hand-in-hand with our
+  enhanced API.
 
-There are also other, more technical, projects that support the above two projects. Paper-API and Paper-Server remain our priority however.
+There are also other, more technical, projects that support the above two
+projects. For more information on that see :doc:`../about/structure`
 
 Where can I download Paper?
 ---------------------------

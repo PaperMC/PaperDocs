@@ -11,11 +11,14 @@ may use it.
 
 You may:
 
-* Use the PaperMC logomark to represent the project in blogposts and other places in order to bring attention to each project respectively.
+* Use the PaperMC logomark to represent the project in blogposts and other
+  places in order to bring attention to the project.
 
-* Use the PaperMC logomark to represent Paper-Server in downloads, server selectors, and similar places.
+* Use the PaperMC logomark to represent Paper-Server in downloads, server
+  selectors, and similar places.
 
-* Crop out extra transparent canvas space behind the PaperMC logomark so it fits better.
+* Crop out extra transparent canvas space behind the PaperMC logomark so it
+  fits better next to other content.
 
 You may not:
 
@@ -27,18 +30,21 @@ You may not:
 
 * Add your own project images or branding to the PaperMC logomark.
 
-* Claim the logomark as your own work or use it as a representation of your own projects.
+* Claim the logomark as your own work or use it as a representation of your
+  own projects.
 
-* Sell or use the PaperMC logomark in a commercial setting unless you have been explicitly permitted to do so.
+* Sell the PaperMC logomark on its own or as part of other products without
+  explicit permission.
 
 * Alter the transparency of any of the elements in the PaperMC logomark
 
 .. note::
-  The logomark is available in higher resolution and vector formats. If you need a higher resolution version please contact us.
+  The logomark is available in higher resolution and vector formats.
+  If you need a higher resolution version please contact us.
 
 The official PaperMC logomark
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /images/proprietary/papermc_logomark_500.png
     :align: center
-    :alt: official PaperMC logomark
+    :alt: Official PaperMC logomark

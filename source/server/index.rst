@@ -1,12 +1,10 @@
-=============
-Paper Server
-=============
+================
+Running A Server
+================
 
-This page has yet to be written.
+Running a Paper server is easy.
 
-It will contain information about running a server.
-
-For now, it's pretty barren. You can access configuration information below.
+Click the links below for more information.
 
 Contents
 ========
@@ -15,4 +13,5 @@ Contents
     :maxdepth: 2
     :titlesonly:
 
+    getting-started
     configuration
