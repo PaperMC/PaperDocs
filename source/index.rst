@@ -16,14 +16,17 @@ Useful Links
 
 -  `1.12 Latest Downloads <https://paperci.emc.gs>`__
 -  `1.13 Latest Downloads <https://paper113.emc.gs>`__
--  `Discord <https://paperdiscord.emc.gs>`__
--  `IRC <https://paperchat.emc.gs>`__
 -  `Docs <https://paper.readthedocs.io>`_
 -  `GitHub <https://github.com/PaperMC/Paper>`_
 -  `Forums <https://aquifermc.org/>`_
 -  `Javadocs <https://paperdocs.emc.gs>`_
 -  `Issue Tracker <https://github.com/PaperMC/Paper/issues>`_
 -  `Organization GitHub <https://github.com/PaperMC>`_
+
+Chat With Us!
+=============
+-  `Discord <https://paperdiscord.emc.gs>`__
+-  `IRC <https://paperchat.emc.gs>`__
 
 Introduction
 ============
