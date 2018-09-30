@@ -28,9 +28,9 @@ See our docs on starting out: :doc:`/server/getting-started`
 Where do I get it?
 ------------------
 
-Builds of Paper are already available from our `continuous integration server <https://ci.destroystokyo.com/job/Paper/>`_.
+Builds of Paper are already available from our `continuous integration server <https://papermc.io/ci/job/Paper/>`_.
 
-Alternatively, you can always get the latest build by clicking `this link <https://ci.destroystokyo.com/job/Paper/lastSuccessfulBuild/artifact/paperclip.jar>`_.
+Alternatively, you can always get the latest build by clicking `this link <https://papermc.io/ci/job/Paper/lastSuccessfulBuild/artifact/paperclip.jar>`_.
 
 Server Administrators
 =====================

@@ -31,7 +31,7 @@ Getting A Server Jar
 ~~~~~~~~~~~~~~~~~~~~~
 
 Paper provides runnable server jars directly from our continuous integration
-server `here <https://destroystokyo.com/ci/job/Paper>`_.
+server `here <https://papermc.io/ci/job/Paper/>`_.
 
 Download one of the artifacts (either paperclip.jar or paperclip-####.jar, they
 are the same) and save it to a new directory somewhere on your file system.

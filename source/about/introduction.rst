@@ -32,4 +32,4 @@ projects. For more information on that see :doc:`../about/structure`
 Where can I download Paper?
 ---------------------------
 
-A complete list of available builds can be obtained from our `continuous integration server <https://ci.destroystokyo.com/job/Paper>`_
+A complete list of available builds can be obtained from our `continuous integration server <https://papermc.io/ci/job/Paper/>`_
