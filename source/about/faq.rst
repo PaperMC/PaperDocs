@@ -81,7 +81,7 @@ Does Paper support Forge Mods?
 
 No, Paper does not support Forge mods of any kind. While there have been
 attempts to merge the Forge and Bukkit platforms in the past, it has never
-been a wonderful experience for developers or administators.
+been a wonderful experience for developers or administrators.
 
 If this is something you're after, we'd point you towards the `Sponge Project <https://www.spongepowered.org>`_
 instead.
