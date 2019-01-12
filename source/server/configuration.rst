@@ -347,10 +347,12 @@ anti-xray
       data.
 
 * chunk-edge-mode
-    - **default**: 1
-    - **description**: Sets how the engine handles chunk edges. Where 1 is to
-      let the server decide, 2 is to wait for the chunk to be loaded naturally,
-      and 3 is to force the chunk to load.
+    - **default**: 3
+    - **description**: Sets how the engine handles chunk edges. Where 1 is not
+    to obfuscate the edges of chunks with unloaded neighbors, 2 is to not send
+    the chunk until its neighbors are present (similar to a x-1 view distance),
+    and 3 is to load the neighbor so it can properly obfuscate the current edge
+    (similar to an x+1 view distance).
 
 * max-chunk-section-index
     - **default**: 3
