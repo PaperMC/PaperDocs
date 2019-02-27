@@ -64,6 +64,7 @@ explain more about the purpose, rationale and structure of the PaperMC project.
     :titlesonly:
 
     about/index
+    site/index
 
 Useful Links
 ============
