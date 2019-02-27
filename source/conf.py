@@ -30,7 +30,6 @@ sys.path.append(os.path.abspath('../exts'))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'edit_on_github',
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest'
 ]
