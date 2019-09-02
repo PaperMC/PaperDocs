@@ -73,8 +73,8 @@ Useful Links
     :maxdepth: 2
     :titlesonly:
 
--  `1.12 Latest Downloads <https://paperci.emc.gs>`__
 -  `1.13 Latest Downloads <https://paper113.emc.gs>`__
+-  `1.14 Latest Downloads <https://papermc.io/downloads#Paper-1.14>`__
 -  `Discord <https://paperdiscord.emc.gs>`__
 -  `IRC <https://paperchat.emc.gs>`__
 -  `Docs <https://paper.readthedocs.io>`_
