@@ -55,6 +55,24 @@ use-versioned-world
 * **warning**: This setting is highly experimental! Don't use this in a
   production environment!
 
+velocity-support
+~~~~~~~~~~~~~~~~
+* enabled
+    - **default**: false
+    - **description**: Set this to true if this server is behind a `Velocity
+      <https://www.velocitypowered.com/>`_ proxy.
+
+* online-mode
+    - **default**: true
+    - **description**: Instructs the server how to handle player UUIDs and data
+      when behind velocity. Set to match your proxy's online-mode setting.
+
+* secret
+    - **default**: ' ' (empty string)
+    - **description**: The secret string that is shared by your Velocity proxy
+      and this server. This needs to match your proxy's ``forwarding-secret``
+      setting.
+
 enable-player-collisions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
