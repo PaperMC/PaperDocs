@@ -109,6 +109,19 @@ spam-limiter
     - **description**: The number that the internal tab spam counter can reach
       until the server kicks the player for spam.
 
+book-size
+~~~~~~~~~
+* page-max
+    - **default**: 2560
+    - **description**: The max number of bytes a single page in a book can
+      contribute to the allowed byte total for a book.
+
+* total-multiplier
+    - **default**: 0.98
+    - **description**: Each page has this multiple of bytes from the last page
+      as it's contribution to the allowed byte total for a book (with the first
+      page being having a multiplier of 1.0).
+
 enable-player-collisions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
