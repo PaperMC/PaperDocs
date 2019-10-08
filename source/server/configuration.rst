@@ -226,13 +226,17 @@ timings
 * history-interval
     - **default**: 300
     - **description**: The interval in seconds between individual points in the
-      Timings report
+      Timings report.
 
 * history-length
     - **default**: 3600
     - **description**: The total amount of data to keep for a single report.
     - **warning**: This value is validated server side, massive reports will be
       rejected by the report site.
+
+* server-name
+    - **default**: Unknown Server
+    - **description**: Instructs timings on what to put in for the server name.
 
 messages
 ~~~~~~~~
