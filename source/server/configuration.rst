@@ -737,12 +737,6 @@ disable-ice-and-snow
 * **default**: false
 * **description**: Disables ice and snow formation.
 
-fire-physics-event-for-redstone
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Instructs the server to fire the *BlockPhysicsEvent* when
-  redstone is activated.
-
 mob-spawner-tick-rate
 ~~~~~~~~~~~~~~~~~~~~~
 * **default**: 1
