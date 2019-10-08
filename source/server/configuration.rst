@@ -512,11 +512,11 @@ optimize-explosions
 * **description**: Instructs the server to cache entity lookups during an
   explosion, rather than recalculating throughout the process.
 
-use-chunk-inhabited-timer
-~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: true
-* **description**: Instructs the server to factor the chunk inhabited timer
-  into various calculations.
+fixed-chunk-inhabited-time
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: -1
+* **description**: If 0 or greater, set the chunk inhabited time to a fixed
+  number.
 * **note**: The timer is increased when chunks are kept loaded because of
   player activity.
 
