@@ -34,6 +34,12 @@ verbose
 * **description**: Sets whether the server should dump all configuration values
   to the server log on startup.
 
+save-player-data
+~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Sets whether the server should save player data, such as
+  inventories, experience, and advancements
+
 enable-player-collisions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
