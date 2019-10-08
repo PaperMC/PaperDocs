@@ -64,8 +64,8 @@ load-permissions-yml-before-plugins
 bungee-online-mode
 ~~~~~~~~~~~~~~~~~~
 * **default**: true
-* **description**: Instructs the server how to behave when behind bungee
-  Set to match your proxy's online-mode setting.
+* **description**: Instructs the server how to handle player UUIDs and data
+  when behind bungee. Set to match your proxy's online-mode setting.
 
 sleep-between-chunk-saves
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
