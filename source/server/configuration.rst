@@ -703,6 +703,24 @@ disable-creeper-lingering-effect
 * **description**: Disables creepers randomly leaving behind a lingering area
   effect cloud.
 
+duplicate-uuid-resolver
+~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: saferegen
+* **description**: Specifies the method the server uses to resolve entities with
+  duplicate UUIDs. This can be one of the following values:
+
+    - **saferegen**: Regenerate a UUID for the entity, or delete it if they are
+      close.
+    - **delete**: Delete the entity.
+    - **silent**: Does nothing, not printing logs.
+    - **warn**: Does nothing, printing logs.
+
+duplicate-uuid-saferegen-delete-range
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: 32
+* **description**: If multiple entities with duplicate UUIDs are within this
+  many blocks, saferegen will delete all but 1 of them.
+
 disable-thunder
 ~~~~~~~~~~~~~~~
 * **default**: false
