@@ -85,6 +85,18 @@ async-chunks
     - **description**: The number of threads the server should use for world
       generation, set to (number of processors - 1) by default.
 
+watchdog
+~~~~~~~~
+* early-warning-every
+    - **default**: 5000
+    - **description**: The interval in milliseconds between printed thread
+      dumps while the server is hanging.
+
+* early-warning-delay
+    - **default**: 10000
+    - **description**: The number of milliseconds before the watchdog thread
+      starts printing thread dumps after the server starts hanging.
+
 enable-player-collisions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
