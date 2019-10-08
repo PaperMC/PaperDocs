@@ -97,6 +97,18 @@ watchdog
     - **description**: The number of milliseconds before the watchdog thread
       starts printing thread dumps after the server starts hanging.
 
+spam-limiter
+~~~~~~~~~~~~
+* tab-spam-increment
+    - **default**: 1
+    - **description**: The amount the internal tab spam counter increases by
+      when a player presses tab in the chat window.
+
+* tab-spam-limit
+    - **default**: 500
+    - **description**: The number that the internal tab spam counter can reach
+      until the server kicks the player for spam.
+
 enable-player-collisions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
