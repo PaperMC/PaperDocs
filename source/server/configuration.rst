@@ -236,6 +236,13 @@ timings
 
 messages
 ~~~~~~~~
+* no-permission
+        - **default**: '&cI''m sorry, but you do not have permission to perform
+          this command. Please contact the server administrators if you
+          believe that this is in error.'
+        - **description**: The message the server sends to requestors with
+          insufficient permissions.
+
 * kick
     - authentication-servers-down
         - **default**: ' ' (empty string)
@@ -243,6 +250,11 @@ messages
           translateable kick message.
         - **description**: Message to kick a player with when they are
           disconnected because the Mojang authentication servers are down.
+
+    - connection-throttle
+        - **default**: Connection throttled! Please wait before reconnecting.
+        - **description**: Message to use when kicking a player when their
+          connection is throttled.
 
     - flying-player
         - **default**: Flying is not enabled on this server
