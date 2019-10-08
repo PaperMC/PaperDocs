@@ -275,6 +275,12 @@ World Settings
 World settings are configured on a per-world basis. The child-node *default*
 is used for all worlds that do not have their own specific settings.
 
+per-player-mob-spawns
+~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Determines whether the mob limit (in bukkit.yml) is counted
+  per-player or for the entire server.
+
 keep-spawn-loaded-range
 ~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 8
