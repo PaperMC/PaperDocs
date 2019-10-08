@@ -40,6 +40,13 @@ save-player-data
 * **description**: Sets whether the server should save player data, such as
   inventories, experience, and advancements
 
+use-alternative-luck-formula
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Use alternative luck formula by Aikar, allowing luck to be
+  applied to items that have no quality defined. Makes major changes to fishing
+  formulas.
+
 enable-player-collisions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
