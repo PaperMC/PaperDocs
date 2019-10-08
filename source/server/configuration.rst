@@ -737,6 +737,12 @@ disable-ice-and-snow
 * **default**: false
 * **description**: Disables ice and snow formation.
 
+count-all-mobs-for-spawning
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Determines whether spawner mobs and other misc mobs are
+  counted towards the global mob limit.
+
 mob-spawner-tick-rate
 ~~~~~~~~~~~~~~~~~~~~~
 * **default**: 1
