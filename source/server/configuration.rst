@@ -499,6 +499,12 @@ armor-stands-do-collision-entity-lookups
 * **description**: Instructs armor stand entities to do entity collision
   checks.
 
+creative-arrow-despawn-rate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: -1
+* **description**: The rate, in ticks, at which arrows shot from players in
+  creative mode are despawned.
+
 queue-light-updates
 ~~~~~~~~~~~~~~~~~~~
 * **default**: false
