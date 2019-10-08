@@ -73,6 +73,18 @@ velocity-support
       and this server. This needs to match your proxy's ``forwarding-secret``
       setting.
 
+async-chunks
+~~~~~~~~~~~~
+* enabled
+    - **default**: true
+    - **description**: Sets whether the server should generate chunks
+      asynchronously, improving performance.
+
+* load-threads
+    - **default**: -1
+    - **description**: The number of threads the server should use for world
+      generation, set to (number of processors - 1) by default.
+
 enable-player-collisions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
