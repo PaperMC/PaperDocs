@@ -528,6 +528,12 @@ use-vanilla-world-scoreboard-name-coloring
 * **note**: Useful when playing on adventure maps made for the vanilla server
   and client.
 
+prevent-moving-into-unloaded-chunks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Sets whether the server will prevent players from moving
+  into unloaded chunks or not.
+
 delay-chunk-unloads-by
 ~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 10s
