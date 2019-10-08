@@ -47,6 +47,14 @@ use-alternative-luck-formula
   applied to items that have no quality defined. Makes major changes to fishing
   formulas.
 
+use-versioned-world
+~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Sets whether the server should save your world in
+  version-specific directories.
+* **warning**: This setting is highly experimental! Don't use this in a
+  production environment!
+
 enable-player-collisions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
