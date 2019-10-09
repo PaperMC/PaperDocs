@@ -512,6 +512,14 @@ bed-search-radius
   respawn a player near their bed. This gives players a better chance to
   respawn at their bed should it became obstructed.
 
+use-faster-eigencraft-redstone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Sets whether the server uses theosib's redstone algorithms,
+  completely overhauling how redstone works. The new algorithms should be
+  many times faster than current vanilla ones.
+* **warning**: This may change how redstone works in very extreme edge-cases.
+
 queue-light-updates
 ~~~~~~~~~~~~~~~~~~~
 * **default**: false
