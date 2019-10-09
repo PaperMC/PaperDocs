@@ -532,6 +532,12 @@ armor-stands-tick
 * **description**: Disable to prevent armor stands from ticking. Can improve
   performance with many armor stands.
 
+spawner-nerfed-mobs-should-jump
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Determines if spawner nerfed mobs should attempt to float
+  (jump) in water.
+
 queue-light-updates
 ~~~~~~~~~~~~~~~~~~~
 * **default**: false
