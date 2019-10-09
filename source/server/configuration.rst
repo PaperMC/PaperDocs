@@ -121,7 +121,7 @@ async-chunks
 ~~~~~~~~~~~~
 * enabled
     - **default**: true
-    - **description**: Sets whether the server should generate chunks
+    - **description**: Sets whether the server should load and save chunks
       asynchronously, improving performance.
 
 * load-threads
@@ -294,7 +294,6 @@ enable-treasure-maps
 ~~~~~~~~~~~~~~~~~~~~
 * **default**: true
 * **description**: Allows villagers to trade treasure maps.
-* **note**: Disabling this may help keep available map IDs higher.
 
 treasure-maps-return-already-discovered
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
