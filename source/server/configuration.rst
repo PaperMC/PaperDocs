@@ -409,6 +409,18 @@ hopper
       hoppers. Dramatically improves hopper performance but will break
       protection plugins and any others that depend on this event.
 
+alt-item-despawn-rate
+~~~~~~~~~~~~~~~~~~~~~
+* enabled
+    - **default**: false
+    - **description**: Determines if items will have different despawn rates.
+
+* items
+    - **default**: { COBBLESTONE: 300 } (a list of mappings)
+    - **description**: Determines how long each respective item despawns in
+      ticks. You can use item names from `this enum
+      <https://papermc.io/javadocs/paper/1.14/org/bukkit/Material.html>`.
+
 baby-zombie-movement-speed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 0.5
