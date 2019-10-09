@@ -326,6 +326,11 @@ game-mechanics
     - **description**: Instructs the server to never send the end game credits
       when leaving the end.
 
+* disable-sprint-interruption-on-attack
+    - **default**: false
+    - **description**: Determines if the server will interrupt a sprinting
+      player if they are attacked.
+
 disable-explosion-knockback
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
