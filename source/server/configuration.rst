@@ -341,6 +341,22 @@ game-mechanics
     - **description**: Prevent enderpearls from storing the thrower when in an
       unloaded chunk.
 
+lightning-strike-distance-limit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* sound
+    - **default**: -1
+    - **description**: The distance that players will hear lightning from.
+
+* impact-sound
+    - **default**: -1
+    - **description**: The distance that players will hear a lightning impact
+      from.
+
+* flash
+    - **default**: -1
+    - **description**: The distance that players will see lightning flashes in
+      the sky.
+
 disable-explosion-knockback
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
