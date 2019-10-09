@@ -873,58 +873,7 @@ portal-search-radius
 
 generator-settings
 ~~~~~~~~~~~~~~~~~~
-* canyon
-    - **default**: true
-    - **description**: Instructs the server to generate canyons.
-
-* caves
-    - **default**: true
-    - **description**: Instructs the server to generate caves.
-
-* dungeon
-    - **default**: true
-    - **description**: Instructs the server to generate dungeons.
-
-* fortress
-    - **default**: true
-    - **description**: Instructs the server to generate fortresses.
-
-* mineshaft
-    - **default**: true
-    - **description**: Instructs the server to generate mineshafts.
-
-* monument
-    - **default**: true
-    - **description**: Instructs the server to generate monuments.
-
-* stronghold
-    - **default**: true
-    - **description**: Instructs the server to generate strongholds.
-
-* temple
-    - **default**: true
-    - **description**: Instructs the server to generate temples.
-
-* village
-    - **default**: true
-    - **description**: Instructs the server to generate villages.
-
 * flat-bedrock
     - **default**: false
     - **description**: Instructs the server to generate bedrock as a single,
       flat, layer.
-
-* disable-extreme-hills-emeralds
-    - **default**: false
-    - **description**: Prevents the server from generating emeralds in extreme
-      hills biomes.
-
-* disable-extreme-hills-monster-eggs
-    - **default**: false
-    - **description**: Prevents the server from generating monster egg blocks
-      in extreme hills biomes.
-
-* disable-mesa-additional-gold
-    - **default**: false
-    - **description**: Prevents the server from generating extra gold in mesa
-      biomes.
