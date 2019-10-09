@@ -301,6 +301,11 @@ parrots-are-unaffected-by-player-movement
 
 game-mechanics
 ~~~~~~~~~~~~~~
+* scan-for-legacy-ender-dragon
+    - **default**: true
+    - **description**: Determines whether the server searches for the ender
+      dragon when loading older worlds.
+
 * disable-player-crits
     - **default**: false
     - **description**: Instructs the server to disable critical hits in PvP,
