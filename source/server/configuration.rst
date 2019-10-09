@@ -398,13 +398,6 @@ frosted-ice
 
 hopper
 ~~~~~~
-* push-based
-    - **default**: false
-    - **description**: Instructs the server to use an alternative hopper system
-      in which items push themselves into hoppers.
-    - **warning**: This feature improves performance but is buggy and known to
-      cause problems.
-
 * cooldown-when-full
     - **default**: true
     - **description**: Instructs the server to apply a short cooldown when the
