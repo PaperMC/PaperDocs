@@ -520,6 +520,12 @@ use-faster-eigencraft-redstone
   many times faster than current vanilla ones.
 * **warning**: This may change how redstone works in very extreme edge-cases.
 
+fix-zero-tick-instant-grow-farms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Enable to fix zero-tick instant farms. See bug `MC-113809
+  <https://bugs.mojang.com/browse/MC-113809>`_ for more info.
+
 queue-light-updates
 ~~~~~~~~~~~~~~~~~~~
 * **default**: false
