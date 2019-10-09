@@ -518,6 +518,11 @@ anti-xray
       ($index + 1) * 16. Therefore, the default value of 3 will result in the
       engine functioning up to Y: 64.
 
+* update-radius
+    - **default**: 2
+    - **description**: Controls the distance in blocks from air or water that
+      hidden-blocks are hidden by the anti-xray engine.
+
 * hidden-blocks
    - **default**: { gold_ore, iron_ore, coal_ore, lapis_ore, mossy_cobblestone,
      obsidian, chest, diamond_ore, redstone_ore, lit_redstone_ore, clay,
