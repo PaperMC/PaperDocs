@@ -526,6 +526,12 @@ fix-zero-tick-instant-grow-farms
 * **description**: Enable to fix zero-tick instant farms. See bug `MC-113809
   <https://bugs.mojang.com/browse/MC-113809>`_ for more info.
 
+armor-stands-tick
+~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Disable to prevent armor stands from ticking. Can improve
+  performance with many armor stands.
+
 queue-light-updates
 ~~~~~~~~~~~~~~~~~~~
 * **default**: false
