@@ -316,6 +316,11 @@ game-mechanics
     - **description**: Allows you to open chests even if they have a cat
       sitting on top of them.
 
+* shield-blocking-delay
+    - **default**: 5
+    - **description**: The number of ticks between a player activiating their
+      shield and it actually blocking damage.
+
 * disable-end-credits
     - **default**: false
     - **description**: Instructs the server to never send the end game credits
