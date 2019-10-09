@@ -752,13 +752,12 @@ anti-xray
 
 * hidden-blocks
    - **default**: { gold_ore, iron_ore, coal_ore, lapis_ore, mossy_cobblestone,
-     obsidian, chest, diamond_ore, redstone_ore, lit_redstone_ore, clay,
-     emerald_ore, ender_chest }
+     obsidian, chest, diamond_ore, redstone_ore, clay, emerald_ore, ender_chest }
    - **description**: List of blocks to be hidden in engine mode 1.
    - **note**: This list is using Mojang server names *not* bukkit names.
 
 * replacement-blocks:
-    - **default**: { stone, planks }
+    - **default**: { stone, oak_planks }
     - **description**: List of blocks that should be replaced by hidden-blocks
       in engine mode 2.
     - **note**: This list is using Mojang server names *not* bukkit names.
