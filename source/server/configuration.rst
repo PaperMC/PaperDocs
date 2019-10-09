@@ -156,7 +156,7 @@ bungee-online-mode
   when behind bungee. Set to match your proxy's online-mode setting.
 
 sleep-between-chunk-saves
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
 * **description**: Instructs the server to sleep the chunk save thread after
   every chunk save.
@@ -671,7 +671,7 @@ max-growth-height
     - **description**: Maximum height reed blocsk will naturally grow to.
 
 fishing-time-range
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 * MinimumTicks
     - **default**: 100
     - **description**: The minimum number of RNG ticks needed to catch a fish.
@@ -700,7 +700,7 @@ falling-block-height-nerf
   the server.
 
 tnt-entity-height-nerf
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 0
 * **note**: Values less than 1, will disable this feature.
 * **description**: The height at which Primed TNT entities will be removed from
