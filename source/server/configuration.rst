@@ -505,6 +505,13 @@ creative-arrow-despawn-rate
 * **description**: The rate, in ticks, at which arrows shot from players in
   creative mode are despawned.
 
+bed-search-radius
+~~~~~~~~~~~~~~~~~
+* **default**: 1
+* **description**: The distance the server checks for a safe place to
+  respawn a player near their bed. This gives players a better chance to
+  respawn at their bed should it became obstructed.
+
 queue-light-updates
 ~~~~~~~~~~~~~~~~~~~
 * **default**: false
