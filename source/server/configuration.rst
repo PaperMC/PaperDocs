@@ -331,6 +331,11 @@ game-mechanics
     - **description**: Determines if the server will interrupt a sprinting
       player if they are attacked.
 
+* disable-relative-projectile-velocity
+    - **default**: false
+    - **description**: Instructs the server to ignore shooter velocity when
+      calculating the velocity of an entities fired arrow.
+
 disable-explosion-knockback
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
