@@ -336,6 +336,11 @@ game-mechanics
     - **description**: Instructs the server to ignore shooter velocity when
       calculating the velocity of an entities fired arrow.
 
+* disable-unloaded-chunk-enderpearl-exploit:
+    - **default**: true
+    - **description**: Prevent enderpearls from storing the thrower when in an
+      unloaded chunk.
+
 disable-explosion-knockback
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
