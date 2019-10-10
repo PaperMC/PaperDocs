@@ -127,7 +127,7 @@ async-chunks
 * load-threads
     - **default**: -1
     - **description**: The number of threads the server should use for world
-      generation, set to (number of processors - 1) by default.
+      saving and loading. This is set to (number of processors - 1) by default.
 
 watchdog
 ~~~~~~~~
