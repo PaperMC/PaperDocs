@@ -17,11 +17,11 @@ through any problems or pain spots as they arise.
 
 I just want to download the latest jar
 --------------------------------------
-To download the latest jar, simply connect to `<https://papermc.io/api/v1/paper/1.13.2/latest/download>`__
+To download the latest jar, simply connect to `<https://papermc.io/api/v1/paper/1.14.4/latest/download>`__
 
 If you're looking for Waterfall or Travertine, their name can be used in place
 of `paper` as either `waterfall` or `travertine`. Specific versions can also be
-used by replacing `1.13.2` with `1.12.2` or another version. For additional
+used by replacing `1.14.4` with `1.12.2` or another version. For additional
 information about available endpoints, projects, and versions, please read
 further below.
 
@@ -102,6 +102,11 @@ an array of supported versions.
  {
   "project": "paper",
   "versions": [
+    "1.14.4",
+    "1.14.3",
+    "1.14.2",
+    "1.14.1",
+    "1.14",
     "1.13.2",
     "1.13.1",
     "1.13-pre7",
@@ -117,26 +122,26 @@ an array of supported versions.
  }
 
 These versions correspond to the version of Minecraft the software is targeting.
-For example, ``https://papermc.io/api/v1/paper/1.13.2`` will return all build IDs
+For example, ``https://papermc.io/api/v1/paper/1.14.4`` will return all build IDs
 targetting the 1.13.2 version of Minecraft.
 
 .. code-block:: json
 
  {
   "project": "paper",
-  "version": "1.13.2",
+  "version": "1.14.4",
   "builds": {
-    "latest": "544",
+    "latest": "210",
     "all": [
-      "544",
-      "543",
-       ...
-      "392",
-      "391",
-      "390",
-      "389",
-      "388",
-      "387"
+      "210",
+      "209",
+       ,,,
+      "140",
+      "139",
+      "138",
+      "137",
+      "136",
+      "135"
     ]
   }
  }
@@ -147,28 +152,28 @@ A specific build of the given project. These build versions correspond
 with the build IDs specified by the backend continuous integration tools. As of
 v1 of the API they will always be integers.
 
-For example, ``https://papermc.io/api/v1/paper/1.13.2/535`` will return
-information about the build with the ID of 535.
+For example, ``https://papermc.io/api/v1/paper/1.14.4/205`` will return
+information about the build with the ID of 205.
 
 .. code-block:: json
 
  {
   "project": "paper",
-  "version": "1.13.2",
-  "build": "535"
+  "version": "1.14.4",
+  "build": "205"
  }
 
 You can use the static keyword `latest` in place of a specific build in order to
 get the latest version for that specific release of minecraft.
-For example, ``https://papermc.io/api/v1/paper/1.13.2/latest`` will return info
-on the latest version of the Paper project for 1.13.2.
+For example, ``https://papermc.io/api/v1/paper/1.14.4/latest`` will return info
+on the latest version of the Paper project for 1.14.4.
 
 .. code-block:: json
 
  {
   "project": "paper",
-  "version": "1.13.2",
-  "build": "544"
+  "version": "1.14.4",
+  "build": "210"
  }
 
 DOWNLOAD
@@ -176,8 +181,8 @@ DOWNLOAD
 Finally, if you want to download a version of something, you can simply append
 ``/download`` to the URL path in order to be served a file.
 
-For example, to download the latest version of the Waterfall project for 1.13,
-you would access ``https://papermc.io/api/v1/waterfall/1.13/latest/download``
+For example, to download the latest version of the Waterfall project for 1.14,
+you would access ``https://papermc.io/api/v1/waterfall/1.14/latest/download``
 
 Downloads served in this way will include ``content-type``, ``content-length``,
 and ``content-disposition`` headers for proper identification, progress, and
@@ -186,5 +191,5 @@ naming of resources.
 .. code-block:: text
 
     content-type: application/java-archive
-    content-length: 14400576
-    content-disposition: attachment; filename=waterfall-258.jar
+    content-length: 13358756
+    content-disposition: attachment; filename=waterfall-295.jar
