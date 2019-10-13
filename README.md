@@ -23,9 +23,9 @@ You can setup an environment so you can instantly see the changes that make to t
 1. [Install Python 3](https://www.python.org)
 2. Install the needed sphinx packages
 
-After installing Python 3 (as well as python-pip), run the following commnads to install the sphinx packages:
+After installing Python 3 (as well as python-pip), run the following command to install the sphinx packages:
 
-	$ pip install --user sphinx sphinx-autobuild sphinx-rtd-theme
+	$ pip install --user -r requirements.txt
 
 [You may need to add the user binary directory to $PATH](https://packaging.python.org/tutorials/installing-packages/#installing-to-the-user-site)
 
@@ -49,8 +49,9 @@ Open your browser and connect to the address provided by the command. When you m
 
 ## Contact
 
-If you need anything else not covered above, you can contact us directly via IRC
+If you need anything else not covered above, you can contact us directly via IRC or Discord
 
+  + PaperMC on Discord ([Invite Link](https://discord.gg/papermc))
   + #Paper on EsperNet ([Webchat](https://webchat.esper.net/?channels=paper))
   + #Paper on SpigotIRC ([Webchat](http://elmer.spi.gt/iris/?channels=paper))
 
