@@ -2,3 +2,4 @@ Sphinx==2.2.0
 sphinx-JDLinker==1.4
 sphinx-intl==2.0.0
 sphinx-rtd-theme==0.4.3
+sphinx-autobuild==0.7.1
