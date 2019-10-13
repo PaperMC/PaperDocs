@@ -61,7 +61,7 @@ author = u'PaperMC Team'
 #
 # The short X.Y version.
 # should match last MC version the docs were updated for
-version = u'1.14'
+version = u'1.14.4'
 # The full version, including alpha/beta/rc tags.
 release = u'1.14.4'
 
