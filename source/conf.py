@@ -52,7 +52,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'PaperDocs'
-copyright = u'2018, PaperMC Contributors'
+copyright = u'2019, PaperMC Contributors'
 author = u'PaperMC Team'
 
 # The version info for the project you're documenting, acts as replacement for

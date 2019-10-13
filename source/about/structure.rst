@@ -7,6 +7,10 @@ The Structure of PaperMC
 +===================================================================+=======================================================+
 | `Paper <https://github.com/PaperMC/Paper>`_                       | Shared API & Server repository                        |
 +-------------------------------------------------------------------+-------------------------------------------------------+
+| `Waterfall <https://github.com/PaperMC/Waterfall>`_               | A principles fork of the Bungeecord software suite    |
++-------------------------------------------------------------------+-------------------------------------------------------+
+| `Travertine <https://github.com/PaperMC/Travertine>`_             | An extended version of Waterfall with 1.7.10 support  |
++-------------------------------------------------------------------+-------------------------------------------------------+
 | `PaperDocs <https://github.com/PaperMC/PaperDocs>`_               | All documentation for the project                     |
 +-------------------------------------------------------------------+-------------------------------------------------------+
 | `Paperclip <https://github.com/PaperMC/Paperclip>`_               | A wrapper around Paper-Server to make it easy to      |

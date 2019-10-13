@@ -23,7 +23,7 @@ Discord
 Our IRC presence is also bridged to a Discord server, you can use the following
 link to join it.
 
-* `<https://discord.gg/jETyjUw>`_
+* `<https://discord.gg/papermc>`_
 
 Twitter
 =======

@@ -35,13 +35,13 @@ If you're using `curl` you can use the ``-JLO`` flags to make it use the
 server's suggested name rather than making up its own. Alternatively, you can
 use the ``-o`` flag by itself to specify your own name for the downloaded file
 (ex: ``curl -o paperclip.jar http://someurl``).
-For more information, please see `curl's own documentation <https://curl.haxx.se/docs/manpage.html>`__
+For more information, please see `curl's own documentation <https://curl.haxx.se/docs/manpage.html>`_.
 
 If you're using `wget` you can add the ``--content-disposition`` flag on newer
 versions to use the server's suggested name rather than having wget make up its
 own name. You can also use the ``-O`` flag to specify your own name for the
 downloaded file. (ex: ``wget http://someurl -O paperclip.jar``)
-For more information, please see `wget's own documentation <https://www.gnu.org/software/wget/manual/wget.html>`__
+For more information, please see `wget's own documentation <https://www.gnu.org/software/wget/manual/wget.html>`_.
 
 Other tools may or may not make up their own names for files, and they may or
 may not have options for following the server's recommended name. You will have

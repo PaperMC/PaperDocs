@@ -73,12 +73,13 @@ Useful Links
     :maxdepth: 2
     :titlesonly:
 
--  `Discord <https://paperdiscord.emc.gs>`__
+-  `Main site <https://papermc.io>`__
+-  `Discord <https://discord.gg/papermc>`__
 -  `IRC <https://paperchat.emc.gs>`__
 -  `Docs <https://paper.readthedocs.io>`_
 -  `GitHub <https://github.com/PaperMC/Paper>`_
--  `Forums <https://aquifermc.org/>`_
--  `Javadocs <https://paperdocs.emc.gs>`_
+-  `Forums <https://papermc.io/forums>`_
+-  `Javadocs <https://papermc.io/javadocs>`_
 -  `Issue Tracker <https://github.com/PaperMC/Paper/issues>`_
 -  `Organization GitHub <https://github.com/PaperMC>`_
 

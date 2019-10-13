@@ -21,16 +21,16 @@ What do I need to run it?
 
 Paper requires the Java Runtime Environment to run. Specifically, it requires
 at least Java version 8. Once that is installed you're all good to go! If you
-don't already have a Java 8 Runtime, `it's easy to download and install <http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html>`_.
+don't already have a Java 8 Runtime, `it's easy to download and install <https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot>`_.
 
 See our docs on starting out: :doc:`/server/getting-started`
 
 Where do I get it?
 ------------------
 
-Builds of Paper are already available from our `continuous integration server <https://ci.destroystokyo.com/job/Paper/>`_.
+Builds of Paper are already available on our `site's download page <https://papermc.io/downloads>`_.
 
-Alternatively, you can always get the latest build by clicking `this link <https://ci.destroystokyo.com/job/Paper/lastSuccessfulBuild/artifact/paperclip.jar>`_.
+Alternatively, for more automated access, builds are available via a RESTful :doc:`/site/api`
 
 Server Administrators
 =====================
@@ -73,8 +73,8 @@ Is there anywhere to get plugins for Paper?
 -------------------------------------------
 
 Many plugins that work with, and are made for, Paper are available on the
-`AquiferMC resource section <https://aquifermc.org/resources/>`_. Sometimes
-you'll also see them elsewhere, you just have to keep your eyes open.
+`forum's resource section <https://papermc.io/forums/c/plugin-releases/paper>`_.
+Sometimes you'll also see them elsewhere, you just have to keep your eyes open.
 
 Does Paper support Forge Mods?
 ------------------------------

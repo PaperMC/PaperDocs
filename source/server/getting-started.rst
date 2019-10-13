@@ -10,7 +10,8 @@ Requirements
 ~~~~~~~~~~~~
 
 Paper requires **Java 8** or newer to run. It should run fine on newer versions
-as well, such as Java 10, but certain plugins may have issues.
+as well, such as Java 11, but certain plugins may have issues. Generally, LTS
+versions of Java are best supported, though you may have luck on newer versions.
 
 Migrating From Vanilla
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -30,11 +31,9 @@ to make any changes.
 Getting A Server Jar
 ~~~~~~~~~~~~~~~~~~~~~
 
-Paper provides runnable server jars directly from our continuous integration
-server `here <https://destroystokyo.com/ci/job/Paper>`_.
+Paper provides runnable server jars directly from our `website's downloads page <https://papermc.io/downloads>`_.
 
-Download one of the artifacts (either paperclip.jar or paperclip-####.jar, they
-are the same) and save it to a new directory somewhere on your file system.
+Click on the build number to download a file.
 
 Running The Server
 ~~~~~~~~~~~~~~~~~~
@@ -42,9 +41,12 @@ Running The Server
 To run the server, simply start it up like any other Java application.
 
 Open your terminal, navigate to the saved location, and then run
-``java -jar paperclip.jar``
+``java -Xms2G -Xmx2G -jar paper-###.jar``
 
-For more advanced Java tuning, see `this page <https://mcflags.emc.gs>`_
+The amount of RAM can be set by changing the numbers in the ``-Xms`` and ``-Xmx``
+arguments.
+
+For more advanced Java tuning, see `Aikar's tuning page <https://mcflags.emc.gs>`_.
 
 To configure your server, see the :doc:`../server/configuration` page.
 
