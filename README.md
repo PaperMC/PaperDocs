@@ -6,14 +6,7 @@ This repository publishes to PaperMC's documentation site, currently hosted [her
 
 ## Branching and Content
 
-The published public documentation for the currently supported PaperMC implementation will live on the `stable` branch.
-
-
-`master` will be used as a staging area for changes to our documentation before being published, at which point it will be merged into the `stable` branch.
-
-Documentation for old versions that are out-of-support will live at `ver/$version` similar to how the main [PaperMC server](https://github.com/PaperMC/Paper) repo handles legacy versions.
-
-Our legacy documentation will continue to live at `Paper/$version` at least for the short term.
+The published public documentation for the currently supported PaperMC implementation lives on the `master` branch.
 
 ## Contributions
 
@@ -32,7 +25,9 @@ You can setup an environment so you can instantly see the changes that make to t
 
 After installing Python 3 (as well as python-pip), run the following commnads to install the sphinx packages:
 
-	$ pip install sphinx sphinx-autobuild sphinx-rtd-theme
+	$ pip install --user sphinx sphinx-autobuild sphinx-rtd-theme
+
+[You may need to add the user binary directory to $PATH](https://packaging.python.org/tutorials/installing-packages/#installing-to-the-user-site)
 
 ### Building
 
@@ -48,7 +43,7 @@ To build the source on Windows without WSL, open CMD and execute the make.bat sc
 
 To automatically rebuild the HTML files as you edit the .rst source files, execute the following command:
 
-	$ sphinx-autobuild source _build/html
+	$ make auto
 
 Open your browser and connect to the address provided by the command. When you make a change to the documentation, the docs should refresh in the browser (possibly after a few seconds).
 
