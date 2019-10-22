@@ -61,7 +61,7 @@ save-player-data
 ~~~~~~~~~~~~~~~~
 * **default**: true
 * **description**: Sets whether the server should save player data, such as
-  inventories, experience, and advancements
+  inventories, experience, and advancements.
 
 use-alternative-luck-formula
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -81,7 +81,7 @@ use-versioned-world
 suggest-player-names-when-null-tab-completions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
-* **description**: Instructs the server to return a list of Players when
+* **description**: Instructs the server to return a list of players when
   tab-completing if the plugin has no tab completions of its own.
 
 enable-player-collisions
@@ -89,8 +89,6 @@ enable-player-collisions
 * **default**: true
 * **description**: Sets whether the server should allow players to collide with
   one another.
-* **warning**: This setting can be broken by plugins interacting with the
-  scoreboard, double check plugins when troubleshooting this value.
 
 save-empty-scoreboard-teams
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,6 +96,8 @@ save-empty-scoreboard-teams
 * **description**: Some scoreboard plugins leave hundreds of empty scoreboard
   teams around, dramatically slowing down login times. This sets whether the
   server should remove those empty teams automatically.
+* **warning**: This setting can be broken by plugins interacting with the
+  scoreboard, double check plugins when troubleshooting this value.
 
 velocity-support
 ~~~~~~~~~~~~~~~~
@@ -145,8 +145,8 @@ spam-limiter
 ~~~~~~~~~~~~
 * tab-spam-increment
     - **default**: 1
-    - **description**: The amount the internal tab spam counter increases by
-      when a player presses tab in the chat window.
+    - **description**: The number that the internal tab spam counter increases
+      by when a player presses tab in the chat window.
 
 * tab-spam-limit
     - **default**: 500
@@ -252,14 +252,15 @@ disable-teleportation-suffocation-check
 * **description**: Disables the suffocation check the server performs before
   teleporting a player.
 * **note**: While useful to keep your players out of walls, leaving this
-  feature on may enable players to teleport through solid materials by logging
+  feature on may allow players to teleport through solid materials by logging
   out in specific locations.
 
 optimize-explosions
 ~~~~~~~~~~~~~~~~~~~
 * **default**: false
 * **description**: Instructs the server to cache entity lookups during an
-  explosion, rather than recalculating throughout the process.
+  explosion, rather than recalculating throughout the process. This
+  speeds up explosions significantly.
 
 portal-search-radius
 ~~~~~~~~~~~~~~~~~~~~
@@ -311,7 +312,8 @@ experience-merge-max-value
 * **description**: Instructs the server put a maximum value on experience orbs,
   preventing them all from merging down into 1 single orb.
 * **note**: The default value instructs the server to use no max value,
-  allowing them to merge down into a single orb.
+  allowing them to merge down into a single orb. This is especially noticeable
+  when defeating boss monsters.
 
 prevent-moving-into-unloaded-chunks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -380,7 +382,7 @@ duplicate-uuid-saferegen-delete-range
 disable-thunder
 ~~~~~~~~~~~~~~~
 * **default**: false
-* **description**: Disables thunderstorms
+* **description**: Disables thunderstorms.
 
 skeleton-horse-thunder-spawn-chance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -402,7 +404,7 @@ count-all-mobs-for-spawning
 keep-spawn-loaded-range
 ~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 8
-* **description**: The number of chunks around spawn to keep loaded.
+* **description**: The range in chunks around spawn to keep loaded.
 
 keep-spawn-loaded
 ~~~~~~~~~~~~~~~~~
@@ -452,8 +454,8 @@ bed-search-radius
 ~~~~~~~~~~~~~~~~~
 * **default**: 1
 * **description**: The distance the server checks for a safe place to
-  respawn a player near their bed. This gives players a better chance to
-  respawn at their bed should it became obstructed.
+  respawn a player near their bed. Increasing this value gives players a better
+  chance to respawn at their bed should it became obstructed.
 
 use-faster-eigencraft-redstone
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -523,7 +525,7 @@ spawner-nerfed-mobs-should-jump
 baby-zombie-movement-speed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 0.5
-* **note**: For reference, the vanilla player moves with a speed of 0.1.
+* **note**: For reference, the vanilla player moves with a speed of ~0.4.
 * **description**: Controls the speed baby zombies move at.
 
 allow-leashing-undead-horse
@@ -581,7 +583,7 @@ game-mechanics
 * disable-relative-projectile-velocity
     - **default**: false
     - **description**: Instructs the server to ignore shooter velocity when
-      calculating the velocity of an entities fired arrow.
+      calculating the velocity of a fired arrow.
 
 * disable-unloaded-chunk-enderpearl-exploit:
     - **default**: true
@@ -596,7 +598,7 @@ max-growth-height
 
 * reeds
     - **default**: 3
-    - **description**: Maximum height reed blocsk will naturally grow to.
+    - **description**: Maximum height reed blocks will naturally grow to.
 
 fishing-time-range
 ~~~~~~~~~~~~~~~~~~
@@ -641,7 +643,7 @@ frosted-ice
 * enabled
     - **default**: true
     - **description**: Instructs the server to enable (and tick) frosted
-      ice blocks
+      ice blocks.
 
 * delay
     - min
@@ -765,8 +767,8 @@ generator-settings
 ~~~~~~~~~~~~~~~~~~
 * flat-bedrock
     - **default**: false
-    - **description**: Instructs the server to generate bedrock as a single,
-      flat, layer.
+    - **description**: Instructs the server to generate bedrock as a single flat
+      layer.
 
 squid-spawn-height
 ~~~~~~~~~~~~~~~~~~
