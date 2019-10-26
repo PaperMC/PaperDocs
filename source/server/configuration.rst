@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated October 8th 2019 for MC 1.14.4, Paper build #210
+    Last updated October 26th 2019 for MC 1.14.4, Paper build #222
 
 Global Settings
 ===============
@@ -89,6 +89,8 @@ enable-player-collisions
 * **default**: true
 * **description**: Sets whether the server should allow players to collide with
   one another.
+* **warning**: This setting can be broken by plugins interacting with the
+  scoreboard, double check plugins when troubleshooting this value.
 
 save-empty-scoreboard-teams
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,8 +98,6 @@ save-empty-scoreboard-teams
 * **description**: Some scoreboard plugins leave hundreds of empty scoreboard
   teams around, dramatically slowing down login times. This sets whether the
   server should remove those empty teams automatically.
-* **warning**: This setting can be broken by plugins interacting with the
-  scoreboard, double check plugins when troubleshooting this value.
 
 velocity-support
 ~~~~~~~~~~~~~~~~
@@ -522,11 +522,13 @@ spawner-nerfed-mobs-should-jump
 * **description**: Determines if spawner nerfed mobs should attempt to float
   (jump) in water.
 
-baby-zombie-movement-speed
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+baby-zombie-movement-modifier
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 0.5
-* **note**: For reference, the vanilla player moves with a speed of ~0.4.
-* **description**: Controls the speed baby zombies move at.
+* **description**: Modifies the speed that baby zombies move at, where 0.5 is
+  50% faster than the mob base speed, and -0.4 would be 40% slower.
+* **note**: For reference, a non-sprinting player moves with a speed modifer
+  around 0.4.
 
 allow-leashing-undead-horse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
