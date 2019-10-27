@@ -527,8 +527,6 @@ baby-zombie-movement-modifier
 * **default**: 0.5
 * **description**: Modifies the speed that baby zombies move at, where 0.5 is
   50% faster than the mob base speed, and -0.4 would be 40% slower.
-* **note**: For reference, a non-sprinting player moves with a speed modifer
-  around 0.4.
 
 allow-leashing-undead-horse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
