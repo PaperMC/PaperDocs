@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated October 26th 2019 for MC 1.14.4, Paper build #222
+    Last updated November 24th 2019 for MC 1.14.4, Paper build #230
 
 Global Settings
 ===============
@@ -550,6 +550,10 @@ mob-spawner-tick-rate
 
 game-mechanics
 ~~~~~~~~~~~~~~
+* disable-pillager-patrols
+    - **default**: false
+    - **description**: Disables Pillager patrols and associated AI.
+
 * scan-for-legacy-ender-dragon
     - **default**: true
     - **description**: Determines whether the server searches for the ender
