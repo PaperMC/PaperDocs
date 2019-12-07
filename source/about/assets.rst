@@ -6,7 +6,7 @@ This page provides the official PaperMC logomark and the terms under which you
 may use it.
 
 .. attention::
-  The PaperMC logo is subject to its own seperate licensing terms and does not
+  The PaperMC logo is subject to its own separate licensing terms and does not
   inherit any from the projects it represents.
 
 You may:

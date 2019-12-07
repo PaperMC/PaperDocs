@@ -17,7 +17,7 @@ Migrating From Vanilla
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Migrating from Vanilla is easy, but there are some differences, namely in
-world saves. Paper (and CraftBukkit and Spigot) seperate out each dimension of
+world saves. Paper (and CraftBukkit and Spigot) separate out each dimension of
 a world (nether, the end, etc) into separate world folders.
 
 Paper will handle this conversion for you automatically.
