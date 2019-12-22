@@ -41,7 +41,7 @@ Running The Server
 To run the server, simply start it up like any other Java application.
 
 Open your terminal, navigate to the saved location, and then run
-``java -Xms2G -Xmx2G -jar paper-###.jar``
+``java -Xms2G -Xmx2G -jar paper-*.jar``
 
 The amount of RAM can be set by changing the numbers in the ``-Xms`` and ``-Xmx``
 arguments.
