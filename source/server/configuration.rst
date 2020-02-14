@@ -403,7 +403,7 @@ count-all-mobs-for-spawning
 
 keep-spawn-loaded-range
 ~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: 8
+* **default**: 10
 * **description**: The range in chunks around spawn to keep loaded.
 
 keep-spawn-loaded
