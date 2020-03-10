@@ -262,6 +262,12 @@ optimize-explosions
   explosion, rather than recalculating throughout the process. This
   speeds up explosions significantly.
 
+portal-create-radius
+~~~~~~~~~~~~~~~~~~~~
+* **default**: 16
+* **description**: The maximum range the server will use to create a new portal.
+* **note**: If this value is greater than `portal-search-radius`, your nether portals will not always link up to their corresponding portals in the overworld.
+
 portal-search-radius
 ~~~~~~~~~~~~~~~~~~~~
 * **default**: 128
