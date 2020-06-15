@@ -95,7 +95,7 @@ What can I do with Paper?
 Paper provides additional APIs ontop of Bukkit, exposing new vanilla elements
 and even some of its own for you to play with.
 
-`Developer Docs <https://papermc.io/javadocs>`_
+`Developer JavaDocs <https://papermc.io/javadocs>`_
 
 Does Paper make any breaking changes to the API?
 ------------------------------------------------
