@@ -50,12 +50,23 @@ to see a noticeable performance improvement.
 Your plugins and worlds will not be changed and both should work just fine
 after the change.
 
+You may also notice changes to gameplay. 
+
 Will players be able to tell?
 -----------------------------
 
 That depends. Your players may see a benefit to gameplay because of the
 performance improvement, assuming you see one. On a properly maintained server,
-your players may not even be able to tell the difference.
+your players may not even be able to tell the difference unless it is content we
+have changed.
+
+
+What has been changed?
+-----------------------------
+
+This is currently not an exhaustive list but: configrable damage on the roof
+ of the nether, configrable nether portal search, leashing undead horses, 
+  fix 0-tick farms, fix piston inconsitencys thus fixing multiple dupes.
 
 Can I run Bukkit plugins on Paper?
 ----------------------------------
