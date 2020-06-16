@@ -64,9 +64,15 @@ have changed.
 What has been changed?
 -----------------------------
 
-This is currently not an exhaustive list but: configrable damage on the roof
- of the nether, configrable nether portal search, leashing undead horses, 
-  fix 0-tick farms, fix piston inconsitencys thus fixing multiple dupes.
+This is currently not an exhaustive list and some are configurable:
+damage above the roof of the nether, nether portal search range, 
+leashing undead horses, fix 0-tick crop farms, fix piston inconsitenciess thus fixing 
+multiple dupes (for example TNT dupers), prevent players from getting kicked for 
+"flying" when actually resting in a bed, prevent phantoms from spawning on creative
+players, phatoms only attack insomniacs, fixed unloaded chunk enderpearl exploit, 
+maximum file size of minecraft book pages, entity activation range, fixed bedrock
+brekaing exploit, natural mob spawn limit calculations and enforcment,  
+
 
 Can I run Bukkit plugins on Paper?
 ----------------------------------
