@@ -234,6 +234,13 @@ timings
     - **default**: Unknown Server
     - **description**: Instructs timings on what to put in for the server name.
 
+unsupported-settings
+~~~~~~~~
+* allow-tnt-duplication
+        - **default**: false
+        - **description**: If set to true, will allow TNT dupers to function.
+        For more information, see https://github.com/PaperMC/Paper/pull/3565
+          
 World Settings
 ==============
 
