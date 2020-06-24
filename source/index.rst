@@ -23,14 +23,14 @@ Not sure what you're looking for? Try our :doc:`about/index` section, which
 contains a short :doc:`about/introduction`, our :doc:`about/faq` and an article
 about :doc:`about/structure`.
 
-Server owners should read our tips and instructions in :doc:`server/index` on
+Server owners should read our tips and instructions in :doc:`paper-server/index` on
 how to install, run and maintain a Paper based server.
 
 The PaperMC project has several main components. Learn more about the project
 structure :doc:`here <about/structure>`.
 
-Running A Server
-~~~~~~~~~~~~~~~~
+Running A Paper Server
+~~~~~~~~~~~~~~~~~~~~~~
 
 Running a Paper server is easy. This section will cover common tasks such as
 configuring it, maintaining plugins, and general best practices.
@@ -39,7 +39,19 @@ configuring it, maintaining plugins, and general best practices.
     :maxdepth: 3
     :titlesonly:
 
-    server/index
+    paper-server/index
+
+Running A Waterfall Server
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Running a Waterfall server is also easy. This section will cover common tasks such as
+configuring it, maintaining plugins, and general best practices.
+
+.. toctree::
+    :maxdepth: 3
+    :titlesonly:
+
+    waterfall-server/index
 
 Contributing to Paper
 ~~~~~~~~~~~~~~~~~~~~~~

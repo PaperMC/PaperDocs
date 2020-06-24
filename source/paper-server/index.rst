@@ -1,6 +1,6 @@
-================
-Running A Server
-================
+======================
+Running A Paper Server
+======================
 
 Running a Paper server is easy.
 
