@@ -1,6 +1,6 @@
-==========================
-Getting Started with Paper
-==========================
+===============
+Getting Started
+===============
 
 .. contents::
    :depth: 1
@@ -48,7 +48,7 @@ arguments.
 
 For more advanced Java tuning, see `Aikar's tuning page <https://mcflags.emc.gs>`_.
 
-To configure your server, see the :doc:`../paper-server/configuration` page.
+To configure your server, see the :doc:`../server/configuration` page.
 
 Updating The Server
 ~~~~~~~~~~~~~~~~~~~

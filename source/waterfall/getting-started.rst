@@ -1,6 +1,6 @@
-==============================
-Getting Started with Waterfall
-==============================
+===============
+Getting Started
+===============
 
 .. contents::
    :depth: 1
@@ -9,14 +9,14 @@ Getting Started with Waterfall
 Requirements
 ~~~~~~~~~~~~
 
-Waterfall requires **Java 8** or newer to run. It should run fine on newer versions
-as well, such as Java 11, but certain plugins may have issues. Generally, LTS
-versions of Java are best supported, though you may have luck on newer versions.
+Waterfall and Travertine require **Java 8** or newer to run. It should run fine
+on newer versions as well, such as Java 11, but certain plugins may have issues.
+Generally, LTS versions of Java are best supported, though you may have luck on newer versions.
 
 Migrating From BungeeCord
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Waterfall is a drop in replacement for BungeeCord, you don't need to make any changes.
+Waterfall and Travertine are drop in replacements for BungeeCord, you don't need to make any changes.
 
 Getting A Server Jar
 ~~~~~~~~~~~~~~~~~~~~~
@@ -36,9 +36,7 @@ Open your terminal, navigate to the saved location, and then run
 The amount of RAM can be set by changing the numbers in the ``-Xms`` and ``-Xmx``
 arguments.
 
-For more advanced Java tuning, see `Aikar's tuning page <https://mcflags.emc.gs>`_.
-
-To configure your server, see the :doc:`../waterfall-server/configuration` page.
+To configure your server, see the :doc:`../waterfall/configuration` page.
 
 Updating The Server
 ~~~~~~~~~~~~~~~~~~~

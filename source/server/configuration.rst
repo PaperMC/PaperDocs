@@ -1,6 +1,6 @@
-===================
-Paper Configuration
-===================
+=============
+Configuration
+=============
 
 This page details the various configuration settings exposed by Paper.
 

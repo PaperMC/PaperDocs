@@ -1,8 +1,8 @@
-=======================
-Waterfall Configuration
-=======================
+=============
+Configuration
+=============
 
-This page details the various configuration settings exposed by Waterfall.
+This page details the various configuration settings exposed by Waterfall and Travertine.
 
 If you want information on settings in BungeeCord's config.yml you should see
 their respective documentation pages.
