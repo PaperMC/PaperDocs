@@ -7,16 +7,16 @@ Syntax
 ======
 
 PaperDocs uses the reStructuredText markup syntax for its documentation.
-It may appear similar to markdown at first glance, but it is quite different.
+It may appear similar to markdown at first glance but it is quite different.
 
 For more information about the syntax and how to use it, please see the
-[reStructuredText site](http://docutils.sourceforge.net/rst.html) for docs, and
+[reStructuredText site](http://docutils.sourceforge.net/rst.html) for docs and
 a quick reference guide.
 
 Formatting
 ==========
 
-**Spaces** not tabs. RST will accept either, but we'd prefer you to stick
+**Spaces** not tabs. RST will accept either but we'd prefer you to stick
 to spaces.
 
 **80** column line limit. Mostly to keep editing easy for all users. Exceptions
@@ -27,7 +27,7 @@ Language & Locale
 =================
 
 Documentation should be submitted in English and conform to the en_US locale.
-This is another soft guideline; here mostly just to swiftly end any debates.
+This is another soft guideline, here mostly just to swiftly end any debates.
 
 Scope
 =====

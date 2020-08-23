@@ -16,7 +16,7 @@ As such, we focus on a few things:
 
 * Giving back to the community matters.
 
-* Mojang Studios decisions and assumptions are not necessarily the best for everyone.
+* Mojang's decisions and assumptions are not necessarily the best for everyone.
 
 Paper is largely composed of two projects:
 
