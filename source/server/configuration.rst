@@ -188,9 +188,9 @@ messages
     - authentication-servers-down
         - **default**: '' (empty string)
         - **note**: The default value instructs the server to send the vanilla
-          translateable kick message.
+          translatable kick message.
         - **description**: Message to kick a player with when they are
-          disconnected because the Mojang authentication servers are down.
+          disconnected because the Mojang Studios authentication servers are down.
 
     - connection-throttle
         - **default**: Connection throttled! Please wait before reconnecting.
@@ -615,7 +615,7 @@ game-mechanics
 
 * shield-blocking-delay
     - **default**: 5
-    - **description**: The number of ticks between a player activiating their
+    - **description**: The number of ticks between a player activating their
       shield and it actually blocking damage.
 
 * disable-unloaded-chunk-enderpearl-exploit:
@@ -812,13 +812,13 @@ anti-xray
    - **default**: { gold_ore, iron_ore, coal_ore, lapis_ore, mossy_cobblestone,
      obsidian, chest, diamond_ore, redstone_ore, clay, emerald_ore, ender_chest }
    - **description**: List of blocks to be hidden in engine mode 1.
-   - **note**: This list is using Mojang server names *not* bukkit names.
+   - **note**: This list is using Mojang Studios server names *not* bukkit names.
 
 * replacement-blocks:
     - **default**: { stone, oak_planks }
     - **description**: List of blocks that should be replaced by hidden-blocks
       in engine mode 2.
-    - **note**: This list is using Mojang server names *not* bukkit names.
+    - **note**: This list is using Mojang Studios server names *not* bukkit names.
 
 viewdistances
 ~~~~~~~~~~~~~
@@ -838,5 +838,4 @@ generator-settings
 ~~~~~~~~~~~~~~~~~~
 * flat-bedrock
     - **default**: false
-    - **description**: Instructs the server to generate bedrock as a single flat
-      layer.
+    - **description**: Instructs the server to generate bedrock as a single flat layer.

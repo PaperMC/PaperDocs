@@ -30,14 +30,14 @@ Section 1 -- Definitions.
      Licensor. For purposes of this Public License, where the Licensed
      Material is a musical work, performance, or sound recording,
      Adapted Material is always produced where the Licensed Material is
-     synched in timed relation with a moving image.
+     synced in timed relation with a moving image.
 
   b. Adapter's License means the license You apply to Your Copyright
      and Similar Rights in Your contributions to Adapted Material in
      accordance with the terms and conditions of this Public License.
 
   c. BY-SA Compatible License means a license listed at
-     creativecommons.org/compatiblelicenses, approved by Creative
+     'creativecommons.org/compatiblelicenses', approved by Creative
      Commons as essentially the equivalent of this Public License.
 
   d. Copyright and Similar Rights means copyright and/or similar rights
@@ -168,7 +168,7 @@ Section 2 -- Scope.
           Public License.
 
        3. To the extent possible, the Licensor waives any right to
-          collect royalties from You for the exercise of the Licensed
+          collect royalties from you, for the exercise of the Licensed
           Rights, whether directly or through a collecting society
           under any voluntary or waivable statutory or compulsory
           licensing scheme. In all other cases the Licensor expressly
