@@ -55,7 +55,7 @@ When an end-user runs Paperclip for the first time a few things happen.
    Minecraft it was built against.
 
 2. Paperclip downloads a vanilla minecraft jar for that particular version
-   directly from Mojang.
+   directly from Mojang Studios.
 
 3. Paperclip checks to see that the vanilla jar it just downloaded is the same
    as the one it was built against using a SHA-256 hash.
@@ -76,5 +76,5 @@ For example, when Paper pushes a new build of Paper for a specific Minecraft
 version, Paperclip will not re-download the vanilla jar, it'll simply re-patch
 it and start up.
 
-If there is a Minecraft version change (like 1.9 to 1.10), only then will
+If there is a Minecraft version change (like 1.9 to 1.10 or 1.16.1 to 1.16.2), only then will
 Paperclip re-download the vanilla Minecraft jar.

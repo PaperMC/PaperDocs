@@ -17,13 +17,14 @@ through any problems or pain spots as they arise.
 
 I just want to download the latest jar
 --------------------------------------
-To download the latest jar, simply connect to `<https://papermc.io/api/v1/paper/1.14.4/latest/download>`__
+To download the latest jar, simply connect to `<https://papermc.io/api/v1/paper/<target version>/<target build>/download>`__
 
-If you're looking for Waterfall or Travertine, their name can be used in place
-of `paper` as either `waterfall` or `travertine`. Specific versions can also be
-used by replacing `1.14.4` with `1.12.2` or another version. For additional
-information about available endpoints, projects, and versions, please read
-further below.
+Within the URL for downloading a specified version of Paper, you may change the '<target version>' and '<target build>' to whichever you may want.
+When you have theses parameters specified, the download of the jar shall begin.
+If you change '<target build>' to 'latest' and you specify the '<target version>', you can download the latest build for the versioned release.
+If you're looking for Waterfall or Travertine, their name can be used in place of `paper` as either `waterfall` or `travertine`.
+Specific versions can be downloaded replacing `1.15.2` with `1.16.2` or newer.
+For additional information about available endpoints, projects, and versions, please read further below.
 
 The new URLs give me weird filenames
 ------------------------------------
@@ -67,9 +68,9 @@ Example getting a listing of available project versions for waterfall: ``https:/
  {
   "project": "waterfall",
   "versions": [
-   "1.13",
-   "1.12",
-   "1.11"
+   "1.16",
+   "1.15",
+   "1.14"
   ]
  }
 
@@ -102,6 +103,11 @@ an array of supported versions.
  {
   "project": "paper",
   "versions": [
+    "1.16.2",
+    "1.16.1",
+    "1.15.2",
+    "1.15.1",
+    "1.15",
     "1.14.4",
     "1.14.3",
     "1.14.2",
@@ -109,39 +115,34 @@ an array of supported versions.
     "1.14",
     "1.13.2",
     "1.13.1",
-    "1.13-pre7",
     "1.13",
     "1.12.2",
     "1.12.1",
-    "1.12",
-    "1.11.2",
-    "1.10.2",
-    "1.9.4",
-    "1.8.8"
+    "1.12"
   ]
  }
 
 These versions correspond to the version of Minecraft the software is targeting.
-For example, ``https://papermc.io/api/v1/paper/1.14.4`` will return all build IDs
-targetting the 1.13.2 version of Minecraft.
+For example, ``https://papermc.io/api/v1/paper/1.16.2`` will return all build IDs
+targeting the 1.16.2 version of Minecraft.
 
 .. code-block:: json
 
  {
   "project": "paper",
-  "version": "1.14.4",
+  "version": "1.16.2",
   "builds": {
-    "latest": "210",
+    "latest": "135",
     "all": [
-      "210",
-      "209",
-       ,,,
-      "140",
-      "139",
-      "138",
-      "137",
-      "136",
-      "135"
+      "135",
+      "134",
+       ...
+      "120",
+      "119",
+      "118",
+      "117",
+      "116",
+      "115"
     ]
   }
  }
@@ -152,28 +153,28 @@ A specific build of the given project. These build versions correspond
 with the build IDs specified by the backend continuous integration tools. As of
 v1 of the API they will always be integers.
 
-For example, ``https://papermc.io/api/v1/paper/1.14.4/205`` will return
-information about the build with the ID of 205.
+For example, ``https://papermc.io/api/v1/paper/1.16.2/135`` will return
+information about the build with the ID of 135.
 
 .. code-block:: json
 
  {
   "project": "paper",
-  "version": "1.14.4",
-  "build": "205"
+  "version": "1.16.2",
+  "build": "135"
  }
 
 You can use the static keyword `latest` in place of a specific build in order to
 get the latest version for that specific release of minecraft.
-For example, ``https://papermc.io/api/v1/paper/1.14.4/latest`` will return info
-on the latest version of the Paper project for 1.14.4.
+For example, ``https://papermc.io/api/v1/paper/1.16.2/latest`` will return info
+on the latest version of the Paper project for 1.16.2.
 
 .. code-block:: json
 
  {
   "project": "paper",
-  "version": "1.14.4",
-  "build": "210"
+  "version": "1.16.2",
+  "build": "135"
  }
 
 DOWNLOAD
@@ -181,8 +182,8 @@ DOWNLOAD
 Finally, if you want to download a version of something, you can simply append
 ``/download`` to the URL path in order to be served a file.
 
-For example, to download the latest version of the Waterfall project for 1.14,
-you would access ``https://papermc.io/api/v1/waterfall/1.14/latest/download``
+For example, to download the latest version of the Waterfall project for 1.16,
+you would access ``https://papermc.io/api/v1/waterfall/1.16.2/latest/download``
 
 Downloads served in this way will include ``content-type``, ``content-length``,
 and ``content-disposition`` headers for proper identification, progress, and
@@ -192,4 +193,4 @@ naming of resources.
 
     content-type: application/java-archive
     content-length: 13358756
-    content-disposition: attachment; filename=waterfall-295.jar
+    content-disposition: attachment; filename=waterfall-370.jar

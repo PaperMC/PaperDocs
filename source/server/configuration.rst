@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated November 24th 2019 for MC 1.14.4, Paper build #230
+    Last updated 15th of August 2020 for MC 1.16.2, Paper build #135
 
 Global Settings
 ===============
@@ -179,9 +179,9 @@ messages
     - authentication-servers-down
         - **default**: ' ' (empty string)
         - **note**: The default value instructs the server to send the vanilla
-          translateable kick message.
+          translatable kick message.
         - **description**: Message to kick a player with when they are
-          disconnected because the Mojang authentication servers are down.
+          disconnected because the Mojang Studios authentication servers are down.
 
     - connection-throttle
         - **default**: Connection throttled! Please wait before reconnecting.
@@ -465,12 +465,6 @@ use-faster-eigencraft-redstone
   many times faster than current vanilla ones.
 * **warning**: This may change how redstone works in very extreme edge-cases.
 
-fix-zero-tick-instant-grow-farms
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: true
-* **description**: Enable to fix zero-tick instant farms. See bug `MC-113809
-  <https://bugs.mojang.com/browse/MC-113809>`_ for more info.
-
 nether-ceiling-void-damage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
@@ -566,7 +560,7 @@ game-mechanics
 
 * shield-blocking-delay
     - **default**: 5
-    - **description**: The number of ticks between a player activiating their
+    - **description**: The number of ticks between a player activating their
       shield and it actually blocking damage.
 
 * disable-end-credits
@@ -759,13 +753,13 @@ anti-xray
    - **default**: { gold_ore, iron_ore, coal_ore, lapis_ore, mossy_cobblestone,
      obsidian, chest, diamond_ore, redstone_ore, clay, emerald_ore, ender_chest }
    - **description**: List of blocks to be hidden in engine mode 1.
-   - **note**: This list is using Mojang server names *not* bukkit names.
+   - **note**: This list is using Mojang Studios server names *not* bukkit names.
 
 * replacement-blocks:
     - **default**: { stone, oak_planks }
     - **description**: List of blocks that should be replaced by hidden-blocks
       in engine mode 2.
-    - **note**: This list is using Mojang server names *not* bukkit names.
+    - **note**: This list is using Mojang Studios server names *not* bukkit names.
 
 generator-settings
 ~~~~~~~~~~~~~~~~~~
