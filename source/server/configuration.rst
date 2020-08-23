@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated 15th of August 2020 for MC 1.16.2, Paper build #135
+    Last updated August 23rd, 2020 for MC 1.16.1, Paper build #138
 
 Global Settings
 ===============
@@ -34,6 +34,11 @@ verbose
 * **description**: Sets whether the server should dump all configuration values
   to the server log on startup.
 
+allow-perm-block-break-exploits
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Sets whether unbreakable blocks can be broken with vanilla exploits.
+
 load-permissions-yml-before-plugins
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
@@ -46,6 +51,11 @@ bungee-online-mode
 * **description**: Instructs the server how to handle player UUIDs and data
   when behind bungee. Set to match your proxy's online-mode setting.
 
+console-has-all-permissions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Sets whether or not console command senders have all permissions
+
 region-file-cache-size
 ~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 256
@@ -57,11 +67,11 @@ incoming-packet-spam-threshold
 * **description**: Sets the threshold at which the server will consider
   incoming packets as spam and ignore them.
 
-save-player-data
-~~~~~~~~~~~~~~~~
+suggest-player-names-when-null-tab-completions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
-* **description**: Sets whether the server should save player data, such as
-  inventories, experience, and advancements.
+* **description**: Instructs the server to return a list of players when
+  tab-completing if the plugin has no tab completions of its own.
 
 use-alternative-luck-formula
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -70,19 +80,11 @@ use-alternative-luck-formula
   applied to items that have no quality defined. Makes major changes to fishing
   formulas.
 
-use-versioned-world
-~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Sets whether the server should save your world in
-  version-specific directories.
-* **warning**: This setting is highly experimental! Don't use this in a
-  production environment!
-
-suggest-player-names-when-null-tab-completions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+save-player-data
+~~~~~~~~~~~~~~~~
 * **default**: true
-* **description**: Instructs the server to return a list of players when
-  tab-completing if the plugin has no tab completions of its own.
+* **description**: Sets whether the server should save player data, such as
+  inventories, experience, and advancements.
 
 enable-player-collisions
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -116,18 +118,6 @@ velocity-support
     - **description**: The secret string that is shared by your Velocity proxy
       and this server. This needs to match your proxy's ``forwarding-secret``
       setting.
-
-async-chunks
-~~~~~~~~~~~~
-* enabled
-    - **default**: true
-    - **description**: Sets whether the server should load and save chunks
-      asynchronously, improving performance.
-
-* load-threads
-    - **default**: -1
-    - **description**: The number of threads the server should use for world
-      saving and loading. This is set to (number of processors - 1) by default.
 
 watchdog
 ~~~~~~~~
@@ -166,6 +156,25 @@ book-size
       as it's contribution to the allowed byte total for a book (with the first
       page being having a multiplier of 1.0).
 
+unsupported-settings
+~~~~~~~~~~~~~~~~~~~~
+* allow-piston-duplication
+  - **default**: false
+  - **description**: If set to true, will allow duplication of TNT,
+        carpets and rails. Introduced in build #371
+
+async-chunks
+~~~~~~~~~~~~
+* enabled
+    - **default**: true
+    - **description**: Sets whether the server should load and save chunks
+      asynchronously, improving performance.
+
+* load-threads
+    - **default**: -1
+    - **description**: The number of threads the server should use for world
+      saving and loading. This is set to (number of processors - 1) by default.
+
 messages
 ~~~~~~~~
 * no-permission
@@ -177,7 +186,7 @@ messages
 
 * kick
     - authentication-servers-down
-        - **default**: ' ' (empty string)
+        - **default**: '' (empty string)
         - **note**: The default value instructs the server to send the vanilla
           translatable kick message.
         - **description**: Message to kick a player with when they are
@@ -240,11 +249,10 @@ World Settings
 World settings are configured on a per-world basis. The child-node *default*
 is used for all worlds that do not have their own specific settings.
 
-per-player-mob-spawns
-~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Determines whether the mob limit (in bukkit.yml) is counted
-  per-player or for the entire server.
+delay-chunk-unloads-by
+~~~~~~~~~~~~~~~~~~~~~~
+* **default**: 10s
+* **description**: Delays chunk unloads by the specified time
 
 disable-teleportation-suffocation-check
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -262,12 +270,11 @@ optimize-explosions
   explosion, rather than recalculating throughout the process. This
   speeds up explosions significantly.
 
-portal-search-radius
-~~~~~~~~~~~~~~~~~~~~
-* **default**: 128
-* **description**: The maximum range the server will use to look for an
-  existing nether portal. If it can't find one in that range, it will generate
-  a new one.
+baby-zombie-movement-modifier
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: 0.5
+* **description**: Modifies the speed that baby zombies move at, where 0.5 is
+  50% faster than the mob base speed, and -0.4 would be 40% slower.
 
 fixed-chunk-inhabited-time
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -291,21 +298,6 @@ remove-corrupt-tile-entities
 * **description**: Instructs the server to automatically remove tile entities
   it detects as broken and cannot fix.
 
-enable-treasure-maps
-~~~~~~~~~~~~~~~~~~~~
-* **default**: true
-* **description**: Allows villagers to trade treasure maps.
-
-treasure-maps-return-already-discovered
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Instructs the server to target the first treasure location
-  found, rather than the first undiscovered one. Vanilla mechanics normally
-  find the first undiscovered location, which may lead to structures that were
-  not fully looted, and can also fail with a world border set. Enabling this
-  will make the map simply find the closest target structure, regardless if it
-  has been loaded or not already.
-
 experience-merge-max-value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: -1
@@ -326,6 +318,18 @@ max-auto-save-chunks-per-tick
 * **default**: 24
 * **description**: The maximum number of chunks the auto-save system will save
   in a single tick.
+
+count-all-mobs-for-spawning
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Determines whether spawner mobs and other misc mobs are
+  counted towards the global mob limit.
+
+per-player-mob-spawns
+~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Determines whether the mob limit (in bukkit.yml) is counted
+  per-player or for the entire server.
 
 falling-block-height-nerf
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -379,65 +383,21 @@ duplicate-uuid-saferegen-delete-range
 * **description**: If multiple entities with duplicate UUIDs are within this
   many blocks, saferegen will delete all but 1 of them.
 
-disable-thunder
-~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Disables thunderstorms.
+phantoms-do-no-spawn-on-creative-players
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Disables spawning of phantoms on players in creative mode
 
-skeleton-horse-thunder-spawn-chance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: 0.01
-* **description**: Sets the chance that a "Skeleton Trap" (4 skeleton horsemen)
-  will spawn in a thunderstorm.
-
-disable-ice-and-snow
-~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Disables ice and snow formation.
-
-count-all-mobs-for-spawning
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Determines whether spawner mobs and other misc mobs are
-  counted towards the global mob limit.
-
-keep-spawn-loaded-range
-~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: 8
-* **description**: The range in chunks around spawn to keep loaded.
+phantoms-only-attack-insomniacs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Prevents phantoms from attacking players who have slept
 
 keep-spawn-loaded
 ~~~~~~~~~~~~~~~~~
 * **default**: true
 * **description**: Instructs the server to keep the spawn chunks loaded at all
   times.
-
-auto-save-interval
-~~~~~~~~~~~~~~~~~~
-* **default**: -1
-* **note**: Default value instructs the world to use Bukkit's default.
-* **description**: Instructs this world to use a specific value for auto-save
-  instead of bukkit's global value.
-
-armor-stands-do-collision-entity-lookups
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: true
-* **description**: Instructs armor stand entities to do entity collision
-  checks.
-
-non-player-arrow-despawn-rate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: -1
-* **note**: The default value instructs the server to use the same default
-  arrow despawn rate from spigot.yml that is used for all arrows.
-* **description**: The rate, in ticks, at which arrows shot from non-player
-  entities are despawned.
-
-creative-arrow-despawn-rate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: -1
-* **description**: The rate, in ticks, at which arrows shot from players in
-  creative mode are despawned.
 
 water-over-lava-flow-speed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -457,20 +417,12 @@ bed-search-radius
   respawn a player near their bed. Increasing this value gives players a better
   chance to respawn at their bed should it became obstructed.
 
-use-faster-eigencraft-redstone
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Sets whether the server uses theosib's redstone algorithms,
-  completely overhauling how redstone works. The new algorithms should be
-  many times faster than current vanilla ones.
-* **warning**: This may change how redstone works in very extreme edge-cases.
-
-nether-ceiling-void-damage
+nether-ceiling-void-damage-height
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Instructs the server to do void damage when an entity is on
-  top of the nether ceiling. Use to limit nether ceiling travel in a
-  vanilla-lore friendly way.
+* **default**: 0
+* **description**: Sets the level above which players in the nether will take void damage.
+  This is a vanilla-friendly way to restrict players using the nether ceiling as buildable
+  area. Setting to 0 disables this feature.
 
 allow-non-player-entities-on-scoreboards
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -480,11 +432,18 @@ allow-non-player-entities-on-scoreboards
 * **note**: Enabling this value may increase the amount of time the server
   spends calculating entity collisions.
 
-disable-explosion-knockback
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Instructs the server to completely block any knockback that
-  occurs as a result of an explosion.
+portal-search-radius
+~~~~~~~~~~~~~~~~~~~~
+* **default**: 128
+* **description**: The maximum range the server will use to look for an
+  existing nether portal. If it can't find one in that range, it will generate
+  a new one.
+
+portal-create-radius
+~~~~~~~~~~~~~~~~~~~~
+* **default**: 16
+* **description**: The maximum range the server will try to create a portal around
+  when generating a new portal
 
 container-update-tick-rate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -498,11 +457,65 @@ parrots-are-unaffected-by-player-movement
 * **description**: Makes parrots "sticky" so they do not fall off a player's
   shoulder when they move. Use crouch to shake them off.
 
+disable-explosion-knockback
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Instructs the server to completely block any knockback that
+  occurs as a result of an explosion.
+
+disable-thunder
+~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Disables thunderstorms.
+
+skeleton-horse-thunder-spawn-chance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: 0.01
+* **description**: Sets the chance that a "Skeleton Trap" (4 skeleton horsemen)
+  will spawn in a thunderstorm.
+
+disable-ice-and-snow
+~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Disables ice and snow formation.
+
+keep-spawn-loaded-range
+~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: 10
+* **description**: The range in chunks around spawn to keep loaded.
+
+armor-stands-do-collision-entity-lookups
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Instructs armor stand entities to do entity collision
+  checks.
+
+enable-treasure-maps
+~~~~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Allows villagers to trade treasure maps.
+
+treasure-maps-return-already-discovered
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Instructs the server to target the first treasure location
+  found, rather than the first undiscovered one. Vanilla mechanics normally
+  find the first undiscovered location, which may lead to structures that were
+  not fully looted, and can also fail with a world border set. Enabling this
+  will make the map simply find the closest target structure, regardless if it
+  has been loaded or not already.
+
 prevent-tnt-from-moving-in-water
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
 * **description**: Instructs the server to keep Primed TNT entities from moving
   in flowing water.
+
+iron-golems-can-spawn-in-air
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Sets whether iron golems can spawn in the air. Iron farms may break
+  depending on this setting
 
 armor-stands-tick
 ~~~~~~~~~~~~~~~~~
@@ -510,23 +523,39 @@ armor-stands-tick
 * **description**: Disable to prevent armor stands from ticking. Can improve
   performance with many armor stands.
 
+non-player-arrow-despawn-rate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: -1
+* **note**: The default value instructs the server to use the same default
+  arrow despawn rate from spigot.yml that is used for all arrows.
+* **description**: The rate, in ticks, at which arrows shot from non-player
+  entities are despawned.
+
+creative-arrow-despawn-rate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: -1
+* **description**: The rate, in ticks, at which arrows shot from players in
+  creative mode are despawned.
+
 spawner-nerfed-mobs-should-jump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
 * **description**: Determines if spawner nerfed mobs should attempt to float
   (jump) in water.
 
-baby-zombie-movement-modifier
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: 0.5
-* **description**: Modifies the speed that baby zombies move at, where 0.5 is
-  50% faster than the mob base speed, and -0.4 would be 40% slower.
-
-allow-leashing-undead-horse
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+entities-target-with-follow-range
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
-* **description**: Instructs the server to allow players to leash undead
-  horse types.
+* **description**: Sets whether the server should use follow range when
+  targeting entities
+
+zombie-villager-infection-chance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: -1.0
+* **description**: Sets the change for villager conversion to zombie villager
+  Set to -1.0 for default behavior based on game difficulty
+  Set to 0.0 to always have villagers die when killed by zombies
+  Set to 1.0 to always convert villagers to zombie villagers
 
 all-chunks-are-slime-chunks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -542,26 +571,32 @@ mob-spawner-tick-rate
 * **description**: How often mob spawners should tick to calculate available
   spawn areas and spawn new entities into the world.
 
+auto-save-interval
+~~~~~~~~~~~~~~~~~~
+* **default**: -1
+* **note**: Default value instructs the world to use Bukkit's default.
+* **description**: Instructs this world to use a specific value for auto-save
+  instead of bukkit's global value.
+
 game-mechanics
 ~~~~~~~~~~~~~~
-* disable-pillager-patrols
-    - **default**: false
-    - **description**: Disables Pillager patrols and associated AI.
-
 * scan-for-legacy-ender-dragon
     - **default**: true
     - **description**: Determines whether the server searches for the ender
       dragon when loading older worlds.
 
+* disable-pillager-patrols
+    - **default**: false
+    - **description**: Disables Pillager patrols and associated AI.
+
+* nerf-pigmen-from-nether-portals
+    - **default**: false
+    - **description**: Removes AI from pigmen spawned via nether portals
+
 * disable-chest-cat-detection
     - **default**: false
     - **description**: Allows you to open chests even if they have a cat
       sitting on top of them.
-
-* shield-blocking-delay
-    - **default**: 5
-    - **description**: The number of ticks between a player activating their
-      shield and it actually blocking damage.
 
 * disable-end-credits
     - **default**: false
@@ -578,15 +613,40 @@ game-mechanics
     - **description**: Determines if the server will interrupt a sprinting
       player if they are attacked.
 
-* disable-relative-projectile-velocity
-    - **default**: false
-    - **description**: Instructs the server to ignore shooter velocity when
-      calculating the velocity of a fired arrow.
+* shield-blocking-delay
+    - **default**: 5
+    - **description**: The number of ticks between a player activating their
+      shield and it actually blocking damage.
 
 * disable-unloaded-chunk-enderpearl-exploit:
     - **default**: true
     - **description**: Prevent enderpearls from storing the thrower when in an
       unloaded chunk.
+
+* disable-relative-projectile-velocity
+    - **default**: false
+    - **description**: Instructs the server to ignore shooter velocity when
+      calculating the velocity of a fired arrow.
+
+pillager-patrols
+~~~~~~~~~~~~~~~~
+    - spawn-chance
+        - **default**: 0.2
+        - **description**: Modify the spawn changes for patrols
+    - spawn-delay
+        - per-player
+            - **default**: false
+            - **description**: Makes spawn-delay per player
+        - ticks
+            - **default**: 1200
+            - **description**: Delay in ticks between spawn chance
+    - start
+        - per-player
+            - **default**: false
+            - **description**: Makes days per player
+        - days
+            - **default**: 5
+            - **description**: Days between raid spawns
 
 max-growth-height
 ~~~~~~~~~~~~~~~~~
@@ -619,22 +679,6 @@ despawn-ranges
     - **default** 128
     - **description**: The number of blocks away from a player in which
       entities will be forcibly despawned.
-
-lightning-strike-distance-limit
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* sound
-    - **default**: -1
-    - **description**: The distance that players will hear lightning from.
-
-* impact-sound
-    - **default**: -1
-    - **description**: The distance that players will hear a lightning impact
-      from.
-
-* flash
-    - **default**: -1
-    - **description**: The distance that players will see lightning flashes in
-      the sky.
 
 frosted-ice
 ~~~~~~~~~~~
@@ -691,6 +735,17 @@ lootables
     - **note**: This field uses time-based values. 12s = 12 seconds,
       3h = 3 hours, 4d = 4 days.
 
+alt-item-despawn-rate
+~~~~~~~~~~~~~~~~~~~~~
+* enabled
+    - **default**: false
+    - **description**: Determines if items will have different despawn rates.
+
+* items
+    - **default**: { COBBLESTONE: 300 } (a list of mappings)
+    - **description**: Determines how long each respective item despawns in
+      ticks. You can use item names from `this enum <https://papermc.io/javadocs/paper/1.14/org/bukkit/Material.html>`.
+
 hopper
 ~~~~~~
 * cooldown-when-full
@@ -704,17 +759,21 @@ hopper
       hoppers. Dramatically improves hopper performance but will break
       protection plugins and any others that depend on this event.
 
-alt-item-despawn-rate
-~~~~~~~~~~~~~~~~~~~~~
-* enabled
-    - **default**: false
-    - **description**: Determines if items will have different despawn rates.
+lightning-strike-distance-limit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* sound
+    - **default**: -1
+    - **description**: The distance that players will hear lightning from.
 
-* items
-    - **default**: { COBBLESTONE: 300 } (a list of mappings)
-    - **description**: Determines how long each respective item despawns in
-      ticks. You can use item names from `this enum
-      <https://papermc.io/javadocs/paper/1.14/org/bukkit/Material.html>`.
+* impact-sound
+    - **default**: -1
+    - **description**: The distance that players will hear a lightning impact
+      from.
+
+* flash
+    - **default**: -1
+    - **description**: The distance that players will see lightning flashes in
+      the sky.
 
 anti-xray
 ~~~~~~~~~
@@ -761,12 +820,11 @@ anti-xray
       in engine mode 2.
     - **note**: This list is using Mojang Studios server names *not* bukkit names.
 
-generator-settings
-~~~~~~~~~~~~~~~~~~
-* flat-bedrock
-    - **default**: false
-    - **description**: Instructs the server to generate bedrock as a single flat
-      layer.
+viewdistances
+~~~~~~~~~~~~~
+* no-tick-view-distance
+  - **default**: -1
+  - **description**: Sets the no-tick view distance
 
 squid-spawn-height
 ~~~~~~~~~~~~~~~~~~
@@ -775,3 +833,9 @@ squid-spawn-height
     - **description**: The maximum height at which squids will spawn.
     - **note**: The default value defers to Minecraft's default setting,
       which as of 1.12 is the sea-level of the world (usually Y: 64).
+
+generator-settings
+~~~~~~~~~~~~~~~~~~
+* flat-bedrock
+    - **default**: false
+    - **description**: Instructs the server to generate bedrock as a single flat layer.
