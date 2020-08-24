@@ -3,6 +3,7 @@ Configuration
 =============
 
 This page details the various configuration settings exposed by Waterfall and Travertine.
+These settings can be found in waterfall.yml.
 
 If you want information on settings in BungeeCord's config.yml you should see
 their respective documentation pages.
@@ -14,7 +15,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated June 24th 2020 for MC 1.8-1.16, Waterfall build #354
+    Last updated August 24th 2020 for MC 1.8-1.16, Waterfall build #370
 
 use_netty_dns_resolver
 ~~~~~~~~~~~~~~~~~~~~~~

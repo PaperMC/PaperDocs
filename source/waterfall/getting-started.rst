@@ -14,7 +14,7 @@ on newer versions as well, such as Java 11, but certain plugins may have issues.
 Generally, LTS versions of Java are best supported, though you may have luck on newer versions.
 
 Migrating From BungeeCord
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Waterfall and Travertine are drop in replacements for BungeeCord, you don't need to make any changes.
 
@@ -32,6 +32,10 @@ To run the server, simply start it up like any other Java application.
 
 Open your terminal, navigate to the saved location, and then run
 ``java -Xms512M -Xmx512M -jar waterfall-###.jar``
+
+Aikar's recommended flags for Waterfall and Travertine are as follows:
+``java -Xms512M -Xmx512M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions``
+``-XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -jar waterfall-###.jar``
 
 The amount of RAM can be set by changing the numbers in the ``-Xms`` and ``-Xmx``
 arguments.
