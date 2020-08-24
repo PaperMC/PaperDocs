@@ -48,4 +48,6 @@ game_version
 disable_entity_metadata_rewrite
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
-* **description**: Sets whether to disable entity metadata rewriting.
+* **description**: This setting disables entity metadata rewriting in favor
+  of sending a join packet to the client. It offers a more robust solution for
+  modded environments but can cause plugins to break.

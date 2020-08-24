@@ -6,29 +6,46 @@ Getting Started
    :depth: 1
    :local:
 
+
+What are Waterfall and Travertine?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Waterfall is a fork of BungeeCord, a proxy used primarily to teleport players
+between multiple Minecraft servers.
+
+Waterfall focuses on three main areas:
+
+- Stability: Waterfall aims to be stable. We will achieve this through making
+  the code base testable and discouraging practices that lead to proxy lag.
+- Features: Waterfall aims to include more features than canonical BungeeCord.
+- Scalability: Waterfall should be able to handle a large number of concurrent
+  players, given a reasonably modern CPU, memory, and good network connection.
+
+Travertine is a fork of Waterfall with additional support for 1.7.10.
+
 Requirements
 ~~~~~~~~~~~~
 
-Waterfall and Travertine require **Java 8** or newer to run. It should run fine
+Waterfall and Travertine require **Java 8** or newer to run. It does run fine
 on newer versions as well, such as Java 11, but certain plugins may have issues.
-Generally, LTS versions of Java are best supported, though you may have luck on newer versions.
+Generally, LTS versions of Java are targeted, though you may have luck on newer versions.
 
 Migrating From BungeeCord
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Waterfall and Travertine are drop in replacements for BungeeCord, you don't need to make any changes.
 
-Getting A Server Jar
+Getting A Proxy Jar
 ~~~~~~~~~~~~~~~~~~~~~
 
-Paper provides runnable server jars directly from our `website's downloads page <https://papermc.io/downloads#Waterfall>`_.
+Paper provides runnable proxy jars directly from our `website's downloads page <https://papermc.io/downloads#Waterfall>`_.
 
 Click on the build number to download a file.
 
-Running The Server
+Running The Proxy
 ~~~~~~~~~~~~~~~~~~
 
-To run the server, simply start it up like any other Java application.
+To run the proxy, simply start it up like any other Java application.
 
 Open your terminal, navigate to the saved location, and then run
 ``java -Xms512M -Xmx512M -jar waterfall-###.jar``
@@ -37,13 +54,14 @@ Aikar's recommended flags for Waterfall and Travertine are as follows:
 ``java -Xms512M -Xmx512M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions``
 ``-XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -jar waterfall-###.jar``
 
-The amount of RAM can be set by changing the numbers in the ``-Xms`` and ``-Xmx``
-arguments.
+For further explanation about advanced Java tuning, see `Aikar's tuning page <https://mcflags.emc.gs>`_.
 
-To configure your server, see the :doc:`../waterfall/configuration` page.
+The amount of memory can be set by changing the numbers in the ``-Xms`` and ``-Xmx`` flags.
 
-Updating The Server
+To configure your proxy, see the :doc:`../waterfall/configuration` page.
+
+Updating The Proxy
 ~~~~~~~~~~~~~~~~~~~
 
-To update the server, first stop it safely by executing the ``end`` command
-and then replace the old waterfall jar with a new one. That's it.
+To update the proxy, first stop it safely by executing the ``end`` command
+and then replace the old proxy jar with a new one. That's it.
