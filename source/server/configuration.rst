@@ -181,14 +181,14 @@ messages
         - **default**: '&cI''m sorry, but you do not have permission to perform
           this command. Please contact the server administrators if you
           believe that this is in error.'
-        - **description**: The message the server sends to requestors with
+        - **description**: The message the server sends to requesters with
           insufficient permissions.
 
 * kick
     - authentication-servers-down
         - **default**: '' (empty string)
         - **note**: The default value instructs the server to send the vanilla
-          translateable kick message.
+          translatable kick message.
         - **description**: Message to kick a player with when they are
           disconnected because the Mojang authentication servers are down.
 
@@ -615,7 +615,7 @@ game-mechanics
 
 * shield-blocking-delay
     - **default**: 5
-    - **description**: The number of ticks between a player activiating their
+    - **description**: The number of ticks between a player activating their
       shield and it actually blocking damage.
 
 * disable-unloaded-chunk-enderpearl-exploit:

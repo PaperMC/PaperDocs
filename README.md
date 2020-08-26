@@ -12,13 +12,13 @@ The published public documentation for the currently supported PaperMC implement
 
 PaperMC has a small team of active developers that focus most of their time on the main server implementation (Paper) itself. In order to keep this documents up-to-date and in good quality, we rely on your contributions. In a perfect world we'd have an individual or team dedicated to documentation, but we currently do not.
 
-We appreciate any and all contributions we receieve and hope that if you see something that needs changing, you'll help us out. Thanks.
+We appreciate any and all contributions we receive and hope that if you see something that needs changing, you'll help us out. Thanks.
 
 ## Building
 
 ### Environment Setup
 
-You can setup an environment so you can instantly see the changes that make to the docs.
+You can set up an environment, so you can instantly see the changes that make to the docs.
 
 1. [Install Python 3](https://www.python.org)
 2. Install the needed sphinx packages
@@ -57,4 +57,4 @@ If you need anything else not covered above, you can contact us directly via IRC
 
 ## Special Thanks
 This project is based on the awesome work done by the [SpongePowered team](https://github.com/SpongePowered/) and [all those](https://github.com/SpongePowered/SpongeDocs/graphs/contributors) who helped them with their [SpongeDocs](https://github.com/SpongePowered/SpongeDocs) platform.
-Therefore it is only appropriate we thank them for all their hardwork that allowed us to build our own based on the structures they created for their own platform.
+Therefore, it is only appropriate we thank them for all their hard work that allowed us to build our own based on the structures they created for their own platform.

@@ -123,7 +123,7 @@ an array of supported versions.
 
 These versions correspond to the version of Minecraft the software is targeting.
 For example, ``https://papermc.io/api/v1/paper/1.14.4`` will return all build IDs
-targetting the 1.13.2 version of Minecraft.
+targeting the 1.13.2 version of Minecraft.
 
 .. code-block:: json
 
