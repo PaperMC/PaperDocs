@@ -555,7 +555,7 @@ zombie-villager-infection-chance
 * **description**: Sets the change for villager conversion to zombie villager
   Set to -1.0 for default behavior based on game difficulty
   Set to 0.0 to always have villagers die when killed by zombies
-  Set to 1.0 to always convert villagers to zombie villagers
+  Set to 100.0 to always convert villagers to zombie villagers
 
 all-chunks-are-slime-chunks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
