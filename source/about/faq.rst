@@ -50,28 +50,15 @@ to see a noticeable performance improvement.
 Your plugins and worlds will not be changed and both should work just fine
 after the change.
 
-You may also notice changes to gameplay. 
+Some users may also notice changes to gameplay. 
 
 Will players be able to tell?
 -----------------------------
 
-That depends. Your players may see a benefit to gameplay because of the
-performance improvement, assuming you see one. On a properly maintained server,
-your players may not even be able to tell the difference unless it is content we
-have changed.
-
-
-What has been changed?
------------------------------
-
-This is currently not an exhaustive list and some are configurable:
-damage above the roof of the nether, nether portal search range, 
-leashing undead horses, fix 0-tick crop farms, fix piston inconsitenciess thus fixing 
-multiple dupes (for example TNT dupers), prevent players from getting kicked for 
-"flying" when actually resting in a bed, prevent phantoms from spawning on creative
-players, phatoms only attack insomniacs, fixed unloaded chunk enderpearl exploit, 
-maximum file size of minecraft book pages, entity activation range, fixed bedrock
-brekaing exploit, natural mob spawn limit calculations and enforcment,  
+That depends. Your players may see a benefit to their gameplay because of the
+performance improvements, assuming you see one. In most cases, your players
+should not be able to tell though more technical players may encounter some
+changes.
 
 
 Can I run Bukkit plugins on Paper?
@@ -83,7 +70,7 @@ plugins made by the community.
 Can I run Spigot plugins on Paper too?
 --------------------------------------
 
-Yes you can! We don't like to break things most of the time. Sometimes there
+Yes, you can! We don't like to break things most of the time. Sometimes there
 are plugin authors who do, but we can usually make things work.
 
 Is there anywhere to get plugins for Paper?
@@ -109,7 +96,7 @@ Developers
 What can I do with Paper?
 -------------------------
 
-Paper provides additional APIs ontop of Bukkit, exposing new vanilla elements
+Paper provides additional APIs on top of Bukkit, exposing new vanilla elements
 and even some of its own for you to play with.
 
 TODO: Link to developer docs here :D
@@ -119,6 +106,6 @@ Does Paper make any breaking changes to the API?
 
 Fortunately, Paper does not make breaking API changes so it can maintain plugin
 compatibility with upstream Spigot and CraftBukkit. At the same time, this
-means we are also sometimes limited with what we can do and how we can do it.
+means we also have limitations with what we can do and how we can do it.
 
 It's a double-edged sword.
