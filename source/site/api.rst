@@ -17,11 +17,11 @@ through any problems or pain spots as they arise.
 
 I just want to download the latest jar
 --------------------------------------
-To download the latest jar, simply connect to `<https://papermc.io/api/v1/paper/1.16.2/latest/download>`__
+To download the latest jar, simply connect to `<https://papermc.io/api/v1/paper/1.16.3/latest/download>`__
 
 If you're looking for Waterfall or Travertine, their name can be used in place
 of `paper` as either `waterfall` or `travertine`. Specific versions can also be
-used by replacing `1.16.2` with `1.12.2` or another version. For additional
+used by replacing `1.16.3` with `1.12.2` or another version. For additional
 information about available endpoints, projects, and versions, please read
 further below.
 
@@ -105,6 +105,7 @@ an array of supported versions.
  {
   "project": "paper",
   "versions": [
+    "1.16.3",
     "1.16.2",
     "1.16.1",
     "1.15.2",
@@ -130,25 +131,24 @@ an array of supported versions.
  }
 
 These versions correspond to the version of Minecraft the software is targeting.
-For example, ``https://papermc.io/api/v1/paper/1.16.2`` will return all build IDs
-targeting the 1.16.2 version of Minecraft.
+For example, ``https://papermc.io/api/v1/paper/1.16.3`` will return all build IDs
+targeting the 1.16.3 version of Minecraft.
 
 .. code-block:: json
 
  {
   "project": "paper",
-  "version": "1.16.2",
+  "version": "1.16.3",
   "builds": {
-    "latest": "148",
+    "latest": "197",
     "all": [
-      "148",
-      "147",
-      "146",
-      "145",
-      "144",
-      "143",
-      "142",
-      "141"
+      "197",
+      "196",
+      "195",
+      "194",
+      "193",
+      "192",
+      "191"
     ]
   }
  }
@@ -159,28 +159,28 @@ A specific build of the given project. These build versions correspond
 with the build IDs specified by the backend continuous integration tools. As of
 v1 of the API they will always be integers.
 
-For example, ``https://papermc.io/api/v1/paper/1.16.2/148`` will return
-information about the build for 1.16.2 with the ID of 148.
+For example, ``https://papermc.io/api/v1/paper/1.16.3/197`` will return
+information about the build for 1.16.3 with the ID of 197.
 
 .. code-block:: json
 
  {
   "project": "paper",
-  "version": "1.16.2",
-  "build": "148"
+  "version": "1.16.3",
+  "build": "197"
  }
 
 You can use the static keyword `latest` in place of a specific build in order to
 get the latest version for that specific release of minecraft.
-For example, ``https://papermc.io/api/v1/paper/1.16.2/latest`` will return info
-on the latest version of the Paper project for 1.16.2.
+For example, ``https://papermc.io/api/v1/paper/1.16.3/latest`` will return info
+on the latest version of the Paper project for 1.16.3.
 
 .. code-block:: json
 
  {
   "project": "paper",
-  "version": "1.16.2",
-  "build": "148"
+  "version": "1.16.3",
+  "build": "197"
  }
 
 DOWNLOAD
@@ -198,5 +198,5 @@ naming of resources.
 .. code-block:: text
 
     content-type: application/java-archive
-    content-length: 13649793
-    content-disposition: attachment; filename=waterfall-370.jar
+    content-length: 13655886
+    content-disposition: attachment; filename=waterfall-377.jar
