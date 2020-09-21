@@ -29,8 +29,8 @@ how to install, run and maintain a Paper based server.
 The PaperMC project has several main components. Learn more about the project
 structure :doc:`here <about/structure>`.
 
-Running A Server
-~~~~~~~~~~~~~~~~
+Running A Paper Server
+~~~~~~~~~~~~~~~~~~~~~~
 
 Running a Paper server is easy. This section will cover common tasks such as
 configuring it, maintaining plugins, and general best practices.
@@ -40,6 +40,18 @@ configuring it, maintaining plugins, and general best practices.
     :titlesonly:
 
     server/index
+
+Running A Waterfall or Travertine Proxy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Running a Waterfall or Travertine proxy is also easy. This section will cover common tasks such as
+configuring it, maintaining plugins, and general best practices.
+
+.. toctree::
+    :maxdepth: 3
+    :titlesonly:
+
+    waterfall/index
 
 Contributing to Paper
 ~~~~~~~~~~~~~~~~~~~~~~
