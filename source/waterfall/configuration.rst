@@ -3,10 +3,10 @@ Configuration
 =============
 
 This page details the various configuration settings exposed by Waterfall and Travertine.
-These settings can be found in waterfall.yml.
+These settings can be found in waterfall.yml. Travertine has no custom configuration file.
 
 If you want information on settings in BungeeCord's config.yml you should see
-their respective documentation pages.
+its respective documentation pages.
 
 * `BungeeCord Configuration (config.yml) <https://www.spigotmc.org/wiki/bungeecord-configuration-guide/>`_
 
@@ -15,7 +15,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated August 24th 2020 for MC 1.8-1.16, Waterfall build #370
+    Last updated August 24th, 2020 for Waterfall build #370
 
 use_netty_dns_resolver
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -41,7 +41,7 @@ throttling
 
 game_version
 ~~~~~~~~~~~~
-* **default**: ‘ ‘ (empty string)
+* **default**: ' ' (empty string)
 * **description**: The supported versions displayed to the client. Default is a 
   comma separated list of supported versions. For example 1.8.x, 1.9.x, 1.10.x
 
