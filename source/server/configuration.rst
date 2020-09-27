@@ -857,12 +857,12 @@ anti-xray
 viewdistances
 ~~~~~~~~~~~~~
 * no-tick-view-distance
-  - **default**: -1
-  - **description**: Sets the no-tick view distance. This is the total view
-    distance of the player: a 'normal' view distance of 5 and a no-tick view
-    distance of 10 would mean 5 view distance is ticked, has mobs moving, etc.,
-    but the extra 5 (therefore 10 in total) is only visible. A value of -1
-    disables this feature.
+    - **default**: -1
+    - **description**: Sets the no-tick view distance. This is the total view
+      distance of the player: a 'normal' view distance of 5 and a no-tick view
+      distance of 10 would mean 5 view distance is ticked, has mobs moving, etc.,
+      but the extra 5 (therefore 10 in total) is only visible. A value of -1
+      disables this feature.
 
 squid-spawn-height
 ~~~~~~~~~~~~~~~~~~
