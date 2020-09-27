@@ -159,9 +159,9 @@ book-size
 unsupported-settings
 ~~~~~~~~~~~~~~~~~~~~
 * allow-piston-duplication
-  - **default**: false
-  - **description**: If set to true, will allow duplication of TNT,
-        carpets and rails. Introduced in build #371
+    - **default**: false
+    - **description**: If set to true, will allow duplication of TNT,
+      carpets and rails. Introduced in build #371.
 
 async-chunks
 ~~~~~~~~~~~~
