@@ -418,7 +418,7 @@ bed-search-radius
   chance to respawn at their bed should it became obstructed.
 
 nether-ceiling-void-damage-height
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 0
 * **description**: Sets the level above which players in the nether will take void damage.
   This is a vanilla-friendly way to restrict players using the nether ceiling as buildable
