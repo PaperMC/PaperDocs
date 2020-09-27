@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated August 23rd, 2020 for MC 1.16.1, Paper build #138
+    Last updated September 27th, 2020 for MC 1.16.3, Paper build #204
 
 Global Settings
 ===============
@@ -33,11 +33,6 @@ verbose
 * **default**: false
 * **description**: Sets whether the server should dump all configuration values
   to the server log on startup.
-
-allow-perm-block-break-exploits
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Sets whether unbreakable blocks can be broken with vanilla exploits.
 
 load-permissions-yml-before-plugins
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,6 +62,13 @@ incoming-packet-spam-threshold
 * **description**: Sets the threshold at which the server will consider
   incoming packets as spam and ignore them.
 
+max-joins-per-tick
+~~~~~~~~~~~~~~~~~~
+* **default**: 3
+* **description**: Sets the maximum amount of players that may join the server
+  in a single tick. If more players join, they will be postponed until later ticks
+  to join.
+
 suggest-player-names-when-null-tab-completions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
@@ -86,6 +88,12 @@ save-player-data
 * **description**: Sets whether the server should save player data, such as
   inventories, experience, and advancements.
 
+chunk-tasks-per-tick
+~~~~~~~~~~~~~~~~~~~~
+* **default**: 1000
+* **description**: How many chunk tasks may be done in the middle of ticks for
+  all worlds. This is helpful to rendering and chunk generation.
+
 enable-player-collisions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
@@ -93,6 +101,18 @@ enable-player-collisions
   one another.
 * **warning**: This setting can be broken by plugins interacting with the
   scoreboard, double check plugins when troubleshooting this value.
+
+player-auto-save-rate
+~~~~~~~~~~~~~~~~~~~~~
+* **default**: -1
+* **description**: Set how often players should be saved. A value of -1 means it
+  will pick a recommended value for you.
+
+max-player-auto-save-per-tick
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: -1
+* **description**: How many players should be saved at most in a single tick.
+  A value of -1 means it will pick a recommended value for you.
 
 save-empty-scoreboard-teams
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,7 +126,8 @@ velocity-support
 * enabled
     - **default**: false
     - **description**: Set this to true if this server is behind a `Velocity
-      <https://www.velocitypowered.com/>`_ proxy.
+      <https://www.velocitypowered.com/>`_ proxy. If this is true, do not enable
+      the bungeecord setting in spigot.yml.
 
 * online-mode
     - **default**: true
@@ -114,10 +135,27 @@ velocity-support
       when behind velocity. Set to match your proxy's online-mode setting.
 
 * secret
-    - **default**: ' ' (empty string)
+    - **default**: '' (empty string)
     - **description**: The secret string that is shared by your Velocity proxy
       and this server. This needs to match your proxy's ``forwarding-secret``
       setting.
+
+unsupported-settings
+~~~~~~~~~~~~~~~~~~~~
+* allow-perm-block-break-exploits
+    - **default**: false
+    - **description**: Sets whether unbreakable blocks can be broken with vanilla exploits.
+      This includes bedrock, end portal frames, end portal blocks, and more.
+
+* allow-piston-duplication
+    - **default**: false
+    - **description**: If set to true, will allow duplication of TNT,
+      carpets and rails. Introduced in 1.15.2, build #358.
+
+* allow-headless-pistons
+    - **default**: false
+    - **description**: If set to true, pistons may in some cases become headless.
+      This is often used to break permanent blocks.
 
 watchdog
 ~~~~~~~~
@@ -156,21 +194,9 @@ book-size
       as it's contribution to the allowed byte total for a book (with the first
       page being having a multiplier of 1.0).
 
-unsupported-settings
-~~~~~~~~~~~~~~~~~~~~
-* allow-piston-duplication
-    - **default**: false
-    - **description**: If set to true, will allow duplication of TNT,
-      carpets and rails. Introduced in build #371.
-
 async-chunks
 ~~~~~~~~~~~~
-* enabled
-    - **default**: true
-    - **description**: Sets whether the server should load and save chunks
-      asynchronously, improving performance.
-
-* load-threads
+* threads
     - **default**: -1
     - **description**: The number of threads the server should use for world
       saving and loading. This is set to (number of processors - 1) by default.
@@ -178,11 +204,11 @@ async-chunks
 messages
 ~~~~~~~~
 * no-permission
-        - **default**: '&cI''m sorry, but you do not have permission to perform
-          this command. Please contact the server administrators if you
-          believe that this is in error.'
-        - **description**: The message the server sends to requesters with
-          insufficient permissions.
+    - **default**: '&cI''m sorry, but you do not have permission to perform
+      this command. Please contact the server administrators if you
+      believe that this is in error.'
+    - **description**: The message the server sends to requesters with
+      insufficient permissions.
 
 * kick
     - authentication-servers-down
@@ -249,11 +275,6 @@ World Settings
 World settings are configured on a per-world basis. The child-node *default*
 is used for all worlds that do not have their own specific settings.
 
-delay-chunk-unloads-by
-~~~~~~~~~~~~~~~~~~~~~~
-* **default**: 10s
-* **description**: Delays chunk unloads by the specified time
-
 disable-teleportation-suffocation-check
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
@@ -263,18 +284,30 @@ disable-teleportation-suffocation-check
   feature on may allow players to teleport through solid materials by logging
   out in specific locations.
 
-optimize-explosions
-~~~~~~~~~~~~~~~~~~~
+max-auto-save-chunks-per-tick
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: 24
+* **description**: The maximum number of chunks the auto-save system will save
+  in a single tick.
+
+per-player-mob-spawns
+~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
-* **description**: Instructs the server to cache entity lookups during an
-  explosion, rather than recalculating throughout the process. This
-  speeds up explosions significantly.
+* **description**: Determines whether the mob limit (in bukkit.yml) is counted
+  per-player or for the entire server.
 
 baby-zombie-movement-modifier
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 0.5
 * **description**: Modifies the speed that baby zombies move at, where 0.5 is
   50% faster than the mob base speed, and -0.4 would be 40% slower.
+
+optimize-explosions
+~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Instructs the server to cache entity lookups during an
+  explosion, rather than recalculating throughout the process. This
+  speeds up explosions significantly.
 
 fixed-chunk-inhabited-time
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -313,35 +346,28 @@ prevent-moving-into-unloaded-chunks
 * **description**: Sets whether the server will prevent players from moving
   into unloaded chunks or not.
 
-max-auto-save-chunks-per-tick
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: 24
-* **description**: The maximum number of chunks the auto-save system will save
-  in a single tick.
-
 count-all-mobs-for-spawning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
 * **description**: Determines whether spawner mobs and other misc mobs are
   counted towards the global mob limit.
 
-per-player-mob-spawns
-~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Determines whether the mob limit (in bukkit.yml) is counted
-  per-player or for the entire server.
+delay-chunk-unloads-by
+~~~~~~~~~~~~~~~~~~~~~~
+* **default**: 10s
+* **description**: Delays chunk unloads by the specified time
 
 falling-block-height-nerf
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 0
-* **note**: Values less than 1, will disable this feature.
+* **note**: Values less than 1 will disable this feature.
 * **description**: The height at which falling blocks will be removed from
   the server.
 
 tnt-entity-height-nerf
 ~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 0
-* **note**: Values less than 1, will disable this feature.
+* **note**: Values less than 1 will disable this feature.
 * **description**: The height at which Primed TNT entities will be removed from
   the server.
 
@@ -393,12 +419,6 @@ phantoms-only-attack-insomniacs
 * **default**: true
 * **description**: Prevents phantoms from attacking players who have slept
 
-keep-spawn-loaded
-~~~~~~~~~~~~~~~~~
-* **default**: true
-* **description**: Instructs the server to keep the spawn chunks loaded at all
-  times.
-
 water-over-lava-flow-speed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 5
@@ -410,12 +430,11 @@ grass-spread-tick-rate
 * **description**: Sets the delay, in ticks, at which the server attempts to
   spread grass. Higher values will result in slower spread.
 
-bed-search-radius
-~~~~~~~~~~~~~~~~~
-* **default**: 1
-* **description**: The distance the server checks for a safe place to
-  respawn a player near their bed. Increasing this value gives players a better
-  chance to respawn at their bed should it became obstructed.
+use-faster-eigencraft-redstone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Instructs the server to use a faster redstone implementation,
+  which may drastically help with performance in redstone.
 
 nether-ceiling-void-damage-height
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -423,6 +442,24 @@ nether-ceiling-void-damage-height
 * **description**: Sets the level above which players in the nether will take void damage.
   This is a vanilla-friendly way to restrict players using the nether ceiling as buildable
   area. Setting to 0 disables this feature.
+
+keep-spawn-loaded
+~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Instructs the server to keep the spawn chunks loaded at all
+  times.
+
+armor-stands-do-collision-entity-lookups
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Instructs armor stand entities to do entity collision
+  checks.
+
+parrots-are-unaffected-by-player-movement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Makes parrots "sticky" so they do not fall off a player's
+  shoulder when they move. Use crouch to shake them off.
 
 allow-non-player-entities-on-scoreboards
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -445,24 +482,6 @@ portal-create-radius
 * **description**: The maximum range the server will try to create a portal around
   when generating a new portal
 
-container-update-tick-rate
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: 1
-* **description**: The rate, in ticks, at which the server updates containers
-  and inventories.
-
-parrots-are-unaffected-by-player-movement
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Makes parrots "sticky" so they do not fall off a player's
-  shoulder when they move. Use crouch to shake them off.
-
-disable-explosion-knockback
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Instructs the server to completely block any knockback that
-  occurs as a result of an explosion.
-
 disable-thunder
 ~~~~~~~~~~~~~~~
 * **default**: false
@@ -479,16 +498,34 @@ disable-ice-and-snow
 * **default**: false
 * **description**: Disables ice and snow formation.
 
+disable-explosion-knockback
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Instructs the server to completely block any knockback that
+  occurs as a result of an explosion.
+
 keep-spawn-loaded-range
 ~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 10
 * **description**: The range in chunks around spawn to keep loaded.
 
-armor-stands-do-collision-entity-lookups
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: true
-* **description**: Instructs armor stand entities to do entity collision
-  checks.
+container-update-tick-rate
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: 1
+* **description**: The rate, in ticks, at which the server updates containers
+  and inventories.
+
+prevent-tnt-from-moving-in-water
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Instructs the server to keep Primed TNT entities from moving
+  in flowing water.
+
+spawner-nerfed-mobs-should-jump
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Determines if spawner nerfed mobs should attempt to float
+  (jump) in water.
 
 enable-treasure-maps
 ~~~~~~~~~~~~~~~~~~~~
@@ -504,12 +541,6 @@ treasure-maps-return-already-discovered
   not fully looted, and can also fail with a world border set. Enabling this
   will make the map simply find the closest target structure, regardless if it
   has been loaded or not already.
-
-prevent-tnt-from-moving-in-water
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Instructs the server to keep Primed TNT entities from moving
-  in flowing water.
 
 iron-golems-can-spawn-in-air
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -537,17 +568,18 @@ creative-arrow-despawn-rate
 * **description**: The rate, in ticks, at which arrows shot from players in
   creative mode are despawned.
 
-spawner-nerfed-mobs-should-jump
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Determines if spawner nerfed mobs should attempt to float
-  (jump) in water.
-
 entities-target-with-follow-range
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
 * **description**: Sets whether the server should use follow range when
   targeting entities
+
+zombies-target-turtle-eggs
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Sets whether zombies and zombified piglins should target
+  turtle eggs. Setting this to false may help with performance, as they won't
+  search for nearby eggs.
 
 zombie-villager-infection-chance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -571,6 +603,13 @@ mob-spawner-tick-rate
 * **description**: How often mob spawners should tick to calculate available
   spawn areas and spawn new entities into the world.
 
+light-queue-size
+~~~~~~~~~~~~~~~~
+* **default**: 20
+* **description**: Sets how large the queue of light updates off the main thread
+  for each world should be. Vanilla uses 5, but this causes issues especially
+  with plugins such as WorldEdit.
+
 auto-save-interval
 ~~~~~~~~~~~~~~~~~~
 * **default**: -1
@@ -589,19 +628,19 @@ game-mechanics
     - **default**: false
     - **description**: Disables Pillager patrols and associated AI.
 
-* nerf-pigmen-from-nether-portals
-    - **default**: false
-    - **description**: Removes AI from pigmen spawned via nether portals
+* disable-unloaded-chunk-enderpearl-exploit:
+    - **default**: true
+    - **description**: Prevent enderpearls from storing the thrower when in an
+      unloaded chunk.
 
 * disable-chest-cat-detection
     - **default**: false
     - **description**: Allows you to open chests even if they have a cat
       sitting on top of them.
 
-* disable-end-credits
+* nerf-pigmen-from-nether-portals
     - **default**: false
-    - **description**: Instructs the server to never send the end game credits
-      when leaving the end.
+    - **description**: Removes AI from pigmen spawned via nether portals
 
 * disable-player-crits
     - **default**: false
@@ -618,10 +657,10 @@ game-mechanics
     - **description**: The number of ticks between a player activating their
       shield and it actually blocking damage.
 
-* disable-unloaded-chunk-enderpearl-exploit:
-    - **default**: true
-    - **description**: Prevent enderpearls from storing the thrower when in an
-      unloaded chunk.
+* disable-end-credits
+    - **default**: false
+    - **description**: Instructs the server to never send the end game credits
+      when leaving the end.
 
 * disable-relative-projectile-velocity
     - **default**: false
@@ -632,21 +671,21 @@ pillager-patrols
 ~~~~~~~~~~~~~~~~
     - spawn-chance
         - **default**: 0.2
-        - **description**: Modify the spawn changes for patrols
+        - **description**: Modify the spawn changes for patrols.
     - spawn-delay
         - per-player
             - **default**: false
-            - **description**: Makes spawn-delay per player
+            - **description**: Makes spawn-delay per player.
         - ticks
-            - **default**: 1200
-            - **description**: Delay in ticks between spawn chance
+            - **default**: 12000
+            - **description**: Delay in ticks between spawn chance.
     - start
         - per-player
             - **default**: false
-            - **description**: Makes days per player
-        - days
+            - **description**: Makes days per player.
+        - day
             - **default**: 5
-            - **description**: Days between raid spawns
+            - **description**: Days between raid spawns.
 
 max-growth-height
 ~~~~~~~~~~~~~~~~~
@@ -656,7 +695,8 @@ max-growth-height
 
 * reeds
     - **default**: 3
-    - **description**: Maximum height reed blocks will naturally grow to.
+    - **description**: Maximum height sugar cane / reeds blocks will naturally
+      grow to.
 
 fishing-time-range
 ~~~~~~~~~~~~~~~~~~
@@ -690,10 +730,10 @@ frosted-ice
 * delay
     - min
         - **default**: 20
-        - **description**: minimum RNG value to apply frosted-ice effects at.
+        - **description**: Minimum RNG value to apply frosted-ice effects at.
     - max
         - **default**: 40
-        - **description**: maximum RNG value to apply frosted-ice effects at.
+        - **description**: Maximum RNG value to apply frosted-ice effects at.
 
 lootables
 ~~~~~~~~~
@@ -744,7 +784,9 @@ alt-item-despawn-rate
 * items
     - **default**: { COBBLESTONE: 300 } (a list of mappings)
     - **description**: Determines how long each respective item despawns in
-      ticks. You can use item names from `this enum <https://papermc.io/javadocs/paper/1.14/org/bukkit/Material.html>`.
+      ticks. You can use item names from `the Material enum`_.
+
+      .. _the Material enum: https://papermc.io/javadocs/paper/1.16/org/bukkit/Material.html
 
 hopper
 ~~~~~~
@@ -787,14 +829,6 @@ anti-xray
       hidden blocks with stone and 2 is to replace all blocks with random block
       data.
 
-* chunk-edge-mode
-    - **default**: 3
-    - **description**: Sets how the engine handles chunk edges. Where 1 is not
-      to obfuscate the edges of chunks with unloaded neighbors, 2 is to not send
-      the chunk until its neighbors are present (similar to a x-1 view distance),
-      and 3 is to load the neighbor so it can properly obfuscate the current edge
-      (similar to an x+1 view distance).
-
 * max-chunk-section-index
     - **default**: 3
     - **description**: Controls to what Y value (height) the engine should
@@ -824,7 +858,11 @@ viewdistances
 ~~~~~~~~~~~~~
 * no-tick-view-distance
   - **default**: -1
-  - **description**: Sets the no-tick view distance
+  - **description**: Sets the no-tick view distance. This is the total view
+    distance of the player: a 'normal' view distance of 5 and a no-tick view
+    distance of 10 would mean 5 view distance is ticked, has mobs moving, etc.,
+    but the extra 5 (therefore 10 in total) is only visible. A value of -1
+    disables this feature.
 
 squid-spawn-height
 ~~~~~~~~~~~~~~~~~~
@@ -840,3 +878,6 @@ generator-settings
     - **default**: false
     - **description**: Instructs the server to generate bedrock as a single flat
       layer.
+
+..
+    vim: set ff=unix autoindent ts=4 sw=4 tw=0 et :
