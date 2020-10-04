@@ -15,7 +15,7 @@ its respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated August 24th, 2020 for Waterfall build #370
+    Last updated October 4th, 2020 for Waterfall build #379
 
 use_netty_dns_resolver
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -51,3 +51,9 @@ disable_entity_metadata_rewrite
 * **description**: This setting disables entity metadata rewriting in favor
   of sending a join packet to the client. It offers a more robust solution for
   modded environments but can cause plugins to break.
+
+disable_tab_list_rewrite
+~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: This setting disables tablist rewriting, which may resolve issues
+  setting player profiles when Waterfall is in offline mode.
