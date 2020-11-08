@@ -841,6 +841,10 @@ anti-xray
     - **default**: 2
     - **description**: Controls the distance in blocks from air or water that
       hidden-blocks are hidden by the anti-xray engine.
+      
+* lava-obscures
+    - **default**: false
+    - **description**: Whether or not to obfuscate blocks touching lava. (Note: Does not work well with non-stone-like ore textures)
 
 * hidden-blocks
    - **default**: { gold_ore, iron_ore, coal_ore, lapis_ore, mossy_cobblestone,
