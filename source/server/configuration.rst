@@ -844,7 +844,7 @@ anti-xray
       
 * lava-obscures
     - **default**: false
-    - **description**: Whether or not to obfuscate blocks touching lava. (Note: Does not work well with non-stone-like ore textures)
+    - **description**: Whether or not to obfuscate blocks touching lava.
 
 * hidden-blocks
    - **default**: { gold_ore, iron_ore, coal_ore, lapis_ore, mossy_cobblestone,
