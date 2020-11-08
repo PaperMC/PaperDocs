@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated September 27th, 2020 for MC 1.16.3, Paper build #204
+    Last updated November 8th, 2020 for MC 1.16.4, Paper build #263
 
 Global Settings
 ===============
