@@ -13,8 +13,6 @@ The Paper project handles most of our communication via IRC.
 
 You can join us on either of these two servers:
 
-* `#paper on irc.spi.gt <https://irc.spi.gt/iris/?channels=paper>`_
-
 * `#paper on irc.esper.net <https://webchat.esper.net/?channels=paper>`_
 
 Discord
