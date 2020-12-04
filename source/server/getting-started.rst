@@ -9,8 +9,8 @@ Getting Started
 Requirements
 ~~~~~~~~~~~~
 
-Paper requires **Java 8** or newer to run. It should run fine on newer versions
-as well, such as Java 11, but certain plugins may have issues. Generally, LTS
+Paper requires **Java 11** or newer to run. It should run fine on newer versions
+as well, but certain plugins may have issues. Generally, LTS
 versions of Java are best supported, though you may have luck on newer versions.
 
 Migrating From Vanilla
