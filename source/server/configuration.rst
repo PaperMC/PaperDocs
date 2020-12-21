@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated November 8th, 2020 for MC 1.16.4, Paper build #263
+    Last updated December 21st, 2020 for MC 1.16.4, Paper build #339
 
 Global Settings
 ===============
@@ -179,6 +179,16 @@ spam-limiter
 * tab-spam-limit
     - **default**: 500
     - **description**: The number that the internal tab spam counter can reach
+      until the server kicks the player for spam.
+    
+* recipe-spam-increment
+    - **default**: 1
+    - **description**: The number that the recipe spam counter increases
+      by when a player presses a recipe.
+
+* recipe-spam-limit
+    - **default**: 20
+    - **description**: The number that the recipe spam counter can reach
       until the server kicks the player for spam.
 
 book-size
@@ -667,6 +677,10 @@ game-mechanics
     - **description**: Instructs the server to ignore shooter velocity when
       calculating the velocity of a fired arrow.
 
+* fix-curing-zombie-villager-discount-exploit
+    - **default**: true
+    - **description**: Fixes the exploit used to gain massive discounts by infecting and curing a zombie villager.
+
 pillager-patrols
 ~~~~~~~~~~~~~~~~
     - spawn-chance
@@ -882,6 +896,44 @@ generator-settings
     - **default**: false
     - **description**: Instructs the server to generate bedrock as a single flat
       layer.
+
+should-remove-dragon
+~~~~~~~~~~~~~~~~~~~~
+    - **default**: false
+    - **description**: Sets whether or not to remove the dragon if it exists without a portal.
+
+wandering-trader
+~~~~~~~~~~~~~~~~
+* spawn-minute-length
+    - **default**: 1200
+    - **description**: The length of the wandering trader spawn minute in ticks.
+
+* spawn-day-length
+    - **default**: 24000
+    - **description**: Time between wandering trader spawn attempts in ticks.
+
+* spawn-chance-failure-increment
+    - **default**: 25
+    - **description**: How much the spawn chance will be increased on every failed wandering trader spawn.
+
+* spawn-chance-min
+    - **default**: 25
+    - **description**: The minimum chance that a wandering trader will be spawned.
+
+* spawn-chance-max
+    - **default**: 75
+    - **description**: The maximum chance that a wandering trader will be spawned.
+
+fix-climbing-bypassing-cramming-rule
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    - **default**: false
+    - **description**: Sets whether climbing should bypass the entity cramming limit.
+
+fix-entity-position-desync
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+    - **default**: true
+    - **description**: Fixes the issue in which an items position is desynchronized between the client and the server.
+
 
 ..
     vim: set ff=unix autoindent ts=4 sw=4 tw=0 et :
