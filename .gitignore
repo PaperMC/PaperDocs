@@ -297,5 +297,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# IDEA
+.idea/
+
 
 # End of https://www.gitignore.io/api/vim,sublimetext,emacs,code,python,notepadpp,windows,macos,linux

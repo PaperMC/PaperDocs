@@ -679,7 +679,7 @@ game-mechanics
 
 * fix-curing-zombie-villager-discount-exploit
     - **default**: true
-    - **description**: Fixes the exploit used to gain massive discounts by infecting and curing a zombie villager.
+    - **description**: Fixes the `exploit <https://bugs.mojang.com/browse/MC-181190>`_ used to gain massive discounts by infecting and curing a zombie villager.
 
 pillager-patrols
 ~~~~~~~~~~~~~~~~
