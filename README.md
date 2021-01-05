@@ -53,7 +53,6 @@ If you need anything else not covered above, you can contact us directly via IRC
 
   + PaperMC on Discord ([Invite Link](https://discord.gg/papermc))
   + #Paper on EsperNet ([Webchat](https://webchat.esper.net/?channels=paper))
-  + #Paper on SpigotIRC ([Webchat](http://elmer.spi.gt/iris/?channels=paper))
 
 ## Special Thanks
 This project is based on the awesome work done by the [SpongePowered team](https://github.com/SpongePowered/) and [all those](https://github.com/SpongePowered/SpongeDocs/graphs/contributors) who helped them with their [SpongeDocs](https://github.com/SpongePowered/SpongeDocs) platform.
