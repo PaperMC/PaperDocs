@@ -2,6 +2,11 @@
 Downloads API
 =============
 
+.. warning::
+    This page shows `v1` of the API which is deprecated as of November 24th, 2020.
+
+    To view the `v2` documentation, please go to `<https://papermc.io/api/docs/>`__
+
 After months of requests (years in the case of a few hosting providers), PaperMC
 has added a downloads API to standardize download links and finding specific
 versions of Paper for specific versions of Minecraft.
