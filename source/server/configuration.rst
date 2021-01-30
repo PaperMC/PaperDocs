@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated December 21st, 2020 for MC 1.16.4, Paper build #339
+    Last updated January 30th, 2021 for MC 1.16.5, Paper build #457
 
 Global Settings
 ===============
@@ -933,7 +933,74 @@ fix-entity-position-desync
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
     - **default**: true
     - **description**: Fixes the issue in which an items position is desynchronized between the client and the server.
+	
+update-pathfinding-on-block-update
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+    - **default**: true
+	- ''description**: Controls whether the pathfinding of mobs is updated when a block is updated in the world. Disabling this option can improve the server performancy significantly while there is almost no noticeable effect on the game mechanics. This is recommended when there are lots of entities loaded and you have automated farms or redstone clocks.
+	
+ender-dragons-death-always-places-dragon-egg
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+    - **default**: false
+	- **description**: Controls whether ender dragons should always drop dragon eggs on death
+
+max-leash-distance
+~~~~~~~~~~~~~~~~~~
+
+   - **default**: 10.0
+   - **description**: Configure the maximum distance of a leash. If the distance to the leashed entity is greater, the leash will break.
+ 
+  
+entity-per-chunk-save-limit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* experience_orb
+  - **default**: -1
+  - **description**: Limits the number of experience orbs that are saved/loaded per chunks. A value of -1 disables this limit
+
+* snowball
+  - **default**: -1
+  - **description**:  Limits the number of snowballs that are saved/loaded per chunks. A value of -1 disables this limit
+
+* ender_pearl
+  - **default**: -1
+  - **description**:  Limits the number of ender pearls that are saved/loaded per chunks. A value of -1 disables this limit
+
+* arrow
+  - **default**: -1
+  - **description**:  Limits the number of arrows that are saved/loaded per chunks. A value of -1 disables this limit
+  
+portal-search-radius
+~~~~~~~~~~~~~~~~~~~~
+
+  - **default**: 128
+  - **description**:
+
+portal-create-radius
+~~~~~~~~~~~~~~~~~~~~
+
+  - **default**: 16
+  - **description**: 
+  
+door-breaking-difficulty
+~~~~~~~~~~~~~~~~~~~~~~~~
+* zombie
+  - **default**: ['HARD']
+  - **description**: Takes a list of difficulties at which zombies are able to break doors
+
+* vindicator
+  - **default**: ['NORMAL', 'HARD']
+  - **description**: Takes a list of difficulties at which vindicators are able to break doors
+
+mobs-can-always-pick-up-loot
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* zombies
+  - **default**: false
+  - **description**: Controls whether zombies always pick up loot. If set to false, the probability that a zombie picks up items depends on the world's difficulty.
+
+* skeletons
+  - **default**: false
+  - **description**: Controls whether skeletons always pick up loot. If set to false, the probability that a skeleton picks up items depends on the world's difficulty.
 ..
     vim: set ff=unix autoindent ts=4 sw=4 tw=0 et :
