@@ -87,7 +87,7 @@ Useful Links
 
 -  `Main site <https://papermc.io>`__
 -  `Discord <https://discord.gg/papermc>`__
--  `IRC <https://paperchat.emc.gs>`__
+-  `IRC <https://webchat.esper.net/?channels=paper>`__
 -  `Docs <https://paper.readthedocs.io>`_
 -  `GitHub <https://github.com/PaperMC/Paper>`_
 -  `Forums <https://papermc.io/forums>`_
