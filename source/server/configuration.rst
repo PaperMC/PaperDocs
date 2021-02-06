@@ -938,13 +938,13 @@ update-pathfinding-on-block-update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     - **default**: true
-	- ''description**: Controls whether the pathfinding of mobs is updated when a block is updated in the world. Disabling this option can improve the server performancy significantly while there is almost no noticeable effect on the game mechanics. This is recommended when there are lots of entities loaded and you have automated farms or redstone clocks.
+    - **description**: Controls whether the pathfinding of mobs is updated when a block is updated in the world. Disabling this option can improve the server performancy significantly while there is almost no noticeable effect on the game mechanics. This is recommended when there are lots of entities loaded and you have automated farms or redstone clocks.
 	
 ender-dragons-death-always-places-dragon-egg
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     - **default**: false
-	- **description**: Controls whether ender dragons should always drop dragon eggs on death
+    - **description**: Controls whether ender dragons should always drop dragon eggs on death.
 
 max-leash-distance
 ~~~~~~~~~~~~~~~~~~
