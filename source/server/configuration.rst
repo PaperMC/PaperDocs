@@ -862,7 +862,7 @@ anti-xray
 
 * use-permission
     - **deafult**: false
-    - **description**: Weather or not to allow players with the ``paper.antixray.bypass`` permission to
+    - **description**: Whether or not to allow players with the ``paper.antixray.bypass`` permission to
       bypass anti-xray. This is disabled by default as legacy permission plugins may
       struggle with the number of checks made. Modern permission plugins such as
       LuckPerms will not cause issues with this enabled.
