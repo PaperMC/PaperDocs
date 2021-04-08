@@ -863,9 +863,9 @@ anti-xray
 * use-permission
     - **deafult**: false
     - **description**: Whether or not to allow players with the ``paper.antixray.bypass`` permission to
-      bypass anti-xray. This is disabled by default as legacy permission plugins may
-      struggle with the number of checks made. Modern permission plugins such as
-      LuckPerms will not cause issues with this enabled.
+      bypass anti-xray. Checking this permission is disabled by default as legacy permission plugins may
+      struggle with the number of checks made. This should only be used with modern
+      permission plugins.
 
 * hidden-blocks
     - **default**: { gold_ore, iron_ore, coal_ore, lapis_ore, mossy_cobblestone,
