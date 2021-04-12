@@ -861,7 +861,7 @@ anti-xray
     - **description**: Whether or not to obfuscate blocks touching lava.
 
 * use-permission
-    - **deafult**: false
+    - **default**: false
     - **description**: Whether or not to allow players with the ``paper.antixray.bypass`` permission to
       bypass anti-xray. Checking this permission is disabled by default as legacy permission plugins may
       struggle with the number of checks made. This should only be used with modern
