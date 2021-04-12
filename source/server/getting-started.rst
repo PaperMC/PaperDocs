@@ -41,10 +41,10 @@ Running The Server
 To run the server, simply start it up like any other Java application.
 
 Open your terminal, navigate to the saved location, and then run
-``java -Xms2G -Xmx2G -jar paper-###.jar --nogui``
+``java -Xms2G -Xmx2G -jar paper-###.jar nogui``
 
 | The amount of RAM can be set by changing the numbers in the ``-Xms`` and ``-Xmx`` arguments.
-| ``--nogui`` disables Vanilla's GUI so you don't get double interfaces when using the command line.
+| ``nogui`` disables Vanilla's GUI so you don't get double interfaces when using the command line.
 
 For more advanced Java tuning, see `Aikar's tuning page <https://mcflags.emc.gs>`_.
 
