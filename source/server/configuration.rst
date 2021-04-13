@@ -860,11 +860,18 @@ anti-xray
     - **default**: false
     - **description**: Whether or not to obfuscate blocks touching lava.
 
+* use-permission
+    - **default**: false
+    - **description**: Whether or not to allow players with the ``paper.antixray.bypass`` permission to
+      bypass anti-xray. Checking this permission is disabled by default as legacy permission plugins may
+      struggle with the number of checks made. This should only be used with modern
+      permission plugins.
+
 * hidden-blocks
-   - **default**: { gold_ore, iron_ore, coal_ore, lapis_ore, mossy_cobblestone,
-     obsidian, chest, diamond_ore, redstone_ore, clay, emerald_ore, ender_chest }
-   - **description**: List of blocks to be hidden in engine mode 1.
-   - **note**: This list is using Mojang server names *not* bukkit names.
+    - **default**: { gold_ore, iron_ore, coal_ore, lapis_ore, mossy_cobblestone,
+      obsidian, chest, diamond_ore, redstone_ore, clay, emerald_ore, ender_chest }
+    - **description**: List of blocks to be hidden in engine mode 1.
+    - **note**: This list is using Mojang server names *not* bukkit names.
 
 * replacement-blocks:
     - **default**: { stone, oak_planks }
