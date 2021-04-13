@@ -963,51 +963,50 @@ max-leash-distance
 entity-per-chunk-save-limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * experience_orb
-  - **default**: -1
-  - **description**: Limits the number of experience orbs that are saved/loaded per chunks. A value of -1 disables this limit
+   - **default**: -1
+   - **description**: Limits the number of experience orbs that are saved/loaded per chunks. A value of -1 disables this limit
 
 * snowball
-  - **default**: -1
-  - **description**:  Limits the number of snowballs that are saved/loaded per chunks. A value of -1 disables this limit
+   - **default**: -1
+   - **description**:  Limits the number of snowballs that are saved/loaded per chunks. A value of -1 disables this limit
 
 * ender_pearl
-  - **default**: -1
-  - **description**:  Limits the number of ender pearls that are saved/loaded per chunks. A value of -1 disables this limit
+   - **default**: -1
+   - **description**:  Limits the number of ender pearls that are saved/loaded per chunks. A value of -1 disables this limit
 
 * arrow
-  - **default**: -1
-  - **description**:  Limits the number of arrows that are saved/loaded per chunks. A value of -1 disables this limit
+   - **default**: -1
+   - **description**:  Limits the number of arrows that are saved/loaded per chunks. A value of -1 disables this limit
   
 portal-search-radius
 ~~~~~~~~~~~~~~~~~~~~
-
-  - **default**: 128
-  - **description**:
+   - **default**: 128
+   - **description**: 
 
 portal-create-radius
 ~~~~~~~~~~~~~~~~~~~~
-
-  - **default**: 16
-  - **description**: 
+   - **default**: 16
+   - **description**: 
   
 door-breaking-difficulty
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * zombie
-  - **default**: ['HARD']
-  - **description**: Takes a list of difficulties at which zombies are able to break doors
+   - **default**: ['HARD']
+   - **description**: Takes a list of difficulties at which zombies are able to break doors
 
 * vindicator
-  - **default**: ['NORMAL', 'HARD']
-  - **description**: Takes a list of difficulties at which vindicators are able to break doors
+   - **default**: ['NORMAL', 'HARD']
+   - **description**: Takes a list of difficulties at which vindicators are able to break doors
 
 mobs-can-always-pick-up-loot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * zombies
-  - **default**: false
-  - **description**: Controls whether zombies always pick up loot. If set to false, the probability that a zombie picks up items depends on the world's difficulty.
+   - **default**: false
+   - **description**: Controls whether zombies always pick up loot. If set to false, the probability that a zombie picks up items depends on the world's difficulty.
 
 * skeletons
-  - **default**: false
-  - **description**: Controls whether skeletons always pick up loot. If set to false, the probability that a skeleton picks up items depends on the world's difficulty.
-..
+   - **default**: false
+   - **description**: Controls whether skeletons always pick up loot. If set to false, the probability that a skeleton picks up items depends on the world's difficulty.
+
+  ..
     vim: set ff=unix autoindent ts=4 sw=4 tw=0 et :
