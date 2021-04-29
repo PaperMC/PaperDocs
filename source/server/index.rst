@@ -15,3 +15,4 @@ Contents
 
     getting-started
     configuration
+    paper-command
