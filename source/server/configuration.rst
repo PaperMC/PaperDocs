@@ -204,6 +204,11 @@ book-size
       as it's contribution to the allowed byte total for a book (with the first
       page being having a multiplier of 1.0).
 
+allow-book-editing
+~~~~~~~~~
+* **default**: true
+* **description**: Sets whether or not book and quills are able to be edited and/or signed.
+
 async-chunks
 ~~~~~~~~~~~~
 * threads
