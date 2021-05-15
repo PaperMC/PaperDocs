@@ -279,6 +279,16 @@ timings
     - **default**: Unknown Server
     - **description**: Instructs timings on what to put in for the server name.
 
+console
+~~~~~~~
+* enable-brigadier-highlighting
+    - **default**: true
+    - **description**: Enables Mojang's Brigadier highlighting in the server console.
+
+* enable-brigadier-completions
+    - **default**: true
+    - **description**: Enables Mojang's Brigadier command completions in the server console.
+
 World Settings
 ==============
 
@@ -419,7 +429,7 @@ duplicate-uuid-saferegen-delete-range
 * **description**: If multiple entities with duplicate UUIDs are within this
   many blocks, saferegen will delete all but 1 of them.
 
-phantoms-do-no-spawn-on-creative-players
+phantoms-do-not-spawn-on-creative-players
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
 * **description**: Disables spawning of phantoms on players in creative mode
@@ -1010,3 +1020,13 @@ mobs-can-always-pick-up-loot
 
   ..
     vim: set ff=unix autoindent ts=4 sw=4 tw=0 et :
+
+fix-wither-targeting-bug
+~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: false
+   - **description**: Fixes the wither's targeting of players. See `MC-29274 <https://bugs.mojang.com/browse/MC-29274>`_.
+
+allow-using-signs-inside-spawn-protection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: false
+   - **description**: Allows players to use signs while inside spawn protection.
