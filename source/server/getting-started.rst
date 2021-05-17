@@ -10,13 +10,13 @@ Requirements
 ~~~~~~~~~~~~
 
 Paper requires **Java 8** or newer to run. It should run fine on newer versions
-as well, such as Java 11, but certain plugins may have issues. Generally, LTS
+as well, such as Java 11 and 16, but certain plugins may have issues. Generally, LTS
 versions of Java are best supported, though you may have luck on newer versions.
 
 .. warning::
-  **Java 11** will be required for future releases starting with Minecraft 1.17.
-  If you are deploying a new server, consider starting with Java 11. 
-  More information about this transition is available `here <https://papermc.io/forums/t/java-11-mc-1-17-and-paper/>`_.
+  **Java 16** will be required for future releases starting with Minecraft 1.17.
+  If you are deploying a new server, consider starting with Java 16. 
+  More information about this transition is available `here <https://papermc.io/forums/t/java-16-mc-1-17-and-paper/5615/>`_.
 
 Migrating From Vanilla
 ~~~~~~~~~~~~~~~~~~~~~~
