@@ -35,14 +35,6 @@ For most cases, it is preferred if you use `yarn`_, as their license works with 
 
 For more information on the Mojang name licensing issues, check this out: https://cpw.github.io/MinecraftMappingData.html.
 
-#############################################
-My commit doesn't need a build, what do I do?
-#############################################
-
-Well, quite simple: You add ``[CI-SKIP]`` to the start of your commit subject.
-
-This case most often applies to changes to files like ``README.md``, this very file (``CONTRIBUTING.md``), the ``LICENSE.md`` file, and so forth.
-
 .. _patching-building-really-slow:
 
 ####################################################
