@@ -63,7 +63,7 @@ To install the API to your local maven repository, do the following:
 * Run ``mvn install``.
 
     * If you are working on a patch without much care for whether the tests pass, you can instead run ``mvn install -DskipTests``. Do not PR changes without running tests first.
-    * If a test failed, you have to identify the failing tests by scrolling up a couple lines (i.e. around 50-200). You should find it fairly quickly.
+    * If a test failed, you have to identify the failing tests by scrolling up a couple of lines (i.e. around 50-200). You should find it fairly quickly.
     * If you later need to use the Paper-API, you might want to remove the jar from your local maven repository. If you use Windows and don't usually build using WSL, you might not need to do this.
 
 You can now use the API in your plugin to test it before PRing. You will also need to do this to build the Server with the implemented API.
