@@ -1,6 +1,6 @@
-==============
+=============
 Pull Requests
-==============
+=============
 
 In order to add code to Paper or modify code already in Paper, you must submit a Pull Request via GitHub. We have a simple policy for new changes to Paper. Keep reading to find our Pull Request Policy, a tip for keeping your topic branches in sync, and some code change guidelines.
 

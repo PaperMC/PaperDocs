@@ -1,6 +1,6 @@
-====================
+===================
 Obfuscation Helpers
-====================
+===================
 
 In an effort to make future updates easier on ourselves, Paper tries to use obfuscation helpers whenever possible. The purpose of these helpers is to make the code more readable and maintainable. These helpers should be be made as easy to inline as possible by the JVM whenever possible.
 

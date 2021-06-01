@@ -1,6 +1,6 @@
-========
+=======
 Patches
-========
+=======
 
 Paper is mostly patches and extensions to Spigot. These patches/extensions are split into different directories which target certain parts of the code. These directories are:
 

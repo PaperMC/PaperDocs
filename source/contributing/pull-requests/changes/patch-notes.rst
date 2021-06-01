@@ -1,6 +1,6 @@
-============
+===========
 Patch Notes
-============
+===========
 
 When submitting patches to Paper, we may ask you to add notes to the patch header. While we do not require it for all changes, you should add patch notes when the changes you're making are technical, complex, or require an explanation of some kind. It is very likely that your patch will remain long after we've all forgotten about the details of your PR; patch notes will help us maintain it without having to dig back through GitHub history looking for your PR.
 

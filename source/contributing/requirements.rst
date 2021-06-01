@@ -1,13 +1,13 @@
-=============
+============
 Requirements
-=============
+============
 
 To get started with PRing changes, you'll need the following software, most of which can be obtained in (most) package managers such as apt (Debian / Ubuntu; you will most likely use this for WSL), homebrew (macOS / Linux), and more:
 
 - ``git`` (package ``git`` everywhere);
 - ``patch`` (often package ``patch``);
-- A Java 8 or later JDK (packages vary, use Google/DuckDuckGo/etc.). If you need one, you can find them on AdoptOpenJDK.
-- ``maven`` (often package ``maven``; can be found on Apache's site too);
+- A Java 16 or later JDK (packages vary, use Google/DuckDuckGo/etc.). If you need one, you can find them on AdoptOpenJDK.
+- ``maven`` 3.6.3 or later (often package ``maven``; can be found on Apache's site too);
 - ``curl`` (package ``curl`` everywhere).
 
 If you're on Windows, see :ref:`patching-building-really-slow`

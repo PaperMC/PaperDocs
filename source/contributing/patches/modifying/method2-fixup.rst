@@ -1,6 +1,6 @@
-=================
+===============
 Method 2: Fixup
-=================
+===============
 
 If you are simply editing a more recent commit or your change is small, simply making the change at HEAD and then moving the commit after you have tested it may be easier.
 

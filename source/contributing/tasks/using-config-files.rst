@@ -38,7 +38,7 @@ PaperWorldConfig example
         useInhabitedTime = getBoolean("use-chunk-inhabited-timer", true);
     }
 
-Again, notice that the field is always public, but the setter is always private. To access this value, you'll need an instance of the net.minecraft.World object:
+Again, notice that the field is always public, but the setter is always private. To access this value, you'll need an instance of the ``net.minecraft.World`` object:
 
 .. code-block:: java
 

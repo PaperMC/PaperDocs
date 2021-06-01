@@ -15,9 +15,9 @@ The PaperMC build tool provides a handy command to automatically do this type of
 
 .. hint::
     * It should show something like `this`_ in the text editor you get.
-    * If your editor does not have a "menu" at the bottom, you're using ``vim``. If you don't know how to use ``vim`` and don't want to learn, enter ``:q!`` and press ``enter``. Before redoing this step, do export ``EDITOR=nano`` for an easier editor to use.
+    * If your editor does not have a "menu" at the bottom, you're using ``vim``. If you don't know how to use ``vim`` and don't want to learn, enter ``:q!`` and press ``enter``. Before redoing this step, do ``export EDITOR=nano`` for an easier editor to use.
    
-2. Replace ``pick`` with ``edit`` for the commit/patch you want to modify, and "save" the changes;
+1. Replace ``pick`` with ``edit`` for the commit/patch you want to modify, and "save" the changes;
 
 .. hint::
     Only do this for one commit at a time.

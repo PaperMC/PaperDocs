@@ -10,8 +10,8 @@ By default, Paper (and upstream) only import files we make changes to. If you wo
 
 1. Save (rebuild) any patches you are in the middle of working on! Their progress will be lost if you do not.
 2. Identify the name(s) of the file(s) you want to import.
-3. Open the file at ./scripts/importmcdev.sh and add the name of your file to the script. Skip to the 2nd last header and follow the instructions there;
-4. Re-patch the server ./paper patch;
+3. Open the file at ``./scripts/importmcdev.sh`` and add the name of your file to the script. Skip to the 2nd last header and follow the instructions there;
+4. Re-patch the server ``./paper patch``;
 5. Edit away!
 
 .. hint:: 
@@ -47,7 +47,7 @@ In order to speed up patching process on Windows, it's recommended you get WSL 2
 
 To setup WSL 2, follow the information here: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
-You will most likely want to use the Ubuntu apps. Once it's set up, install the required tools with sudo apt-get update && sudo apt-get install $TOOL_NAMES -y. Replace $TOOL_NAMES with the packages found in the requirements. You can now clone the repository and do everything like usual.
+You will most likely want to use the Ubuntu apps. Once it's set up, install the required tools with ``sudo apt-get update && sudo apt-get install $TOOL_NAMES -y``. Replace ``$TOOL_NAMES`` with the packages found in the requirements. You can now clone the repository and do everything like usual.
 
 .. warning::
     ❗ Do not use the /mnt/ directory in WSL! Instead, mount the WSL directories in Windows like described here: https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/
