@@ -1091,7 +1091,7 @@ map-item-frame-cursor-limit
 seed-based-feature-search
 ~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: true
-   - **description**: Whether the server should check whether a chunk's biome (determined by world seed) can support
+   - **description**: Whether the server should check if a chunk's biome (determined by world seed) can support
      the desired feature before loading it during feature searches. This dramatically reduces the number of chunks
      loaded during feature searches.
    - **note**: This expects the full world to be generated with the same seed and generator.
