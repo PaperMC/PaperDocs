@@ -79,7 +79,7 @@ track-plugin-scoreboards
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
 * **description**: Whether the server should track plugin scoreboards with only
-  dummy objectives. This is a breaking change, however provides a much more
+  dummy objectives. This is a breaking change; however, it provides a much more
   sensible default value. Enabling this with plugins using many scoreboards will
   incur a performance degradation.
 
