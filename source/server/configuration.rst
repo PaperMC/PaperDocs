@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated January 30th, 2021 for MC 1.16.5, Paper build #457
+    Last updated June 3rd, 2021 for MC 1.16.5, Paper build #762
 
 Global Settings
 ===============
@@ -1094,10 +1094,13 @@ map-item-frame-cursor-limit
 seed-based-feature-search
 ~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: true
-   - **description**: Whether the server should check if a chunk's biome (determined by world seed) can support
-     the desired feature before loading it during feature searches. This dramatically reduces the number of chunks
+   - **description**: Whether the server should check if a chunk's biome
+     (determined by world seed) can support the desired feature before loading
+     it during feature searches. This dramatically reduces the number of chunks
      loaded during feature searches.
-   - **note**: This expects the full world to be generated with the same seed and generator.
+   - **note**: This assumes the seed and generator have remained unchanged.
+     If your seed or world generator has been changed, features will be
+     located incorrectly.
 
 allow-using-signs-inside-spawn-protection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
