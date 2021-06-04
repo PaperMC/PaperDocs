@@ -261,7 +261,8 @@ timings
       reports.
 
 * hidden-config-entries
-    - **default**: { database, settings.bungeecord-addresses }
+    - **default**: { database, settings.bungeecord-addresses,
+      settings.velocity-support.secret }
     - **description**: Configuration entries to hide in Timings reports.
 
 * history-interval
