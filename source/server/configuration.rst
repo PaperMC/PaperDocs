@@ -1088,8 +1088,8 @@ fix-wither-targeting-bug
 map-item-frame-cursor-limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: 128
-   - **description**: The number of cursors (markers) allowed per map. A large number of markers
-     may be used to lag clients.
+   - **description**: The number of cursors (markers) allowed per map. A
+     large number of cursors may be used to lag clients.
 
 seed-based-feature-search
 ~~~~~~~~~~~~~~~~~~~~~~~~~
