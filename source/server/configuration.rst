@@ -569,10 +569,10 @@ container-update-tick-rate
 fix-items-merging-through-walls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
-* **description**: Whether item merges should be raytraced to prevent items
-  merging through walls. Enabling this will incur a performance degradation.
-  This is only necessary when ``merge-radius.item`` (spigot.yml) is large
-  enough to merge items through walls.
+* **description**: Whether items should be prevented from merging
+  through walls. Enabling this will incur a performance degradation.This is
+  only necessary when ``merge-radius.item`` (spigot.yml) is large enough to
+  merge items through walls.
 
 prevent-tnt-from-moving-in-water
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
