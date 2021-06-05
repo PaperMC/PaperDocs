@@ -53,6 +53,17 @@ configuring it, maintaining plugins, and general best practices.
 
     waterfall/index
 
+Developing Plugins for Paper Platforms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Developing plugins for a Paper server, or Waterfall or Travertine proxy is the best way to extend your server with new features that are not available in the vanilla game.
+
+.. toctree::
+    :maxdepth: 3
+    :titlesonly:
+
+    development/index
+
 Contributing to Paper
 ~~~~~~~~~~~~~~~~~~~~~~
 
