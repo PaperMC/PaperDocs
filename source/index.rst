@@ -40,6 +40,7 @@ configuring it, maintaining plugins, and general best practices.
     :titlesonly:
 
     server/index
+    java-update/index
 
 Running A Waterfall or Travertine Proxy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
