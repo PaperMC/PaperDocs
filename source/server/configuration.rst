@@ -20,13 +20,19 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated January 30th, 2021 for MC 1.16.5, Paper build #457
+    Last updated June 3rd, 2021 for MC 1.16.5, Paper build #762
 
 Global Settings
 ===============
 
 Global settings affect all worlds on the server as well as the core server
 functionality itself.
+
+use-display-name-in-quit-message
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Sets whether the server should use the player's display name
+  in quit messages.
 
 verbose
 ~~~~~~~
@@ -68,6 +74,14 @@ max-joins-per-tick
 * **description**: Sets the maximum amount of players that may join the server
   in a single tick. If more players join, they will be postponed until later ticks
   to join.
+
+track-plugin-scoreboards
+~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Whether the server should track plugin scoreboards with only
+  dummy objectives. This is a breaking change; however, it provides a much more
+  sensible default value. Enabling this with plugins using many scoreboards will
+  incur a performance degradation.
 
 suggest-player-names-when-null-tab-completions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -261,7 +275,8 @@ timings
       reports.
 
 * hidden-config-entries
-    - **default**: { database, settings.bungeecord-addresses }
+    - **default**: { database, settings.bungeecord-addresses,
+      settings.velocity-support.secret }
     - **description**: Configuration entries to hide in Timings reports.
 
 * history-interval
@@ -430,7 +445,7 @@ duplicate-uuid-saferegen-delete-range
   many blocks, saferegen will delete all but 1 of them.
 
 phantoms-do-not-spawn-on-creative-players
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
 * **description**: Disables spawning of phantoms on players in creative mode
 
@@ -481,6 +496,18 @@ parrots-are-unaffected-by-player-movement
 * **description**: Makes parrots "sticky" so they do not fall off a player's
   shoulder when they move. Use crouch to shake them off.
 
+only-players-collide
+~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Only calculate collisions if a player is one of the two entities
+  colliding.
+
+allow-vehicle-collisions
+~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Whether vehicles should also be able to collide while
+  ``only-players-collide`` is enabled.
+
 allow-non-player-entities-on-scoreboards
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
@@ -501,6 +528,11 @@ portal-create-radius
 * **default**: 16
 * **description**: The maximum range the server will try to create a portal around
   when generating a new portal
+
+portal-search-vanilla-dimension-scaling
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Whether to apply vanilla dimension scaling to ``portal-search-radius``.
 
 disable-thunder
 ~~~~~~~~~~~~~~~
@@ -534,6 +566,14 @@ container-update-tick-rate
 * **default**: 1
 * **description**: The rate, in ticks, at which the server updates containers
   and inventories.
+
+fix-items-merging-through-walls
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Whether items should be prevented from merging
+  through walls. Enabling this will incur a performance degradation.This is
+  only necessary when ``merge-radius.item`` (spigot.yml) is large enough to
+  merge items through walls.
 
 prevent-tnt-from-moving-in-water
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -687,6 +727,11 @@ game-mechanics
     - **description**: Instructs the server to ignore shooter velocity when
       calculating the velocity of a fired arrow.
 
+* disable-mob-spawner-spawn-egg-transformation
+    - **default**: false
+    - **description**: Whether to block players from changing the type of
+      mob spawners with a spawn egg.
+
 * fix-curing-zombie-villager-discount-exploit
     - **default**: true
     - **description**: Fixes the `exploit <https://bugs.mojang.com/browse/MC-181190>`_ used to gain massive discounts by infecting and curing a zombie villager.
@@ -721,6 +766,14 @@ max-growth-height
     - **default**: 3
     - **description**: Maximum height sugar cane / reeds blocks will naturally
       grow to.
+
+* bamboo
+    - **max**
+        - **default**: 16
+        - **description**: Maximum height bamboo will naturally grow to.
+    - **min**
+        - **default**: 11
+        - **description**: Minimum height bamboo will naturally grow to.
 
 fishing-time-range
 ~~~~~~~~~~~~~~~~~~
@@ -987,7 +1040,14 @@ entity-per-chunk-save-limit
 * arrow
    - **default**: -1
    - **description**:  Limits the number of arrows that are saved/loaded per chunks. A value of -1 disables this limit
-  
+
+unsupported-settings
+~~~~~~~~~~~~~~~~~~~~
+* fix-invulnerable-end-crystal-exploit
+    - **default**: true
+    - **description**: If set to false, the creation of
+      invulnerable end crystals will be allowed. Fixes `MC-108513 <https://bugs.mojang.com/browse/MC-108513>`_.
+
 portal-search-radius
 ~~~~~~~~~~~~~~~~~~~~
    - **default**: 128
@@ -1025,6 +1085,23 @@ fix-wither-targeting-bug
 ~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: false
    - **description**: Fixes the wither's targeting of players. See `MC-29274 <https://bugs.mojang.com/browse/MC-29274>`_.
+
+map-item-frame-cursor-limit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: 128
+   - **description**: The number of cursors (markers) allowed per map. A
+     large number of cursors may be used to lag clients.
+
+seed-based-feature-search
+~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: true
+   - **description**: Whether the server should check if a chunk's biome
+     (determined by world seed) can support the desired feature before loading
+     it during feature searches. This dramatically reduces the number of chunks
+     loaded during feature searches.
+   - **note**: This assumes the seed and generator have remained unchanged.
+     If your seed or world generator has been changed, features will be
+     located incorrectly.
 
 allow-using-signs-inside-spawn-protection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
