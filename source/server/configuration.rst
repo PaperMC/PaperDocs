@@ -1044,7 +1044,7 @@ unsupported-settings
 ~~~~~~~~~~~~~~~~~~~~
 * fix-invulnerable-end-crystal-exploit
     - **default**: true
-    - **description**: If set to true, the creation of
+    - **description**: If set to false, the creation of
       invulnerable end crystals will be allowed. Fixes `MC-108513 <https://bugs.mojang.com/browse/MC-108513>`_.
 
 portal-search-radius
