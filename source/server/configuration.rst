@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated June 3rd, 2021 for MC 1.16.5, Paper build #762
+    Last updated June 8th, 2021 for MC 1.16.5, Paper build #766
 
 Global Settings
 ===============
@@ -303,6 +303,30 @@ console
 * enable-brigadier-completions
     - **default**: true
     - **description**: Enables Mojang's Brigadier command completions in the server console.
+
+item-validation
+~~~~~~~~~~~~~~~
+* display-name
+    - **default**: 8192
+    - **description**: Overrides Spigot's limit on item display name length.
+* loc-name
+    - **default**: 8192
+    - **description**: Overrides Spigot's limit on translatable item name
+      length.
+* lore-title
+    - **default**: 8192
+    - **description**: Overrides Spigot's limit on lore title length.
+* book
+    * title
+        - **default**: 8192
+        - **description**: Overrides Spigot's limit on book title length.
+    * author
+        - **default**: 8192
+        - **description**: Overrides Spigot's limit on book author length.
+    * page
+        - **default**: 16384
+        - **description**: Overrides Spigot's limit on individual book page
+          length.
 
 World Settings
 ==============
