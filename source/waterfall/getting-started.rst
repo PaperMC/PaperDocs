@@ -8,7 +8,7 @@ Getting Started
 
 
 What is Waterfall?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 Waterfall is a fork of BungeeCord, a proxy used primarily to teleport players
 between multiple Minecraft servers.

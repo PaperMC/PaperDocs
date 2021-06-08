@@ -43,9 +43,9 @@ configuring it, maintaining plugins, and general best practices.
     java-update/index
 
 Running A Waterfall Proxy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Running a Waterfall Proxy is also easy. This section will cover common tasks such as
+Running a Waterfall proxy is also easy. This section will cover common tasks such as
 configuring it, maintaining plugins, and general best practices.
 
 .. toctree::

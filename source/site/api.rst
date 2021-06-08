@@ -24,8 +24,8 @@ I just want to download the latest jar
 --------------------------------------
 To download the latest jar, simply connect to `<https://papermc.io/api/v1/paper/1.16.3/latest/download>`__
 
-If you're looking for Waterfall, it's name can be used by replacing
-`paper` with `waterfall`. Specific versions can also be
+If you're looking for Waterfall, the name `paper` can be
+replaced with `waterfall`. Specific versions can also be
 used by replacing `1.16.4` with `1.12.2` or another version. For additional
 information about available endpoints, projects, and versions, please read
 further below.
