@@ -865,6 +865,29 @@ alt-item-despawn-rate
 
       .. _the Material enum: https://papermc.io/javadocs/paper/1.16/org/bukkit/Material.html
 
+spawn-limits
+~~~~~~~~~~~~
+* monsters:
+    - **default**: -1
+    - **description**: The number of monsters that can spawn per world. This
+      is identical to the value set in bukkit.yml, except that it can
+      be configured per world. A value of -1 will use the value in bukkit.yml.
+* animals:
+    - **default**: -1
+    - **description**: The number of animals that can spawn per world. This
+      is identical to the value set in bukkit.yml, except that it can
+      be configured per world. A value of -1 will use the value in bukkit.yml.
+* water-animals:
+    - **default**: -1
+    - **description**: The number of water animals that can spawn per world.
+      This is identical to the value set in bukkit.yml, except that it can be
+      configured per world. A value of -1 will use the value in bukkit.yml
+* ambient:
+    - **default**: -1
+    - **description**: The number of ambient creatures that can spawn per world.
+      This is identical to the value set in bukkit.yml, except that it can be
+      configured per world. A value of -1 will use the value in bukkit.yml
+
 hopper
 ~~~~~~
 * cooldown-when-full
