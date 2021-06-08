@@ -7,8 +7,8 @@ Getting Started
    :local:
 
 
-What are Waterfall and Travertine?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What is Waterfall?
+~~~~~~~~~~~~~~~~~~
 
 Waterfall is a fork of BungeeCord, a proxy used primarily to teleport players
 between multiple Minecraft servers.
@@ -21,19 +21,16 @@ Waterfall focuses on three main areas:
 - Scalability: Waterfall should be able to handle a large number of concurrent
   players, given a reasonably modern CPU, memory, and good network connection.
 
-Travertine is a fork of Waterfall with additional support for 1.7.10.
-
 Requirements
 ~~~~~~~~~~~~
 
-Waterfall and Travertine require **Java 8** or newer to run. It does run fine
-on newer versions as well, such as Java 11, but certain plugins may have issues.
+Waterfall requires **Java 8** or newer to run. The Paper team recommends you run on Java 11 or higher.
 Generally, LTS versions of Java are targeted, though you may have luck on newer versions.
 
 Migrating From BungeeCord
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Waterfall and Travertine are drop in replacements for BungeeCord, you don't need to make any changes.
+Waterfall is a drop in replacements for BungeeCord, you don't need to make any changes to your configuration.
 
 Getting A Proxy Jar
 ~~~~~~~~~~~~~~~~~~~~~
@@ -50,7 +47,7 @@ To run the proxy, simply start it up like any other Java application.
 Open your terminal, navigate to the saved location, and then run
 ``java -Xms512M -Xmx512M -jar waterfall-###.jar``
 
-Aikar's recommended flags for Waterfall and Travertine are as follows:
+Aikar's recommended flags for Waterfall are as follows:
 ``java -Xms512M -Xmx512M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions``
 ``-XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -jar waterfall-###.jar``
 

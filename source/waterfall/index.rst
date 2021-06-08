@@ -1,8 +1,8 @@
-=======================================
-Running A Waterfall or Travertine Proxy
-=======================================
+=========================
+Running A Waterfall Proxy
+=========================
 
-Running a Waterfall or Travertine proxy is easy.
+Running a Waterfall proxy is easy.
 
 Click the links below for more information.
 

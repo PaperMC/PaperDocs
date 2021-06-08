@@ -2,8 +2,8 @@
 Configuration
 =============
 
-This page details the various configuration settings exposed by Waterfall and Travertine.
-These settings can be found in waterfall.yml. Travertine has no custom configuration file.
+This page details the various configuration settings exposed by Waterfall.
+These settings can be found in waterfall.yml.
 
 If you want information on settings in BungeeCord's config.yml you should see
 its respective documentation pages.
