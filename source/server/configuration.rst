@@ -1126,6 +1126,14 @@ seed-based-feature-search
      If your seed or world generator has been changed, features will be
      located incorrectly.
 
+seed-based-feature-search-loads-chunks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: false
+   - **description**: When set to false, ``seed-based-feature-search`` will
+     not load the target chunk. Instead, it will return the center of the
+     chunk. The more precise location of the feature will be returned as the
+     player loads the target chunk.
+
 allow-using-signs-inside-spawn-protection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: false
