@@ -24,8 +24,8 @@ I just want to download the latest jar
 --------------------------------------
 To download the latest jar, simply connect to `<https://papermc.io/api/v1/paper/1.16.3/latest/download>`__
 
-If you're looking for Waterfall or Travertine, their name can be used in place
-of `paper` as either `waterfall` or `travertine`. Specific versions can also be
+If you're looking for Waterfall, it's name can be used by replacing
+`paper` with `waterfall`. Specific versions can also be
 used by replacing `1.16.4` with `1.12.2` or another version. For additional
 information about available endpoints, projects, and versions, please read
 further below.
@@ -93,7 +93,6 @@ PROJECT_NAME
 ------------
 - ``paper`` - The PaperMC server implementation
 - ``waterfall`` - The Waterfall server proxy
-- ``travertine`` - The Travertine proxy fork
 
 NOTE: The parent (``https://papermc.io/api/v1``) does not currently enumerate the
 available project names and will return a ``404 Not Found`` if accessed
