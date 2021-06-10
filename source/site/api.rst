@@ -219,6 +219,7 @@ naming of resources.
 .. code-block:: text
 
     content-type: application/java-archive
+    content-length: 17759028
     cache-control: public, max-age=14400, s-maxage=604800
     content-disposition: attachment; filename*=UTF-8''waterfall-1.16-430.jar
 
