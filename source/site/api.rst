@@ -96,7 +96,7 @@ The parent (``https://papermc.io/api/v2/projects``) will return a list
 of all available projects if accessed directly.
 
 VERSION
----------------
+-------
 This will vary from project to project above. By accessing the API using just
 the project name (ex: ``https://papermc.io/api/v2/projects/paper``),
 the API will return an array of available versions and version groups.
