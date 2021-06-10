@@ -24,8 +24,8 @@ which is not recommended and, in rare cases, can lead to world corruption.
 
 The new URLs give me weird filenames
 ------------------------------------
-While downloads using the `v2` API should have reasonable names compared to
-that of `v1`, the below instructions are kept for completion.
+While downloads using the ``v2`` API should have reasonable names compared to
+that of ``v1``, the below instructions are kept for completion.
 
 If you're using `curl` you can use the ``-JLO`` flags to make it use the
 server's suggested name rather than making up its own. Alternatively, you can
