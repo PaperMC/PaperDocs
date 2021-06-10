@@ -164,7 +164,7 @@ will return all build IDs targeting the 1.16.5 version of Minecraft.
     432,
     433,
     434,
-    435,
+    435
   ]
  }
 
