@@ -224,7 +224,7 @@ naming of resources.
     content-disposition: attachment; filename*=UTF-8''waterfall-1.16-430.jar
 
 API Versions
---------------
+------------
 ``v1`` - The initial launch version of the API, now deprecated.
 
 ``v2`` - The current version of the API recommended for all usage.
