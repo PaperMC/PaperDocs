@@ -87,7 +87,7 @@ available API versions and will instead redirect to a usage page on the latest
 version of the API.
 
 PROJECT
-------------
+-------
 - ``paper`` - The PaperMC server implementation
 - ``waterfall`` - The Waterfall server proxy
 - ``travertine`` - The Travertine proxy; Waterfall, but supprting Minecraft 1.7. Now deprecated.
