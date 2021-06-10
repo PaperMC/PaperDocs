@@ -52,7 +52,7 @@ Endpoint Documentation
 The downloads API is project-based, and downloads can be obtained via the following format:
 ``https://papermc.io/api/v2/projects/{PROJECT}/versions/{VERSION}/builds/{BUILD}/downloads/{DOWNLOAD}``
 
-Example getting a listing of available project versions for waterfall:
+Example getting a listing of available project versions for Waterfall:
 ``https://papermc.io/api/v2/projects/waterfall``
 
 .. code-block:: json
