@@ -160,10 +160,10 @@ Arch Linux
     (Generic)`_ guide instead.
 
 To install Java 16 on Arch Linux, you will need to use the Arch User Repository
-(AUR). You need to install the |jdk-openjdk AUR package|_.
+(AUR). You need to install the |jdk-adoptopenjdk AUR package|_.
 
-.. |jdk-openjdk AUR package| replace:: ``jdk-openjdk`` package
-.. _jdk-openjdk AUR package: https://aur.archlinux.org/packages/jdk-adoptopenjdk/
+.. |jdk-adoptopenjdk AUR package| replace:: ``jdk-adoptopenjdk`` package
+.. _jdk-adoptopenjdk AUR package: https://aur.archlinux.org/packages/jdk-adoptopenjdk/
 
 To simplify this process, and to make updating easier, see `yay
 <https://github.com/Jguer/yay>`_.
