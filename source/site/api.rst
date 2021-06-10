@@ -150,7 +150,6 @@ For example, ``https://papermc.io/api/v2/projects/paper/versions/1.16.5``
 will return all build IDs targeting the 1.16.5 version of Minecraft.
 
 .. code-block:: json
- 
  {
   "project_id": "paper",
   "project_name": "Paper",
