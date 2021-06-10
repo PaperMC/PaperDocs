@@ -90,7 +90,7 @@ PROJECT
 -------
 - ``paper`` - The PaperMC server implementation
 - ``waterfall`` - The Waterfall server proxy
-- ``travertine`` - The Travertine proxy; Waterfall, but supprting Minecraft 1.7. Now deprecated.
+- ``travertine`` - The Travertine proxy; Waterfall, but supporting Minecraft 1.7. Now deprecated.
 
 The parent (``https://papermc.io/api/v2/projects``) will return a list
 of all available projects if accessed directly.
