@@ -145,8 +145,17 @@ Debian/Ubuntu
 =============
 
 To install Java 16 on Debian, Ubuntu, and the plethora of other distributions
-based on these, you should follow `AdoptOpenJDK's own DEB installation guide
-here <https://adoptopenjdk.net/installation.html?variant=openjdk16&jvmVariant=hotspot#linux-pkg-deb>`_.
+based on these, execute the following commands to add the AdoptOpenJDK APT repository and to install AdoptOpenJDK Hotspot:
+
+.. code-block:: console
+
+    sudo apt update
+    sudo apt install apt-transport-https software-properties-common gnupg
+    wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+    sudo add-apt-repository https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+    sudo apt install adoptopenjdk-16-hotspot
+    
+You can also replace ``16`` with ``11`` for Java 11.
 
 Arch Linux
 ==========
