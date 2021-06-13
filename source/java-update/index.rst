@@ -243,10 +243,10 @@ trailing slash here):
 
 .. code-block:: console
 
-    # echo <<EOF
+    # cat <<EOF | tee /etc/profile.d/java.sh
     export JAVA_HOME=/usr/lib/jvm/jdk-16.0.1+1
     export PATH=$JAVA_HOME/bin:"$PATH"
-    EOF | tee /etc/profile.d/java.sh
+    EOF
     # chmod +x /etc/profile.d/java.sh
 
 .. note::
