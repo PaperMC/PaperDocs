@@ -881,12 +881,18 @@ spawn-limits
     - **default**: -1
     - **description**: The number of water animals that can spawn per world.
       This is identical to the value set in bukkit.yml, except that it can be
-      configured per world. A value of -1 will use the value in bukkit.yml
+      configured per world. A value of -1 will use the value in bukkit.yml.
+* water-ambient:
+    - **default**: -1
+    - **description**: The number of ambient water creatures that can spawn per
+      world. This is identical to the value set in bukkit.yml, except that it
+      can be configured per world. A value of -1 will use the value in
+      bukkit.yml.
 * ambient:
     - **default**: -1
     - **description**: The number of ambient creatures that can spawn per world.
       This is identical to the value set in bukkit.yml, except that it can be
-      configured per world. A value of -1 will use the value in bukkit.yml
+      configured per world. A value of -1 will use the value in bukkit.yml.
 
 hopper
 ~~~~~~
