@@ -5,9 +5,8 @@ Downloads API
 .. warning::
     Version 1 of the API has been deprecated as of November 24th, 2020.
 
-    To view the full `v2` documentation, including example responses
-    for all endpoints and an interactive request generator,
-    please go to `<https://papermc.io/api/docs/>`__
+    We encourage everyone to use the new version of the API as the
+    previous one will soon be removed.__
 
 After months of requests (years in the case of a few hosting providers), PaperMC
 has added a downloads API to standardize download links and finding specific
@@ -21,7 +20,7 @@ function for some time until further announcements are made.
 I just want to download the latest jar
 --------------------------------------
 Unlike the v1 API, there is no API endpoint to simply fetch the latest jar.
-This is intentional, as it was previously used to make auto-updating servers
+This is intentional, as it had been primarily used to auto-update servers,
 which is highly discouraged.
 
 Downloading from the command line
@@ -52,6 +51,16 @@ for some reason.
 ======================
 Endpoint Documentation
 ======================
+
+
+Swagger docs
+------------
+To view the full `v2` documentation, including example responses
+for all below-documented endpoints and an interactive request generator,
+please go to `<https://papermc.io/api/docs/>`
+
+Overview
+--------
 
 The downloads API is project-based, and downloads can be obtained via the following format:
 ``https://papermc.io/api/v2/projects/{PROJECT}/versions/{VERSION}/builds/{BUILD}/downloads/{DOWNLOAD}``
@@ -104,6 +113,9 @@ you would access the following URL:
 
 The final piece of the URL, `waterfall-1.16-430.jar` can be found by using the
 previously documented endpoint to obtain information about a build.
+
+Note that filenames are not guaranteed to follow the same naming format,
+and you query the API properly to get the name of each build.
 
 Downloads served in this way will include ``content-type``, ``content-length``,
 and ``content-disposition`` headers for proper identification, progress, and
