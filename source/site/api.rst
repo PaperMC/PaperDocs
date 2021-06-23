@@ -22,7 +22,7 @@ I just want to download the latest jar
 --------------------------------------
 Unlike the v1 API, there is no API endpoint to simply fetch the latest jar.
 This is intentional, as it was previously used to make auto-updating servers
-which is not recommended and, in rare cases, can lead to world corruption.
+which is highly discouraged.
 
 Downloading from the command line
 ---------------------------------
