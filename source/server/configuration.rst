@@ -1144,3 +1144,12 @@ allow-using-signs-inside-spawn-protection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: false
    - **description**: Allows players to use signs while inside spawn protection.
+   
+loot-table-stack-splitter
+~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: true
+   - **description**: When set to false, loot tables will not attempt to split
+     items with a stack size higher than the maximum into items of smaller stack
+     sizes. This will prevent overstacked items from being lost or causing a chunk
+     to become uninhabitable (players will get constantly kicked due to oversized
+     packets) when a shulker box is broken in survival.
