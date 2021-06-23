@@ -84,7 +84,7 @@ For example, ``https://papermc.io/api/v2/projects/paper/versions/1.16.5``
 will return all build IDs targeting the 1.16.5 version of Minecraft.
 
 BUILD
---------
+-----
 A specific build of the given project. These build versions correspond
 with the build IDs specified by the backend continuous integration tools. As of
 v2 of the API they will always be integers.
