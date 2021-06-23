@@ -6,11 +6,11 @@ Downloads API
     Version 1 of the API has been deprecated as of November 24th, 2020.
 
     We encourage everyone to use the new version of the API as the
-    previous one will soon be removed.__
+    previous one will soon be removed.
 
 After months of requests (years in the case of a few hosting providers), PaperMC
 has added a downloads API to standardize download links and finding specific
-versions of Paper for specific versions of Minecraft.
+versions of our software for specific versions of Minecraft.
 
 It is a simple RESTful JSON API. Like most APIs it uses versioned endpoints;
 the current version is ``v2``. If any breaking changes are made it will be
@@ -57,7 +57,7 @@ Swagger docs
 ------------
 To view the full `v2` documentation, including example responses
 for all below-documented endpoints and an interactive request generator,
-please go to `<https://papermc.io/api/docs/>`
+please go to `<https://papermc.io/api/docs/>`_
 
 Overview
 --------
@@ -115,7 +115,7 @@ The final piece of the URL, `waterfall-1.16-430.jar` can be found by using the
 previously documented endpoint to obtain information about a build.
 
 Note that filenames are not guaranteed to follow the same naming format,
-and you query the API properly to get the name of each build.
+and you must query the API properly to get the name of each build.
 
 Downloads served in this way will include ``content-type``, ``content-length``,
 and ``content-disposition`` headers for proper identification, progress, and
