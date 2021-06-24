@@ -21,7 +21,7 @@ What do I need to run it?
 
 Paper requires the Java Runtime Environment to run. Specifically, it requires
 at least Java version 16. Once that is installed you're all good to go! If you
-don't already have a Java 16 Runtime, `it's easy to download and install <https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot>`_.
+don't already have a Java 16 Runtime, `it's easy to download and install </en/latest/java-update/index.html>`_.
 
 See our docs on starting out: :doc:`/server/getting-started`
 
