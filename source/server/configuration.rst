@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated June 8th, 2021 for MC 1.16.5, Paper build #766
+    Last updated June 24th, 2021 for MC 1.16.5, Paper build #778
 
 Global Settings
 ===============
@@ -1158,11 +1158,12 @@ seed-based-feature-search
 
 seed-based-feature-search-loads-chunks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - **default**: false
+   - **default**: true
    - **description**: When set to false, ``seed-based-feature-search`` will
      not load the target chunk. Instead, it will return the center of the
      chunk. The more precise location of the feature will be returned as the
-     player loads the target chunk.
+     player loads the target chunk. While disabling this will increase
+     performance, it may lead to incorrect feature locations being returned.
 
 allow-using-signs-inside-spawn-protection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
