@@ -301,7 +301,8 @@ Press the ``Environment Variables...`` button:
 
 |br|
 
-Select the ``JAVA_HOME`` variable on the bottom half and press ``Edit...``, OR
+Select the ``JAVA_HOME`` variable in the ``System variables`` section in the
+*bottom half* of the window and press ``Edit...``, OR
 if the variable is not present, create a new variable with ``New...`` in the
 *lower* half of the window, and name it ``JAVA_HOME``. You now want to ``Browse
 Directory...`` and find the Java directory under ``C:\Program
@@ -311,7 +312,8 @@ Files\AdoptOpenJDK`` in the Windows Explorer window:
 
 |br|
 
-Now go to your ``Path`` variable in the *lower* window and press ``Edit...``.
+Now go to your ``Path`` variable in the ``System variables`` section in the
+*bottom half* of the window and press ``Edit...``.
 If there is already a ``%JAVA_HOME%\bin`` entry in the list, skip this step.
 Otherwise, press the ``New`` button at the top and enter ``%JAVA_HOME%\bin``:
 
