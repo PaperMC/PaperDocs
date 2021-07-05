@@ -116,6 +116,15 @@ showing how to change the Java version, along with recommendations per Minecraft
 version. If you do nothing, it will automatically select the version that fits
 best for your server.
 
+Nitrado
+~~~~~~~~~~
+
+If you create a 1.17 server the Java version will be set to Java 16 out of the box. However if it doesn't (because e.g. you upgraded the server manually) you can set the Java version under "General" -> "Java"
+
+.. image:: java-update-assets/nitrado-settings-panel.png
+
+.. image:: java-update-assets/nitrado-java-settings.png
+
 Pterodactyl
 ===========
 
