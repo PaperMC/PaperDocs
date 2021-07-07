@@ -135,6 +135,12 @@ save-empty-scoreboard-teams
   teams around, dramatically slowing down login times. This sets whether the
   server should remove those empty teams automatically.
 
+log-named-entity-deaths
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**:  Since 1.17.1, all deaths of named entities are logged. 
+  This setting allows you to control this behavior. 
+
 velocity-support
 ~~~~~~~~~~~~~~~~
 * enabled
