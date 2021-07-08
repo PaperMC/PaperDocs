@@ -8,7 +8,6 @@ System Properties
 
 What are system properties?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 Typically system properties are used to denote aspects of the environment,
 such as the operating system or system architecture. Individual applications
 can also read custom system properties for their configuration. For paper,
@@ -19,20 +18,20 @@ debugging, or could pose risk if misconfigured.
 
 How do I set system properties?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 While system properties can be modified at runtime, they are typically set
 when you start the server. System properties can be set in your start command
-. They follow the typical format of ``-Dkey=value``. If I wanted to set
-``paper.example`` to ``true``, I would start my server like this: ``java
--Dpaper.example=true -jar paperclip.jar``. Note that properties are set
-before -jar in your startup command.
+. They follow the typical format of ``-Dkey=value``. In order to set
+``paper.example`` to ``true``, one would start the server with a command
+similar to this: ``java -Dpaper.example=true -jar paperclip.jar``. Note that
+system properties are set before -jar in your startup command.
 
 Configurable System Properties Exposed by Paper
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. warning::
-    Remember - system properties are case sensitive. Paper unfortunately does
-    not follow a standard case for properties.
+    Many system properties are dangerous and not meant to be changed
+    unless you know what you are doing. Please only modify system
+    properties after fully understanding any possible implications. Anything
+    exposed via system properties is not supported by Paper.
 
 Paper.IgnoreJavaVersion
 =======================
@@ -40,81 +39,133 @@ Setting this to ``true`` will allow bypassing Spigot's java version
 check. This will **not** allow your server to run on a lower than required
 version of java. Default ``false``.
 
-paper.ticklist-warn-on-excessive-delay
-======================================
-Weather to warn for excessive tick scheduling delay. Threshold set by
-``paper.ticklist-excessive-delay-threshold``. Default ``false``.
+paper.playerconnection.keepalive
+================================
+Keepalive timeout for players in seconds. A higher value may prevent players
+on slower connections from being disconnected from your server, however this
+comes at the cost of dead connections being left open much longer. See
+`this issue comment`_ for more information.
 
-paper.ticklist-excessive-delay-threshold
-========================================
-Specifies the excessive tick delay threshold on which to warn, set in
-number of ticks. Has no effect without
-``paper.ticklist-warn-on-excessive-delay``. Defaults ``60 * 20`` (60 seconds
-in ticks).
+.. _this issue: https://github.com/PaperMC/Paper/issues/895#issuecomment-353785832
 
-paper.ticklist-max-tick-delay
-=============================
-Default ``-1``
+.. paper.ticklist-warn-on-excessive-delay
+.. ======================================
+.. Weather to warn for excessive tick scheduling delay. Threshold set by
+.. ``paper.ticklist-excessive-delay-threshold``. Default ``false``.
 
-timings.bypassMax
-=================
-Setting this to any value will allow you to bypass Paper's limit on timings
-size. This will **not** however bypass limits set on the timings server. This
-should only be used for debugging or when using an alternative timings server.
+.. paper.ticklist-excessive-delay-threshold
+.. ========================================
+.. Specifies the excessive tick delay threshold on which to warn, set in
+.. number of ticks. Has no effect without
+.. ``paper.ticklist-warn-on-excessive-delay``. Defaults ``60 * 20`` (60 seconds
+.. in ticks).
+
+.. paper.ticklist-max-tick-delay
+.. =============================
+.. Default ``-1``
+
+.. timings.bypassMax
+.. =================
+.. Setting this to any value will allow you to bypass Paper's limit on timings
+.. size. This will **not** however bypass limits set on the timings server. This
+.. should only be used for debugging or when using an alternative timings server.
 
 LetMeReload
 ===========
-Setting this to true will let you reload the server without confirmation
-. Default ``false`.
+Setting this to true will let you reload the server without confirmation. Default ``false``.
 
 paper.disableChannelLimit
 =========================
 When set to true, this disables Spigot's channel limit. Enabling this may be
 necessary in environments where Spigot's limit causes issues, such as servers
-which encourage the use of large modpacks.
+which encourage the use of large modpacks. Default ``false``.
+
+paper.maxCustomChannelName
+==========================
+Sets the maximum custom channel size. Default ``64``.
 
 Paper.DisableClassPrioritization
 ================================
-When set to true, this disables plugins' classloaders prioritizing their own
-classes. Default ``false``.
+When set to true, this disables plugin classloaders self-prioritizing their
+own classes. Default ``false``.
 
 Paper.debugDynamicMissingKeys
 =============================
-When set to true, prints additional details regarding missing NBT keys. When
-dealing with large NBT objects, this can be computationally intensive.
+When set to true, prints additional details regarding missing NBT keys. For
+large NBT objects, this can be computationally intensive. Default ``false``.
 
 disable.watchdog
 ================
-When set to true, this prevents the watchdog from killing the server.
+When set to true, this prevents the watchdog from killing the server. This
+will not prevent the watchdog from priting thread dumps. Default ``false``.
 
-paper.explicit-flush
-====================
-When set to true, re-enables explicit network manager flushing.
+.. paper.explicit-flush
+.. ====================
+.. When set to true, re-enables explicit network manager flushing.
 
 Paper.enable-sync-chunk-writes
 ==============================
 When set to true, allows the use of ``sync-chunk-writes`` in server
-.properties.
+.properties. Default ``false``
 
 paper.debug-sync-loads
 ======================
 When set to true, allows the use of the ``/paper syncloadinfo`` function to
-produce a log of sync chunk loads.
+produce a log of sync chunk loads. Default ``false``.
 
 Paper.ignoreWorldDataVersion
 ============================
 When set to true, this allows the server to load chunks generated by a newer
-version of the game. Keep in mind that this will often lead to corruption.
+version of the game. Keep in mind that this will often lead to corruption and
+is only provided as a courtesy, not supported or recommended for use. Default
+``false``.
 
-Paper.allowAsyncChunksSingleCore
-================================
-When set to true, this allow asynchronous chunk IO with only one core.
+.. Paper.allowAsyncChunksSingleCore
+.. ================================
+.. When set to true, this allow asynchronous chunk IO with only one core.
 
 debug.entities
 ==============
 When set to true, this prints additional details for duplicate entities.
+Default ``false``.
 
 Paper.bypassHostCheck
 =====================
-When set to true, allows bypassing the bungeecord host check.
+When set to true, allows bypassing the bungeecord host check. Keep in mind
+that this check is made to protect you from misconfiguration that could allow
+attackers access to your server. Ensure you understand both your setup as
+well as the implications before enabling this. Default ``false``.
 
+paper.alwaysPrintWarningState
+=============================
+When set to true, the server will print all warnings regardless of state.
+Default ``false``.
+
+Paper.maxSignLength
+===================
+Sets the maximum sign length. Vanilla default ``384``, Paper default ``80``.
+``-1`` disables.
+
+Paper.minPrecachedDatafixVersion
+================================
+The minimum data version to precache DFU rewrite rules for. Mojang default
+is to precache all rewrite rules, paper default is to precache none.
+
+paper.maxChunkThreads
+=====================
+The maximum number of threads to be used for async chunkloading. Default
+``available-1`` or ``8``. Whichever is lower.
+
+Paper.WorkerThreadCount
+=======================
+Overrides worker thread count. Default is ``available-2``, or ``8``. Whichever is
+lowest.
+
+Paper.excessiveTELimit
+======================
+Sets the maximum number of tile entities allowed before splitting up tile
+entitiy sending. Default ``750``.
+
+printSaveStats
+==============
+Interval between printing statistics on chunk saving. Default ``null``.
