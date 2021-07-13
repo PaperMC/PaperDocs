@@ -15,13 +15,9 @@ development material (sources, documentation, a reference compiler, and more).
 
 To update, please find the appropriate header for you in the table of contents.
 
-.. It's somewhat ugly that we have the same title again, but I'm not sure
-   that there's a tonne we can do about it while also getting a properly
-   indented list.
-
-.. toctree::
-
-    index
+.. contents::
+    :depth: 2
+    :local:
 
 .. We don't want text to appear right underneath images: this is ugly.
    Licensed under CC BY-SA 4.0, found 2021-06-05 on: https://stackoverflow.com/a/54412348
