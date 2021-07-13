@@ -68,11 +68,12 @@ The downloads API is project-based, and downloads can be obtained via the follow
 Example getting a listing of available project versions for Waterfall:
 ``https://papermc.io/api/v2/projects/waterfall``
 
-NOTE: The parent (``https://papermc.io/api``) does not currently enumerate the
-available API versions and will instead redirect to a usage page on the current
-version of the API.
+.. hint::
+  The parent (``https://papermc.io/api``) does not currently enumerate the
+  available API versions and will instead redirect to a usage page on the current
+  version of the API.
 
-PROJECT
+Project
 -------
 - ``paper`` - The PaperMC server implementation
 - ``waterfall`` - The Waterfall server proxy
@@ -81,7 +82,7 @@ PROJECT
 The parent (``https://papermc.io/api/v2/projects``) will return a list
 of all available projects if accessed directly.
 
-VERSION
+Version
 -------
 This will vary from project to project above. By accessing the API using just
 the project name (ex: ``https://papermc.io/api/v2/projects/paper``),
@@ -92,7 +93,7 @@ These versions correspond to the version of Minecraft the software is targeting.
 For example, ``https://papermc.io/api/v2/projects/paper/versions/1.16.5``
 will return all build IDs targeting the 1.16.5 version of Minecraft.
 
-BUILD
+Build
 -----
 A specific build of the given project. These build versions correspond
 with the build IDs specified by the backend continuous integration tools. As of
@@ -101,7 +102,7 @@ v2 of the API they will always be integers.
 For example, ``https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/435`` will return
 information about the build for 1.16.5 with the ID of 435.
 
-DOWNLOAD
+Download
 --------
 Finally, if you want to download a version of something, you must append
 the name of the file to download to the URL format in the example above.
