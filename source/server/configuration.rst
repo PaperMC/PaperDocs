@@ -359,7 +359,10 @@ per-player-mob-spawns
 ~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
 * **description**: Determines whether the mob limit (in bukkit.yml) is counted
-  per-player or for the entire server.
+  per-player or for the entire server. Enabling this setting results in roughly
+  the same number of mobs, but with a more even distribution that prevents one
+  player from using the entire mob cap and provides a more single-player like
+  experience.
 
 baby-zombie-movement-modifier
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
