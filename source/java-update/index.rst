@@ -67,6 +67,7 @@ You can select Java 16 from the server configuration panel by selecting the
 Java version option ending in ``openjdk-16``:
 
 .. image:: java-update-assets/bloomhost-java-version.jpg
+  :width: 500
 
 |br|
 
@@ -99,6 +100,19 @@ have to do anything whatsoever. If you want to test Java 16 on Minecraft 1.16 or
 earlier, you will need to set the server type to *Snapshot*, then put Paper back
 on the server manually.
 
+Nitado
+~~~~~~
+
+If you create a 1.17 server the Java version will be set to Java 16 out of the box. However if it doesn't (because e.g. you upgraded the server manually) you can set the Java version under "General" -> "Java"
+
+.. image:: java-update-assets/nitrado-settings-panel.png
+
+|br|
+
+.. image:: java-update-assets/nitrado-java-settings.png
+
+|br|
+
 PebbleHost
 ~~~~~~~~~~
 
@@ -106,24 +120,6 @@ PebbleHost's knowledgebase has a great article `Does PebbleHost support Java 16?
 <https://help.pebblehost.com/en/article/does-pebblehost-support-java-11-java-16-1f5zlk2/>`_
 on their website to show how to change the Java version, along with
 incompatibilities with certain versions.
-
-WinterNode
-~~~~~~~~~~
-
-WinterNode's Help Center has an helpful article `Java Version Selector
-<https://www.notion.so/MC-1-17-Java-Version-Selection-c0ab39f51ab147de9b1125418e001fab>`_
-showing how to change the Java version, along with recommendations per Minecraft
-version. If you do nothing, it will automatically select the version that fits
-best for your server.
-
-Nitrado
-~~~~~~~~~~
-
-If you create a 1.17 server the Java version will be set to Java 16 out of the box. However if it doesn't (because e.g. you upgraded the server manually) you can set the Java version under "General" -> "Java"
-
-.. image:: java-update-assets/nitrado-settings-panel.png
-
-.. image:: java-update-assets/nitrado-java-settings.png
 
 Server.pro
 ~~~~~~~~~~
@@ -135,8 +131,23 @@ on the dropdown menu. Save the changes by clicking ``Save Changes``
 at the bottom of the page.
 
 .. image:: java-update-assets/serverpro-panel.png
+  :width: 300
+
+|br|
 
 .. image:: java-update-assets/serverpro-java-version-dropdown.png
+  :width: 300
+
+|br|
+
+WinterNode
+~~~~~~~~~~
+
+WinterNode's Help Center has an helpful article `Java Version Selector
+<https://www.notion.so/MC-1-17-Java-Version-Selection-c0ab39f51ab147de9b1125418e001fab>`_
+showing how to change the Java version, along with recommendations per Minecraft
+version. If you do nothing, it will automatically select the version that fits
+best for your server.
 
 Pterodactyl
 ===========
