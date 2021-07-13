@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated June 24th, 2021 for MC 1.16.5, Paper build #778
+    Last updated Jul 11th, 2021 for MC 1.17.1, Paper build #100
 
 Global Settings
 ===============
@@ -610,6 +610,12 @@ prevent-tnt-from-moving-in-water
 * **default**: false
 * **description**: Instructs the server to keep Primed TNT entities from moving
   in flowing water.
+
+show-sign-click-command-failure-msgs-to-player
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Whether commands executed by sign click should show failure
+  messages to players. 
 
 spawner-nerfed-mobs-should-jump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
