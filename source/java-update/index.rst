@@ -100,8 +100,8 @@ have to do anything whatsoever. If you want to test Java 16 on Minecraft 1.16 or
 earlier, you will need to set the server type to *Snapshot*, then put Paper back
 on the server manually.
 
-Nitado
-~~~~~~
+Nitrado
+~~~~~~~
 
 If you create a 1.17 server the Java version will be set to Java 16 out of the box. However if it doesn't (because e.g. you upgraded the server manually) you can set the Java version under "General" -> "Java"
 
