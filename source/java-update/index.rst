@@ -125,6 +125,19 @@ If you create a 1.17 server the Java version will be set to Java 16 out of the b
 
 .. image:: java-update-assets/nitrado-java-settings.png
 
+Server.pro
+~~~~~~~~~~
+
+Creating a server on 1.17 automatically selects Java 16.
+To manually set the Java version, navigate to the control panel,
+select ``Advanced Settings`` and select ``Java 16 - HotSpot``
+on the dropdown menu. Save the changes by clicking ``Save Changes``
+at the bottom of the page.
+
+.. image:: java-update-assets/serverpro-panel.png
+
+.. image:: java-update-assets/serverpro-java-version-dropdown.png
+
 Pterodactyl
 ===========
 
