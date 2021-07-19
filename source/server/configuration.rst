@@ -1184,3 +1184,10 @@ allow-using-signs-inside-spawn-protection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: false
    - **description**: Allows players to use signs while inside spawn protection.
+   
+allow-player-cramming-damage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: false
+   - **description**: Allows players to take damage from cramming when colliding
+     with more entities than set in the ``maxEntityCramming`` gamerule.
+
