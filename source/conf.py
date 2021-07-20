@@ -31,7 +31,8 @@ sys.path.append(os.path.abspath('../exts'))
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.doctest'
+    'sphinx.ext.doctest',
+    'sphinx_tabs.tabs'
 ]
 
 # github config

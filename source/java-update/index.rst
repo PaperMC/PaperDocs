@@ -187,6 +187,38 @@ based on these, execute the following commands to add the AdoptOpenJDK APT repos
     
 You can also replace ``16`` with ``11`` for Java 11.
 
+RPM-Based
+=========
+
+To install Java 16 on CentOS, RHEL, Fedora, openSUSE, SLES and many other RPM-based
+distributions, execute the following commands to add Amazon Corretto's
+RPM repository and install Java 16.
+
+.. tabs::
+
+  .. tab:: DNF
+
+    .. code-block:: console
+
+      $ sudo rpm --import https://yum.corretto.aws/corretto.key
+      $ sudo curl -Lo /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+      $ sudo dnf -y install java-16-amazon-corretto-devel
+
+  .. tab:: zypper
+
+    .. code-block:: console
+
+      $ sudo zypper addrepo https://yum.corretto.aws/corretto.repo
+      $ sudo zypper install java-16-amazon-corretto-devel
+
+  .. tab:: yum
+
+    .. code-block:: console
+
+      $ sudo rpm --import https://yum.corretto.aws/corretto.key
+      $ sudo curl -Lo /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+      $ sudo yum -y install java-16-amazon-corretto-devel
+
 Arch Linux
 ==========
 
