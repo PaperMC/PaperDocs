@@ -1191,3 +1191,24 @@ allow-player-cramming-damage
    - **description**: Allows players to take damage from cramming when colliding
      with more entities than set in the ``maxEntityCramming`` gamerule.
 
+tick-rates
+~~~~~~~~~~
+* sensor
+    - ``<entity-type>``
+        - ``<sensor-name>``: Sets the sensor tick rate of an entity.
+          See timings for the names. Might change between updates!
+    - villager
+        - secondaryplaces
+            - **default**: 40
+            - **description**: Sets the tick rate of the ``secondaryplaces`` sensor
+              of Villager entities
+* behavior
+    - ``<entity-type>``
+        - ``<behavior-name>``: Sets the behavior tick rate of an entity.
+          See timings for the names. Might change between updates!
+    - villager
+        - positionvalidate
+            - **default**: 20
+            - **description**: Sets the tick rate of the ``positionvalidate`` behavior.
+              of Villager entities
+
