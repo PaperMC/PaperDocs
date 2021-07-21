@@ -1195,20 +1195,20 @@ tick-rates
 ~~~~~~~~~~
 * sensor
     - ``<entity-type>``
-        - ``<sensor-name>``: Sets the sensor tick rate of an entity.
+        - ``<sensor-name>``: Sets the sensor tick rate of an entity. -1 uses Vanilla.
           See timings for the names. Might change between updates!
     - villager
-        - secondaryplaces
+        - secondarypoisensor
             - **default**: 40
-            - **description**: Sets the tick rate of the ``secondaryplaces`` sensor
+            - **description**: Sets the tick rate of the ``secondarypoisensor`` sensor
               of Villager entities
 * behavior
     - ``<entity-type>``
-        - ``<behavior-name>``: Sets the behavior tick rate of an entity.
+        - ``<behavior-name>``: Sets the behavior tick rate of an entity. -1 uses Vanilla.
           See timings for the names. Might change between updates!
     - villager
-        - positionvalidate
-            - **default**: 20
-            - **description**: Sets the tick rate of the ``positionvalidate`` behavior.
+        - validatenearbypoi
+            - **default**: -1
+            - **description**: Sets the tick rate of the ``validatenearbypoi`` behavior.
               of Villager entities
 
