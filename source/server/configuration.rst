@@ -1179,6 +1179,8 @@ seed-based-feature-search-loads-chunks
      chunk. The more precise location of the feature will be returned as the
      player loads the target chunk. While disabling this will increase
      performance, it may lead to incorrect feature locations being returned.
+     This will impact both the ``/locate`` command, buried treasure maps, and
+     any other game mechanic that relies on feature searches.
 
 allow-using-signs-inside-spawn-protection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
