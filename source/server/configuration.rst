@@ -274,6 +274,11 @@ timings
     - **description**: Instructs Timings to provide more specific information
       in its reports. For example, specific entity types causing lag rather
       than just "entities".
+      
+* url
+    - **default**: ``https://timings.aikar.co/``
+    - **description**: Specifies the URL of the `Timings Viewer <https://github.com/aikar/timings>`_
+      server where Timings reports should be uploaded to.
 
 * server-name-privacy
     - **default**: false
