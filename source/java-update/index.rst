@@ -224,23 +224,15 @@ Arch Linux
 
 .. i use arch, btw
 
-.. note::
+To install Java 16 on Arch Linux, you will need to install the ``jre-openjdk``
+package.
 
-    There is no JRE-only Java 16 package for Arch Linux. This is not an issue
-    whatsoever, but if you'd like the smaller variant, you can use the `Linux
-    (Generic)`_ guide instead.
+.. code-block:: console
 
-To install Java 16 on Arch Linux, you will need to use the Arch User Repository
-(AUR). You need to install the |jdk-adoptopenjdk AUR package|_.
+   $ sudo pacman -Syu jre-openjdk
 
-.. |jdk-adoptopenjdk AUR package| replace:: ``jdk-adoptopenjdk`` package
-.. _jdk-adoptopenjdk AUR package: https://aur.archlinux.org/packages/jdk-adoptopenjdk/
-
-To simplify this process, and to make updating easier, see `yay
-<https://github.com/Jguer/yay>`_.
-
-To switch between available Java versions on the system, see the wiki on
-`Switching between JVMs <https://wiki.archlinux.org/title/Java#Switching_between_JVM>`_.
+To switch between available Java versions on the system with the archlinux-java
+tool, see the wiki on `Switching between JVMs <https://wiki.archlinux.org/title/Java#Switching_between_JVM>`_.
 
 Linux (Generic)
 ===============
