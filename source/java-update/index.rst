@@ -254,8 +254,8 @@ can use this on practically any Linux (and BSD!) environment. Follow the
 You can then proceed to install one of their many Java distributions with the
 `simple commands on their website <https://sdkman.io/jdks>`_.
 
-AdoptOpenJDK
-~~~~~~~~~~~~
+Adoptium
+~~~~~~~~
 
 .. note::
 
@@ -268,8 +268,8 @@ AdoptOpenJDK
 
     You are going to require the ``tar`` and ``sha256sum`` tools to do this install.
 
-First, select an appropriate ``tar.gz`` file from `AdoptOpenJDK's website
-<https://adoptopenjdk.net/releases.html?variant=openjdk16&jvmVariant=hotspot>`_,
+First, select an appropriate ``tar.gz`` file from `Adoptium's website
+<https://adoptium.net/releases.html?variant=openjdk16&jvmVariant=hotspot>`_,
 and copy the download URL.
 
 Next, figure out which directory you want to install Java to; this is commonly a
@@ -316,9 +316,9 @@ of a shell, so you can just re-open the shell. Alternatively, run ``source
 Windows 10
 ==========
 
-If you're on Windows 10, you will want AdoptOpenJDK's JRE. You can find the
+If you're on Windows 10, you will want Adoptium's JRE. You can find the
 ``msi`` file you should install on `their website
-<https://adoptopenjdk.net/index.html?variant=openjdk16&jvmVariant=hotspot>`_.
+<https://adoptium.net/?variant=openjdk16&jvmVariant=hotspot>`_.
 
 Remember to reboot your computer after installing.
 
@@ -331,8 +331,8 @@ something along the lines of:
 .. code-block::
 
     openjdk version "16.0.1" 2021-04-20
-    OpenJDK Runtime Environment AdoptOpenJDK-16.0.1+9 (build 16.0.1+9)
-    OpenJDK 64-Bit Server VM AdoptOpenJDK-16.0.1+9 (build 16.0.1+9, mixed mode, sharing)
+    OpenJDK Runtime Environment Temurin-16.0.2+7 (build 16.0.2+7)
+    OpenJDK 64-Bit Server VM Temurin-16.0.2+7 (build 16.0.2+7, mixed mode, sharing)
 
 It is the ``version "16.0.1"`` part that is important -- if the first number is
 not ``16``, you need to modify your ``PATH``.
