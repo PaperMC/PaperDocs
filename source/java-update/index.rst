@@ -359,7 +359,7 @@ Select the ``JAVA_HOME`` variable in the ``System variables`` section in the
 if the variable is not present, create a new variable with ``New...`` in the
 *lower* half of the window, and name it ``JAVA_HOME``. You now want to ``Browse
 Directory...`` and find the Java directory under ``C:\Program
-Files\AdoptOpenJDK`` in the Windows Explorer window:
+Files\Eclipse Foundation`` in the Windows Explorer window:
 
 .. image:: java-update-assets/windows-browse-directory.png
 
