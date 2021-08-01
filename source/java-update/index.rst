@@ -88,6 +88,17 @@ For more information, feel free to read the `How to change your server's Java
 version <https://docs.dedicatedmc.io/server-setup/how-to-change-your-servers-java-version/>`_
 guide on their wiki.
 
+EnviroMC
+~~~~~~~~
+
+EnviroMC defaults to Java 16 if you select Paper as your server jar.
+To manually change your Java version, please navigate to the
+Startup -> Docker Image option, and select Java 16, as shown below.
+
+.. image:: java-update-assets/enviro-java-version.png
+
+|br|
+
 MCProHosting
 ~~~~~~~~~~~~
 
@@ -144,18 +155,6 @@ WinterNode's Help Center has an helpful article `Java Version Selector
 showing how to change the Java version, along with recommendations per Minecraft
 version. If you do nothing, it will automatically select the version that fits
 best for your server.
-
-EnviroMC
-~~~~~~~~
-
-EnviroMC defaults to Java 16 if you select Paper as your server jar.
-To manually change your Java version, please navigate to the
-Startup -> Docker Image option, and select Java 16, as shown below.
-
-.. image:: java-update-assets/enviro-java-version-dropdown.png
-
-|br|
-
 
 Pterodactyl
 ===========
