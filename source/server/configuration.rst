@@ -969,6 +969,12 @@ lightning-strike-distance-limit
 
 anti-xray
 ~~~~~~~~~
+
+.. note::
+   More in depth anti-xray documentation as well as recommended configuration 
+   for both engine modes can be found in `this guide by stonar96
+   <https://gist.github.com/stonar96/ba18568bd91e5afd590e8038d14e245e>`_.
+
 * enabled
     - **default**: false
     - **description**: Controls the on/off state for the Anti-Xray system.
@@ -979,18 +985,17 @@ anti-xray
       hidden blocks with stone and 2 is to replace all blocks with random block
       data.
 
-* max-chunk-section-index
-    - **default**: 3
-    - **description**: Controls to what Y value (height) the engine should
-      operate to, expressed in chunk sections.
-    - **note**: To determine the total height, use this formula:
-      ($index + 1) * 16. Therefore, the default value of 3 will result in the
-      engine functioning up to Y: 64.
+* max-block-height
+    - **default**: 64
+    - **description**: Sets the maximum height at which anti-xray will attempt
+      to hide ores. Only multiples of 16 are allowed. Other values will be
+      rounded down to a multiple of 16.
 
 * update-radius
     - **default**: 2
     - **description**: Controls the distance in blocks from air or water that
-      hidden-blocks are hidden by the anti-xray engine.
+      hidden-blocks are hidden by the anti-xray engine. The maximum allowed
+      value is 2.
       
 * lava-obscures
     - **default**: false
@@ -998,19 +1003,24 @@ anti-xray
 
 * use-permission
     - **default**: false
-    - **description**: Whether or not to allow players with the ``paper.antixray.bypass`` permission to
-      bypass anti-xray. Checking this permission is disabled by default as legacy permission plugins may
-      struggle with the number of checks made. This should only be used with modern
-      permission plugins.
+    - **description**: Whether or not to allow players with the
+      ``paper.antixray.bypass`` permission to bypass anti-xray. Checking this
+      permission is disabled by default as legacy permission plugins may
+      struggle with the number of checks made. This should only be used with
+      modern permission plugins.
 
 * hidden-blocks
-    - **default**: { gold_ore, iron_ore, coal_ore, lapis_ore, mossy_cobblestone,
-      obsidian, chest, diamond_ore, redstone_ore, clay, emerald_ore, ender_chest }
+    - **default**: [copper_ore, deepslate_copper_ore, gold_ore,
+      deepslate_gold_ore, iron_ore, deepslate_iron_ore, coal_ore,
+      deepslate_coal_ore, lapis_ore, deepslate_lapis_ore, mossy_cobblestone,
+      obsidian, chest, diamond_ore, deepslate_diamond_ore, redstone_ore,
+      deepslate_redstone_ore, clay, emerald_ore, deepslate_emerald_ore,
+      ender_chest]
     - **description**: List of blocks to be hidden in engine mode 1.
     - **note**: This list is using Mojang server names *not* bukkit names.
 
 * replacement-blocks:
-    - **default**: { stone, oak_planks }
+    - **default**: [stone, oak_planks]
     - **description**: List of blocks that should be replaced by hidden-blocks
       in engine mode 2.
     - **note**: This list is using Mojang server names *not* bukkit names.
