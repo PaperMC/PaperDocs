@@ -88,6 +88,17 @@ For more information, feel free to read the `How to change your server's Java
 version <https://docs.dedicatedmc.io/server-setup/how-to-change-your-servers-java-version/>`_
 guide on their wiki.
 
+EnviroMC
+~~~~~~~~
+
+EnviroMC defaults to Java 16 if you select Paper as your server jar.
+To manually change your Java version, please navigate to the
+*Startup -> Docker Image* option, and select ``Java 16``, as shown below.
+
+.. image:: java-update-assets/enviro-java-version.png
+
+|br|
+
 MCProHosting
 ~~~~~~~~~~~~
 
