@@ -93,7 +93,7 @@ EnviroMC
 
 EnviroMC defaults to Java 16 if you select Paper as your server jar.
 To manually change your Java version, please navigate to the
-Startup -> Docker Image option, and select Java 16, as shown below.
+*Startup -> Docker Image* option, and select ``Java 16``, as shown below.
 
 .. image:: java-update-assets/enviro-java-version.png
 
