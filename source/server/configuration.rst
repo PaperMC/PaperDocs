@@ -1207,7 +1207,15 @@ allow-player-cramming-damage
    - **default**: false
    - **description**: Allows players to take damage from cramming when colliding
      with more entities than set in the ``maxEntityCramming`` gamerule.
-
+   
+hide-itemmeta-from-clients
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: false
+   - **description**: Controls whether or not unnecessary item information
+     (such as durability, enchantments, items in a shulker box/bundle, etc.)
+     that can give cheat clients an advantage should be sent to players'
+     clients.
+   
 tick-rates
 ~~~~~~~~~~
 * sensor
