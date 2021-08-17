@@ -174,7 +174,7 @@ administrator control panel, go to the *Servers* tab, click on your server
 of), and press the *Startup* tab.
 
 Proceed by selecting ``ghcr.io/pterodactyl/yolks:java_16`` from the *Image* dropdown under *Docker Container Configuration*.
-If you are running older panel version, manually enter the image url in the custom image field.
+If you are running an older panel version, manually enter the image url in the custom image field.
 For Java 11, select it from the dropdown instead or replace ``16`` with ``11``.
 
 .. image:: java-update-assets/pterodactyl-startup-tab.png
