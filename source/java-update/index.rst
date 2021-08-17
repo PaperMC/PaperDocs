@@ -396,16 +396,14 @@ If you're on macOS, you can use a tool called `Homebrew <https://brew.sh/>`_ to
 install Java. Follow the `instructions on their website
 <https://docs.brew.sh/Installation>`_ for how to install it.
 
-To now install Java, open your Terminal app and run the following two commands:
+To now install Java, open your Terminal app and run the following command:
 
 .. code-block:: console
 
-    $ brew tap AdoptOpenJDK/openjdk
-    $ brew install --cask adoptopenjdk16-jre
+    $ brew install --cask temurin
 
-.. note::
+If you used AdoptOpenJDK previously, untap it.
 
-    You can find the complete list of available Java versions on `the GitHub
-    page of the Java tap
-    <https://github.com/AdoptOpenJDK/homebrew-openjdk#available-versions>`_.
+.. code-block:: console
 
+    $ brew untap AdoptOpenJDK/openjdk
