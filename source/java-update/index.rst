@@ -178,6 +178,7 @@ If you are running older panel version, manually enter the image url in the cust
 For Java 11, select it from the dropdown instead or replace ``16`` with ``11``.
 
 .. image:: java-update-assets/pterodactyl-startup-tab.png
+  :width: 500
 
 |br|
 
