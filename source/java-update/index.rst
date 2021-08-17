@@ -402,8 +402,9 @@ To now install Java, open your Terminal app and run the following command:
 
     $ brew install --cask temurin
 
-If you used AdoptOpenJDK previously, untap it.
+If you used AdoptOpenJDK previously, uninstall and untap it.
 
 .. code-block:: console
 
+    $ brew uninstall adoptopenjdk16-jre
     $ brew untap AdoptOpenJDK/openjdk
