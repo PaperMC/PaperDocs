@@ -111,7 +111,7 @@ Minehub
 ~~~~~~~~~~~~
 
 Minehub will automatically set the Java version to Java 16 when selecting 1.17.
-You can also set the Java version yourself under "Select Java version".
+You can also set the Java version yourself under ``Select Java version``.
 
 .. image:: java-update-assets/minehub-java-version.png
 
