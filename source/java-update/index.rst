@@ -107,6 +107,16 @@ have to do anything whatsoever. If you want to test Java 16 on Minecraft 1.16 or
 earlier, you will need to set the server type to *Snapshot*, then put Paper back
 on the server manually.
 
+Minehub
+~~~~~~~~~~~~
+
+Minehub will automatically set the Java version to Java 16 when selecting 1.17.
+You can also set the Java version yourself under "Select Java version".
+
+.. image:: java-update-assets/minehub-java-version.png
+
+|br|
+
 Nitrado
 ~~~~~~~
 
