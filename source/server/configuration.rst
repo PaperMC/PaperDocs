@@ -609,7 +609,7 @@ map-item-frame-cursor-update-interval
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 10
 * **description**: The interval in ticks at which cursors on maps in item frames are updated.
-  Setting this to a number less than 1 will disable updates all together.
+  Setting this to a number less than 1 will disable updates altogether.
 
 fix-items-merging-through-walls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
