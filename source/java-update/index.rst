@@ -183,11 +183,12 @@ administrator control panel, go to the *Servers* tab, click on your server
 (this has to be repeated for every server you wish to switch the Java version
 of), and press the *Startup* tab.
 
-Proceed by replacing the text in the *Image* input field under *Docker Container
-Configuration* with the following: ``quay.io/parkervcp/pterodactyl-images:debian_openjdk-16``.
-You can also replace ``16`` with ``11`` for Java 11.
+Proceed by selecting ``ghcr.io/pterodactyl/yolks:java_16`` from the *Image* dropdown under *Docker Container Configuration*.
+If you are running an older panel version, manually enter the image url in the custom image field.
+For Java 11, select it from the dropdown instead or replace ``16`` with ``11``.
 
 .. image:: java-update-assets/pterodactyl-startup-tab.png
+  :width: 500
 
 |br|
 
