@@ -608,8 +608,8 @@ container-update-tick-rate
 map-item-frame-cursor-update-interval
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 10
-* **description**: The interval in ticks for which cursors on maps in item frames are updated.
-  A number less than 1 would disable updates all together.
+* **description**: The interval in ticks at which cursors on maps in item frames are updated.
+  Setting this to a number less than 1 will disable updates all together.
 
 fix-items-merging-through-walls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
