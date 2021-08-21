@@ -605,6 +605,12 @@ container-update-tick-rate
 * **description**: The rate, in ticks, at which the server updates containers
   and inventories.
 
+map-item-frame-cursor-update-interval
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: 10
+* **description**: The interval in ticks at which cursors on maps in item frames are updated.
+  Setting this to a number less than 1 will disable updates altogether.
+
 fix-items-merging-through-walls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
