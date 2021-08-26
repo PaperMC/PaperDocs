@@ -1214,6 +1214,12 @@ allow-player-cramming-damage
    - **description**: Allows players to take damage from cramming when colliding
      with more entities than set in the ``maxEntityCramming`` gamerule.
 
+allow-spiders-to-climb-worldborder
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: true
+   - **description**: When set to true, spiders will be able to climb the
+     world border, as if it is a regular was.
+
 tick-rates
 ~~~~~~~~~~
 * sensor
