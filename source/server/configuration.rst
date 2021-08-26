@@ -707,6 +707,20 @@ all-chunks-are-slime-chunks
 * **note**: This may actually decrease your chances of running into a Slime as
   they now have a much larger potential spawn area.
 
+slime-spawn-height
+~~~~~~~~~~~~~~~~~~
+    - swamp-biome
+        - maximum
+            - **default**: 70
+            - **description**: Sets the maximum Y position for natural Slime spawn in Swamp Biomes.
+        - minimum
+            - **default**: 50
+            - **description**: Sets the minimum Y position for natural Slime spawn in Swamp Biomes.	
+    - slime-chunk
+        - maximum
+            - **default**: 40
+            - **description**: Sets the maximum Y position for natural Slime spawn in Slime Chunks.
+
 mob-spawner-tick-rate
 ~~~~~~~~~~~~~~~~~~~~~
 * **default**: 1
