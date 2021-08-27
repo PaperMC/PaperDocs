@@ -345,6 +345,11 @@ World Settings
 World settings are configured on a per-world basis. The child-node *default*
 is used for all worlds that do not have their own specific settings.
 
+allow-chorus-teleport-above-logical-height
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Allows chorus fruit teleports to work above the nether roof.
+
 disable-teleportation-suffocation-check
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
