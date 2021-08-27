@@ -1219,6 +1219,7 @@ allow-spiders-to-climb-worldborder
    - **default**: true
    - **description**: When set to true, spiders will be able to climb the
      world border to reach their target.
+
 tick-rates
 ~~~~~~~~~~
 * sensor
