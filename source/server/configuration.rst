@@ -96,12 +96,6 @@ use-alternative-luck-formula
   applied to items that have no quality defined. Makes major changes to fishing
   formulas.
 
-save-player-data
-~~~~~~~~~~~~~~~~
-* **default**: true
-* **description**: Sets whether the server should save player data, such as
-  inventories, experience, and advancements.
-
 chunk-tasks-per-tick
 ~~~~~~~~~~~~~~~~~~~~
 * **default**: 1000
@@ -134,12 +128,6 @@ save-empty-scoreboard-teams
 * **description**: Some scoreboard plugins leave hundreds of empty scoreboard
   teams around, dramatically slowing down login times. This sets whether the
   server should remove those empty teams automatically.
-
-log-named-entity-deaths
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: true
-* **description**:  Since 1.17.1, all deaths of named entities are logged. 
-  This setting allows you to control this behavior. 
 
 velocity-support
 ~~~~~~~~~~~~~~~~
