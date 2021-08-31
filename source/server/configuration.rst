@@ -1223,3 +1223,14 @@ tick-rates
             - **description**: Sets the tick rate of the ``validatenearbypoi`` behavior.
               of Villager entities
 
+feature-seeds
+~~~~~~~~~~
+* generate-random-seeds-for-all
+   - **default**: false
+   - **description**: Enables auto-filling random seeds for all available
+     features you haven't already set a seed to. Using this in a controlled
+     environemnt is also a good way of receiving a full list of features you can set
+     seeds for.
+* ``<feature-namespace>``: Sets the population seed for the specified feature.
+  If set to -1, the Vanilla population seed stays unchanged and will not be
+  overridden by the auto-fill option either.
