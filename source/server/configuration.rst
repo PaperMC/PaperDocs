@@ -1224,7 +1224,7 @@ tick-rates
               of Villager entities
 
 feature-seeds
-~~~~~~~~~~
+~~~~~~~~~~~~~
 * generate-random-seeds-for-all
    - **default**: false
    - **description**: Enables auto-filling random seeds for all available
