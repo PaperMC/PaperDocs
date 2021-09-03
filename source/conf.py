@@ -32,8 +32,14 @@ sys.path.append(os.path.abspath('../exts'))
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
-    'sphinx_tabs.tabs'
+    'sphinx_tabs.tabs',
+    'sphinxext.opengraph'
 ]
+
+# opengraph config
+ogp_site_url = 'https://paper.readthedocs.io'
+ogp_site_name = 'PaperDocs'
+ogp_image = 'https://paper.readthedocs.io/en/latest/_images/papermc_logomark_500.png'
 
 # github config
 edit_on_github_project = 'PaperMC/PaperDocs'
