@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated Jul 11th, 2021 for MC 1.17.1, Paper build #100
+    Last updated Sep 3rd, 2021 for MC 1.17.1, Paper build #249
 
 Global Settings
 ===============
@@ -128,6 +128,23 @@ save-empty-scoreboard-teams
 * **description**: Some scoreboard plugins leave hundreds of empty scoreboard
   teams around, dramatically slowing down login times. This sets whether the
   server should remove those empty teams automatically.
+
+lag-compensate-block-breaking
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Whether the server should use time or TPS to determine block
+  break duration. The client assumes the server is always running at 20 TPS,
+  causing disagreement when a block is broken during server lag. This setting
+  prevents this desync.
+
+send-full-pos-for-hard-colliding-entities
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: true
+* **description**: Collisions with boats and minecarts are often subject to
+  client/server disagreement, which may cause glitchy behaviour for players.
+  This setting attempts to mitigate this desync by sending precise locations
+  for entities involved in collisions. Having this enabled will use more
+  bandwidth, however in the majority of cases, this is a worthy tradeoff.
 
 velocity-support
 ~~~~~~~~~~~~~~~~
@@ -327,6 +344,88 @@ item-validation
         - **description**: Overrides Spigot's limit on individual book page
           length.
 
+chunk-loading
+~~~~~~~~~~~~~
+* min-load-radius
+    - **default**: 2
+    - **description**: The radius of chunks around a player that are not
+      throttled for chunk loading. Effectively, this radius will be unaffected
+      by the ``chunk-loading.max-concurrent-sends`` setting. The number of chunks
+      affected is actually the configured value plus one, as this config
+      controls the chunks the client will actually be able to render.
+* max-concurrent-sends
+    - **default**: 2
+    - **description**: The maximum number of chunks that will be queued to
+      send at any one time. Lower values will help alleviate server-side
+      networking bottlenecks such as anti-xray or compression, however
+      is unlikely to help users with a poor internet connection.
+* autoconfig-send-distance
+    - **default**: true
+    - **description**: Whether to use the client's view distance for the chunk send
+      distance of the server. This will exclusively change the radius of chunks sent
+      to the client, and will have no effect on ticking or non-ticking view distance.
+      Assuming no plugin has explicitly set the send distance and the client's view
+      distance is less than the server's send distance, the client's view distance
+      will be used.
+* target-player-chunk-send-rate
+    - **default**: 100.0
+    - **description**: The maximum chunk send rate an individual player will ever have.
+      A value of less than 1 will disable this limit.
+* global-max-chunk-send-rate
+    - **default**: -1
+    - **description**: The maximum chunk send rate for the entire server. This may help
+      with server-side peak bandwidth usage. A value of less than 1 will disable this limit.
+* enable-frustum-priority
+    - **default**: false
+    - **description**: Whether to attempt to load chunks in front of the player before
+      loading chunks to their sides or behind. Due to the client reacting poorly to receiving
+      chunks out of order, this is disabled by default.
+* global-max-chunk-load-rate
+    - **default**: 300.0
+    - **description**: The maximum chunk load rate for the whole server.
+* player-max-concurrent-loads
+    - **default**: 4.0
+    - **description**: The maximum number of chunk loads processed for a player at one time.
+* global-max-concurrent-loads
+    - **default**: 500.0
+    - **description**: The maximum number of chunk loads processed for the whole server
+      one time. This will override ``player-max-concurrent-loads`` if exceeded.
+
+packet-limiter
+~~~~~~~~~~~~~~
+* kick-message
+    - **default**: &cSent too many packets
+    - **description**: The message players are kicked with for sending too many pakcets.
+* limits
+    * all
+        * **description**: This section applies for all incoming packets. You may
+          not define an action in this section, it will always kick the player if the
+          limit is violated.
+        * interval
+            * **default**: 7.0
+            * **description**: The interval, in seconds, for which ``max-packet-rate`` should apply.
+        * max-packet-rate
+            - **default**: 500.0
+            - **description**: The number of any packet allowed per player within the interval.
+    * PacketPlayInAutoRecipe:
+        * **description**: This section applies specific limits for each packet, based on the
+          packets name as shown in timings, or it's class name for more advanced users.
+          PacketPlayInAutoRecipe is used by default because this packet is very expensive to process,
+          and may allow malicious actors to crash your server if unmitigated.
+        * interval
+            - **default**: 4.0
+            - **description**: The interval, in seconds, for which ``max-packet-rate`` should apply
+              for this packet.
+        * max-packet-rate
+            - **default**: 5.0
+            - **description**: The number of packets allowed within the interval before action
+              is executed.
+        * action
+            - **default**: DROP
+            - **description**: The action to take once the limit has been violated. Possible values
+              are ``DROP`` which will ignore packets over the limit, and ``KICK`` which will kick
+              players for exceeding the limit.
+
 World Settings
 ==============
 
@@ -350,7 +449,7 @@ max-auto-save-chunks-per-tick
 
 per-player-mob-spawns
 ~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
+* **default**: true
 * **description**: Determines whether the mob limit (in bukkit.yml) is counted
   per-player or for the entire server. Enabling this setting results in roughly
   the same number of mobs, but with a more even distribution that prevents one
@@ -1080,13 +1179,13 @@ fix-entity-position-desync
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
     - **default**: true
     - **description**: Fixes the issue in which an items position is desynchronized between the client and the server.
-	
+
 update-pathfinding-on-block-update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     - **default**: true
     - **description**: Controls whether the pathfinding of mobs is updated when a block is updated in the world. Disabling this option can improve the server performancy significantly while there is almost no noticeable effect on the game mechanics. This is recommended when there are lots of entities loaded and you have automated farms or redstone clocks.
-	
+
 ender-dragons-death-always-places-dragon-egg
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1098,8 +1197,7 @@ max-leash-distance
 
    - **default**: 10.0
    - **description**: Configure the maximum distance of a leash. If the distance to the leashed entity is greater, the leash will break.
- 
-  
+
 entity-per-chunk-save-limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * experience_orb
