@@ -1,5 +1,5 @@
-Sphinx==2.2.0
-sphinx-JDLinker==1.4
-sphinx-intl==2.0.0
-sphinx-rtd-theme==0.4.3
-sphinx-autobuild==0.7.1
+Sphinx==4.1.2
+sphinx-rtd-theme==1.0.0rc1
+sphinx-tabs==3.2.0
+sphinx-autobuild==2021.3.14
+sphinxext-opengraph==0.4.2

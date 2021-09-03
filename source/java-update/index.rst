@@ -15,13 +15,9 @@ development material (sources, documentation, a reference compiler, and more).
 
 To update, please find the appropriate header for you in the table of contents.
 
-.. It's somewhat ugly that we have the same title again, but I'm not sure
-   that there's a tonne we can do about it while also getting a properly
-   indented list.
-
-.. toctree::
-
-    index
+.. contents::
+    :depth: 2
+    :local:
 
 .. We don't want text to appear right underneath images: this is ugly.
    Licensed under CC BY-SA 4.0, found 2021-06-05 on: https://stackoverflow.com/a/54412348
@@ -67,6 +63,7 @@ You can select Java 16 from the server configuration panel by selecting the
 Java version option ending in ``openjdk-16``:
 
 .. image:: java-update-assets/bloomhost-java-version.jpg
+  :width: 500
 
 |br|
 
@@ -91,6 +88,17 @@ For more information, feel free to read the `How to change your server's Java
 version <https://docs.dedicatedmc.io/server-setup/how-to-change-your-servers-java-version/>`_
 guide on their wiki.
 
+EnviroMC
+~~~~~~~~
+
+EnviroMC defaults to Java 16 if you select Paper as your server jar.
+To manually change your Java version, please navigate to the
+*Startup -> Docker Image* option, and select ``Java 16``, as shown below.
+
+.. image:: java-update-assets/enviro-java-version.png
+
+|br|
+
 MCProHosting
 ~~~~~~~~~~~~
 
@@ -99,6 +107,29 @@ have to do anything whatsoever. If you want to test Java 16 on Minecraft 1.16 or
 earlier, you will need to set the server type to *Snapshot*, then put Paper back
 on the server manually.
 
+Minehub
+~~~~~~~~~~~~
+
+Minehub will automatically set the Java version to Java 16 when selecting 1.17.
+You can also set the Java version yourself under ``Select Java version``.
+
+.. image:: java-update-assets/minehub-java-version.png
+
+|br|
+
+Nitrado
+~~~~~~~
+
+If you create a 1.17 server the Java version will be set to Java 16 out of the box. However if it doesn't (because e.g. you upgraded the server manually) you can set the Java version under "General" -> "Java"
+
+.. image:: java-update-assets/nitrado-settings-panel.png
+
+|br|
+
+.. image:: java-update-assets/nitrado-java-settings.png
+
+|br|
+
 PebbleHost
 ~~~~~~~~~~
 
@@ -106,6 +137,25 @@ PebbleHost's knowledgebase has a great article `Does PebbleHost support Java 16?
 <https://help.pebblehost.com/en/article/does-pebblehost-support-java-11-java-16-1f5zlk2/>`_
 on their website to show how to change the Java version, along with
 incompatibilities with certain versions.
+
+Server.pro
+~~~~~~~~~~
+
+Creating a server on 1.17 automatically selects Java 16.
+To manually set the Java version, navigate to the control panel,
+select ``Advanced Settings`` and select ``Java 16 - HotSpot``
+on the dropdown menu. Save the changes by clicking ``Save Changes``
+at the bottom of the page.
+
+.. image:: java-update-assets/serverpro-panel.png
+  :width: 300
+
+|br|
+
+.. image:: java-update-assets/serverpro-java-version-dropdown.png
+  :width: 300
+
+|br|
 
 WinterNode
 ~~~~~~~~~~
@@ -133,11 +183,12 @@ administrator control panel, go to the *Servers* tab, click on your server
 (this has to be repeated for every server you wish to switch the Java version
 of), and press the *Startup* tab.
 
-Proceed by replacing the text in the *Image* input field under *Docker Container
-Configuration* with the following: ``quay.io/parkervcp/pterodactyl-images:debian_openjdk-16``.
-You can also replace ``16`` with ``11`` for Java 11.
+Proceed by selecting ``ghcr.io/pterodactyl/yolks:java_16`` from the *Image* dropdown under *Docker Container Configuration*.
+If you are running an older panel version, manually enter the image url in the custom image field.
+For Java 11, select it from the dropdown instead or replace ``16`` with ``11``.
 
 .. image:: java-update-assets/pterodactyl-startup-tab.png
+  :width: 500
 
 |br|
 
@@ -158,28 +209,52 @@ based on these, execute the following commands to add the AdoptOpenJDK APT repos
     
 You can also replace ``16`` with ``11`` for Java 11.
 
+RPM-Based
+=========
+
+To install Java 16 on CentOS, RHEL, Fedora, openSUSE, SLES and many other RPM-based
+distributions, execute the following commands to add Amazon Corretto's
+RPM repository and install Java 16.
+
+.. tabs::
+
+  .. tab:: DNF
+
+    .. code-block:: console
+
+      $ sudo rpm --import https://yum.corretto.aws/corretto.key
+      $ sudo curl -Lo /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+      $ sudo dnf -y install java-16-amazon-corretto-devel
+
+  .. tab:: zypper
+
+    .. code-block:: console
+
+      $ sudo zypper addrepo https://yum.corretto.aws/corretto.repo
+      $ sudo zypper install java-16-amazon-corretto-devel
+
+  .. tab:: yum
+
+    .. code-block:: console
+
+      $ sudo rpm --import https://yum.corretto.aws/corretto.key
+      $ sudo curl -Lo /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+      $ sudo yum -y install java-16-amazon-corretto-devel
+
 Arch Linux
 ==========
 
 .. i use arch, btw
 
-.. note::
+To install Java 16 on Arch Linux, you will need to install the ``jre-openjdk``
+package.
 
-    There is no JRE-only Java 16 package for Arch Linux. This is not an issue
-    whatsoever, but if you'd like the smaller variant, you can use the `Linux
-    (Generic)`_ guide instead.
+.. code-block:: console
 
-To install Java 16 on Arch Linux, you will need to use the Arch User Repository
-(AUR). You need to install the |jdk-adoptopenjdk AUR package|_.
+   $ sudo pacman -Syu jre-openjdk
 
-.. |jdk-adoptopenjdk AUR package| replace:: ``jdk-adoptopenjdk`` package
-.. _jdk-adoptopenjdk AUR package: https://aur.archlinux.org/packages/jdk-adoptopenjdk/
-
-To simplify this process, and to make updating easier, see `yay
-<https://github.com/Jguer/yay>`_.
-
-To switch between available Java versions on the system, see the wiki on
-`Switching between JVMs <https://wiki.archlinux.org/title/Java#Switching_between_JVM>`_.
+To switch between available Java versions on the system with the archlinux-java
+tool, see the wiki on `Switching between JVMs <https://wiki.archlinux.org/title/Java#Switching_between_JVM>`_.
 
 Linux (Generic)
 ===============
@@ -201,8 +276,8 @@ can use this on practically any Linux (and BSD!) environment. Follow the
 You can then proceed to install one of their many Java distributions with the
 `simple commands on their website <https://sdkman.io/jdks>`_.
 
-AdoptOpenJDK
-~~~~~~~~~~~~
+Adoptium
+~~~~~~~~
 
 .. note::
 
@@ -215,8 +290,8 @@ AdoptOpenJDK
 
     You are going to require the ``tar`` and ``sha256sum`` tools to do this install.
 
-First, select an appropriate ``tar.gz`` file from `AdoptOpenJDK's website
-<https://adoptopenjdk.net/releases.html?variant=openjdk16&jvmVariant=hotspot>`_,
+First, select an appropriate ``tar.gz`` file from `Adoptium's website
+<https://adoptium.net/releases.html?variant=openjdk16&jvmVariant=hotspot>`_,
 and copy the download URL.
 
 Next, figure out which directory you want to install Java to; this is commonly a
@@ -263,9 +338,9 @@ of a shell, so you can just re-open the shell. Alternatively, run ``source
 Windows 10
 ==========
 
-If you're on Windows 10, you will want AdoptOpenJDK's JRE. You can find the
+If you're on Windows 10, you will want Adoptium's JRE. You can find the
 ``msi`` file you should install on `their website
-<https://adoptopenjdk.net/index.html?variant=openjdk16&jvmVariant=hotspot>`_.
+<https://adoptium.net/?variant=openjdk16&jvmVariant=hotspot>`_.
 
 Remember to reboot your computer after installing.
 
@@ -278,8 +353,8 @@ something along the lines of:
 .. code-block::
 
     openjdk version "16.0.1" 2021-04-20
-    OpenJDK Runtime Environment AdoptOpenJDK-16.0.1+9 (build 16.0.1+9)
-    OpenJDK 64-Bit Server VM AdoptOpenJDK-16.0.1+9 (build 16.0.1+9, mixed mode, sharing)
+    OpenJDK Runtime Environment Temurin-16.0.2+7 (build 16.0.2+7)
+    OpenJDK 64-Bit Server VM Temurin-16.0.2+7 (build 16.0.2+7, mixed mode, sharing)
 
 It is the ``version "16.0.1"`` part that is important -- if the first number is
 not ``16``, you need to modify your ``PATH``.
@@ -301,17 +376,19 @@ Press the ``Environment Variables...`` button:
 
 |br|
 
-Select the ``JAVA_HOME`` variable on the bottom half and press ``Edit...``, OR
+Select the ``JAVA_HOME`` variable in the ``System variables`` section in the
+*bottom half* of the window and press ``Edit...``, OR
 if the variable is not present, create a new variable with ``New...`` in the
 *lower* half of the window, and name it ``JAVA_HOME``. You now want to ``Browse
 Directory...`` and find the Java directory under ``C:\Program
-Files\AdoptOpenJDK`` in the Windows Explorer window:
+Files\Eclipse Foundation`` in the Windows Explorer window:
 
 .. image:: java-update-assets/windows-browse-directory.png
 
 |br|
 
-Now go to your ``Path`` variable in the *lower* window and press ``Edit...``.
+Now go to your ``Path`` variable in the ``System variables`` section in the
+*bottom half* of the window and press ``Edit...``.
 If there is already a ``%JAVA_HOME%\bin`` entry in the list, skip this step.
 Otherwise, press the ``New`` button at the top and enter ``%JAVA_HOME%\bin``:
 
@@ -330,16 +407,15 @@ If you're on macOS, you can use a tool called `Homebrew <https://brew.sh/>`_ to
 install Java. Follow the `instructions on their website
 <https://docs.brew.sh/Installation>`_ for how to install it.
 
-To now install Java, open your Terminal app and run the following two commands:
+To now install Java, open your Terminal app and run the following command:
 
 .. code-block:: console
 
-    $ brew tap AdoptOpenJDK/openjdk
-    $ brew install --cask adoptopenjdk16-jre
+    $ brew install --cask temurin
 
-.. note::
+If you used AdoptOpenJDK previously, uninstall and untap it.
 
-    You can find the complete list of available Java versions on `the GitHub
-    page of the Java tap
-    <https://github.com/AdoptOpenJDK/homebrew-openjdk#available-versions>`_.
+.. code-block:: console
 
+    $ brew uninstall adoptopenjdk16-jre
+    $ brew untap AdoptOpenJDK/openjdk

@@ -20,7 +20,7 @@ their respective documentation pages.
     information here to be incomplete. If you cannot find what you're looking for
     or think something may be wrong, :doc:`../about/contact`
 
-    Last updated June 3rd, 2021 for MC 1.16.5, Paper build #762
+    Last updated Jul 11th, 2021 for MC 1.17.1, Paper build #100
 
 Global Settings
 ===============
@@ -95,12 +95,6 @@ use-alternative-luck-formula
 * **description**: Use alternative luck formula by Aikar, allowing luck to be
   applied to items that have no quality defined. Makes major changes to fishing
   formulas.
-
-save-player-data
-~~~~~~~~~~~~~~~~
-* **default**: true
-* **description**: Sets whether the server should save player data, such as
-  inventories, experience, and advancements.
 
 chunk-tasks-per-tick
 ~~~~~~~~~~~~~~~~~~~~
@@ -268,6 +262,11 @@ timings
     - **description**: Instructs Timings to provide more specific information
       in its reports. For example, specific entity types causing lag rather
       than just "entities".
+      
+* url
+    - **default**: ``https://timings.aikar.co/``
+    - **description**: Specifies the URL of the `Timings Viewer <https://github.com/aikar/timings>`_
+      server where Timings reports should be uploaded to.
 
 * server-name-privacy
     - **default**: false
@@ -304,6 +303,30 @@ console
     - **default**: true
     - **description**: Enables Mojang's Brigadier command completions in the server console.
 
+item-validation
+~~~~~~~~~~~~~~~
+* display-name
+    - **default**: 8192
+    - **description**: Overrides Spigot's limit on item display name length.
+* loc-name
+    - **default**: 8192
+    - **description**: Overrides Spigot's limit on translatable item name
+      length.
+* lore-title
+    - **default**: 8192
+    - **description**: Overrides Spigot's limit on lore title length.
+* book
+    * title
+        - **default**: 8192
+        - **description**: Overrides Spigot's limit on book title length.
+    * author
+        - **default**: 8192
+        - **description**: Overrides Spigot's limit on book author length.
+    * page
+        - **default**: 16384
+        - **description**: Overrides Spigot's limit on individual book page
+          length.
+
 World Settings
 ==============
 
@@ -329,7 +352,10 @@ per-player-mob-spawns
 ~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
 * **description**: Determines whether the mob limit (in bukkit.yml) is counted
-  per-player or for the entire server.
+  per-player or for the entire server. Enabling this setting results in roughly
+  the same number of mobs, but with a more even distribution that prevents one
+  player from using the entire mob cap and provides a more single-player like
+  experience.
 
 baby-zombie-movement-modifier
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -567,6 +593,12 @@ container-update-tick-rate
 * **description**: The rate, in ticks, at which the server updates containers
   and inventories.
 
+map-item-frame-cursor-update-interval
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: 10
+* **description**: The interval in ticks at which cursors on maps in item frames are updated.
+  Setting this to a number less than 1 will disable updates altogether.
+
 fix-items-merging-through-walls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
@@ -580,6 +612,12 @@ prevent-tnt-from-moving-in-water
 * **default**: false
 * **description**: Instructs the server to keep Primed TNT entities from moving
   in flowing water.
+
+show-sign-click-command-failure-msgs-to-player
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **default**: false
+* **description**: Whether commands executed by sign click should show failure
+  messages to players. 
 
 spawner-nerfed-mobs-should-jump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -925,6 +963,12 @@ lightning-strike-distance-limit
 
 anti-xray
 ~~~~~~~~~
+
+.. note::
+   More in depth anti-xray documentation as well as recommended configuration 
+   for both engine modes can be found in `this guide by stonar96
+   <https://gist.github.com/stonar96/ba18568bd91e5afd590e8038d14e245e>`_.
+
 * enabled
     - **default**: false
     - **description**: Controls the on/off state for the Anti-Xray system.
@@ -935,18 +979,17 @@ anti-xray
       hidden blocks with stone and 2 is to replace all blocks with random block
       data.
 
-* max-chunk-section-index
-    - **default**: 3
-    - **description**: Controls to what Y value (height) the engine should
-      operate to, expressed in chunk sections.
-    - **note**: To determine the total height, use this formula:
-      ($index + 1) * 16. Therefore, the default value of 3 will result in the
-      engine functioning up to Y: 64.
+* max-block-height
+    - **default**: 64
+    - **description**: Sets the maximum height at which anti-xray will attempt
+      to hide ores. Only multiples of 16 are allowed. Other values will be
+      rounded down to a multiple of 16.
 
 * update-radius
     - **default**: 2
     - **description**: Controls the distance in blocks from air or water that
-      hidden-blocks are hidden by the anti-xray engine.
+      hidden-blocks are hidden by the anti-xray engine. The maximum allowed
+      value is 2.
       
 * lava-obscures
     - **default**: false
@@ -954,19 +997,24 @@ anti-xray
 
 * use-permission
     - **default**: false
-    - **description**: Whether or not to allow players with the ``paper.antixray.bypass`` permission to
-      bypass anti-xray. Checking this permission is disabled by default as legacy permission plugins may
-      struggle with the number of checks made. This should only be used with modern
-      permission plugins.
+    - **description**: Whether or not to allow players with the
+      ``paper.antixray.bypass`` permission to bypass anti-xray. Checking this
+      permission is disabled by default as legacy permission plugins may
+      struggle with the number of checks made. This should only be used with
+      modern permission plugins.
 
 * hidden-blocks
-    - **default**: { gold_ore, iron_ore, coal_ore, lapis_ore, mossy_cobblestone,
-      obsidian, chest, diamond_ore, redstone_ore, clay, emerald_ore, ender_chest }
+    - **default**: [copper_ore, deepslate_copper_ore, gold_ore,
+      deepslate_gold_ore, iron_ore, deepslate_iron_ore, coal_ore,
+      deepslate_coal_ore, lapis_ore, deepslate_lapis_ore, mossy_cobblestone,
+      obsidian, chest, diamond_ore, deepslate_diamond_ore, redstone_ore,
+      deepslate_redstone_ore, clay, emerald_ore, deepslate_emerald_ore,
+      ender_chest]
     - **description**: List of blocks to be hidden in engine mode 1.
     - **note**: This list is using Mojang server names *not* bukkit names.
 
 * replacement-blocks:
-    - **default**: { stone, oak_planks }
+    - **default**: [stone, oak_planks]
     - **description**: List of blocks that should be replaced by hidden-blocks
       in engine mode 2.
     - **note**: This list is using Mojang server names *not* bukkit names.
@@ -1134,16 +1182,58 @@ seed-based-feature-search
 
 seed-based-feature-search-loads-chunks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - **default**: false
+   - **default**: true
    - **description**: When set to false, ``seed-based-feature-search`` will
      not load the target chunk. Instead, it will return the center of the
      chunk. The more precise location of the feature will be returned as the
-     player loads the target chunk.
+     player loads the target chunk. While disabling this will increase
+     performance, it may lead to incorrect feature locations being returned.
+     This will impact both the ``/locate`` command, buried treasure maps, and
+     any other game mechanic that relies on feature searches.
 
 allow-using-signs-inside-spawn-protection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: false
    - **description**: Allows players to use signs while inside spawn protection.
+     
+allow-player-cramming-damage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: false
+   - **description**: Allows players to take damage from cramming when colliding
+     with more entities than set in the ``maxEntityCramming`` gamerule.
+
+tick-rates
+~~~~~~~~~~
+* sensor
+    - ``<entity-type>``
+        - ``<sensor-name>``: Sets the sensor tick rate of an entity. -1 uses Vanilla.
+          See timings for the names. Might change between updates!
+    - villager
+        - secondarypoisensor
+            - **default**: 40
+            - **description**: Sets the tick rate of the ``secondarypoisensor`` sensor
+              of Villager entities
+* behavior
+    - ``<entity-type>``
+        - ``<behavior-name>``: Sets the behavior tick rate of an entity. -1 uses Vanilla.
+          See timings for the names. Might change between updates!
+    - villager
+        - validatenearbypoi
+            - **default**: -1
+            - **description**: Sets the tick rate of the ``validatenearbypoi`` behavior.
+              of Villager entities
+
+feature-seeds
+~~~~~~~~~~~~~
+* generate-random-seeds-for-all
+   - **default**: false
+   - **description**: Enables auto-filling random seeds for all available
+     features you haven't already set a seed to. Using this in a controlled
+     environemnt is also a good way of receiving a full list of features you can set
+     seeds for.
+* ``<feature-namespace>``: Sets the population seed for the specified feature.
+  If set to -1, the Vanilla population seed stays unchanged and will not be
+  overridden by the auto-fill option either.
    
 split-overstacked-loot
 ~~~~~~~~~~~~~~~~~~~~~~
