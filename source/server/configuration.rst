@@ -352,13 +352,15 @@ chunk-loading
       throttled for chunk loading. Effectively, this radius will be unaffected
       by the ``chunk-loading.max-concurrent-sends`` setting. The number of chunks
       affected is actually the configured value plus one, as this config
-      controls the chunks the client will actually be able to render.
+      controls the chunks the client will actually be able to render. A value of
+      -1 will disable this feature.
 * max-concurrent-sends
     - **default**: 2
     - **description**: The maximum number of chunks that will be queued to
       send at any one time. Lower values will help alleviate server-side
       networking bottlenecks such as anti-xray or compression, however
-      is unlikely to help users with a poor internet connection.
+      is unlikely to help users with a poor internet connection. A value of
+      -1 will not disable this limit. Use a large number instead.
 * autoconfig-send-distance
     - **default**: true
     - **description**: Whether to use the client's view distance for the chunk send
@@ -370,11 +372,11 @@ chunk-loading
 * target-player-chunk-send-rate
     - **default**: 100.0
     - **description**: The maximum chunk send rate an individual player will ever have.
-      A value of less than 1 will disable this limit.
+      A value of -1 will disable this limit.
 * global-max-chunk-send-rate
     - **default**: -1
     - **description**: The maximum chunk send rate for the entire server. This may help
-      with server-side peak bandwidth usage. A value of less than 1 will disable this limit.
+      with server-side peak bandwidth usage. A value of -1 will disable this limit.
 * enable-frustum-priority
     - **default**: false
     - **description**: Whether to attempt to load chunks in front of the player before
@@ -382,14 +384,17 @@ chunk-loading
       chunks out of order, this is disabled by default.
 * global-max-chunk-load-rate
     - **default**: 300.0
-    - **description**: The maximum chunk load rate for the whole server.
+    - **description**: The maximum chunk load rate for the whole server. A value of -1 will
+      not disable this. Use a large number instead.
 * player-max-concurrent-loads
     - **default**: 4.0
     - **description**: The maximum number of chunk loads processed for a player at one time.
+      A value of -1 will not disable this. Use a large number instead.
 * global-max-concurrent-loads
     - **default**: 500.0
     - **description**: The maximum number of chunk loads processed for the whole server
-      one time. This will override ``player-max-concurrent-loads`` if exceeded.
+      one time. This will override ``player-max-concurrent-loads`` if exceeded. A value of
+      -1 will disable this limit.
 
 packet-limiter
 ~~~~~~~~~~~~~~
