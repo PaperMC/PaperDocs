@@ -148,6 +148,8 @@ to the settings page, and select ``Java Version``. More information can be found
 
 .. image:: java-update-assets/serverflex-java-version.png
 
+|br|
+
 Server.pro
 ~~~~~~~~~~
 
