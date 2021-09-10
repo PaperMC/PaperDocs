@@ -141,9 +141,10 @@ incompatibilities with certain versions.
 ServerFlex
 ~~~~~~~~~~
 
-ServerFlex defaults to Java 8, but will automatically select Java 16 where appropriate. You can configure the
-java version manually at the bottom of the server settings page, you can also find more information `on the support article.
-<https://serverflex.io/help/article/change-java-version-on-minecraft-server>`_
+ServerFlex defaults to Java 8, but will automatically select Java 16
+where appropriate. To manually configure the java version, navigate
+to the settings page, and select ``Java Version``. More information can be found
+`in ServerFlex's support article. <https://serverflex.io/help/article/change-java-version-on-minecraft-server>`_
 
 .. image:: java-update-assets/serverflex-java-version.png
 
