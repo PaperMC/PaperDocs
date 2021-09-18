@@ -57,7 +57,7 @@ Open your terminal, navigate to the saved location, and then run
 | The amount of RAM can be set by changing the numbers in the ``-Xms`` and ``-Xmx`` arguments.
 | ``--nogui`` disables Vanilla's GUI so you don't get double interfaces when using the command line.
 
-For more advanced Java tuning, see `Aikar's tuning page <https://mcflags.emc.gs>`_.
+For more advanced Java tuning, see `Aikar's tuning page <https://web.archive.org/web/20210327141039if_/https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/>`_.
 
 To configure your server, see the :doc:`../server/configuration` page.
 
