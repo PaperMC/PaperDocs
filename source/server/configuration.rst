@@ -371,12 +371,13 @@ chunk-loading
       will be used.
 * target-player-chunk-send-rate
     - **default**: 100.0
-    - **description**: The maximum chunk send rate an individual player will ever have.
-      A value of -1 will disable this limit.
+    - **description**: The maximum number of chunks ever sent to an invidual player
+      within one second. A value of -1 will disable this limit.
 * global-max-chunk-send-rate
     - **default**: -1
-    - **description**: The maximum chunk send rate for the entire server. This may help
-      with server-side peak bandwidth usage. A value of -1 will disable this limit.
+    - **description**: The maximum number of chunks sent per second for the entire
+      server. This may help with server-side peak bandwidth usage. A value of -1
+      will disable this limit.
 * enable-frustum-priority
     - **default**: false
     - **description**: Whether to attempt to load chunks in front of the player before
@@ -384,11 +385,11 @@ chunk-loading
       chunks out of order, this is disabled by default.
 * global-max-chunk-load-rate
     - **default**: 300.0
-    - **description**: The maximum chunk load rate for the whole server. A value of -1 will
-      not disable this. Use a large number instead.
+    - **description**: The maximum number of chunks loaded per second for the whole server. A
+      value of -1 will not disable this. Use a large number instead.
 * player-max-concurrent-loads
     - **default**: 4.0
-    - **description**: The maximum number of chunk loads processed for a player at one time.
+    - **description**: The maximum number of chunk loads processed per player at one time.
       A value of -1 will not disable this. Use a large number instead.
 * global-max-concurrent-loads
     - **default**: 500.0
