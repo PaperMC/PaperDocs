@@ -1050,22 +1050,6 @@ hopper
       hoppers. Dramatically improves hopper performance but will break
       protection plugins and any others that depend on this event.
 
-lightning-strike-distance-limit
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* sound
-    - **default**: -1
-    - **description**: The distance that players will hear lightning from.
-
-* impact-sound
-    - **default**: -1
-    - **description**: The distance that players will hear a lightning impact
-      from.
-
-* flash
-    - **default**: -1
-    - **description**: The distance that players will see lightning flashes in
-      the sky.
-
 anti-xray
 ~~~~~~~~~
 
