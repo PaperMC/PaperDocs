@@ -352,7 +352,7 @@ Windows 10
 
 If you're on Windows 10, you will want Adoptium's JRE. You can find the
 ``msi`` file you should install on `their website
-<https://adoptium.net/?variant=openjdk16&jvmVariant=hotspot>`_.
+<https://adoptium.net/archive.html?variant=openjdk16&jvmVariant=hotspot>`_.
 
 Remember to reboot your computer after installing.
 
