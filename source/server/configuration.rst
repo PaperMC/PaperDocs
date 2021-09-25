@@ -1218,7 +1218,8 @@ anticheat
               (such as enchantments, items in a shulker box/bundle, etc.)
               that can give cheat clients an advantage should be sent to other
               players' clients. This may break resource packs that rely on
-              information such as enchantments when observing other players.
+              information such as enchantments, lore or item names
+              when observing other players.
 
         * hide-durability
             - **default**: false
