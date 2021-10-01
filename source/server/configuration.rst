@@ -1322,3 +1322,12 @@ feature-seeds
 * ``<feature-namespace>``: Sets the population seed for the specified feature.
   If set to -1, the Vanilla population seed stays unchanged and will not be
   overridden by the auto-fill option either.
+   
+split-overstacked-loot
+~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: true
+   - **description**: When set to false, loot tables will not attempt to split
+     items with a stack size higher than the maximum into items of smaller stack
+     sizes. This will prevent overstacked items from being lost or causing a chunk
+     to become uninhabitable (due to players getting constantly kicked because of
+     oversized packets) when a shulker box is broken in survival.
