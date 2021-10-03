@@ -1226,7 +1226,6 @@ anticheat
             - **description**: Controls whether durability information is sent
               to other players' clients. This may break resource packs that rely
               on durability values when observing other players.
-
    
 tick-rates
 ~~~~~~~~~~
