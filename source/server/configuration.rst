@@ -69,7 +69,7 @@ Examples
   environment variable ``PAPER_SETTINGS_VELOCITY_SUPPORT_SECRET`` and the
   JVM property ``paper.settings.velocity-support.secret``.
 * ``online-mode`` in server.properties will correspond to the environment
-  variable``MINECRAFT_ONLINE_MODE`` and the JVM property ``minecraft.online-mode``.
+  variable ``MINECRAFT_ONLINE_MODE`` and the JVM property ``minecraft.online-mode``.
 
 Global Settings
 ===============
