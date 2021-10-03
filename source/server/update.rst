@@ -24,8 +24,8 @@ Step 1. Backup
 This is the most important step, and yet the most frequently skipped.
 While it is unlikely that updating Paper itself will cause any issues
 requiring you to restore from a backup, plugin malfunctions or other
-accidents might! Updating is a great time to work in a backup. Having
-functioning backups is essential to every server, big or small.
+accidents might! Updating is a great time to work on a backup plan.
+Having functioning backups is essential to every server, big or small.
 
 ..
     If you don’t already have a backup plan in place, see [Backup and
