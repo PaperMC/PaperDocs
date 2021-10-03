@@ -22,6 +22,28 @@ their respective documentation pages.
 
     Last updated Sep 3rd, 2021 for MC 1.17.1, Paper build #249
 
+Overriding settings
+===================
+
+Paper introduced environment variables to override configuration values in `paper.yml`, `spigot.yml`, and `server.properties`.
+The environment variable name starts with the prefix (see the table below), following by the configuration key (``.`` and ``-`` is replaced with ``_``).
+This works with string, int, double, and boolean values.
+
++-----------------------------------+--------------------------+
+| Configuration                     | ENV Prefix               |
++===================================+==========================+
+| Paper (``paper.yml``)             | ``PAPER_``               |
++-----------------------------------+--------------------------+
+| Spigot (``spigot.yml``)           | ``SPIGOT_``              |
++-----------------------------------+--------------------------+
+| Minecraft (``server.properties``) | ``MINECRAFT_``           |
++-----------------------------------+--------------------------+
+
+Examples
+~~~~~~~~
+* ``settings.velocity-support.secret`` in paper.yml will correspond to ``PAPER_SETTINGS_VELOCITY_SUPPORT_SECRET``
+* ``online-mode`` in server.properties will correspond to ``MINECRAFT_ONLINE_MODE``
+
 Global Settings
 ===============
 
@@ -205,7 +227,7 @@ spam-limiter
     - **default**: 500
     - **description**: The number that the internal tab spam counter can reach
       until the server kicks the player for spam.
-    
+
 * recipe-spam-increment
     - **default**: 1
     - **description**: The number that the recipe spam counter increases
@@ -279,7 +301,7 @@ timings
     - **description**: Instructs Timings to provide more specific information
       in its reports. For example, specific entity types causing lag rather
       than just "entities".
-      
+
 * url
     - **default**: ``https://timings.aikar.co/``
     - **description**: Specifies the URL of the `Timings Viewer <https://github.com/aikar/timings>`_
@@ -722,7 +744,7 @@ show-sign-click-command-failure-msgs-to-player
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
 * **description**: Whether commands executed by sign click should show failure
-  messages to players. 
+  messages to players.
 
 spawner-nerfed-mobs-should-jump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1054,7 +1076,7 @@ anti-xray
 ~~~~~~~~~
 
 .. note::
-   More in depth anti-xray documentation as well as recommended configuration 
+   More in depth anti-xray documentation as well as recommended configuration
    for both engine modes can be found in `this guide by stonar96
    <https://gist.github.com/stonar96/ba18568bd91e5afd590e8038d14e245e>`_.
 
@@ -1079,7 +1101,7 @@ anti-xray
     - **description**: Controls the distance in blocks from air or water that
       hidden-blocks are hidden by the anti-xray engine. The maximum allowed
       value is 2.
-      
+
 * lava-obscures
     - **default**: false
     - **description**: Whether or not to obfuscate blocks touching lava.
@@ -1216,13 +1238,13 @@ unsupported-settings
 portal-search-radius
 ~~~~~~~~~~~~~~~~~~~~
    - **default**: 128
-   - **description**: 
+   - **description**:
 
 portal-create-radius
 ~~~~~~~~~~~~~~~~~~~~
    - **default**: 16
-   - **description**: 
-  
+   - **description**:
+
 door-breaking-difficulty
 ~~~~~~~~~~~~~~~~~~~~~~~~
 * zombie
@@ -1283,7 +1305,7 @@ allow-using-signs-inside-spawn-protection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: false
    - **description**: Allows players to use signs while inside spawn protection.
-   
+
 allow-player-cramming-damage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: false
@@ -1322,7 +1344,7 @@ feature-seeds
 * ``<feature-namespace>``: Sets the population seed for the specified feature.
   If set to -1, the Vanilla population seed stays unchanged and will not be
   overridden by the auto-fill option either.
-   
+
 split-overstacked-loot
 ~~~~~~~~~~~~~~~~~~~~~~
    - **default**: true
