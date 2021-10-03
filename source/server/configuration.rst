@@ -671,7 +671,7 @@ disable-thunder
 * **description**: Disables thunderstorms.
 
 thunder-chance
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 * **default**: 100000
 * **description**: One in value chance of thunder per tick per loaded chunk during a
   thunderstorm. Value must be larger or equal to 1.
