@@ -25,9 +25,13 @@ their respective documentation pages.
 Overriding settings
 ===================
 
-Paper has introduced environment variables to override configuration values in `paper.yml`, `spigot.yml`, and `server.properties`.
+Paper has introduced environment variables and JVM properties to override configuration values in `paper.yml`, `spigot.yml`, `bukkit.yml`, and `server.properties`.
+
+Environment variables
+~~~~~~~~~~~~~~~~~~~~~
+
 Each environment variable starts with a prefix (see the table below), followed by the configuration key, replacing ``.`` and ``-`` with ``_``.
-This works with string, int, double, and boolean values.
+This works with string, int, boolean, double, and long values.
 
 +-----------------------------------+--------------------------+
 | Configuration                     | ENV Prefix               |
@@ -36,13 +40,36 @@ This works with string, int, double, and boolean values.
 +-----------------------------------+--------------------------+
 | Spigot (``spigot.yml``)           | ``SPIGOT_``              |
 +-----------------------------------+--------------------------+
+| Bukkit (``bukkit.yml``)           | ``BUKKIT_``              |
++-----------------------------------+--------------------------+
 | Minecraft (``server.properties``) | ``MINECRAFT_``           |
++-----------------------------------+--------------------------+
+
+JVM Properties
+~~~~~~~~~~~~~~
+
+Each JVM property starts with a prefix (see the table below), followed by the configuration key.
+This works with string, int, boolean, double, and long values.
+
++-----------------------------------+--------------------------+
+| Configuration                     | Property Prefix          |
++===================================+==========================+
+| Paper (``paper.yml``)             | ``paper.``               |
++-----------------------------------+--------------------------+
+| Spigot (``spigot.yml``)           | ``spigot.``              |
++-----------------------------------+--------------------------+
+| Bukkit (``bukkit.yml``)           | ``bukkit.``              |
++-----------------------------------+--------------------------+
+| Minecraft (``server.properties``) | ``minecraft.``           |
 +-----------------------------------+--------------------------+
 
 Examples
 ~~~~~~~~
-* ``settings.velocity-support.secret`` in paper.yml will correspond to ``PAPER_SETTINGS_VELOCITY_SUPPORT_SECRET``
-* ``online-mode`` in server.properties will correspond to ``MINECRAFT_ONLINE_MODE``
+* ``settings.velocity-support.secret`` in paper.yml will correspond to the
+  environment variable ``PAPER_SETTINGS_VELOCITY_SUPPORT_SECRET`` and the
+  JVM property ``paper.settings.velocity-support.secret``.
+* ``online-mode`` in server.properties will correspond to the environment
+  variable``MINECRAFT_ONLINE_MODE`` and the JVM property ``minecraft.online-mode``.
 
 Global Settings
 ===============
