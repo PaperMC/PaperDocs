@@ -26,7 +26,7 @@ Overriding settings
 ===================
 
 Paper introduced environment variables to override configuration values in `paper.yml`, `spigot.yml`, and `server.properties`.
-The environment variable name starts with the prefix (see the table below), following by the configuration key (``.`` and ``-`` is replaced with ``_``).
+The environment variable name starts with the prefix (see the table below), followed by the configuration key (``.`` and ``-`` are replaced with ``_``).
 This works with string, int, double, and boolean values.
 
 +-----------------------------------+--------------------------+
