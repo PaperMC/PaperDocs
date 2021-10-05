@@ -25,26 +25,9 @@ their respective documentation pages.
 Overriding settings
 ===================
 
-Paper has introduced environment variables and JVM properties to override configuration values in `paper.yml`, `spigot.yml`, `bukkit.yml`, and `server.properties`.
+Paper has introduced JVM properties and environment variables to override configuration values in `paper.yml`, `spigot.yml`, `bukkit.yml`, and `server.properties`.
 This allows you to override simple values, such as string, int, boolean, double, and long.
 Complex structures such as maps and lists are not supported.
-
-Environment variables
-~~~~~~~~~~~~~~~~~~~~~
-
-Each environment variable starts with a prefix (see the table below), followed by the configuration key, replacing ``.`` and ``-`` with ``_``.
-
-+-----------------------------------+--------------------------+
-| Configuration                     | ENV Prefix               |
-+===================================+==========================+
-| Paper (``paper.yml``)             | ``PAPER_``               |
-+-----------------------------------+--------------------------+
-| Spigot (``spigot.yml``)           | ``SPIGOT_``              |
-+-----------------------------------+--------------------------+
-| Bukkit (``bukkit.yml``)           | ``BUKKIT_``              |
-+-----------------------------------+--------------------------+
-| Minecraft (``server.properties``) | ``MINECRAFT_``           |
-+-----------------------------------+--------------------------+
 
 JVM Properties
 ~~~~~~~~~~~~~~
@@ -61,6 +44,23 @@ Each JVM property starts with a prefix (see the table below), followed by the co
 | Bukkit (``bukkit.yml``)           | ``bukkit.``              |
 +-----------------------------------+--------------------------+
 | Minecraft (``server.properties``) | ``minecraft.``           |
++-----------------------------------+--------------------------+
+
+Environment variables
+~~~~~~~~~~~~~~~~~~~~~
+
+Each environment variable starts with a prefix (see the table below), followed by the configuration key, replacing ``.`` and ``-`` with ``_``.
+
++-----------------------------------+--------------------------+
+| Configuration                     | ENV Prefix               |
++===================================+==========================+
+| Paper (``paper.yml``)             | ``PAPER_``               |
++-----------------------------------+--------------------------+
+| Spigot (``spigot.yml``)           | ``SPIGOT_``              |
++-----------------------------------+--------------------------+
+| Bukkit (``bukkit.yml``)           | ``BUKKIT_``              |
++-----------------------------------+--------------------------+
+| Minecraft (``server.properties``) | ``MINECRAFT_``           |
 +-----------------------------------+--------------------------+
 
 Examples
