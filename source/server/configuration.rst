@@ -26,12 +26,13 @@ Overriding settings
 ===================
 
 Paper has introduced environment variables and JVM properties to override configuration values in `paper.yml`, `spigot.yml`, `bukkit.yml`, and `server.properties`.
+This allows you to override simple values, such as string, int, boolean, double, and long.
+Complex structures such as maps and lists are not supported.
 
 Environment variables
 ~~~~~~~~~~~~~~~~~~~~~
 
 Each environment variable starts with a prefix (see the table below), followed by the configuration key, replacing ``.`` and ``-`` with ``_``.
-This works with string, int, boolean, double, and long values.
 
 +-----------------------------------+--------------------------+
 | Configuration                     | ENV Prefix               |
@@ -49,7 +50,6 @@ JVM Properties
 ~~~~~~~~~~~~~~
 
 Each JVM property starts with a prefix (see the table below), followed by the configuration key.
-This works with string, int, boolean, double, and long values.
 
 +-----------------------------------+--------------------------+
 | Configuration                     | Property Prefix          |
