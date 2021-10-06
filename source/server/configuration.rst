@@ -371,7 +371,7 @@ chunk-loading
       will be used.
 * target-player-chunk-send-rate
     - **default**: 100.0
-    - **description**: The maximum number of chunks ever sent to an invidual player
+    - **description**: The maximum number of chunks ever sent to an individual player
       within one second. A value of -1 will disable this limit.
 * global-max-chunk-send-rate
     - **default**: -1
@@ -401,10 +401,10 @@ packet-limiter
 ~~~~~~~~~~~~~~
 * kick-message
     - **default**: &cSent too many packets
-    - **description**: The message players are kicked with for sending too many pakcets.
+    - **description**: The message players are kicked with for sending too many packets.
 * limits
     * all
-        * **description**: This section applies for all incoming packets. You may
+        * **description**: This section applies to all incoming packets. You may
           not define an action in this section, it will always kick the player if the
           limit is violated.
         * interval
@@ -708,7 +708,7 @@ fix-items-merging-through-walls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
 * **description**: Whether items should be prevented from merging
-  through walls. Enabling this will incur a performance degradation.This is
+  through walls. Enabling this will incur a performance degradation. This is
   only necessary when ``merge-radius.item`` (spigot.yml) is large enough to
   merge items through walls.
 
@@ -978,7 +978,7 @@ lootables
     - **default**: -1
     - **description**: Sets the maximum number of times a lootable may
       be refilled.
-    - **note**: The default value will allow a lootable to refilled an infinite
+    - **note**: The default value will allow a lootable to refill an infinite
       number of times.
 
 * refresh-min
@@ -1100,13 +1100,13 @@ anti-xray
       deepslate_redstone_ore, clay, emerald_ore, deepslate_emerald_ore,
       ender_chest]
     - **description**: List of blocks to be hidden in engine mode 1.
-    - **note**: This list is using Mojang server names *not* bukkit names.
+    - **note**: This list is using Mojang server names, *not* bukkit names.
 
 * replacement-blocks:
     - **default**: [stone, oak_planks]
     - **description**: List of blocks that should be replaced by hidden-blocks
       in engine mode 2.
-    - **note**: This list is using Mojang server names *not* bukkit names.
+    - **note**: This list is using Mojang server names, *not* bukkit names.
 
 viewdistances
 ~~~~~~~~~~~~~
@@ -1174,7 +1174,7 @@ update-pathfinding-on-block-update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     - **default**: true
-    - **description**: Controls whether the pathfinding of mobs is updated when a block is updated in the world. Disabling this option can improve the server performancy significantly while there is almost no noticeable effect on the game mechanics. This is recommended when there are lots of entities loaded and you have automated farms or redstone clocks.
+    - **description**: Controls whether the pathfinding of mobs is updated when a block is updated in the world. Disabling this option can improve the server performance significantly, while there is almost no noticeable effect on the game mechanics. This is recommended when there are lots of entities loaded, and you have automated farms or redstone clocks.
 
 ender-dragons-death-always-places-dragon-egg
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1317,7 +1317,7 @@ feature-seeds
    - **default**: false
    - **description**: Enables auto-filling random seeds for all available
      features you haven't already set a seed to. Using this in a controlled
-     environemnt is also a good way of receiving a full list of features you can set
+     environment is also a good way of receiving a full list of features you can set
      seeds for.
 * ``<feature-namespace>``: Sets the population seed for the specified feature.
   If set to -1, the Vanilla population seed stays unchanged and will not be
