@@ -92,9 +92,11 @@ suggest-player-names-when-null-tab-completions
 use-alternative-luck-formula
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: false
-* **description**: Use alternative luck formula by Aikar, allowing luck to be
+* **description**: Use an alternative `luck formula by Aikar`_, allowing luck to be
   applied to items that have no quality defined. Makes major changes to fishing
   formulas.
+
+.. _luck formula by Aikar: https://gist.github.com/aikar/40281f6c73ec9b6fef7588e6461e1ba9
 
 chunk-tasks-per-tick
 ~~~~~~~~~~~~~~~~~~~~
