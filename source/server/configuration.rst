@@ -386,7 +386,7 @@ chunk-loading
       loading chunks to their sides or behind. Due to the client reacting poorly to receiving
       chunks out of order, this is disabled by default.
 * global-max-chunk-load-rate
-    - **default**: 300.0
+    - **default**: -1.0
     - **description**: The maximum number of chunks loaded per second for the whole server. A
       value of -1 will disable this limit.
 * player-max-concurrent-loads
