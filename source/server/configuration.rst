@@ -388,7 +388,7 @@ chunk-loading
 * global-max-chunk-load-rate
     - **default**: 300.0
     - **description**: The maximum number of chunks loaded per second for the whole server. A
-      value of -1 will not disable this. Use a large number instead.
+      value of -1 will disable this limit.
 * player-max-concurrent-loads
     - **default**: 4.0
     - **description**: The maximum number of chunk loads processed per player at one time.
