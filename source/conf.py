@@ -33,7 +33,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx_tabs.tabs',
-    'sphinxext.opengraph'
+    'sphinxext.opengraph',
+    'sphinx_last_updated_by_git'
 ]
 
 # opengraph config
