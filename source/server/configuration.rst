@@ -804,7 +804,8 @@ mob-spawner-tick-rate
 ~~~~~~~~~~~~~~~~~~~~~
 * **default**: 1
 * **description**: How often mob spawners should tick to calculate available
-  spawn areas and spawn new entities into the world.
+  spawn areas and spawn new entities into the world. A value of -1 will
+  disable all spawners.
 
 light-queue-size
 ~~~~~~~~~~~~~~~~
