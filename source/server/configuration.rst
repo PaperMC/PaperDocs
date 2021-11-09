@@ -931,15 +931,69 @@ fishing-time-range
 
 despawn-ranges
 ~~~~~~~~~~~~~~
-* soft
-    - **default**: 32
-    - **description**: The number of blocks away from a player in which
-      entities will be randomly selected to be despawned.
-
-* hard
-    - **default** 128
-    - **description**: The number of blocks away from a player in which
-      entities will be forcibly despawned.
+* monster:
+    - soft
+        - **default**: 32
+        - **description**: The number of blocks away from a player in which
+          monsters will be randomly selected to be despawned.
+    - hard
+        - **default**: 128
+        - **description**: The number of blocks away from a player in which
+          monsters will be forcibly despawned.
+* creature:
+    - soft
+        - **default**: 32
+        - **description**: The number of blocks away from a player in which
+          creatures will be randomly selected to be despawned.
+    - hard
+        - **default**: 128
+        - **description**: The number of blocks away from a player in which
+          creatures will be forcibly despawned.
+* ambient:
+    - soft
+        - **default**: 32
+        - **description**: The number of blocks away from a player in which
+          ambient entities will be randomly selected to be despawned.
+    - hard
+        - **default**: 128
+        - **description**: The number of blocks away from a player in which
+          ambient entities will be forcibly despawned.
+* underground_water_creature:
+    - soft
+        - **default**: 32
+        - **description**: The number of blocks away from a player in which
+          underground water creatures will be randomly selected to be despawned.
+    - hard
+        - **default**: 128
+        - **description**: The number of blocks away from a player in which
+          underground water creatures will be forcibly despawned.
+* water_creature:
+    - soft
+        - **default**: 32
+        - **description**: The number of blocks away from a player in which
+          water creatures will be randomly selected to be despawned.
+    - hard
+        - **default**: 128
+        - **description**: The number of blocks away from a player in which
+          water creatures will be forcibly despawned.
+* water_ambient:
+    - soft
+        - **default**: 32
+        - **description**: The number of blocks away from a player in which
+          water ambient entities will be randomly selected to be despawned.
+    - hard
+        - **default**: 64
+        - **description**: The number of blocks away from a player in which
+          water ambient entities will be forcibly despawned.
+* misc:
+    - soft
+        - **default**: 32
+        - **description**: The number of blocks away from a player in which
+          misc entities will be randomly selected to be despawned.
+    - hard
+        - **default**: 128
+        - **description**: The number of blocks away from a player in which
+          misc entities will be forcibly despawned.
 
 frosted-ice
 ~~~~~~~~~~~
@@ -1011,25 +1065,30 @@ alt-item-despawn-rate
 
 spawn-limits
 ~~~~~~~~~~~~
-* monsters:
+* monster:
     - **default**: -1
     - **description**: The number of monsters that can spawn per world. This
       is identical to the value set in bukkit.yml, except that it can
       be configured per world. A value of -1 will use the value in bukkit.yml.
-* animals:
+* creature:
     - **default**: -1
     - **description**: The number of animals that can spawn per world. This
-      is identical to the value set in bukkit.yml, except that it can
+      is identical to the value set for *animals* in bukkit.yml, except that it can
       be configured per world. A value of -1 will use the value in bukkit.yml.
-* water-animals:
+* water_creature:
     - **default**: -1
     - **description**: The number of water animals that can spawn per world.
-      This is identical to the value set in bukkit.yml, except that it can be
+      This is identical to the value set for *water-animals* in bukkit.yml, except that it can be
       configured per world. A value of -1 will use the value in bukkit.yml.
-* water-ambient:
+* underground_water_creature:
+    - **default**: -1
+    - **description**: The number of water animals that can spawn per world.
+      This is identical to the value set for *water-underground-creature* in bukkit.yml, except that it can be
+      configured per world. A value of -1 will use the value in bukkit.yml.
+* water_ambient:
     - **default**: -1
     - **description**: The number of ambient water creatures that can spawn per
-      world. This is identical to the value set in bukkit.yml, except that it
+      world. This is identical to the value set for *water-ambient* in bukkit.yml, except that it
       can be configured per world. A value of -1 will use the value in
       bukkit.yml.
 * ambient:
