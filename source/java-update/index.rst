@@ -102,10 +102,9 @@ To manually change your Java version, please navigate to the
 MCProHosting
 ~~~~~~~~~~~~
 
-When loading 1.17, the server will automatically be set to Java 16 and you don't
-have to do anything whatsoever. If you want to test Java 16 on Minecraft 1.16 or
-earlier, you will need to set the server type to *Snapshot*, then put Paper back
-on the server manually.
+When loading 1.17+, the server will automatically be set to Java 17 and you don't
+have to do anything whatsoever. To run Java 17 on prior versions you'll want to 
+select a 1.17+ server type and then manually specify the jar.
 
 Minehub
 ~~~~~~~~~~~~
