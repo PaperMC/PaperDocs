@@ -1,17 +1,19 @@
 ===================
-Updating to Java 16
+Updating to Java 17
 ===================
 
-As of Minecraft 1.17, Paper will only support Java 16 and above. This is in line
-with our new policy of only supporting the last two long-term-support (LTS)
-versions of the Java runtime. Although Minecraft 1.17 requires a Java version
-that is too new for any LTS, we will maintain our policy as far as possible. We
-will only support Java 16 and above because of Mojang Studios deciding to bump
-their own Java requirement with 1.17.
+Paper will only support Java 17 and above because of Mojang Studios deciding
+to bump their own Java requirement with 1.18.
 
 If you're a developer or want to be on the safe side, pick the JDK options in
 the guides instead of a generic JRE. The JDK contains the JRE, in addition to
 development material (sources, documentation, a reference compiler, and more).
+
+The RPM, Ubuntu/Debian and Windows instructions below use Amazon Corretto
+as OpenJDK vendor.
+It's worth to note that Corretto is not the only OpenJDK vendor to choose from,
+you are free to use a different one like `Azul Zulu <https://www.azul.com/>`_ or
+`Microsoft <https://www.microsoft.com/openjdk>`_.
 
 To update, please find the appropriate header for you in the table of contents.
 
@@ -42,28 +44,21 @@ ticket with your host's website to ask how to update.
 Apex Hosting
 ~~~~~~~~~~~~
 
-Apex Hosting is already on Java 16 for both Paper and Waterfall. You don't need
-to do anything to update.
+Apex Hosting chooses the correct Java version for both Paper and Waterfall
+per default. You don't need to do anything to update.
 
 Aternos
 ~~~~~~~
 
-If you run Paper, you should have Java 16 selected automatically. If you run
-Minecraft 1.16 or earlier, you can change this in the server configuration panel
-on their website to Java 8, 11, or 16:
-
-.. image:: java-update-assets/aternos-environment.png
+If you run Paper, you have the correct Java version set automatically.
 
 |br|
 
 Bloom.Host
 ~~~~~~~~~~
 
-You can select Java 16 from the server configuration panel by selecting the
-Java version option ending in ``openjdk-16``:
-
-.. image:: java-update-assets/bloomhost-java-version.jpg
-  :width: 500
+Bloom.Host selects the correct Java version per default.
+You don't need to do anything to update.
 
 |br|
 
@@ -76,8 +71,8 @@ CreeperHost has some terrific documentation on how to do this on their website:
 DedicatedMC
 ~~~~~~~~~~~
 
-When loading Minecraft 1.17, the server will automatically be set to Java 16,
-and you don't need to do anything whatsoever. If you wish to test Java 16 before
+When loading Minecraft 1.18, the server will automatically be set to Java 17,
+and you don't need to do anything whatsoever. If you wish to test Java 17 before
 updating, you can set this yourself in the *Startup Settings* panel:
 
 .. image:: java-update-assets/dedicatedmc-java-version.png
@@ -120,7 +115,9 @@ You can also set the Java version yourself under ``Select Java version``.
 Nitrado
 ~~~~~~~
 
-If you create a 1.17 server the Java version will be set to Java 16 out of the box. However if it doesn't (because e.g. you upgraded the server manually) you can set the Java version under "General" -> "Java"
+If you create a 1.17 server the Java version will be set to Java 16 out
+of the box. However if it doesn't (because e.g. you upgraded the server manually)
+you can set the Java version under "General" -> "Java".
 
 .. image:: java-update-assets/nitrado-settings-panel.png
 
@@ -136,7 +133,7 @@ PebbleHost
 PebbleHost's knowledgebase has a great article `Does PebbleHost support Java 16?
 <https://help.pebblehost.com/en/article/does-pebblehost-support-java-11-java-16-1f5zlk2/>`_
 on their website to show how to change the Java version, along with
-incompatibilities with certain versions.
+incompatibilities with certain versions, but they will provide the correct version automatically.
 
 ServerFlex
 ~~~~~~~~~~
@@ -153,9 +150,9 @@ to the settings page, and select ``Java Version``. More information can be found
 Server.pro
 ~~~~~~~~~~
 
-Creating a server on 1.17 automatically selects Java 16.
+Creating a server on 1.18 automatically selects Java 17.
 To manually set the Java version, navigate to the control panel,
-select ``Advanced Settings`` and select ``Java 16 - HotSpot``
+select ``Advanced Settings`` and select ``Java 17 - HotSpot``
 on the dropdown menu. Save the changes by clicking ``Save Changes``
 at the bottom of the page.
 
@@ -173,7 +170,7 @@ WinterNode
 ~~~~~~~~~~
 
 WinterNode's Help Center has an helpful article `Java Version Selector
-<https://www.notion.so/MC-1-17-Java-Version-Selection-c0ab39f51ab147de9b1125418e001fab>`_
+<hhttps://help.winternode.com/Java-Version-Selection-c0ab39f51ab147de9b1125418e001fab>`_
 showing how to change the Java version, along with recommendations per Minecraft
 version. If you do nothing, it will automatically select the version that fits
 best for your server.
@@ -183,8 +180,9 @@ Pterodactyl
 
 .. note::
 
-    To switch the Java version on Pterodactyl, you will require an administrator
-    account.
+    To switch the Java version on Pterodactyl on a version lower than v1.2.0, 
+    you will require an administrator account. On versions later than v1.2.0,
+    you can select it in the ``Startup`` tab.
 
 .. note::
 
@@ -195,9 +193,9 @@ administrator control panel, go to the *Servers* tab, click on your server
 (this has to be repeated for every server you wish to switch the Java version
 of), and press the *Startup* tab.
 
-Proceed by selecting ``ghcr.io/pterodactyl/yolks:java_16`` from the *Image* dropdown under *Docker Container Configuration*.
+Proceed by selecting ``ghcr.io/pterodactyl/yolks:java_17`` from the *Image*
+dropdown under *Docker Container Configuration*.
 If you are running an older panel version, manually enter the image url in the custom image field.
-For Java 11, select it from the dropdown instead or replace ``16`` with ``11``.
 
 .. image:: java-update-assets/pterodactyl-startup-tab.png
   :width: 500
@@ -207,26 +205,23 @@ For Java 11, select it from the dropdown instead or replace ``16`` with ``11``.
 Debian/Ubuntu
 =============
 
-To install Java 16 on Debian, Ubuntu, and the plethora of other distributions
-based on these, execute the following commands to add the AdoptOpenJDK APT repository and to install AdoptOpenJDK Hotspot:
+To install Java 17 on Debian, Ubuntu, and the plethora of other distributions
+based on these, execute the following commands to add the Corretto apt
+repository and to install OpenJDK Hotspot:
 
 .. code-block:: console
 
-    $ sudo apt update
-    $ sudo apt install apt-transport-https software-properties-common gnupg wget
-    $ wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
-    $ sudo add-apt-repository https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-    $ sudo apt update
-    $ sudo apt install adoptopenjdk-16-hotspot
-    
-You can also replace ``16`` with ``11`` for Java 11.
+    $ wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
+    $ sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
+    $ sudo apt-get update
+    $ sudo apt-get install -y java-17-amazon-corretto-jdk
 
 RPM-Based
 =========
 
-To install Java 16 on CentOS, RHEL, Fedora, openSUSE, SLES and many other RPM-based
+To install Java 17 on CentOS, RHEL, Fedora, openSUSE, SLES and many other RPM-based
 distributions, execute the following commands to add Amazon Corretto's
-RPM repository and install Java 16.
+RPM repository and install Java 17.
 
 .. tabs::
 
@@ -236,14 +231,15 @@ RPM repository and install Java 16.
 
       $ sudo rpm --import https://yum.corretto.aws/corretto.key
       $ sudo curl -Lo /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
-      $ sudo dnf -y install java-16-amazon-corretto-devel
+      $ sudo dnf -y install java-17-amazon-corretto-devel
 
   .. tab:: zypper
 
     .. code-block:: console
 
       $ sudo zypper addrepo https://yum.corretto.aws/corretto.repo
-      $ sudo zypper install java-16-amazon-corretto-devel
+      $ sudo zypper refresh
+      $ sudo zypper install java-17-amazon-corretto-devel
 
   .. tab:: yum
 
@@ -251,19 +247,14 @@ RPM repository and install Java 16.
 
       $ sudo rpm --import https://yum.corretto.aws/corretto.key
       $ sudo curl -Lo /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
-      $ sudo yum -y install java-16-amazon-corretto-devel
+      $ sudo yum -y install java-17-amazon-corretto-devel
 
 Arch Linux
 ==========
 
-.. i use arch, btw
-
-To install Java 16 on Arch Linux, you will need to install the ``jre-openjdk``
-package.
-
 .. code-block:: console
 
-   $ sudo pacman -Syu jre-openjdk
+   $ sudo pacman -Syu jdk-openjdk
 
 To switch between available Java versions on the system with the archlinux-java
 tool, see the wiki on `Switching between JVMs <https://wiki.archlinux.org/title/Java#Switching_between_JVM>`_.
@@ -303,7 +294,7 @@ Adoptium
     You are going to require the ``tar`` and ``sha256sum`` tools to do this install.
 
 First, select an appropriate ``tar.gz`` file from `Adoptium's website
-<https://adoptium.net/releases.html?variant=openjdk16&jvmVariant=hotspot>`_,
+<https://adoptium.net/releases.html?variant=openjdk17&jvmVariant=hotspot>`_,
 and copy the download URL.
 
 Next, figure out which directory you want to install Java to; this is commonly a
@@ -321,17 +312,17 @@ column, output from running ``sha256sum "the downloaded file path goes here"``.
 If they are not the same, delete the files and re-download them.
 
 Next up, extract the file with: ``tar xzf "the downloaded file path goes
-here"``. There should now be a directory named something like ``jdk-16.0.1+1/``.
+here"``. There should now be a directory named something like ``jdk-17.0.1+12/``.
 You can safely delete the ``tar.gz`` file if this is the case.
 
 Now you should add an environment variable called ``JAVA_HOME`` pointing to the
-directory you created (e.g. ``/usr/lib/jvm/jdk-16.0.1+1``; note there is no
+directory you created (e.g. ``/usr/lib/jvm/jdk-17.0.1+12``; note there is no
 trailing slash here):
 
 .. code-block:: console
 
     # cat <<EOF | tee /etc/profile.d/java.sh
-    export JAVA_HOME=/usr/lib/jvm/jdk-16.0.1+1
+    export JAVA_HOME=/usr/lib/jvm/jdk-17.0.1+12
     export PATH=$JAVA_HOME/bin:"$PATH"
     EOF
     # chmod +x /etc/profile.d/java.sh
@@ -347,12 +338,12 @@ You must now source the new file you created, which is usually done at the start
 of a shell, so you can just re-open the shell. Alternatively, run ``source
 /etc/profile.d/java.sh``.
 
-Windows 10
-==========
+Windows 10 & 11
+===============
 
-If you're on Windows 10, you will want Adoptium's JRE. You can find the
+If you're on Windows 10 or 11, you can download Corretto's JDK. You can find the
 ``msi`` file you should install on `their website
-<https://adoptium.net/archive.html?variant=openjdk16&jvmVariant=hotspot>`_.
+<https://corretto.aws/downloads/latest/amazon-corretto-17-x64-windows-jdk.msi>`_.
 
 Remember to reboot your computer after installing.
 
@@ -364,12 +355,12 @@ something along the lines of:
 
 .. code-block::
 
-    openjdk version "16.0.1" 2021-04-20
-    OpenJDK Runtime Environment Temurin-16.0.2+7 (build 16.0.2+7)
-    OpenJDK 64-Bit Server VM Temurin-16.0.2+7 (build 16.0.2+7, mixed mode, sharing)
+    openjdk version "17" 2021-09-14 LTS
+    OpenJDK Runtime Environment Corretto-17.0.0.35.1 (build 17+35-LTS)
+    OpenJDK 64-Bit Server VM Corretto-17.0.0.35.1 (build 17+35-LTS, mixed mode, sharing)
 
-It is the ``version "16.0.1"`` part that is important -- if the first number is
-not ``16``, you need to modify your ``PATH``.
+It is the ``version "17"`` part that is important -- if the first number is
+not ``17``, you need to modify your ``PATH``.
 
 Modifying your ``PATH``
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -393,7 +384,7 @@ Select the ``JAVA_HOME`` variable in the ``System variables`` section in the
 if the variable is not present, create a new variable with ``New...`` in the
 *lower* half of the window, and name it ``JAVA_HOME``. You now want to ``Browse
 Directory...`` and find the Java directory under ``C:\Program
-Files\Eclipse Foundation`` in the Windows Explorer window:
+Files\Amazon Corretto`` in the Windows Explorer window:
 
 .. image:: java-update-assets/windows-browse-directory.png
 
@@ -423,7 +414,7 @@ To now install Java, open your Terminal app and run the following command:
 
 .. code-block:: console
 
-    $ brew install --cask temurin
+    $ brew install openjdk
 
 If you used AdoptOpenJDK previously, uninstall and untap it.
 
