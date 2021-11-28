@@ -211,6 +211,7 @@ repository and to install OpenJDK Hotspot:
 
 .. code-block:: console
 
+    $ sudo apt-get install software-properties-common
     $ wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
     $ sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
     $ sudo apt-get update
@@ -359,8 +360,9 @@ something along the lines of:
     OpenJDK Runtime Environment Corretto-17.0.0.35.1 (build 17+35-LTS)
     OpenJDK 64-Bit Server VM Corretto-17.0.0.35.1 (build 17+35-LTS, mixed mode, sharing)
 
-It is the ``version "17"`` part that is important -- if the first number is
-not ``17``, you need to modify your ``PATH``.
+It is the ``version "17.0.1"`` part that is important -- if the first number is
+not ``17``, you need to modify your ``PATH``. Corretto's installer will set this
+automatically, no interaction needed.
 
 Modifying your ``PATH``
 ~~~~~~~~~~~~~~~~~~~~~~~
