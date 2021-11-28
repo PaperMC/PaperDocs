@@ -15,3 +15,4 @@ Contents
 
     getting-started
     configuration
+    aikar-tuning
