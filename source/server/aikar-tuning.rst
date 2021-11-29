@@ -2,27 +2,10 @@
 Aikar's Tuning
 ===============
 
-.. note::
-   This is a copy of the blog post Aikar has made `here <https://mcflags.emc.gs/>`_.
-
 .. contents::
    :depth: 1
    :local:
 
-Introduction
-============
-
-After many weeks of studying the JVM, Flags, and testing various combinations, I came up with a highly tuned set of Garbage Collection flags for Minecraft. 
-I tested these on my server, and have been used for years. I then announced my research to the public, and to this day, many servers have been using my flag 
-recommendations for years and reporting great improvement to garbage collection behavior.
-
-These flags are the result of a ton of effort, and results of seeing it in production on various server sizes, plugin lists and server types. 
-They have proven themselves repeatedly.
-
-I strongly suggest using these flags to start your server. These flags help keep your server running CONSISTENT without any large garbage collection spikes. 
-CPU may be slightly higher, but your server will be overall more reliable and stable TPS.
-
-If these flags help your server, consider donating!
 
 The JVM Startup Flags to use – MC 1.15+ (Java 8+, MC 1.8+) Update
 =================================================================
@@ -52,23 +35,10 @@ These flags are recommended for ALL versions of Minecraft! 1.8 all the way to 1.
    This also leaves room for the Operating System to use memory too.
    **Have 8000M memory? Use 6500M for safety.** *But you may also ask your host if they will cover this overhead for you and give you 9500M instead. Some hosts will! Just ask.*
 
-Recommended Server Software
-===========================
-
-If you are not already using Paper, the extremely improved version of Spigot, you really need to switch! Paper is a much faster version of Spigot, with massive performance improvements. 
-It also comes with bug and exploit fixes, many new features, and a ton of new API for developers to use and have a better plugin experience.
-
-Paper is a drop in replacement for Spigot that every Bukkit/Spigot plugin should work the same for. There is no downside to switching.
-
-* `Download Paper <https://papermc.io/>`_
-* :doc:`/index`
-* `Paper Discord <https://discord.gg/papermc>`_
-* `/r/admincraft post on “Why you should switch to Paper” <https://whypaper.emc.gs/>`_ for much more details.
-
 Recommended Memory
 ==================
 
-**I recommend using at least 6-10GB**, No matter how few players! If you can’t afford 10GB of memory, give as much as you can, 
+**We recommend using at least 6-10GB**, no matter how few players! If you can’t afford 10GB of memory, give as much as you can, 
 but ensure you leave the operating system some memory too. G1GC operates better with more memory.
 
 If you are running with 12GB or less memory for MC, you should not adjust these parameters.
@@ -84,7 +54,8 @@ If you have and use more than 12GB of memory, adjust the following:
 * -XX:G1ReservePercent=15
 * -XX:InitiatingHeapOccupancyPercent=20
 
-NOTICE: If you see increase in old generation collections after this, revert back to the base flags!
+.. warning::
+   If you see increase in old generation collections after this, revert back to the base flags!
 
 Explanation of these changes:
 
@@ -96,7 +67,7 @@ Explanation of these changes:
 Java GC Logging
 ===============
 
-Are you having old gen issues with these flags? Help me help you! Add the following flags based on your java version to enable GC Logging:
+Are you having old gen issues with these flags? Add the following flags based on your java version to enable GC Logging:
 
 **Java 8-10**
 
@@ -111,8 +82,6 @@ Are you having old gen issues with these flags? Help me help you! Add the follow
 
    -Xlog:gc*:logs/gc.log:time,uptime:filecount=5,filesize=1M
 
-Once you start seeing old generation collections in Timings, grab the logs/gc.log file (same location as your latest.log) and send it to me on Paper Discord to analyze.
-
 GC logging does not hurt your performance and can be left on at all times. The files will not take up much space (5MB)
 
 
@@ -122,7 +91,7 @@ Technical Explanation of the Flags
 #. **-Xms matching -Xmx – Why:** You should never run your server with the case that -Xmx can run the system completely out of memory. 
    Your server should always be expected to use the entire -Xmx! You should then ensure the OS has extra memory on top of that Xmx for non MC/OS level things. 
    Therefore, you should never run MC with -Xmx settings you can’t support if java uses it all. Now, that means if -Xms is lower than -Xmx 
-   **YOU HAVE UNUSED MEMORY! Unused memory is wasted memory.** G1 (and probably even CMS to a certain threshold, but I’m only stating what I’m sure about) 
+   **YOU HAVE UNUSED MEMORY! Unused memory is wasted memory.** G1 (and probably even CMS to a certain threshold, but we're only stating what we're sure about) 
    operates better with the more memory it’s given. G1 adaptively chooses how much memory to give to each region to optimize pause time. If you have more 
    memory than it needs to reach an optimal pause time, G1 will simply push that extra into the old generation and it will not hurt you 
    (This may not be the case for CMS, but is the case for G1). The fundamental idea of improving GC behavior is to ensure short lived objects die young and 
@@ -151,8 +120,7 @@ Technical Explanation of the Flags
    Mixed are not as heavy as a full old collection, so having small incremental cleanups of old keeps memory usage light. 
    
    Default is 65 to 85 depending on Java Version, we are setting to 90 to ensure we reclaim garbage in old gen as fast as possible 
-   to retain as much free regions as we can. My Old flag set had this at 35 which was a bug. I had the intent of this flag 
-   inverted, as I thought 35 was what 65 does. You should not be using 35 for this number.
+   to retain as much free regions as we can. 
 
 #. **G1ReservePercent=20:** MC Memory allocation rate in up to date versions is really insane. We run the risk of a dreaded 
    “to-space exhaustion” not having enough memory free to move data around. This ensures more memory is waiting to be used 
@@ -222,11 +190,5 @@ Transparent Huge Pages
 
 Controversial Feature but may be usable if you can not configure your host for real HugeTLBFS. 
 Try adding ``-XX:+UseTransparentHugePages`` but it’s extremely important you also have AlwaysPreTouch set. 
-Otherwise THP will likely hurt you. I have not measured how THP works for MC or its impact with AlwaysPreTouch, 
+Otherwise THP will likely hurt you. We have not measured how THP works for MC or its impact with AlwaysPreTouch, 
 so this section is for the advanced users who want to experiement.
-
-
-Credits
-
-Thanks to https://product.hubspot.com/blog/g1gc-fundamentals-lessons-from-taming-garbage-collection for 
-helping reinforce my understanding of the flags and introduce improvements!
