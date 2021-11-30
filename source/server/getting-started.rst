@@ -10,8 +10,8 @@ Requirements
 ~~~~~~~~~~~~
 
 .. warning::
-  With the release of Minecraft 1.17, Paper now requires **Java 16** to run. If
-  you don't already have Java 16, :doc:`it's easy to download and
+  With the release of Minecraft 1.18, Paper now requires **Java 17** to run. If
+  you don't already have Java 17, :doc:`it's easy to download and
   install</java-update/index>`.
 
 +------------------------+--------------------------+
@@ -21,7 +21,9 @@ Requirements
 +------------------------+--------------------------+
 | Paper 1.12 to 1.16.4   | Java 11                  |
 +------------------------+--------------------------+
-| Paper 1.16.5 and newer | Java 16                  |
+| Paper 1.16.5 to 1.17.1 | Java 16                  |
++------------------------+--------------------------+
+| Paper 1.18 and newer   | Java 17                  |
 +------------------------+--------------------------+
 
 Migrating From Vanilla
