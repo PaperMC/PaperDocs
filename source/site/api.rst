@@ -9,6 +9,11 @@ finding specific versions of our software for specific versions of Minecraft.
 API Versions
 ------------
 
+.. warning::
+    Some API versions are now non-functioning, and are labeled as discontinued
+    in the table below for posterity. Trying to use these versions will fail
+    and return ``410 Gone``.
+
 Like most APIs, we uses versioned endpoints; the current version is ``v2``.
 If any breaking changes are made it will be incremented to ``v3`` and
 announced, with the old version continuing to function for some time
