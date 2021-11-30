@@ -2,20 +2,25 @@
 Downloads API
 =============
 
-.. warning::
-    Version 1 of the API has been deprecated as of November 24th, 2020.
-
-    We encourage everyone to use the new version of the API as the
-    previous one will soon be removed.
-
 After months of requests (years in the case of a few hosting providers), PaperMC
-has added a downloads API to standardize download links and finding specific
-versions of our software for specific versions of Minecraft.
+has added a simple RESTful JSON downloads API to standardize download links and
+finding specific versions of our software for specific versions of Minecraft.
 
-It is a simple RESTful JSON API. Like most APIs it uses versioned endpoints;
-the current version is ``v2``. If any breaking changes are made it will be
-incremented to ``v3`` and announced, with the old version continuing to
-function for some time until further announcements are made.
+API Versions
+------------
+
+Like most APIs, we uses versioned endpoints; the current version is ``v2``.
+If any breaking changes are made it will be incremented to ``v3`` and
+announced, with the old version continuing to function for some time
+until further announcements are made.
+
++---------+--------------+
+| Version | Status       |
++=========+==============+
+| ``v2``  | Available    |
++---------+--------------+
+| ``v1``  | Discontinued |
++---------+--------------+
 
 I just want to download the latest jar
 --------------------------------------
