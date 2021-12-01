@@ -27,7 +27,7 @@ Paper is largely composed of two projects:
   enhanced API.
 
 There are also other, more technical, projects that support the above two
-projects. For more information on that see :doc:`../about/structure`.
+projects. For more information on that see :doc:`./structure`.
 
 Where can I download Paper?
 ---------------------------

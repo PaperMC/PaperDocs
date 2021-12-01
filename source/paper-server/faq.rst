@@ -1,6 +1,6 @@
-==========================
-Frequently Asked Questions
-==========================
+================
+Paper Server FAQ
+================
 
 .. contents::
    :depth: 2
@@ -21,16 +21,16 @@ What do I need to run it?
 
 Paper requires the Java Runtime Environment to run. Specifically, it requires
 at least Java version 16. Once that is installed you're all good to go! If you
-don't already have a Java 16 Runtime, :doc:`it's easy to download and install</java-update/index>`.
+don't already have a Java 16 Runtime, :doc:`it's easy to download and install<./java-update/index>`.
 
-See our docs on starting out: :doc:`/server/getting-started`
+See our docs on starting out: :doc:`./getting-started`
 
 Where do I get it?
 ------------------
 
 Builds of Paper are already available on our `site's download page <https://papermc.io/downloads>`_.
 
-Alternatively, for more automated access, builds are available via a RESTful :doc:`/site/api`
+Alternatively, for more automated access, builds are available via a RESTful :doc:`/site-api/api`
 
 Server Administrators
 =====================

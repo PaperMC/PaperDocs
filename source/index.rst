@@ -19,15 +19,15 @@ fix gameplay and mechanics inconsistencies as well as to improve performance.
 Paper contains numerous features, bug fixes, exploit preventions and
 major performance improvements not found in Spigot.
 
-Not sure what you're looking for? Try our :doc:`about/index` section, which
-contains a short :doc:`about/introduction`, our :doc:`about/faq` and an article
-about :doc:`about/structure`.
+Not sure what you're looking for? Try our :doc:`paper-org/index` section, which
+contains a short :doc:`paper-org/introduction` and an article
+about PaperMC's :doc:`paper-org/structure`.
 
-Server owners should read our tips and instructions in :doc:`server/index` on
+Server owners should read our tips and instructions in :doc:`paper-server/index` on
 how to install, run and maintain a Paper based server.
 
 The PaperMC project has several main components. Learn more about the project
-structure :doc:`here <about/structure>`.
+structure :doc:`here <paper-org/structure>`.
 
 Running A Paper Server
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -39,8 +39,7 @@ configuring it, maintaining plugins, and general best practices.
     :maxdepth: 3
     :titlesonly:
 
-    server/index
-    java-update/index
+    paper-server/index
 
 Running A Waterfall Proxy
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,20 +53,16 @@ configuring it, maintaining plugins, and general best practices.
 
     waterfall/index
 
-Contributing to Paper
-~~~~~~~~~~~~~~~~~~~~~~
+Contributing to PaperMC
+~~~~~~~~~~~~~~~~~~~~~~~
 
 It's great to see new contributors to the project! Here are some documents
 which provide further information to get you started:
 
-.. toctree::
-    :maxdepth: 3
-    :titlesonly:
+:doc:`paper-org/contributing`
 
-    contributing/index
-
-About Paper
-~~~~~~~~~~~~
+About PaperMC
+~~~~~~~~~~~~~
 
 Paper is a fork of Spigot with certain goals in mind. The following links
 explain more about the purpose, rationale and structure of the PaperMC project.
@@ -76,8 +71,16 @@ explain more about the purpose, rationale and structure of the PaperMC project.
     :maxdepth: 3
     :titlesonly:
 
-    about/index
-    site/index
+    paper-org/index
+
+Site API
+~~~~~~~~
+
+.. toctree::
+    :maxdepth: 3
+    :titlesonly:
+
+    site-api/index
 
 Useful Links
 ============

@@ -14,4 +14,6 @@ Contents
     :titlesonly:
 
     getting-started
+    java-update/index
+    faq
     configuration

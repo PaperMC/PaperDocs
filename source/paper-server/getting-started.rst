@@ -12,7 +12,7 @@ Requirements
 .. warning::
   With the release of Minecraft 1.18, Paper now requires **Java 17** to run. If
   you don't already have Java 17, :doc:`it's easy to download and
-  install</java-update/index>`.
+  install<./java-update/index>`.
 
 +------------------------+--------------------------+
 | Paper Release          | Recommended Java Version |
@@ -61,7 +61,7 @@ Open your terminal, navigate to the saved location, and then run
 
 For more advanced Java tuning, see `Aikar's tuning page <https://mcflags.emc.gs>`_.
 
-To configure your server, see the :doc:`../server/configuration` page.
+To configure your server, see the :doc:`./configuration` page.
 
 Updating The Server
 ~~~~~~~~~~~~~~~~~~~

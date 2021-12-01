@@ -13,7 +13,7 @@ Contents
     :titlesonly:
 
     introduction
-    faq
     structure
+    contributing
     assets
     contact

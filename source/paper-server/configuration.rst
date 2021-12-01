@@ -18,7 +18,7 @@ their respective documentation pages.
 .. warning::
     Configuration values change frequently at times. It is possible for the
     information here to be incomplete. If you cannot find what you're looking for
-    or think something may be wrong, :doc:`../about/contact`
+    or think something may be wrong, :doc:`../paper-org/contact`
 
 Global Settings
 ===============
