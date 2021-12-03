@@ -1059,9 +1059,8 @@ alt-item-despawn-rate
 * items
     - **default**: { COBBLESTONE: 300 } (a list of mappings)
     - **description**: Determines how long each respective item despawns in
-      ticks. You can use item names from `the Material enum`_.
-
-      .. _the Material enum: https://papermc.io/javadocs/paper/1.16/org/bukkit/Material.html
+      ticks. You can use the resource location of the item, e.g. `stone` or
+      `grass_block`.
 
 spawn-limits
 ~~~~~~~~~~~~
