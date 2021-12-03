@@ -1,5 +1,5 @@
 ===============
-Aikar's Tuning
+Aikar's Flags
 ===============
 
 .. contents::
@@ -7,10 +7,10 @@ Aikar's Tuning
    :local:
 
 
-The JVM Startup Flags to use – MC 1.15+ (Java 8+, MC 1.8+) Update
+Recommended JVM Startup Flags
 =================================================================
 
-**Use these flags exactly, only changing Xmx and Xms. These flags work and scale accordingly to any size of memory, even 500MB but 1.15+ will not do well with such low memory…)**
+**Use these flags exactly, only changing Xmx and Xms. These flags work and scale accordingly to any size of memory, even 500MB but modern Minecraft versions will not do well with such low memory…)**
 
 .. code-block:: bash
 
@@ -23,9 +23,6 @@ The JVM Startup Flags to use – MC 1.15+ (Java 8+, MC 1.8+) Update
    -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs 
    -Daikars.new.flags=true -jar paperclip.jar nogui
 
-LAST UPDATED: **Apr 25 2020 3:30PM EST**    
-
-These flags are recommended for ALL versions of Minecraft! 1.8 all the way to 1.15+, use this set.
 
 .. warning::
    **IMPORTANT – READ – Don’t use ALL of your memory!! PTERODACTYL USERS!**
