@@ -6,7 +6,6 @@ Aikar's Flags
    :depth: 1
    :local:
 
-
 Recommended JVM Startup Flags
 =================================================================
 
@@ -37,6 +36,9 @@ Recommended Memory
 
 **We recommend using at least 6-10GB**, no matter how few players! If you can’t afford 10GB of memory, give as much as you can, 
 but ensure you leave the operating system some memory too. G1GC operates better with more memory.
+
+However, more memory does not mean better performance above a certain point. Eventually you will hit a point 
+of deminishing returns. Going out and getting 32GB of RAM for a server will only waste your money with minimal returns.
 
 If you are running with 12GB or less memory for MC, you should not adjust these parameters.
 
@@ -81,17 +83,16 @@ Are you having old gen issues with these flags? Add the following flags based on
 
 GC logging does not hurt your performance and can be left on at all times. The files will not take up much space (5MB)
 
-
 Technical Explanation of the Flags
 ===================================
 
 #. **-Xms matching -Xmx – Why:** You should never run your server with the case that -Xmx can run the system completely out of memory. 
    Your server should always be expected to use the entire -Xmx! You should then ensure the OS has extra memory on top of that Xmx for non MC/OS level things. 
    Therefore, you should never run MC with -Xmx settings you can’t support if java uses it all. Now, that means if -Xms is lower than -Xmx 
-   **YOU HAVE UNUSED MEMORY! Unused memory is wasted memory.** G1 (and probably even CMS to a certain threshold, but we're only stating what we're sure about) 
-   operates better with the more memory it’s given. G1 adaptively chooses how much memory to give to each region to optimize pause time. If you have more 
+   **YOU HAVE UNUSED MEMORY! Unused memory is wasted memory.** G1 operates better with the more memory it’s given. G1 adaptively 
+   chooses how much memory to give to each region to optimize pause time. If you have more 
    memory than it needs to reach an optimal pause time, G1 will simply push that extra into the old generation and it will not hurt you 
-   (This may not be the case for CMS, but is the case for G1). The fundamental idea of improving GC behavior is to ensure short lived objects die young and 
+   The fundamental idea of improving GC behavior is to ensure short lived objects die young and 
    never get promoted. With the more memory G1 has, the better assurance you will get that objects are not getting prematurely promoted to the old generation. 
    G1 Operates differently than previous collectors and is able to handle larger heaps more efficiently. 
 
@@ -100,8 +101,7 @@ Technical Explanation of the Flags
 
 #. **UnlockExperimentalVMOptions** – needed for some the below options
 
-#. **G1NewSizePercent:** These are the important ones. In CMS and other Generations, tweaking the New Generation results in FIXED SIZE New Gen 
-   and usually is done through explicit size setting with -Xmn.With G1, things are better! You now can specify percentages of an overall desired 
+#. **G1NewSizePercent:** These are the important ones. You now can specify percentages of an overall desired 
    range for the new generation. With these settings, we tell G1 to not use its default 5% for new gen, and instead give it 40%! **Minecraft has 
    an extremely high a memory allocation rate, ranging to at least 800 Megabytes a second on a 30 player server! And this is mostly short lived 
    objects (Block Position).** 
@@ -172,7 +172,6 @@ Technical Explanation of the Flags
 #. **+PerfDisableSharedMem:** Causes GC to write to file system which can cause major latency if disk IO is high 
    – See `<https://www.evanjones.ca/jvm-mmap-pause.html>`_
 
-
 Using Large Pages
 =================
 
@@ -180,7 +179,6 @@ Also for Large Pages – It’s even more important to use -Xms = -Xmx! Large Pa
 for it or you could end up without the gains. This memory will not be used by the OS anyways, so use it.
 
 Additionally use these flags (Metaspace is Java 8 Only, don’t use it for Java7): ``-XX:+UseLargePagesInMetaspace``
-
 
 Transparent Huge Pages
 ======================
