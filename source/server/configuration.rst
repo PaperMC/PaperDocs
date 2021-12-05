@@ -1306,11 +1306,6 @@ mobs-can-always-pick-up-loot
   ..
     vim: set ff=unix autoindent ts=4 sw=4 tw=0 et :
 
-fix-wither-targeting-bug
-~~~~~~~~~~~~~~~~~~~~~~~~
-   - **default**: false
-   - **description**: Fixes the wither's targeting of players. See `MC-29274 <https://bugs.mojang.com/browse/MC-29274>`_.
-
 map-item-frame-cursor-limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: 128
