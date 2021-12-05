@@ -7,7 +7,7 @@ Aikar's Flags
    :local:
 
 Recommended JVM Startup Flags
-=================================================================
+=============================
 
 **Use these flags exactly, only changing Xmx and Xms. These flags work and scale accordingly to any size of memory, even 500MB but modern Minecraft versions will not do well with such low memory…)**
 
