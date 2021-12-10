@@ -1350,7 +1350,7 @@ anticheat
 * obfuscation
     * items
         * hide-itemmeta
-            - **default**: true
+            - **default**: false
             - **description**: Controls whether unnecessary item information
               (such as enchantments, items in a shulker box/bundle, etc.)
               that can give cheat clients an advantage should be sent to other
