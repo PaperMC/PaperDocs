@@ -1412,3 +1412,10 @@ split-overstacked-loot
      sizes. This will prevent overstacked items from being lost or causing a chunk
      to become uninhabitable (due to players getting constantly kicked because of
      oversized packets) when a shulker box is broken in survival.
+
+use-mojang-item-optimizations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: false
+   - **description**: When set to true, Mojang's item tick skipping optimizations
+     (based on entity id) will be used, instead of Spigot's, which are based on the
+     amount of ticks the item entity has been alive.
