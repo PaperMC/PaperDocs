@@ -1412,3 +1412,15 @@ split-overstacked-loot
      sizes. This will prevent overstacked items from being lost or causing a chunk
      to become uninhabitable (due to players getting constantly kicked because of
      oversized packets) when a shulker box is broken in survival.
+     
+sleep-players-sleeping-message
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: true
+   - **description**: Determines if the "X/Y players sleeping" message should be displayed to players
+   when sleeping.
+   
+sleep-skipping-night-message
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: true
+   - **description**: Determines if the "Sleeping through this night" message should be displayed to players
+   when sleeping.
