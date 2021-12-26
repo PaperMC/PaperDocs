@@ -1416,11 +1416,9 @@ split-overstacked-loot
 sleep-players-sleeping-message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: true
-   - **description**: Determines if the "X/Y players sleeping" message should be displayed to players
-   when sleeping.
+   - **description**: Determines if the "X/Y players sleeping" message should be displayed to players when sleeping.
    
 sleep-skipping-night-message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: true
-   - **description**: Determines if the "Sleeping through this night" message should be displayed to players
-   when sleeping.
+   - **description**: Determines if the "Sleeping through this night" message should be displayed to players when sleeping.
