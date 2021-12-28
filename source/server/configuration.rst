@@ -1412,3 +1412,9 @@ split-overstacked-loot
      sizes. This will prevent overstacked items from being lost or causing a chunk
      to become uninhabitable (due to players getting constantly kicked because of
      oversized packets) when a shulker box is broken in survival.
+
+monster-spawn-max-light-level
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   - **default**: -1
+   - **description**: When set to -1, the Vanilla default will be used (=0).
+     Set to 15 or greater to revert to pre-1.18 behavior.
