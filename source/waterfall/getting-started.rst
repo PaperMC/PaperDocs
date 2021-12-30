@@ -51,8 +51,6 @@ Aikar's recommended flags for Waterfall are as follows:
 ``java -Xms512M -Xmx512M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions``
 ``-XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -jar waterfall-###.jar``
 
-For further explanation about advanced Java tuning, see `Aikar's tuning page <https://mcflags.emc.gs>`_.
-
 The amount of memory can be set by changing the numbers in the ``-Xms`` and ``-Xmx`` flags.
 
 To configure your proxy, see the :doc:`../waterfall/configuration` page.

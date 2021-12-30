@@ -59,7 +59,7 @@ Open your terminal, navigate to the saved location, and then run
 | The amount of RAM can be set by changing the numbers in the ``-Xms`` and ``-Xmx`` arguments.
 | ``--nogui`` disables Vanilla's GUI so you don't get double interfaces when using the command line.
 
-For more advanced Java tuning, see :doc:`../server/aikar-tuning` page.
+For more advanced Java tuning, see :doc:`../server/aikar-flags` page.
 
 To configure your server, see the :doc:`../server/configuration` page.
 
