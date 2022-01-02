@@ -182,6 +182,12 @@ unsupported-settings
     - **description**: If set to true, pistons may in some cases become headless.
       This is often used to break permanent blocks.
 
+* perform-username-validation
+    - **default**: true
+    - **description**: If set to false, usernames will not be validated. While this may allow
+      users with special characters in their name to join, it can also cause issues with commands
+      and plugins.
+
 watchdog
 ~~~~~~~~
 * early-warning-every
