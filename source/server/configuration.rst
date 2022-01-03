@@ -239,8 +239,12 @@ async-chunks
 ~~~~~~~~~~~~
 * threads
     - **default**: -1
-    - **description**: The number of threads the server should use for world
-      saving and loading. This is set to (number of processors - 1) by default.
+    - **description**: The number of threads the server should use for world saving and loading.
+      The default ``-1`` indicates that Paper will utilize half your system's threads for chunk
+      loading unless otherwise specified. There is also a maximum default of 4 threads used for
+      saving and loading of chunks. This can be overridden by adding
+      ``-Dpaper.maxChunkThreads=[number of threads]`` to your JVM flags (and of course replacing
+      ``[number of threads]`` with the number of threads you desire).
 
 messages
 ~~~~~~~~
