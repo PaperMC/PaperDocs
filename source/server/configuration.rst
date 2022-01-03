@@ -346,6 +346,9 @@ item-validation
 
 chunk-loading
 ~~~~~~~~~~~~~
+.. warning::
+   This configuration has not yet been implemented for 1.18!
+
 * min-load-radius
     - **default**: 2
     - **description**: The radius of chunks around a player that are not
@@ -1177,6 +1180,20 @@ anti-xray
 
 viewdistances
 ~~~~~~~~~~~~~
+.. note::
+   ``no-tick-view-distance`` has been replaced by ``simulation-distance`` in 1.18!
+
+   +-------------------------------------------+-------------------------------------------------+
+   | 1.17                                      | 1.18                                            |
+   +===========================================+=================================================+
+   | ``view-distance`` (``server.properties``) | ``simulation-distance`` (``server.properties``) |
+   +-------------------------------------------+-------------------------------------------------+
+   | ``no-tick-view-distance`` (``paper.yml``) | ``view-distance`` (``server.properties``)       |
+   +-------------------------------------------+-------------------------------------------------+
+
+   Per-world configuration for both ``view-distance`` and ``simulation-distance`` can be found in
+   ``spigot.yml``.
+
 * no-tick-view-distance
     - **default**: -1
     - **description**: Sets the no-tick view distance. This is the total view
