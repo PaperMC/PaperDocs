@@ -242,7 +242,7 @@ async-chunks
     - **description**: The number of threads the server should use for world saving and loading.
       The default ``-1`` indicates that Paper will utilize half your system's threads for chunk
       loading unless otherwise specified. There is also a maximum default of 4 threads used for
-      saving and loadingf chunks. This can be overridden by adding
+      saving and loading chunks. This can be overridden by adding
       ``-Dpaper.maxChunkThreads=[number of threads]`` to your JVM flags (and of course replacing
       ``[number of threads]`` with the number of threads you desire).
 
@@ -1289,7 +1289,7 @@ entity-per-chunk-save-limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * experience_orb
    - **default**: -1
-   - **description**: Limits the number of experience orbs that are saved/loaded per chunks A value of -1 disables this limit
+   - **description**: Limits the number of experience orbs that are saved/loaded per chunks. A value of -1 disables this limit
 
 * snowball
    - **default**: -1
