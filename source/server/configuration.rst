@@ -144,7 +144,7 @@ send-full-pos-for-hard-colliding-entities
   client/server disagreement, which may cause glitchy behaviour for players.
   This setting attempts to mitigate this desync by sending precise locations
   for entities involved in collisions. Having this enabled will use more
-  bandwidth, however, in the majority of cases, this is a worthy tradeoff.
+  bandwidth; however, in the majority of cases, this is a worthy tradeoff.
 
 velocity-support
 ~~~~~~~~~~~~~~~~
