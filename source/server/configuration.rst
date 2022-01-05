@@ -108,7 +108,7 @@ enable-player-collisions
 * **description**: Sets whether the server should allow players to collide with
   one another.
 * **warning**: This setting can be broken by plugins interacting with the
-  scoreboard, double check plugins when troubleshooting this value.
+  scoreboard, double-check plugins when troubleshooting this value.
 
 player-auto-save-rate
 ~~~~~~~~~~~~~~~~~~~~~
@@ -144,7 +144,7 @@ send-full-pos-for-hard-colliding-entities
   client/server disagreement, which may cause glitchy behaviour for players.
   This setting attempts to mitigate this desync by sending precise locations
   for entities involved in collisions. Having this enabled will use more
-  bandwidth, however in the majority of cases, this is a worthy tradeoff.
+  bandwidth, however, in the majority of cases, this is a worthy tradeoff.
 
 velocity-support
 ~~~~~~~~~~~~~~~~
@@ -232,7 +232,7 @@ book-size
 * total-multiplier
     - **default**: 0.98
     - **description**: Each page has this multiple of bytes from the last page
-      as it's contribution to the allowed byte total for a book (with the first
+      as its contribution to the allowed byte total for a book (with the first
       page being having a multiplier of 1.0).
 
 async-chunks
@@ -242,7 +242,7 @@ async-chunks
     - **description**: The number of threads the server should use for world saving and loading.
       The default ``-1`` indicates that Paper will utilize half your system's threads for chunk
       loading unless otherwise specified. There is also a maximum default of 4 threads used for
-      saving and loading of chunks. This can be overridden by adding
+      saving and loadingf chunks. This can be overridden by adding
       ``-Dpaper.maxChunkThreads=[number of threads]`` to your JVM flags (and of course replacing
       ``[number of threads]`` with the number of threads you desire).
 
@@ -313,7 +313,7 @@ timings
 * history-length
     - **default**: 3600
     - **description**: The total amount of data to keep for a single report.
-    - **warning**: This value is validated server side, massive reports will be
+    - **warning**: This value is validated server-side, massive reports will be
       rejected by the report site.
 
 * server-name
@@ -371,14 +371,14 @@ chunk-loading
     - **default**: 2
     - **description**: The maximum number of chunks that will be queued to
       send at any one time. Lower values will help alleviate server-side
-      networking bottlenecks such as anti-xray or compression, however
+      networking bottlenecks such as anti-xray or compression, however,
       is unlikely to help users with a poor internet connection. A value of
       -1 will not disable this limit. Use a large number instead.
 * autoconfig-send-distance
     - **default**: true
     - **description**: Whether to use the client's view distance for the chunk send
       distance of the server. This will exclusively change the radius of chunks sent
-      to the client, and will have no effect on ticking or non-ticking view distance.
+      to the client and will not effect ticking or non-ticking view distance.
       Assuming no plugin has explicitly set the send distance and the client's view
       distance is less than the server's send distance, the client's view distance
       will be used.
@@ -428,7 +428,7 @@ packet-limiter
             - **description**: The number of any packet allowed per player within the interval.
     * PacketPlayInAutoRecipe:
         * **description**: This section applies specific limits for each packet, based on the
-          packets name as shown in timings, or it's class name for more advanced users.
+          packets name as shown in timings, or its class name for more advanced users.
           PacketPlayInAutoRecipe is used by default because this packet is very expensive to process,
           and may allow malicious actors to crash your server if unmitigated.
         * interval
@@ -477,7 +477,7 @@ per-player-mob-spawns
 ~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
 * **description**: Determines whether the mob limit (in bukkit.yml) is counted
-  per-player or for the entire server. Enabling this setting results in roughly
+  per player or for the entire server. Enabling this setting results in roughly
   the same number of mobs, but with a more even distribution that prevents one
   player from using the entire mob cap and provides a more single-player like
   experience.
@@ -520,7 +520,7 @@ remove-corrupt-tile-entities
 experience-merge-max-value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: -1
-* **description**: Instructs the server put a maximum value on experience orbs,
+* **description**: Instructs the server to put a maximum value on experience orbs,
   preventing them all from merging down into 1 single orb.
 * **note**: The default value instructs the server to use no max value,
   allowing them to merge down into a single orb. This is especially noticeable
@@ -561,8 +561,8 @@ filter-nbt-data-from-spawn-eggs-and-related
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
 * **description**: Instructs the server to remove certain NBT data from
-  spawn-eggs, falling-blocks, and other often abused items in creative mode.
-* **note**: Some adventure maps may require this be turned off to function
+  spawneggs, falling blocks, and other often-abused items in creative mode.
+* **note**: Some adventure maps may require this to be turned off to function
   correctly, but we do not recommend turning it off on a public server.
 
 max-entity-collisions
@@ -614,7 +614,7 @@ grass-spread-tick-rate
 ~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 1
 * **description**: Sets the delay, in ticks, at which the server attempts to
-  spread grass. Higher values will result in slower spread.
+  spread grass. Higher values will result in a slower spread.
 
 use-faster-eigencraft-redstone
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -626,7 +626,7 @@ nether-ceiling-void-damage-height
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: 0
 * **description**: Sets the level above which players in the nether will take void damage.
-  This is a vanilla-friendly way to restrict players using the nether ceiling as buildable
+  This is a vanilla-friendly way to restrict players from using the nether ceiling as a buildable
   area. Setting to 0 disables this feature.
 
 keep-spawn-loaded
@@ -762,8 +762,8 @@ treasure-maps-return-already-discovered
   found, rather than the first undiscovered one. Vanilla mechanics normally
   find the first undiscovered location, which may lead to structures that were
   not fully looted, and can also fail with a world border set. Enabling this
-  will make the map simply find the closest target structure, regardless if it
-  has been loaded or not already.
+  will make the map simply find the closest target structure, regardless of whether
+  it has been loaded or not already.
 
 iron-golems-can-spawn-in-air
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -807,10 +807,13 @@ zombies-target-turtle-eggs
 zombie-villager-infection-chance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: -1.0
-* **description**: Sets the change for villager conversion to zombie villager
-  Set to -1.0 for default behavior based on game difficulty
-  Set to 0.0 to always have villagers die when killed by zombies
-  Set to 100.0 to always convert villagers to zombie villagers
+* **description**: Sets the change for villager conversion to zombie villager.
+
+  Set to -1.0 for default behavior based on game difficulty.
+
+  Set to 0.0 to always have villagers die when killed by zombies.
+
+  Set to 100.0 to always convert villagers to zombie villagers.
 
 all-chunks-are-slime-chunks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -869,7 +872,7 @@ game-mechanics
 * disable-player-crits
     - **default**: false
     - **description**: Instructs the server to disable critical hits in PvP,
-      instead treating them as normal hits.
+      treating them as normal hits instead.
 
 * disable-sprint-interruption-on-attack
     - **default**: false
@@ -928,7 +931,7 @@ max-growth-height
 
 * reeds
     - **default**: 3
-    - **description**: Maximum height sugar cane / reeds blocks will naturally
+    - **description**: Maximum height sugar cane/reeds blocks will naturally
       grow to.
 
 * bamboo
@@ -1046,8 +1049,8 @@ lootables
 
 * reset-seed-on-fill
     - **default**: true
-    - **description**: Resets the loot seed each time the lootable is refilled.
-      Effectively randomizing the new loot items on each refill.
+    - **description**: Resets the loot seed each time the lootable is refilled,
+      effectively randomizing the new loot items on each refill.
 
 * max-refills
     - **default**: -1
@@ -1134,7 +1137,7 @@ anti-xray
 ~~~~~~~~~
 
 .. note::
-   More in depth anti-xray documentation as well as recommended configuration 
+   More in-depth anti-xray documentation as well as a recommended configuration 
    for both engine modes can be found in `this guide by stonar96
    <https://gist.github.com/stonar96/ba18568bd91e5afd590e8038d14e245e>`_.
 
@@ -1218,7 +1221,7 @@ squid-spawn-height
     - **default**: 0.0
     - **description**: The maximum height at which squids will spawn.
     - **note**: The default value defers to Minecraft's default setting,
-      which as of 1.12 is the sea-level of the world (usually Y: 64).
+      which as of 1.12 is the sea level of the world (usually Y: 64).
 
 generator-settings
 ~~~~~~~~~~~~~~~~~~
@@ -1262,7 +1265,7 @@ fix-climbing-bypassing-cramming-rule
 fix-entity-position-desync
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
     - **default**: true
-    - **description**: Fixes the issue in which an items position is desynchronized between the client and the server.
+    - **description**: Fixes the issue in which an item's position is desynchronized between the client and the server.
 
 update-pathfinding-on-block-update
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1286,19 +1289,19 @@ entity-per-chunk-save-limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * experience_orb
    - **default**: -1
-   - **description**: Limits the number of experience orbs that are saved/loaded per chunks. A value of -1 disables this limit
+   - **description**: Limits the number of experience orbs that are saved/loaded per chunks A value of -1 disables this limit
 
 * snowball
    - **default**: -1
-   - **description**:  Limits the number of snowballs that are saved/loaded per chunks. A value of -1 disables this limit
+   - **description**:  Limits the number of snowballs that are saved/loaded per chunk. A value of -1 disables this limit
 
 * ender_pearl
    - **default**: -1
-   - **description**:  Limits the number of ender pearls that are saved/loaded per chunks. A value of -1 disables this limit
+   - **description**:  Limits the number of ender pearls that are saved/loaded per chunk. A value of -1 disables this limit
 
 * arrow
    - **default**: -1
-   - **description**:  Limits the number of arrows that are saved/loaded per chunks. A value of -1 disables this limit
+   - **description**:  Limits the number of arrows that are saved/loaded per chunk. A value of -1 disables this limit
 
 unsupported-settings
 ~~~~~~~~~~~~~~~~~~~~
