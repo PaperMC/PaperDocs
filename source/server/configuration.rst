@@ -378,7 +378,7 @@ chunk-loading
     - **default**: true
     - **description**: Whether to use the client's view distance for the chunk send
       distance of the server. This will exclusively change the radius of chunks sent
-      to the client and will not effect ticking or non-ticking view distance.
+      to the client and will not affect ticking or non-ticking view distance.
       Assuming no plugin has explicitly set the send distance and the client's view
       distance is less than the server's send distance, the client's view distance
       will be used.
@@ -561,7 +561,7 @@ filter-nbt-data-from-spawn-eggs-and-related
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * **default**: true
 * **description**: Instructs the server to remove certain NBT data from
-  spawneggs, falling blocks, and other often-abused items in creative mode.
+  spawn eggs, falling blocks, and other often abused items in creative mode.
 * **note**: Some adventure maps may require this to be turned off to function
   correctly, but we do not recommend turning it off on a public server.
 
@@ -1137,7 +1137,7 @@ anti-xray
 ~~~~~~~~~
 
 .. note::
-   More in-depth anti-xray documentation as well as a recommended configuration 
+   More in-depth anti-xray documentation as well as recommended configuration 
    for both engine modes can be found in `this guide by stonar96
    <https://gist.github.com/stonar96/ba18568bd91e5afd590e8038d14e245e>`_.
 
