@@ -371,7 +371,7 @@ chunk-loading
     - **default**: 2
     - **description**: The maximum number of chunks that will be queued to
       send at any one time. Lower values will help alleviate server-side
-      networking bottlenecks such as anti-xray or compression, however,
+      networking bottlenecks such as anti-xray or compression; however, it
       is unlikely to help users with a poor internet connection. A value of
       -1 will not disable this limit. Use a large number instead.
 * autoconfig-send-distance
