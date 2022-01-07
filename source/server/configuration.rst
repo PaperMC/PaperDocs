@@ -616,11 +616,17 @@ grass-spread-tick-rate
 * **description**: Sets the delay, in ticks, at which the server attempts to
   spread grass. Higher values will result in a slower spread.
 
-use-faster-eigencraft-redstone
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* **default**: false
-* **description**: Instructs the server to use a faster redstone implementation,
-  which may drastically help with performance in redstone.
+redstone-algo
+~~~~~~~~~~~~~
+* **default**: eigencraft
+* **description**: Instructs the server to use a specific Redstone implementation.
+      Possible values are ``vanilla`` (for the vanilla Redstone implementation), the
+      default value ``eigencraft`` (a tried and tested Redstone implementation that
+      significantly outperforms Vanilla, at the cost of behavior parity in very niche 
+      areas), and ``alternate-current``. Alternate Current is an implementation that is
+      significantly faster than both Vanilla and Eigencraft, but hasn't been tested as much.
+* **note**: The actual differences in conformity to Vanilla behavior only truly apply to
+      highly-technical builds that make use of Vanilla-specific unintended or extremely niche behavior.
 
 nether-ceiling-void-damage-height
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
