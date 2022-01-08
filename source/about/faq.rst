@@ -73,7 +73,7 @@ Is there anywhere to get plugins for Paper?
 -------------------------------------------
 
 Many plugins that work with, and are made for, Paper are available on the
-`forum's resource section <https://papermc.io/forums/c/plugin-releases/paper>`_.
+`forums' resource section <https://forums.papermc.io/forums/paper-plugin-releases>`_.
 Sometimes you'll also see them elsewhere, you just have to keep your eyes open.
 
 Does Paper support Forge Mods?

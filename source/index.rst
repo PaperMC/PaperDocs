@@ -91,7 +91,7 @@ Useful Links
 -  `IRC <https://webchat.esper.net/?channels=paper>`__
 -  `Docs <https://paper.readthedocs.io>`_
 -  `GitHub <https://github.com/PaperMC/Paper>`_
--  `Forums <https://papermc.io/forums>`_
+-  `Forums <https://forums.papermc.io>`_
 -  `Javadocs <https://papermc.io/javadocs>`_
 -  `Issue Tracker <https://github.com/PaperMC/Paper/issues>`_
 -  `Organization GitHub <https://github.com/PaperMC>`_
