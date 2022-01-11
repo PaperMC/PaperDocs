@@ -715,7 +715,7 @@ slime-spawn-height
             - **description**: Sets the maximum Y position for natural Slime spawn in Swamp Biomes.
         - minimum
             - **default**: 50
-            - **description**: Sets the minimum Y position for natural Slime spawn in Swamp Biomes.	
+            - **description**: Sets the minimum Y position for natural Slime spawn in Swamp Biomes.
     - slime-chunk
         - maximum
             - **default**: 40
