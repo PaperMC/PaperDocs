@@ -1147,6 +1147,12 @@ hopper
       hoppers. Dramatically improves hopper performance but will break
       protection plugins and any others that depend on this event.
 
+* ignore-occluding-blocks
+    - **default**: false
+    - **description**: Determines if hoppers will ignore containers inside
+      occluding blocks, like a hopper minecart inside a sand block. Enabling
+      this will improve performance for hoppers checking where to insert items.
+
 anti-xray
 ~~~~~~~~~
 
