@@ -456,7 +456,7 @@ reset-titles-join
 ~~~~~~~~~~~~~~~~~~~~~~~
    - **default**: false
    - **description**: When set to true, players will have their titles cleared when they join.
-   This fixes `MC-55347 <https://bugs.mojang.com/browse/MC-55347>`_.
+     This fixes `MC-55347 <https://bugs.mojang.com/browse/MC-55347>`_.
 
 World Settings
 ==============
