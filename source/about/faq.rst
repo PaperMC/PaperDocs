@@ -19,9 +19,9 @@ and more APIs for developers to build awesome plugins with.
 What do I need to run it?
 -------------------------
 
-Paper requires the Java Runtime Environment to run. Specifically, it requires
-at least Java version 17. Once that is installed you're all good to go! If you
-don't already have a Java 17 Runtime, :doc:`it's easy to download and install</java-update/index>`.
+Paper requires the Java Runtime Environment to run. We have the same version
+requirements as Mojang. For more information on the required version and how
+to update to it, check out :doc:`the guide on how to update Java</java-update/index>`.
 
 See our docs on starting out: :doc:`/server/getting-started`
 
