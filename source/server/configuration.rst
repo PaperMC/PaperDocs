@@ -356,8 +356,6 @@ item-validation
 
 chunk-loading
 ~~~~~~~~~~~~~
-.. warning::
-   This configuration has not yet been implemented for 1.18!
 
 * min-load-radius
     - **default**: 2
