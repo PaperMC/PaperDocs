@@ -165,6 +165,12 @@ at the bottom of the page.
 
 |br|
 
+StellaNode
+~~~~~~~~~~
+
+StellaNode's website has some excellent documentation on how to do this:
+`Changing Java Version <https://billing.stellanode.com/knowledgebase/1/Changing-The-Java-Version-On-YourMinecraft-Server.html>`_.
+
 WinterNode
 ~~~~~~~~~~
 
